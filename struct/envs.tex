@@ -1,0 +1,208 @@
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex}
+\setlength{\columnsep}{1cm}
+
+%
+\newcommand{\highlight}[2][highlightColor!12]{\mathchoice%
+  {\colorbox{#1}{$\displaystyle#2$}}%
+  {\colorbox{#1}{$\textstyle#2$}}%
+  {\colorbox{#1}{$\scriptstyle#2$}}%
+  {\colorbox{#1}{$\scriptscriptstyle#2$}}}%
+
+
+% eq tables
+\newcolumntype{C}{>{$}c<{$}}
+\newcolumntype{L}{>{$}l<{$}}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+
+% Change "Chapter" to "Capítulo"
+\makeatletter
+\renewcommand{\chaptermark}[1]{%
+  \markboth{{\fontfamily{bch}\selectfont\color{black}\chaptername\ \thechapter\ | #1}}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{{\fontfamily{bch}\selectfont\thesection\ | #1}}%
+}
+\makeatother
+\fancypagestyle{mainstyle}{
+    \fancyhf{} % Clear all header and footer fields
+    % Headers
+    \fancyhead[LE,RO]{\thepage} % Page number on outer sides
+    \fancyhead[RE]{\leftmark} % Chapter name on even pages
+    \fancyhead[LO]{\rightmark} % Section name on odd pages
+    % Optional: Thin rules
+    \renewcommand{\headrulewidth}{0pt} % Header rule
+    \renewcommand{\footrulewidth}{0pt} % No footer rule
+}
+
+
+% Command to insert a blank page with a specific text
+\newcommand{\blankintpage}{
+    \newpage
+    \thispagestyle{empty} % No header or footer
+    \vspace*{\fill}
+    {\textcolor{gray}{
+    \begin{center}
+        \Large This page is blank intentionally
+    \end{center}}}
+    \vspace{\fill}
+    \newpage
+}
+
+% Part
+\titleformat{\part}[display]
+  {\color{black}\fontfamily{qhv}\bfseries\centering}
+  {\vfill\Large\partname~\thepart}
+  {6pt}
+  {\Huge}
+  [\vfill]
+\titlespacing*{\part}{0pt}{0pt}{40pt}
+
+% Chapter
+\titleformat{\chapter}[display]
+  {\fontfamily{qhv}\selectfont\bfseries\centering}
+  {\color{titleColor!50!black}\Large\chaptername\ \thechapter}
+  {5pt}
+  {\color{titleColor}\Huge}
+  [\vspace{10pt}{\color{black}\titlerule[2pt]}] % Line beneath the title
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+% Section
+\titleformat{\section}[hang]
+{\fontfamily{phv}\selectfont\LARGE}
+{\bfseries\color{titleColor}\thesection}
+{1em}
+{\bfseries\color{titleColor!50!black}}
+\titlespacing{\section}{0em}{5ex}{1ex}
+
+% Subsection
+\titleformat{\subsection}[hang]
+{\fontfamily{phv}\large}
+{\color{titleColor}\bfseries\thesubsection}
+{1em}
+{\bfseries\color{titleColor}}
+\titlespacing*{\subsection}{0pt}{1ex}{0em}
+
+% Subsubsection
+\titleformat{\subsubsection}
+  {\fontfamily{qhv}\selectfont\large}
+  {}                           
+  {0pt}                       
+  {}                     
+\titlespacing*{\subsubsection}{0pt}{3.25ex}{0ex}
+
+
+
+% example 
+\newcounter{example}[chapter]
+\renewcommand{\theexample}{\thechapter.\arabic{example}}
+\newenvironment{example}[1]
+    {\refstepcounter{example}
+    \par
+    \textcolor{exampleColor}{\rule{\textwidth}{1.5pt}}
+    \par
+    \fontfamily{qhv}\selectfont{\bfseries\textcolor{exampleColor}{Ejemplo~\theexample\hfill#1}}
+    \par\small
+    }
+    {
+    \par
+    \textcolor{exampleColor}{\rule{\textwidth}{1.5pt}}
+    \par
+    }
+% exercise
+\newcounter{exercise}[chapter]
+%\renewcommand{\theexercise}{\arabic{exercise}}
+\newenvironment{exercise}[1]
+    {\refstepcounter{exercise}
+    \par
+    {\fontfamily{qhv}\selectfont\textbf{Ejercicio~\theexercise\hfill#1}}
+    \par
+    }
+    {
+    \par
+    \rule{\columnwidth}{1.5pt}
+    \par
+    }
+% definition
+\newenvironment{definition}[1][]
+{%
+    \ifstrempty{#1} % Check if the title argument is empty
+        {\begin{mdframed}[backgroundcolor=gray!10, linecolor=black!20,linewidth=1.5pt, roundcorner=1pt]}
+        {\begin{mdframed}[backgroundcolor=gray!10, linecolor=black!20,linewidth=1.5pt, roundcorner=1pt,
+            frametitle={\fontfamily{qhv}\selectfont\color{black!60}\textbf{#1}}, frametitlebackgroundcolor=gray!10, frametitlerule=false]}
+}
+{%
+    \small\end{mdframed}
+}
+% emphasizeb
+\newenvironment{emphasizeb}[1][]
+{%
+    \ifstrempty{#1} % Check if the title argument is empty
+        {\begin{mdframed}[backgroundcolor=emphasizeb, linecolor=emphasizeb!80!black,linewidth=1.5pt, roundcorner=1pt]}
+        {\begin{mdframed}[backgroundcolor=emphasizeb, linecolor=emphasizeb!80!black,linewidth=1.5pt, roundcorner=1pt,
+            frametitle={\fontfamily{qhv}\selectfont\color{emphasizeb!30!black}\textbf{#1}}, frametitlebackgroundcolor=emphasizeb, frametitlerule=false]}
+}
+{%
+    \end{mdframed}
+}
+% emphasizer
+\newenvironment{emphasizer}[1][]
+{%
+    \ifstrempty{#1} % Check if the title argument is empty
+        {\begin{mdframed}[backgroundcolor=emphasizer, linecolor=emphasizer!80!black,linewidth=1.5pt, roundcorner=1pt]}
+        {\begin{mdframed}[backgroundcolor=emphasizer, linecolor=emphasizer!80!black,linewidth=1.5pt, roundcorner=1pt,
+            frametitle={\fontfamily{qhv}\selectfont\color{emphasizer!30!black}\textbf{#1}}, frametitlebackgroundcolor=emphasizer, frametitlerule=false]}
+}
+{%
+    \end{mdframed}
+}
+
+
+\lstdefinestyle{pythonstyle}{
+    backgroundcolor=\color[rgb]{0.95,0.95,0.95},   % light gray background
+    commentstyle=\color[rgb]{0.25,0.5,0.35}\itshape, % green comments
+    keywordstyle=\color[rgb]{0.0,0.0,0.6}\bfseries, % dark blue keywords
+    numberstyle=\tiny\color[rgb]{0.5,0.5,0.5},      % gray numbers
+    stringstyle=\color[rgb]{0.58,0.0,0.82},         % purple strings
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=8pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=4
+}
+\lstset{language=Python,style=pythonstyle}
+
+% New commands
+\newcommand{\re}[1]{\text{Re}\left(#1\right)}
+\newcommand{\im}[1]{\text{Im}\left(#1\right)}
+\newcommand{\bA}{\bm{A}}
+\newcommand{\bB}{\bm{B}}
+\newcommand{\bC}{\bm{C}}
+\newcommand{\bD}{\bm{D}}
+\newcommand{\bO}{\bm{0}}
+\newcommand{\bR}{\bm{r}}
+\newcommand{\hn}{\bm{\hat{n}}}
+\newcommand{\hr}{\bm{\hat{r}}}
+\newcommand{\hx}{\bm{\hat{x}}}
+\newcommand{\hy}{\bm{\hat{y}}}
+\newcommand{\hz}{\bm{\hat{z}}}
+
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\veq}{\rotatebox{90}{$\,=$}}
+
+% emphasizes
+\newcommand{\bfemph}[1]{\fontfamily{bch}\textcolor{emph}{\textbf{#1}}}
+\newcommand{\itemph}[1]{\textbf{\textit{\fontfamily{bch}\selectfont #1}}}
+\newcommand{\laplace}[1]{\mathscr{L}\left[#1\right]}
+\newcommand{\ilaplace}[1]{\mathscr{L}^{-1}\left[#1\right]}
+\newcommand{\fourier}[1]{\mathscr{F}\left[#1\right]}
+\newcommand{\ifourier}[1]{\mathscr{F}^{-1}\left[#1\right]}
+

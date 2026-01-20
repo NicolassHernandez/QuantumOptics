@@ -1,0 +1,40 @@
+\documentclass[letterpaper,11pt,openany]{book}
+\input{struct/pckgs}
+\input{struct/colors}
+\input{struct/circuitikz}
+\input{struct/envs}
+%%
+\newcommand{\course}{Notes of }
+\newcommand{\datee}{}% \today
+\newcommand{\edition}{Wyant College of Optical Sciences\\ University of Arizona}
+\newcommand{\autor}{Nicolás Hernández Alegría}
+%%
+\usepackage{charter}
+
+
+\makeindex
+\begin{document}
+\nocite{*}
+\input{struct/Frontpage}
+\input{struct/Preface}
+
+% TOCS
+\setcounter{tocdepth}{1}
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+% MAIN
+\blankintpage
+\pagestyle{mainstyle}
+\input{PartOne/ChapterOne/main.tex}
+
+
+%% APENDICE
+\blankintpage
+\appendix
+%\input{Appendix/main}% I dont know why but this is getting up in the chapter minitoc
+%% INDICE
+\printindex
+%
+\end{document}

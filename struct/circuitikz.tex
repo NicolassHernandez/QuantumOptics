@@ -1,0 +1,90 @@
+\usepackage{graphicx} % For including images
+\usepackage{lipsum} % Dummy text package
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{tikz}
+\usepackage[siunitx, RPvoltages]{circuitikz}
+\usepackage{bm}
+\usetikzlibrary{3d}
+\usepackage{comment}
+\usepackage{caption,subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest} % or a newer version if available
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{pgfplots.groupplots}
+
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzset{>=latex}
+%\usetikzlibrary{calc,arrows, arrows.meta}
+\tikzstyle{arrow} = [->,>=stealth,shorten >=0pt]
+\tikzstyle{darrow}=[<->,shorten >=0pt,shorten <=0pt,>=stealth]
+%
+\tikzset{
+    flux/.style args={#1,#2}{ % Define two arguments
+        decoration={
+            markings,
+            mark=at position #1 with {\arrow{>}},
+            mark=at position #2 with {\arrow{>}}
+        },
+        postaction={decorate}
+    },
+    flux/.style args={#1}{ % Define a single argument case
+        decoration={
+            markings,
+            mark=at position #1 with {\arrow{>}}
+        },
+        postaction={decorate}
+    }
+}
+%
+\tikzstyle{spring}=[line width=0.8,snake=coil,segment amplitude=5,segment length=5,line cap=round]
+
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{snakes,pgfplots.fillbetween}
+\usetikzlibrary{fadings,shadings,decorations.pathreplacing,decorations.markings,arrows.meta,decorations.pathmorphing,shapes,positioning,backgrounds,fit}
+
+\definecolor{ao}{RGB}{210,234,255}
+\ctikzset{sources/fill=gray!10,csources/fill=gray!10,instruments/fill=blue!10,american, raised voltages,bipoles/cuteswitch/thickness=0.25,resistors/scale=0.4,capacitors/scale=0.4,inductors/scale=0.4,sources/scale=0.7,csources/scale=0.7,font=\footnotesize,voltage shift=2,amplifiers/scale=.8,amplifiers/fill=ao,amplifiers/thickness=0.4,diodes/scale=0.5,bipoles/generic potentiometer/height/.initial=1.5,bipoles/potentiometer/height/.initial=1.5,multipoles/rotary/thickness=0.5,multipoles/rotary/shape=circ}
+
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\def\eq{=}
+
+\makeatletter
+\newlength\@SizeOfCirc%
+\newcommand{\CricArrowRight}[2][]{%
+    \setlength{\@SizeOfCirc}{\maxof{\widthof{#2}}{\heightof{#2}}}%
+    \tikz [x=1.0ex,y=1.0ex,line width=.20ex, fill=black, -stealth, #1]%
+        \draw [anchor=center]%
+            node (0,0) {#2}%
+            (0,1.2\@SizeOfCirc) arc (85:-240:1.2\@SizeOfCirc);%
+}%
+\newcommand{\CricArrowLeft}[2][]{\CricArrowRight[xscale=-1,#1]{#2}}%
+\makeatother
+
+
+\tikzset{
+  magnet/.style={
+    rectangle, minimum width=15, minimum height=30,
+    draw=none,
+    append after command={
+      \pgfextra{
+        \begin{scope}
+        \coordinate(right)at(\tikzlastnode.east);
+        \coordinate(left)at(\tikzlastnode.west);
+        \coordinate(above)at(\tikzlastnode.north);
+        \coordinate(below)at(\tikzlastnode.south);
+        \coordinate(mid)at(\tikzlastnode.center);
+        \coordinate(rightabove)at(\tikzlastnode.north east);
+        \coordinate(rightbelow)at(\tikzlastnode.south east);
+        \coordinate(leftabove)at(\tikzlastnode.north west);
+        \coordinate(leftbelow)at(\tikzlastnode.south west);
+        % camera
+        \draw[fill=red!40]($(leftabove)!0!(leftbelow)$)rectangle($(rightabove)!.5!(rightbelow)$);
+        \draw[fill=white]($(leftabove)!.5!(leftbelow)$)rectangle($(rightabove)!1!(rightbelow)$);
+        \draw($(leftabove)!.5!(right)$)node[]{N}($(left)!.5!(rightbelow)$)node[]{S};
+        \end{scope}
+      }
+    }
+  },
+}
