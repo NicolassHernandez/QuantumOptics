@@ -18,7 +18,34 @@
 \usetikzlibrary{pgfplots.groupplots}
 \usetikzlibrary{shapes.geometric, arrows}
 \tikzstyle{arrow} = [->,>=stealth,shorten >=2pt]
-
+\newcommand{\re}[1]{\text{Re}\left(#1\right)}
+\newcommand{\im}[1]{\text{Im}\left(#1\right)}
+\newcommand{\bA}{\bm{A}}
+\newcommand{\bB}{\bm{B}}
+\newcommand{\bC}{\bm{C}}
+\newcommand{\bE}{\bm{E}}
+\newcommand{\bH}{\bm{H}}
+\newcommand{\bD}{\bm{D}}
+\newcommand{\bO}{\bm{0}}
+\newcommand{\br}{\bm{r}}
+\newcommand{\bR}{\bm{R}}
+\newcommand{\hA}{\hat{A}}
+\newcommand{\hB}{\hat{B}}
+\newcommand{\hC}{\hat{C}}
+\newcommand{\ha}{\hat{a}}
+\newcommand{\hn}{\bm{\hat{n}}}
+\newcommand{\hr}{\bm{\hat{r}}}
+\newcommand{\hx}{\bm{\hat{x}}}
+\newcommand{\hy}{\bm{\hat{y}}}
+\newcommand{\hz}{\bm{\hat{z}}}
+\newcommand{\laplace}[1]{\mathscr{L}\left[#1\right]}
+\newcommand{\ilaplace}[1]{\mathscr{L}^{-1}\left[#1\right]}
+\newcommand{\fourier}[1]{\mathscr{F}\left[#1\right]}
+\newcommand{\ifourier}[1]{\mathscr{F}^{-1}\left[#1\right]}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle#1\right|}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\D}{\mathcal{D}}
 \usepackage{cancel}
 \usepackage{bm}
 \usepackage{fancyhdr}
@@ -45,7 +72,7 @@
 %
 \newcommand{\institution}{University of Arizona}
 \newcommand{\autor}{Nicolás Hernández Alegría}
-\newcommand{\course}{OPTI 570 Quantum Mechanics}
+\newcommand{\course}{OPTI 544 Quantum Optics}
 \newcommand{\assignment}{Assignment 1}
 %
 \title{\textbf{\assignment}\\\course\\{\Large\institution}}
@@ -68,479 +95,100 @@
 \pagestyle{mainstyle}
 \maketitle
 %%
-\section{Exercise 1 (Done)}% 9.30
-The problem asks to verify the statement by completing the square in the argument of the exponent. The term $b$ cannot be simply separated as two
-exponential will have to be integraed, which is more difficult. Instead, what is asked is to obtain a perfect binomial of the form $(x-\square)^2$.
-The right hand of the equation seems to be the result of the integration of a gaussian distribution, so that the argument must be of the form $\frac{(x-\square)^2}{2a^2}$.
-We are going to work with the argument alone. First, we add $b$ into the fraction
-\begin{align*}
-  -\left[\frac{x^2-2a^2bx}{2a^2}\right].
-\end{align*}
-If we want a perfect binomial in the numerator, then we compare the numerator with the general binomial terms:
-\begin{align}
-  x^2-2a^2bx = x^2-2\square x+\square^2.
-\end{align}
-By comparison, $\square=a^2b$ and therefore the term $(a^2b)^2$ must be added and substracted
-\begin{align*}
-  -\left[\frac{x^2-2a^2bx+(a^2b)^2-(a^2b)^2}{2a^2}\right]=-\left[\frac{(x-a^2b)^2}{2a^2}-\frac{(a^2b)^2}{2a^2}\right]=-\frac{(x-a^2b)^2}{2a^2}+\frac{a^2b^2}{2}.
-\end{align*}
-Replacing the new argument into the integral yields
-\begin{align*}
-  \int_{-\infty}^\infty C\exp\left\{-\frac{(x-a^2b)^2}{2a^2}+\frac{a^2b^2}{2}\right\}\;dx=C\exp\{a^2b^2/2\}\int_{-\infty}^\infty\exp\left\{-\frac{(x-a^2b)^2}{2a^2}\right\}\;dx
-\end{align*}
-The integral needs a change of variable or standarization to be identified as a standard integral. If we set $u=(x-a^2b)/a$, then $du=dx/a$. Thus,
-\begin{align*}
-  C\exp\{a^2b^2/2\}\int_{-\infty}^\infty e^{-u^2/2}\;\left(a\;du\right)=aC\exp\{a^2b^2/2\}\int_{-\infty}^\infty e^{-u^2/2}\;du=\sqrt{2\pi}aC\exp\{a^2b^2/2\}.
-\end{align*}
-The last integral is well-known and results to be $\sqrt{2\pi}$. Finally, we conclude that 
-\begin{align}
-  \int_{-\infty}^\infty dx\;C\exp\left\{-\frac{x^2}{2a^2}+bx\right\}=\sqrt{2\pi}a\exp\{a^2b^2/2\}.
-\end{align}
-
-\section{Exercise 2 (Done)}
-If $x$ has dimensions os length $[L]$, then the dimension of $a$ must be also $[L]$ in order to maintain the argument of the exponential adimensional.
-For the same reason, $b$ must have dimensions of $[L^{-1}]$. Due to the integration in $x$, the integral provides a $[L]$ dimension to the result. Therefore,
-is a dimensionless results is desired, $C$ must have dimensions of $[L^{-1}]$.
-
-\section{Exercise 3 (Done)}
-The integral to compute is along the real line $(-\infty,\infty)$, so that negative and positive values of $x$ are considered.
-The integrand
-\begin{align}
-  f(x)=x^{11}e^{-\frac{x^2}{2a}},
-\end{align}
-is an odd functions due to the term $x^{11}$. This implies that if negative $x$ are evaluated, we have
-\begin{align*}
-  f(-x)=(-x)^{11}e^{-\frac{(-x)^2}{2a}}=-x^{11}e^{-\frac{x^2}{2a}}=-f(x)\Longrightarrow f(-x)=-f(x).
-\end{align*}
-Using this property, the integral can be split in two parts one for the range $(-\infty,0]$ and other for $[0,\infty)$.
-It turns out that both integrals will cancel each other giving a net result of zero.
-
-
-\section{Exercise 4}
-\begin{enumerate}[itemsep=0pt,topsep=0pt,label=\alph*)]
-  \item The dimensional units of $x$ is $[L]$, while for the momentum is $[MLT^{-1}]$. The imaginary units does not provide any dimensional information, and the final
-  unit of the argument of the exponent must be adimensional. Therefore, the dimension of $\hbar$ must be 
+\section*{Exercise 1}
+\begin{enumerate}[itemsep=0pt,topsep=0pt]
+  \item Ill use the definition of the E- and B-fields in terms of the vector potential.
   \begin{align*}
-    [MLT^{-1}][L]/[\hbar]&=[-]\\
-    [\hbar]&=[ML^2T^{-1}].
-  \end{align*}
-  \item Given that the constant result is adimensional, the integrand must be so that multiplied by the differential $dx$ whose dimension is $[L]$ must be 
-  dimensionless. Therefore, doing dimensional analysis we have  
+    \bE=-\partial_t\bA,\quad\text{and}\quad\bB=\nabla\times\bA.
+  \end{align*} 
+  Taking the curl of the B-field allows to replace the vector potential and have a triple product,
+  which can be reexpressed using vector identities. Because $\nabla\times\bB$ is Ampere's law,
+  it also depends on the E-field, where the above definition can be replaced.
   \begin{align*}
-    [\psi]^2\cdot[L]&=[-]\\
-    [\psi]&=\sqrt{[L^{-1}]}=[L^{-1/2}].
+    \nabla\times\bB&=\frac{1}{c^2}\partial_t\bE\\
+    \nabla\times\nabla\times\bA&=\frac{1}{c^2}\partial_t(-\partial_t\bA)\\
+    \nabla(\cancelto{0}{\nabla\cdot\bA})-\nabla^2\bA&=-\frac{1}{c^2}\partial_t^2\bA\\
+    \nabla^2\bA(\br,t)-\frac{1}{c^2}\partial_t^2\bA(\br,t)&=0.
   \end{align*}
-  \item Using the fourier transform definition given in the problem set, we can extract the dimensions of the relevant variables, i.e, $\hbar$, $dx$, $\psi(x)$, and 
-  operate as the formula indicates:
-  \begin{align}
-    [\tilde{\psi}(p)]=[\hbar]^{-1/2}\cdot[dx]\cdot[\psi(x)]=[ML^2T^{-1}]^{-1/2}\cdot[L]\cdot[L^{-1/2}]=[M^{-1/2}L^{-1/2}T^{1/2}]=[MLT^{-1}]^{-1/2},
-  \end{align} 
-  which is the inverse square root of the momentum dimension $[MLT^{-1}]$.
+  \item fsfaf
+  \item asgsag
+  \item asgsa
+  \item sagasg
 \end{enumerate}
-
-\section{Exercise 5 (Done)}
-The Fourier transform of $\psi(x)=A\exp\{-\frac{x^2}{2a^2}\}$ is 
-\begin{align}
-  \tilde{\psi}(p)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty A\exp\left\{-\frac{x^2}{2a^2}\right\}\exp\left\{-\frac{ip}{\hbar}x\right\}\;dx=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty A\exp\left\{-\frac{x^2}{2a^2}-\frac{ip}{\hbar}x\right\}\;dx.
-\end{align}
-Using the result from exercise 1 with $b=-ip/\hbar$ gives
-\begin{align}
-  \tilde{\psi}(p)=\frac{1}{\sqrt{2\pi\hbar}}\cdot \sqrt{2\pi}aA\exp\left\{-\frac{a^2p^2}{2\hbar^2}\right\}=\frac{aA}{\sqrt{\hbar}}\exp\left\{-\frac{a^2p^2}{2\hbar^2}\right\}.
-\end{align}
-
-
-\section{Exercise 6 (done)}
-Eulers formula, in a general manner, states that:
-\begin{align}
-  e^{a\pm i\theta}=e^{a}(\cos\theta\pm i\sin\theta).
-\end{align}
-The sine and cosine functions can be defined in terms of the exponential function by setting $a=0$ and using the taylor expansion.
-Without prove the equivalences are the following:
-\begin{align*}
-  \sin\theta=\frac{e^{i\theta}-e^{-i\theta}}{2i},\quad\text{and}\quad\cos\theta=\frac{e^{i\theta}+e^{-i\theta}}{2}.
-\end{align*}
-For the first identity, replacing the above definitions yields:
-\begin{align*}
-  \sin(2\theta)&=2\sin(\theta)\cos(\theta)\\
-  \frac{e^{i2\theta}-e^{-i2\theta}}{2i}&=\cancel{2}\left(\frac{e^{i\theta}-e^{-i\theta}}{2i}\right)\left(\frac{e^{i\theta}+e^{-i\theta}}{\cancel{2}}\right)\\
-  &=\frac{e^{i2\theta}+\cancel{e^0}-\cancel{e^{0}}-e^{-i2\theta}}{2i}\\
-  \frac{e^{i2\theta}-e^{-i2\theta}}{2i}&=\frac{e^{i2\theta}-e^{-i2\theta}}{2i}.
-\end{align*}
-Similarly, for the second identity:
-\begin{align*}
-  \cos^2(\theta)&=\frac{1}{2}[1+\cos(2\theta)]\\
-  \left(\frac{e^{i\theta}+e^{-i\theta}}{2}\right)^2&=\frac{1}{2}\left[1+\frac{e^{i2\theta}+e^{-i2\theta}}{2}\right]\\
-  \frac{e^{i2\theta}+2e^{0}+e^{-i2\theta}}{4}&=\frac{1}{2}\left[\frac{2+e^{i2\theta}+e^{-i2\theta}}{2}\right]\\
-  \frac{e^{i2\theta}+2+e^{-i2\theta}}{4}&=\frac{e^{i2\theta}+2+e^{-i2\theta}}{4}.
-\end{align*}
 %%
-\section{Exercise 7 (Done)}
-In general this Differential equation has an exponential solution. One possible is to consider $y(x)=2e^{mx}$. To verify that is a solution we 
-substitute it into the ODE:
-\begin{align*}
-  \frac{\partial}{\partial x}y(x)&=my(x)\\
-  \frac{\partial}{\partial x}(2e^{mx})&=m(2e^{mx})\\
-  2me^{mx}&=2me^{mx},
-\end{align*}
-where the last equality confirms that the proposed solution is correct.
+\section*{Exercise 2}
 
-\section{Exercise 8 (Done)}
-In this case, a possible solution belongs from the complex exponential family. Therefore, we select $y(x)=\cos mx$ as the proposed solution. 
-Substituting into the ODE gives
-\begin{align*}
-  \frac{\partial^2}{\partial x^2}y(x)&=-m^2y(x)\\
-  \frac{\partial^2}{\partial x^2}(\cos mx)&=-m^2(\cos mx)\\
-  \frac{\partial}{\partial x}(-m\sin mx)&=-m^2\cos mx\\
-  -m^2\cos mx&=-m^2\cos mx,
-\end{align*}
-confirming our choice.
-
-\section{Exercise 9 (Done)}
-Given the $\bm{M}$ matrix, the eigenvalue problem is the following:
-\begin{align}
-  \bm{M}\bm{v}=\lambda\bm{v},
-\end{align}
-where $\lambda$ are the eigenvalues to be obtained and $\bm{v}$ are the eigenvectors associated.
-In order to get the eigenvalues, the following equation must be solved:
-\begin{align}
-  |\bm{M}-\lambda\bm{I}|=0,
-\end{align}
-where $\bm{I}$ is the identity matrix. Substituting $\bm{M}$ and $\bm{I}$,
-\begin{align*}
-  \left|\begin{pmatrix}
-    3&0&0\\0&4&0\\0&0&2
-  \end{pmatrix}-\begin{pmatrix}
-    \lambda&0&0\\0&\lambda&0\\0&0&\lambda
-  \end{pmatrix}\right|=\begin{vmatrix}
-    3-\lambda&0&0\\0&4-\lambda&0\\0&0&2-\lambda
-  \end{vmatrix}=0.
-\end{align*}
-The above results is easy to solve, as the determinant of a diagonal matrix is the product of its diagonal elements:
-\begin{align}
-  (3-\lambda)(4-\lambda)(2-\lambda)=0\Longrightarrow\lambda\in\{2,3,4\}.
-\end{align}
-Because the polinomial is expressed a a productory of its roots, the eigenvalues are the roots of the equation.
 %%
-\section{Exercise 10 (Done)}
-Given the $\bm{M}$ matrix, the eigenvalue problem is similar to previous exercise. In this case, we have:
-\begin{align*}
-  \left|\bm{M}-\lambda\bm{I}\right|=
-  \left|\begin{pmatrix}
-    0&-i\\i&0
-  \end{pmatrix}-\begin{pmatrix}
-    \lambda&0\\0&\lambda
-  \end{pmatrix}\right|=\left|\begin{pmatrix}
-    -\lambda&-i\\i&-\lambda
-  \end{pmatrix}\right|=\lambda^2-1=0\Longrightarrow\lambda\in\{-1,1\}\in\mathbb{R}.
-\end{align*}
-The eigenvalues are real numbers, as expected from a Hermitian matrix: $\bm{M}=\bm{M}^\dagger$.
-The eigenvectors are obtained replacing each $\lambda$ in the rearranged eigenvalue problem.
-\begin{itemize}
-  \item For $\lambda_1=-1$, we have
+
+\section*{Exercise 3}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,label=\alph*)]
+  \item We can simplify the problem using the BCH formula
   \begin{align*}
-    (\bm{M}-\lambda_1\bm{I})\bm{v}_1&=\bm{0}\\
-    (\bm{M}+\bm{I})\bm{v}_1&=\\
-    \left(\begin{pmatrix}
-      0&-i\\i&0
-    \end{pmatrix}+\begin{pmatrix}
-      1&0\\0&1
-    \end{pmatrix}\right)\bm{v}_1&=\\
-    \begin{pmatrix}
-      1&-i\\i&1
-    \end{pmatrix}\begin{pmatrix}
-    v_1^{(1)}\\v_1^{(2)}
-    \end{pmatrix}&=\\
-    \begin{pmatrix}
-      1v_1^{(1)}-iv_1^{(2)}\\
-      iv_1^{(1)}+1v_1^{(2)}
-    \end{pmatrix}&=\begin{pmatrix}
-      0\\0
-    \end{pmatrix}
+    e^{\hA}\hB e^{-\hA}=\hB+[\hA,\hB]+\frac{1}{2!}[\hA,[\hA,\hB]]+\cdots
   \end{align*}
-  Solving each row provides the same answer, namely, $v_1^{(2)}=-iv_1^{(1)}$. That implies that replacing this results gives:
-  \begin{align}
-    \bm{v}_1=\begin{pmatrix}
-    v_1^{(1)}\\v_1^{(2)}
-    \end{pmatrix}=\begin{pmatrix}
-      v_1^{(1)}\\-iv_1^{(1)}
-    \end{pmatrix}=v_1^{(1)}\begin{pmatrix}
-      1\\-i
-    \end{pmatrix}\Longrightarrow\bm{v}_1=\begin{pmatrix}
-      1\\-i
-    \end{pmatrix}.
-  \end{align}
-  %
-  \item For $\lambda_2=1$, we have
+  In this case, $\hA=\alpha^*\ha-\alpha\ha^\dagger$ and $\hB=\ha$. The first two commutators are:
   \begin{align*}
-    (\bm{M}-\lambda_2\bm{I})\bm{v}_2&=\bm{0}\\
-    (\bm{M}-\bm{I})\bm{v}_2&=\\
-    \left(\begin{pmatrix}
-      0&-i\\i&0
-    \end{pmatrix}-\begin{pmatrix}
-      1&0\\0&1
-    \end{pmatrix}\right)\bm{v}_2&=\\
-    \begin{pmatrix}
-      -1&-i\\i&-1
-    \end{pmatrix}\begin{pmatrix}
-    v_2^{(1)}\\v_2^{(2)}
-    \end{pmatrix}&=\\
-    \begin{pmatrix}
-      -1v_2^{(1)}-iv_2^{(2)}\\
-      iv_2^{(1)}-1v_2^{(2)}
-    \end{pmatrix}&=\begin{pmatrix}
-      0\\0
-    \end{pmatrix}
+    [\hA,\hB]&=[(\alpha^*\ha-\alpha\ha^\dagger),\ha]=\alpha^*[\ha,\ha]-\alpha[\ha^\dagger,\ha]=\alpha,\\
+    [\hA,[\hA,\hB]]&=[(\alpha^*\ha-\alpha\ha^\dagger),\alpha]=0,\\
+    &\vdots
   \end{align*}
-  Solving each row yields $v_2^{(2)}=iv_2^{(1)}$. In this case, the eigenvector is:
-  \begin{align}
-    \bm{v}_2=\begin{pmatrix}
-    v_2^{(1)}\\v_2^{(2)}
-    \end{pmatrix}=\begin{pmatrix}
-      v_2^{(1)}\\iv_2^{(1)}
-    \end{pmatrix}=v_2^{(2)}\begin{pmatrix}
-      1\\i
-    \end{pmatrix}\Longrightarrow\bm{v}_2=\begin{pmatrix}
-      1\\i
-    \end{pmatrix}.
-  \end{align}
-\end{itemize}
-To give unitary normalized eigenvectors, we compute the square root of their inner product with themselves:
-\begin{align*}
-  [\bm{v}_1^\dagger\cdot\bm{v}_1]^{1/2}=\left[\begin{pmatrix}
-    1&i
-  \end{pmatrix}\cdot\begin{pmatrix}
-    1\\-i
-  \end{pmatrix}\right]^{1/2}=\sqrt{2},\quad\text{and}\quad
-  [\bm{v}_2^\dagger\cdot\bm{v}_2]^{1/2}=\left[\begin{pmatrix}
-    1&-i
-  \end{pmatrix}\cdot\begin{pmatrix}
-    1\\i
-  \end{pmatrix}\right]^{1/2}=\sqrt{2}.
-\end{align*}
-We thus use each normalization factor to divide the respective eigenvector, so that we finally have:
-\begin{align*}
-  \bm{v}\in\{\bm{v}_1,\bm{v}_2\}=\left\{\frac{1}{\sqrt{2}}\begin{pmatrix}
-  1\\-i\end{pmatrix},\frac{1}{\sqrt{2}}\begin{pmatrix}
-  1\\i\end{pmatrix}\right\}.
-\end{align*}
-
-\section{Exercise 11 (Done)} 
-The norm of the given complex matrix is obtained as the square root of the inner product of the complex conjugate of the matrix times its
-original form, as follows
-\begin{align*}
-  \|\bm{v}\|=[\bm{v}^\dagger\cdot\bm{v}]^{1/2}=\left[
-    \begin{pmatrix}
-      -3&-4i
-    \end{pmatrix}\cdot\begin{pmatrix}
-      -3\\4i
-    \end{pmatrix}
-  \right]^{1/2}=[(-3)(-3)-(4i)(4i)]^{1/2}=[9+16]^{1/2}=\sqrt{25}=5.
-\end{align*}
-
-
-
-\section{Exercise 12 (Done)}
-Given $\bm{M}$ and $\bm{v}$, the product $\bm{M}\bm{v}$ is computed as follows:
-\begin{align*}
-  \bm{M}\cdot\bm{v}=\begin{pmatrix}
-    1&0&4\\0&2&1\\3&2&0
-  \end{pmatrix}_{\textcolor{blue}{3}\times\textcolor{red}{3}}\cdot\begin{pmatrix}
-  4\\0\\1
-  \end{pmatrix}_{\textcolor{red}{3}\times1}=\begin{pmatrix}
-  1\cdot4+0\cdot0+4\cdot1\\0\cdot4+2\cdot0+1\cdot1\\3\cdot4+2\cdot0+0\cdot1
-  \end{pmatrix}_{\textcolor{blue}{3}\times1}=\begin{pmatrix}
-  8\\1\\12
-  \end{pmatrix}_{\textcolor{blue}{3}\times1}.
-\end{align*}
-The dimension was explicitly indicated to show how the result takes place.
-
-
-
-\section{Exercise 13 (Done)}
-The sketch of the function $y(x)=e^{-x^2/a^2}$ is shown in Figure \ref{fig:plotex13_a} while in figure \ref{fig:plotex13_b} 
-we plot three functions corresponding to $a\in\{1,2,3\}$.
-\begin{figure}[htbp]
-  \centering
-  \begin{subfigure}{.45\columnwidth}
-    \centering
-    \begin{circuitikz}[scale=1,xscale=0.5]
-    \def\aa{1}
-    \draw[arrow](-7,0)--(7,0)node[below]{$x$};
-    \draw[arrow](0,0)--(0,2)node[right]{$f(x)$};
-    \draw[very thick,NavyBlue,domain=-6:6,samples=100] plot(\x,{ exp( -(\x*\x)/\aa^2 ) });
-    \draw(\aa,.1)--(\aa,-.1)node[below]{$a$}(-\aa,.1)--(-\aa,-.1)node[below]{$-a$}(.1,1)--(-.1,1)node[above left]{$1$};
-  \end{circuitikz}
-  \caption{General plot of $f(x)=e^{-x^2/a^2}$.}
-  \label{fig:plotex13_a}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{.45\columnwidth}
-    \centering
-    \begin{circuitikz}[scale=1,xscale=0.5]
-      \def\aa{1}
-      \def\ab{2}
-      \def\ac{3}
-      \draw[arrow](-7,0)--(7,0)node[below]{$x$};
-      \draw[arrow](0,0)--(0,2)node[right]{$f(x)$};
-      \draw[very thick,NavyBlue,domain=-6:6,samples=100] plot(\x,{ exp( -(\x*\x)/\aa^2 ) });
-      \draw[very thick,Black,domain=-6:6,samples=100] plot(\x,{ exp( -(\x*\x)/\ab^2 ) });
-      \draw[very thick,OliveGreen,domain=-6:6,samples=100] plot(\x,{ exp( -(\x*\x)/\ac^2 ) });
-      \draw(\aa,.1)--(\aa,-.1)node[below]{\small$\aa$}(-\aa,.1)--(-\aa,-.1)node[below]{\small$-\aa$}
-      (\ab,.1)--(\ab,-.1)node[below]{\small$\ab$}(-\ab,.1)--(-\ab,-.1)node[below]{\small$-\ab$}
-      (\ac,.1)--(\ac,-.1)node[below]{\small$\ac$}(-\ac,.1)--(-\ac,-.1)node[below]{\small$-\ac$}
-      (.1,1)--(-.1,1)node[above left]{$1$}
-      (5,1)node[align=center]{$\textcolor{NavyBlue}{a=1}$\\$\textcolor{Black}{a=2}$\\$\textcolor{OliveGreen}{a=3}$};
-    \end{circuitikz}
-    \caption{Evaluation of $a\in\{1,2,3\}$.}
-    \label{fig:plotex13_b}
-  \end{subfigure}
-\caption{The function $f(x)=e^{-x^2/a^2}$ belongs to the so-called normal distribution.}
-\label{fig:plotex13}
-\end{figure}
-
-This well-known function correspond to the \emph{Gaussian} or \emph{normal} distribution. The general 
-expression is:
-\begin{align}
-  f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}},
-  \label{eq:gaussianex13}
-\end{align}
-where $\mu$ is the mean value and $\sigma$ the standard deviation. Comparing equation \eqref{eq:gaussianex13} with the 
-function of the problem allows to identify the parameters $(\mu,\sigma^2)$:
-\begin{align}
-  \mu=0,\quad\text{and}\quad\sigma^2=\frac{a^2}{2}.
-\end{align}
-The first parameter fhist horizontally the function, while the second control the dispersion of width of the bell shape. 
-Figure \ref{fig:plotex13_b} illustrates this effect as $a$ is increased.
-%%
-\section{Exercise 14 (Done)}
-The sketch of the function $f(t)=\sin^2(\frac{\Omega t}{2})$ is shown in Figure \ref{fig:plotex14}.
-\begin{figure}[htbp]
-  \centering
-  \begin{circuitikz}[scale=1,xscale=0.5]
-    \def\Om{1}
-    \draw[arrow](0,0)--({6*pi/\Om+1},0)node[below]{$t$};
-    \draw[arrow](0,0)--(0,2)node[right]{$f(t)$};
-    \draw[very thick,NavyBlue,domain=0:{6*pi/\Om},samples=100] plot(\x,{ (sin(deg(\Om*\x/2)) )^2 });
-    \draw[very thick,dashed,NavyBlue,domain=-{pi/\Om}:0,samples=10] plot(\x,{ (sin(deg(\Om*\x/2)) )^2 });
-    \draw(0,.1)--(0,-.1)node[below]{0}({2*pi/\Om},.1)--({2*pi/\Om},-.1)node[below]{$\frac{2\pi}{\Omega}$}
-    ({4*pi/\Om},.1)--({4*pi/\Om},-.1)node[below]{$\frac{4\pi}{\Omega}$}
-    (.1,1)--(-.1,1)node[left]{$1$};
-  \end{circuitikz}
-  \caption{Plot of the function $f(t)=\sin^2(\frac{\Omega t}{2})$.}
-  \label{fig:plotex14}
-\end{figure}
-
-The behavior is oscilatory as a simple sinusoidal function. The period of $f(t)$ is  
-\begin{align*}
-  \frac{2\pi}{T}t=\frac{\Omega}{2}t\longrightarrow T=\frac{4\pi}{\Omega}.
-\end{align*}
-The ceros of the function are the same of its unsquared version $\sin(\frac{\Omega t}{2})$, which are obtained through
-\begin{align*}
-  \sin\left(\frac{\Omega t}{2}\right)&=0/\sin^{-1}(\cdot)\\
-  \frac{\Omega t_k}{2}&=k\pi,\quad k\in\mathbb{Z}\\
-  t_k&=\frac{2k\pi}{\Omega},\quad k\in\mathbb{Z}.
-\end{align*} 
-This can also be obtained by using trigonometric identities.
-With respect to the output values, the function oscilates in the range $f(t)\in[0,1]$. The clapped
-range is due to the square $(\cdot)^2$ that mirrors the sinusoidal where it is negative to a positive value.
-In fact, 
-\begin{align*}
-  -1\leq&\sin(\cdot)\leq1\\
-  -1\leq\sin(\cdot)\leq0&\cup0\leq\sin(\cdot)\leq1\bigr/(\cdot)^2\\
-  (-1)^2\leq\sin^2(\cdot)\leq0^2&\cup0^2\leq\sin^2(\cdot)\leq1^2\\
-  0\leq\sin^2(\cdot)\leq1&\cup0\leq\sin^2(\cdot)\leq1^2\\
-  0\leq&\sin^2(\cdot)\leq1.
-\end{align*}
-
-%%
-\section{Exercise 15 (Done)}
-Given the the integral $\int_{-\infty}^\infty e^{-u^4}\;du=1.81\pm0.01$, we have to transform the asked integral to this form through
-the proper change of variable. It seems that $u=2^{1/4}x/a$ is a suitable substitution, with $dx=adx/2^{1/4}$. Using this 
-the integral becomes:
-\begin{align*}
-  \int^\infty_{-\infty}e^{-2x^4/a^4}\;dx=\int_{-\infty}^\infty e^{-u^4}\left(\frac{a\;dx}{2^{1/4}}\right)=\frac{a}{2^{1/4}}\cancelto{1.81\pm0.01}{\int_{-\infty}^{\infty}e^{-u^4}\;du}=\frac{a}{2^{1/4}}(1.81\pm0.01).
-  \frac{}{}.
-\end{align*}
-Substituting $a=10^{-6}\;m$ and plug in this result in the following statement
-\begin{align}
-  1=A^2\int^\infty_{-\infty}e^{-2x^4/a^4}\;dx=A^2\frac{10^{-6}}{2^{1/4}}(1.81\pm0.01)
-\end{align}
-allow us to solve for $A$:
-\begin{align}
-  A=\sqrt{\frac{2^{1/4}}{10^{-6}(1.81\pm0.01)}}\;m^{1/2}.
-\end{align}
-The units of $A$ is $m^{-1/2}$ due to the fact that the final result must be adimensional and the integral has units of meters $m$ given by the differential
-element $dx$, so that
-\begin{align}
-  [-]=[A^2]\cdot[m]\longrightarrow [A]=[m]^{-1/2}.
-\end{align}
-On the other hand, the uncertaintly given by the range can be handled by considering each case, where $+$ will yields the minimum value while $-$ the maximum:
-\begin{align}
-  \left.\begin{array}{l}
-  A_{min}=\sqrt{\cfrac{2^{1/4}}{10^{-6}(1.81+0.01)}}=808.338\;m^{-1/2}\\
-  A_{max}=\sqrt{\cfrac{2^{1/4}}{10^{-6}(1.81-0.01)}}=812.817\;m^{-1/2}
-  \end{array}\right\}A\in[808.338,812.817]\;m^{1/2}.
-\end{align} 
-
-
-%%
-\section{Exercise 16 (Done)}
-Given the function $f(x)=x^2/a$, where $x$ and $a$ has units of meters $m$, then the function has units of $m$.
-The area required in integrated along a distance from $0\;m$ to $b=2\;m$. The integration adds the units of the differential
-which in this case is units of meters $m$. Therefore, the value of the area along with its unit is
-\begin{align}
-  \int_0^2\frac{x^2}{4}dx=\left.\frac{x^3}{12}\right|_0^2=\frac{2}{3}\;m^2.
-\end{align}
-The integration is the same as multipling the function by the differential, so dimensionally we have
-\begin{align}
-  [m]\cdot[m]=[m^2].
-\end{align}
-
-%%
-\section{Exercise 17 (Done)}
-Let be $\omega\in\mathbb{C}$, obtaining the cube-root of $1$ is the same as solving the equation $\omega^3=1$.
-If $\omega$ is expressed in polar form, we have
-\begin{align*}
-  \omega^3\equiv\rho^3e^{i3\theta}\equiv\rho^3(\cos3\theta+i\sin3\theta)=1.
-\end{align*}
-The radius $\rho$ is easy to acquire if the second equality with the last one are compared. Therefore,
-\begin{align*}
-  \rho^3e^{i3\theta}=1e^{i0}\Longrightarrow\rho=1.
-\end{align*}
-In doing the same with the third and last equations we have the following relations
-\begin{align*}
-  \rho^3\cos3\theta=1\quad\text{and}\quad\rho^3\sin3\theta=0.
-\end{align*}
-From the sine equation, we can formulate the $\theta$ values:
-\begin{align*}
-  \sin3\theta=0/\sin^{-1}(\cdot)\Longrightarrow \theta_k=\frac{k\pi}{3},\quad k\in\{0,1,2\}.
-\end{align*}
-The $k$ has been restricted to the first three roots desired.
-Using $\rho$ and $\theta$ obtained allows to express the three cube-roots of $1$ as
-\begin{align}
-  \begin{array}{rl}
-    \omega_0&=1\left(\cos\frac{2\cdot0\cdot\pi}{3}+i\sin\frac{2\cdot0\cdot\pi}{3}\right)=1+i0\\
-    \omega_1&=1\left(\cos\frac{2\cdot1\cdot\pi}{3}+i\sin\frac{2\cdot1\cdot\pi}{3}\right)=-\frac{1}{2}+i\frac{\sqrt{3}}{2}\\
-    \omega_2&=1\left(\cos\frac{2\cdot2\cdot\pi}{3}+i\sin\frac{2\cdot2\cdot\pi}{3}\right)=-\frac{1}{2}-i\frac{\sqrt{3}}{2}\\
-  \end{array}
-\end{align}
-
-The principal three cube-roots obtained above are ploted in the complex plane as shown in figure \ref{fig:ex17}.
-\begin{figure}[htbp]
-    \centering
-    \begin{circuitikz}[scale=1]
-    \draw[arrow](-2,0)--(2,0)node[below]{$\text{Re}(z)$};
-    \draw[arrow](0,-2)--(0,2)node[right]{$\text{Im}(z)$};
-    \draw[arrow,very thick,NavyBlue](0:0)--(0:1)node[above right]{$\omega_0$};
-    \draw[arrow,very thick,NavyBlue](0:0)--(120:1)node[above left]{$\omega_1$};
-    \draw[arrow,very thick,NavyBlue](0:0)--(240:1)node[below left]{$\omega_2$};
-    \draw[black](0,0)+(0:1)arc[start angle=0,end angle=360,radius=1](1,1)node[above right]{$\rho=1$}; 
-    \end{circuitikz}
-    \caption{First three cube-roots of $1$ in the complex plane.}
-    \label{fig:ex17}
-\end{figure}
-
-
+  Now, we can express the displacement operator as:
+  \begin{align*}
+    \tilde{a}&\D^\dagger(\alpha)\ha\D(\alpha)=e^{\alpha^*\ha-\alpha\ha^\dagger}\ha e^{-(\alpha^*\ha-\alpha\ha^\dagger)}=\ha+\alpha,\quad\text{and}\\
+    \tilde{a}^\dagger&=\D^\dagger(\alpha)\ha^\dagger\D(\alpha)=\ha^\dagger+\alpha^*.
+  \end{align*}
+  Application of both in $\ket{0}$ (just to test them) yields:
+  \begin{align*}
+    \tilde{a}\ket{0}=(\ha+\alpha)\ket{0}=\alpha\ket{0},\quad\text{and}\quad\tilde{a}^\dagger\ket{0}=(\ha^\dagger+\alpha^*)\ket{0}=\ket{1}+\alpha^*\ket{0}.
+  \end{align*}
+  \item We use algabra of operators and the fact that the coherent state $\ket{\alpha}$ is got from $\ket{0}$ by appliying a displacement operator $\D(\alpha)$:
+  \begin{align*}
+    \braket{\hat{X}_1}&=\frac{1}{2}\braket{\alpha|(\ha+\ha^\dagger)|\alpha}\\
+    &=\frac{1}{2}\braket{0|\D^\dagger(\alpha)(\ha+\ha^\dagger)\D(\alpha)|0}\\
+    &=\frac{1}{2}\left[\braket{0|\D^\dagger(\alpha)\ha\D(\alpha)|0}+\braket{0|\D^\dagger(\alpha)\ha^\dagger\D(\alpha)|0}\right]\\
+    &=\frac{1}{2}\left[\braket{0|\tilde{a}|0}+\braket{0|\tilde{a}^\dagger|0}\right]\\
+    &=\frac{1}{2}\left[\braket{0|(\ha+\alpha)|0}+\braket{0|(\ha^\dagger+\alpha^*)|0}\right]\\
+    &=\frac{1}{2}\left[\braket{0|\ha|0}+\alpha+\braket{0|\ha^\dagger|0}+\alpha^*\right]\\
+    &=\frac{1}{2}\left[\alpha+\alpha^*\right]\\
+    \braket{\hat{X}_1}&=\re{\alpha}.
+  \end{align*}
+  For $\hat{X}_2$, and using the developmente from above:
+  \begin{align*}
+    \braket{\hat{X}_2}&=\frac{1}{2i}\left[\braket{0|(\ha+\alpha)|0}-\braket{0|(\ha^\dagger+\alpha^*)|0}\right]\\
+    &=\frac{1}{2i}\left[\braket{0|\ha|0}+\alpha-\braket{0|\ha^\dagger|0}-\alpha^*\right]\\
+    &=\frac{1}{2i}\left[\alpha-\alpha^*\right]\\
+    \braket{\hat{X}_2}&=\im{\alpha}.
+  \end{align*}
+  For the uncertainties, we now need to get the mean value of $\hat{X}_1^2$ and $\hat{X}_2^2$, with the analogous process:
+  \begin{align*}
+    \braket{\hat{X}_1^2}=&\frac{1}{4}\braket{0|\D^\dagger(\alpha)[\ha+\ha^\dagger]^2\D(\alpha)|0}\\
+    =&\frac{1}{4}\bra{0}\left[\D^\dagger(\alpha)[\ha^2+\ha\ha^\dagger+\ha^\dagger\ha+\ha^{\dagger2}]\D(\alpha)\right]\ket{0}\\
+    =&\frac{1}{4}\bra{0}\left[\D^\dagger\ha^2\D(\alpha)+2\D^\dagger(\alpha)\ha^\dagger\ha\D(\alpha)+1+\D^\dagger(\alpha)\ha^{\dagger2}\D(\alpha)\right]\ket{0}\\
+    =&\frac{1}{4}\bra{0}\left[(\D^\dagger\ha\D)(\D^\dagger\ha\D)+2(\D^\dagger\ha^\dagger\D)(\D^\dagger\ha\D)+1+(\D^\dagger\ha^\dagger\D)(\D^\dagger\ha^\dagger\D)\right]\ket{0}\\
+    =&\frac{1}{4}\bra{0}\left[(\ha+\alpha)^2+2(\ha^\dagger+\alpha^*)(\ha+\alpha)+1+(\ha^\dagger+\alpha^*)^2\right]\ket{0}\\
+    =&\frac{1}{4}[\ha^2+2\alpha\ha+\alpha^2+2\ha^\dagger\ha+2\ha^\dagger\alpha+2\alpha^*\ha+2|\alpha|^2+1+\ha^{\dagger2}+2\alpha^*\ha^\dagger+\alpha^{*2}]\\
+    \braket{\hat{X}_1^2}=&\frac{1}{4}\left[(\alpha+\alpha^*)^2+1\right].
+  \end{align*}
+  Then,
+  \begin{align*}
+    \Delta\hat{X}_1&=\sqrt{\braket{\hat{X}^2_1}-\braket{\hat{X}_1}^2}\\
+    &=\sqrt{\frac{1}{4}\left[(\alpha+\alpha^*)^2+1\right]-\frac{1}{4}(\alpha+\alpha^*)^2}\\
+    \Delta\hat{X}_1&=\frac{1}{2}.
+  \end{align*}
+  The same procedure is done for the uncertainty of $\hat{X}_2$:
+  \begin{align*}
+    \braket{\hat{X}_2}&=\frac{1}{4}\bra{0}\left[(\D^\dagger\ha\D)(\D^\dagger\ha\D)-2(\D^\dagger\ha^\dagger\D)(\D^\dagger\ha\D)-1+(\D^\dagger\ha^\dagger\D)(\D^\dagger\ha^\dagger\D)\right]\ket{0}\\
+    &=-\frac{1}{4}\bra{0}\left[(\ha+\alpha)^2-2(\ha^\dagger+\alpha^*)(\ha+\alpha)-1+(\ha^\dagger+\alpha^*)^2\right]\ket{0}\\
+    &=-\frac{1}{4}[\ha^2+2\alpha\ha+\alpha^2-2\ha^\dagger\ha-2\ha^\dagger\alpha-2\alpha^*\ha-2|\alpha|^2-1+\ha^{\dagger2}+2\alpha^*\ha^\dagger+\alpha^{*2}]\\
+    \braket{\hat{X}_2^2}&=\frac{1}{4}\left[1-(\alpha-\alpha^*)^2\right].
+  \end{align*}
+  Then,
+  \begin{align*}
+    \Delta\hat{X}_2&=\sqrt{\braket{\hat{X}^2_2}-\braket{\hat{X}_2}^2}\\
+    &=\sqrt{\frac{1}{4}[1-(\alpha-\alpha^*)^2]+\frac{1}{4}(\alpha-\alpha^*)^2}\\
+    \Delta\hat{X}_2&=\frac{1}{2}.
+  \end{align*}
+\end{enumerate}
 
 
 
