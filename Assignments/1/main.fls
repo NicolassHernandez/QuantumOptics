@@ -449,12 +449,18 @@ INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
 INPUT C:\Users\irisp\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\main.bbl
+INPUT .\main.bbl
+INPUT main.bbl
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
+INPUT C:\Users\irisp\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\irisp\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
 INPUT C:\Users\irisp\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\irisp\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\irisp\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
@@ -487,3 +493,5 @@ INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
 INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

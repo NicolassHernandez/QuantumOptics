@@ -33,11 +33,14 @@
 \newcommand{\hB}{\hat{B}}
 \newcommand{\hC}{\hat{C}}
 \newcommand{\ha}{\hat{a}}
-\newcommand{\hn}{\bm{\hat{n}}}
+\newcommand{\hn}{\hat{n}}
+\newcommand{\hH}{\hat{H}}
+\newcommand{\hN}{\hat{N}}
 \newcommand{\hr}{\bm{\hat{r}}}
-\newcommand{\hx}{\bm{\hat{x}}}
-\newcommand{\hy}{\bm{\hat{y}}}
-\newcommand{\hz}{\bm{\hat{z}}}
+\newcommand{\hx}{\hat{x}}
+\newcommand{\hp}{\hat{p}}
+\newcommand{\hy}{\hat{y}}
+\newcommand{\hz}{\hat{z}}
 \newcommand{\laplace}[1]{\mathscr{L}\left[#1\right]}
 \newcommand{\ilaplace}[1]{\mathscr{L}^{-1}\left[#1\right]}
 \newcommand{\fourier}[1]{\mathscr{F}\left[#1\right]}
@@ -54,19 +57,13 @@
 \usepackage[margin=0.8in,top=1in,bottom=1in]{geometry}
 %%%%%
 \begin{filecontents*}{refs.bib}
-@book{bornwolf,
-  author    = {Born, M. and Wolf, E.},
-  title     = {Principles of Optics},
-  publisher = {Pergamon Press},
-  edition   = {7},
-  year      = {1999}
-}
-@book{hecht,
-  author    = {Hecht, E.},
-  title     = {Optics},
-  publisher = {Addison-Wesley},
-  edition   = {5},
-  year      = {2016}
+@article{cohen1986quantum,
+  title={Quantum mechanics, volume 1},
+  author={Cohen-Tannoudji, Claude and Diu, Bernard and Laloe, Frank},
+  journal={Quantum Mechanics},
+  volume={1},
+  pages={898},
+  year={1986}
 }
 \end{filecontents*}
 %
@@ -77,7 +74,7 @@
 %
 \title{\textbf{\assignment}\\\course\\{\Large\institution}}
 \author{\autor}
-\date{\today\\Total time: 12 hours}
+%\date{\today\\Total time: 12 hours}
 %
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 \fancypagestyle{mainstyle}{
@@ -96,7 +93,67 @@
 \maketitle
 %%
 \section*{Exercise 1}
-\begin{enumerate}[itemsep=0pt,topsep=0pt]
+The Hamiltonian in position space of the quantum harmonic oscillator is:
+\begin{align*}
+  \hH=\frac{\hp^2}{2m}+\frac{1}{2}m\omega^2\hx^2,\quad[\hx,\hp]=i\hbar.
+\end{align*}
+Defining the \emph{ladder operators}
+\begin{align*}
+  \begin{array}{l}
+    \ha=\dfrac{1}{\sqrt{2}}\left(\dfrac{\hx}{\sigma}+i\dfrac{\sigma\hp}{\hbar}\right)\\
+    \ha^\dagger=\dfrac{1}{\sqrt{2}}\left(\dfrac{\hx}{\sigma}-i\dfrac{\sigma\hp}{\hbar}\right)
+  \end{array},\quad\text{with}\quad
+  \begin{array}{l}
+    \hx=\dfrac{\sigma}{\sqrt{2}}(\ha^\dagger+\ha)\\
+    \hp=\dfrac{i\hbar}{\sigma\sqrt{2}}(\ha^\dagger-\ha)
+  \end{array}
+\end{align*},
+with $\sigma$ the oscillation length 
+\begin{align*}
+  \sigma=\sqrt{\frac{\hbar}{m\omega}},
+\end{align*}
+allow us to express the Hamiltonian in a simpler form. First, we notice that the commutation of $\hx$ and $\hp$ is inherited for $\ha$ and $\ha^\dagger$:
+\begin{align*}
+  [\ha,\ha^\dagger]=\frac{1}{2}\left[\frac{\hx}{\sigma}+i\frac{\sigma\hp}{\hbar},\frac{\hx}{\sigma}-i\frac{\sigma\hp}{\hbar}\right]
+  =\frac{1}{2}\left(-\frac{2i}{\hbar}[\hx,\hp]\right)
+  =-\frac{i}{\hbar}[\hx,\hp]
+  =-\frac{i}{\hbar}(i\hbar)
+  =1.
+\end{align*}
+If we replace the $\hx,\hp$ in terms of $\ha,\ha^\dagger$ in the Hamiltonian, we have:
+\begin{align*}
+  \hH&=\frac{1}{2m}\left[-\frac{\hbar^2}{2\sigma^2}(\ha^\dagger-\ha)^2\right]+\frac{1}{2}m\omega^2\left[\frac{\sigma^2}{2}(\ha^\dagger+\ha)^2\right]\\
+  &=\frac{\hbar\omega}{2}\left[\ha^{\dagger2}+\ha^\dagger\ha+\ha\ha^\dagger+\ha^2-\ha^{\dagger2}+\ha^\dagger\ha+\ha\ha^\dagger-\ha^2\right]\\
+  &=\frac{\hbar\omega}{2}\left[2(\ha^\dagger\ha+\ha\ha^\dagger)\right]\\
+  &=\hbar\omega(\ha^\dagger\ha+\ha^\dagger\ha+1)\\
+  &=\hbar\omega\left(\ha^\dagger\ha+\frac{1}{2}\right)\\
+  \hH&=\hbar\omega\left(\hN+\frac{1}{2}\right),
+\end{align*}
+where $\hN=\ha^\dagger\ha$ is the \emph{number operator}. If we know the eigenequation of $\hN$ we automatically know the eigenequation of $\hH$. 
+Assuming the following equation for $\hN$, then:
+\begin{align*}
+  \hN\ket{n}=n\ket{n}\Longrightarrow\hH\ket{n}=\left(n+\frac{1}{2}\right)\ket{n}.
+\end{align*}
+This means that the energy engenvalues are 
+\begin{align*}
+  E_n=\left(n+\frac{1}{2}\right)\hbar\omega.
+\end{align*}
+The nature of $n$ needs to be proved. First, we compute the commutator of $\hN$ with $\ha,\ha^\dagger$:
+\begin{align*}
+  [\hN,\ha]&=[\ha^\dagger\ha,\ha]=\ha^\dagger[\ha,\ha]+[\ha^\dagger,\ha]\ha=-\ha,\\
+  [\hN,\ha^\dagger]&=[\ha^\dagger\ha,\ha^\dagger]=\ha^\dagger[\ha,\ha^\dagger]+[\ha^\dagger,\ha^\dagger]\ha=\ha^\dagger.
+\end{align*}
+Using these relations, we can test some actions on $\ket{n}$:
+\begin{align*}
+  \hN\ha^\dagger\ket{n}&=([\hN,\ha^\dagger]+\ha^\dagger\hN)\ket{n}=(\ha^\dagger+\ha^\dagger\hN)\ket{n}=(\ha^\dagger+\ha^\dagger n)\ket{n}=(n+1)\ha^\dagger\ket{n},\\
+  \hN\ha\ket{n}&=([\hN,\ha]+\ha\hN)\ket{n}=(-\ha+\ha\hN)\ket{n}=(\ha n-\ha)\ket{n}=(n-1)\ha\ket{n}.
+\end{align*}
+This imply that $\ha^\dagger\ket{n}$ and $\ha\ket{n}$ are also eigenkets of $\hN$, with eigenvalue increased and decreased by one, respectively.
+With this, we conclude that $n$ must be integer so that $\hN$ and therefore $\hH$ are quantized. A more rigurous proof is given by \cite{cohen1986quantum}.
+
+%%
+\section*{Exercise 2}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,label=\alph*)]
   \item Ill use the definition of the E- and B-fields in terms of the vector potential.
   \begin{align*}
     \bE=-\partial_t\bA,\quad\text{and}\quad\bB=\nabla\times\bA.
@@ -116,10 +173,6 @@
   \item sagasg
 \end{enumerate}
 %%
-\section*{Exercise 2}
-
-%%
-
 \section*{Exercise 3}
 \begin{enumerate}[itemsep=0pt,topsep=0pt,label=\alph*)]
   \item We can simplify the problem using the BCH formula
@@ -134,7 +187,7 @@
   \end{align*}
   Now, we can express the displacement operator as:
   \begin{align*}
-    \tilde{a}&\D^\dagger(\alpha)\ha\D(\alpha)=e^{\alpha^*\ha-\alpha\ha^\dagger}\ha e^{-(\alpha^*\ha-\alpha\ha^\dagger)}=\ha+\alpha,\quad\text{and}\\
+    \tilde{a}&=\D^\dagger(\alpha)\ha\D(\alpha)=e^{\alpha^*\ha-\alpha\ha^\dagger}\ha e^{-(\alpha^*\ha-\alpha\ha^\dagger)}=\ha+\alpha,\quad\text{and}\\
     \tilde{a}^\dagger&=\D^\dagger(\alpha)\ha^\dagger\D(\alpha)=\ha^\dagger+\alpha^*.
   \end{align*}
   Application of both in $\ket{0}$ (just to test them) yields:
@@ -191,9 +244,9 @@
 \end{enumerate}
 
 
-
-%\nocite{*}
-%\bibliographystyle{plain}   % or unsrt, alpha, apalike, etc.
-%\bibliography{refs}
+\clearpage
+\nocite{*}
+\bibliographystyle{plain}   % or unsrt, alpha, apalike, etc.
+\bibliography{refs}
 
 \end{document}
