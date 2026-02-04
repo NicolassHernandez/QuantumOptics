@@ -1,0 +1,124 @@
+\section{Quantization of a single-mode field}
+
+\subsection{Fields in a cavity}
+Lets consider the following one-dimensional problem, where a cavity of length $L$ is oriented along the z-axis.
+
+A linear polarized E-field is assumed, the medium is free space, perfect conducting walls and there is no free charges nor free current. The scheme is 
+shown in figure \ref{fig:onedimensionalcavity}.
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}%y,z,x
+        \draw[arrow,thick](0,0,0)--(12,0,0)node[below]{$z$};
+        \draw[arrow,thick](0,0,0)--(0,2,0)node[right]{$z$};
+        \draw[arrow,thick](0,0,0)--(0,0,2)node[below]{$x$};
+        \draw[fill=NavyBlue!10,opacity=.5](0,1,1)--(0,-1,1)--(0,-1,-1)--(0,1,-1)--cycle;
+        \draw[very thick,NavyBlue](0,0,0)plot[domain=0:10,samples=100]({\x},{1*sin(pi*\x/10 r)},0);
+        \draw[very thick,OliveGreen](0,0,0)plot[domain=0:10,samples=100]({\x},{1*sin(pi*\x/5 r)},0);
+        \draw[very thick,YellowOrange](0,0,0)plot[domain=0:10,samples=200]({\x},{1*sin(pi*\x r)},0);
+        \draw[fill=NavyBlue!10,opacity=.5](10,1,1)--(10,-1,1)--(10,-1,-1)--(10,1,-1)--cycle;
+        \draw[|-|,thick](0,1.5,0)--(10,1.5,0)node[midway,fill=white]{$L$};
+        \draw(0,-.5,.5)node[]{$A$};
+    \end{tikzpicture}
+    \caption{One-dimensional cavity problem. Perfect conducting walls.}
+    \label{fig:onedimensionalcavity}
+\end{figure}
+
+Our goal is to find the E- and B-field inside the cavity. Maxwell's equations in this case are:
+\begin{align}
+    \shortstack{Maxwell's equations\\with free sources}\qquad\left\{
+    \begin{array}{l}
+        \nabla\cdot\bE=0\\
+        \nabla\cdot\bB=0\\
+        \nabla\times\bE=-\partial_t\bB\\
+        \nabla\times\bB=\frac{1}{c^2}\partial_t\bE
+    \end{array}\right.
+\end{align}
+The E-field will be assumed to be $\bE(z,t)=\be E(z,t)$, where $\be$ is the polarization vector. Because fields depends only on z, $\nabla=\hz\partial_z$.
+First Maxwell equation yields:
+\begin{align*}
+    \nabla\cdot\bE=\partial_z(\hz\cdot\bE)=\partial_z(\hz\cdot\be E)=0\Longrightarrow\be\cdot\hz=0.
+\end{align*}
+This implies that the polarization vector must be unitary in the transverse plane:
+\begin{align*}
+    \be=\cos\phi\hx+\sin\phi\hy.
+\end{align*}
+Third Maxwell's equation yields 
+\begin{align*}
+    \nabla\times\bE=(\hz\partial_z)\times(\be E)=(\hz\times\be)\partial_zE=-\partial_t\bB.
+\end{align*}
+Taking the curl of this equation, using Fourth Maxwell's equation and vector identities:
+\begin{align*}
+    \nabla\times(\nabla\times\bE)&=-\partial_t(\nabla\times\bB)\\
+    \nabla(\cancelto{0}{\nabla\cdot\bE})-\nabla^2\bE&=-\frac{1}{c^2}\partial_t^2\bE\\
+    -\be\partial_z^2E&=-\be\frac{1}{c^2}\partial_t^2E.
+\end{align*}
+From here, we have the E-field wave equation for this particular problem.
+\begin{align}
+    \partial_z^2E-\frac{1}{c^2}\partial_t^2E=0.
+    \label{eq:waveequation_cavity}
+\end{align}
+Before solving this equation, we need the boundary condition set by the PEC condition. We need to $\hn\times\bE=0$ on the surface. Because 
+the normal surface unit vector is $\hn=\pm\hz$, we have 
+\begin{align*}
+    \text{Boundary condition}\qquad\hn\times\bE=\hz\times(\be E)=0\Longrightarrow E(z=0,t)=E(z=L,t)=0.
+\end{align*} 
+In order to solve the PDE, we assum a product form $E(z,t)=Z(z)q(t)$. Then, by replacing in it in \eqref{eq:waveequation_cavity}:
+\begin{align*}
+    \partial_z^2[Z(z)q(t)]-\frac{1}{c^2}\partial_t^2[Z(z)q(t)]&=0\\
+    Z''(z)q(t)-\frac{1}{c^2}Z(z)\ddot{q}(t)&=\biggr/[Z(z)q(t)]^{-1}\\
+    \frac{Z''(z)}{Z(z)}&=\frac{1}{c^2}\frac{\ddot{q}(z)}{q(z)}.
+\end{align*}
+Left side depends only on $z$, while the right side only on $y$. The only way this can be true is if both are a constant, say, $-k^2$. Then,
+\begin{align*}
+    \text{Spatial and temporal differential equations}\qquad
+    \left\{\begin{array}{l}
+        \dfrac{Z''}{Z}=-k^2\longrightarrow Z''+k^2Z=0\\
+        \dfrac{1}{c^2}\dfrac{\ddot{T}}{T}=-k^2\longrightarrow\ddot{q}+\omega^2q(t)=0
+    \end{array}\right..
+\end{align*} 
+For the spatial ODE, we assume a solution of the form 
+\begin{align*}
+    Z(z)&=A\sin(kz)+B\cos(kz),\quad Z(0)=Z(L)=0.
+\end{align*}
+Setting the boundaries:
+\begin{align*}
+    Z(0)&=A\sin(0)+B\cos(0)=0\Longrightarrow B=0\\
+    Z(L)&=A\sin(kL)=0\Longrightarrow k_m=\frac{m\pi}{L},\quad m\in\mathbb{N}.
+\end{align*}
+We left the temporal ODE unsolved.
+Finally, putting all together yields the initial E-field:
+\begin{align*}
+    \bE_{\bk,\lambda}(z,t)=\be_{\lambda}\textcolor{BrickRed}{\sqrt{\frac{2\omega^2}{V\varepsilon_0}}}q_{\bk,\lambda}(t)\sin(kz),\quad k_m=\frac{m\pi}{L},\quad\omega=ck.
+    \label{eq:Efieldincavity_generalform}
+\end{align*}
+We have includnig the subscript $\lambda$ and $\bk$ to consider multiple mode $\bk$ varied with $m$ and $\lambda$. Also, the coefficient in red is for better 
+results in the future.
+
+Using Faraday's law:
+\begin{align*}
+    \bB(z,t)=(\bk\times\be_{\lambda})\frac{1}{kc^2}\sqrt{\frac{2\omega^2}{V\varepsilon_0}}\dot{q}_{\bk,\lambda}(t)\sin(kz).
+\end{align*}
+The term $\dot{q}(t)$ will play the role of a canonical momentum for a particle of unit mass, $p(t)=\dot{q}(t)$.
+%%
+\subsection{Single-mode Hamiltonian}
+The classical field energy, or Hamiltonian $H$, of the single-mode field is given by 
+\begin{align*}
+    H&=\frac{1}{2}\int\;dV\left[\varepsilon_0\bE^2+\frac{1}{\mu_0}\bB^2\right]\\
+    &=\frac{1}{2}A\int_0^L\;dz\left[\frac{2\omega^2}{V\varepsilon_0}q^2(t)\sin^2(kz)+\frac{1}{\mu_0}\frac{1}{k^2c^4}\frac{2\omega^2}{V\varepsilon_0}p^2(t)\cos^2(kz)\right]\\
+    &=\frac{A}{V}\int_0^L\;dz\left[\omega^2q^2(t)\sin^2(kz)+p^2(t)\cos^2(kz)\right]\\
+    &=\frac{1}{L}\left[\omega^2q^2(t)\frac{L}{2}+p^2(t)\frac{L}{2}\right]\\
+    H&=\frac{1}{2}\left[\omega^2q^2(t)+p^2(t)\right].
+\end{align*}
+It is apparent that a single-mode field if formally equivalent to a harmonic quantim oscillator of unit mass, where the E- and B-fields play the 
+roles of canonical position and momentum. To begin the quantization, we make $q,p$ operators $\hq,\hp$, which needs to satisfy the canonical commutation 
+relations 
+\begin{align}
+    [\hq,\hp]=i\hbar.
+\end{align}
+The EM fields with the operators are:
+\begin{align}
+    \shortstack{Quantized EM fields}\qquad\begin{array}{l}
+        \bhE_{\bk,\lambda}(z,t)=\be_{\bk,\lambda}\sqrt{\dfrac{2\omega^2}{V\varepsilon_0}}\hq(t)\sin(kz)\\
+        \bhB_{\bk,\lambda}(z,t)=(\bk\times\be_{\bk,\lambda})\dfrac{1}{kc^2}\sqrt{\dfrac{2\omega^2}{V\varepsilon_0}}\hp(t)\cos(kz)
+    \end{array}.
+\end{align}
