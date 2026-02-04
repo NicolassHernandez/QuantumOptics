@@ -28,6 +28,7 @@
 \newcommand{\bD}{\bm{D}}
 \newcommand{\bO}{\bm{0}}
 \newcommand{\br}{\bm{r}}
+\newcommand{\bk}{\bm{k}}
 \newcommand{\bR}{\bm{R}}
 \newcommand{\hA}{\hat{A}}
 \newcommand{\hB}{\hat{B}}
@@ -165,12 +166,70 @@ With this, we conclude that $n$ must be integer so that $\hN$ and therefore $\hH
     \nabla\times\bB&=\frac{1}{c^2}\partial_t\bE\\
     \nabla\times\nabla\times\bA&=\frac{1}{c^2}\partial_t(-\partial_t\bA)\\
     \nabla(\cancelto{0}{\nabla\cdot\bA})-\nabla^2\bA&=-\frac{1}{c^2}\partial_t^2\bA\\
-    \nabla^2\bA(\br,t)-\frac{1}{c^2}\partial_t^2\bA(\br,t)&=0.
+    \nabla^2\bA-\frac{1}{c^2}\partial_t^2\bA&=0.
   \end{align*}
-  \item fsfaf
-  \item asgsag
-  \item asgsa
-  \item sagasg
+  \item To show that the expression provided is a solution of the A-potential wave equation, we need to substitute it into the wave equation and have 
+  an equality. 
+  The second time-derivative is:
+  \begin{align*}
+    \partial_t\bA(z,t)&=\partial_t\left[\sum_{\bk,\lambda}e_{\bk,\lambda}[A_{\bk,\lambda}e^{-i\omega t}+A^*_{\bk,\lambda}e^{i\omega t}]\sin(kz)\right]=i\sum_{\bk,\lambda}\omega e_{\bk,\lambda}[A^*_{\bk,\lambda}e^{i\omega t}-A_{\bk,\lambda}e^{-i\omega t}]\sin(kz),\\
+    \partial^2_t\bA(z,t)&=\partial_t\left[i\sum_{\bk,\lambda}\omega e_{\bk,\lambda}[A^*_{\bk,\lambda}e^{i\omega t}-A_{\bk,\lambda}e^{-i\omega t}]\sin(kz)\right]=-\sum_{\bk,\lambda}\omega^2e_{\bk,\lambda}[A^*_{\bk,\lambda}e^{i\omega t}+A_{\bk,\lambda}e^{-i\omega t}]\sin(kz).
+  \end{align*}
+  For the laplacian, we have:
+  \begin{align*}
+    \nabla^2\bA(z,t)&=-\sum_{\bk,\lambda}k^2e_{\bk,\lambda}[A_{\bk,\lambda}e^{-i\omega t}+A^*_{\bk,\lambda}e^{i\omega t}]\sin(kz).
+  \end{align*}
+  Substituting both, and using the dispersion relation $\omega=|\bk|c$:
+  {\small
+  \begin{align*}
+    \nabla^2\bA-\frac{1}{c^2}\partial_t^2\bA&=0\\
+    -\sum_{\bk,\lambda}k^2e_{\bk,\lambda}[A_{\bk,\lambda}e^{-i\omega t}+A^*_{\bk,\lambda}e^{i\omega t}]\sin(kz)-\frac{1}{c^2}\left[-\sum_{\bk,\lambda}\omega^2_{\bk}e_{\bk,\lambda}[A^*_{\bk,\lambda}e^{i\omega t}+A_{\bk,\lambda}e^{-i\omega t}]\sin(kz)\right]&=\\
+    \sum_{\bk,\lambda}\left[e_{\bk,\lambda}[A_{\bk,\lambda}e^{-i\omega t}+A^*_{\bk,\lambda}e^{i\omega t}]\sin(kz)\left(\frac{\omega^2_{\bk}}{c^2}-k^2\right)\right]&=\\
+    \sum_{\bk,\lambda}\left[e_{\bk,\lambda}[A_{\bk,\lambda}e^{-i\omega t}+A^*_{\bk,\lambda}e^{i\omega t}]\sin(kz)\left(k^2-k^2\right)\right]&=\quad(\omega^2=|\bk|^2c^2)\\
+    0&=0.
+  \end{align*}}
+  We could also propose a standard harmonic solution, substitute it into the vector equation and impose boundary conditions. The one I did is easier. Also, I denoted 
+  $\omega_{\bk}$ to remember that $\omega$ depends on $\bk$. The dispersion relation holds for each mode $\bk$.
+  \item Assuming a x polarized vector potential
+  \begin{align*}
+    \bA(z,t)=\hx[Ae^{-i\omega t}+A^*e^{i\omega t}]\sin(kz).
+  \end{align*}
+  The E- and B-fields are:
+  \begin{align*}
+    \bE(z,t)&=-\partial_t\bA(z,t)=i\omega\hx[Ae^{-i\omega t}-A^*e^{i\omega t}]\sin(kz)\equiv2\omega|A|\hx\sin(\omega t-\phi)\sin(kz),\\
+    \bB(z,t)&=\nabla\times\bA(z,t)=\hy\partial_zA_x=\hy k[Ae^{-i\omega t}+A^*e^{i\omega t}]\cos(kz)\equiv2k|A|\hy\cos(\omega t-\phi)\cos(kz),
+  \end{align*}
+  where we have assumed a phasor form of $A$: $A=|A|e^{i\phi}$.
+  \item We use the expression from previous part. We first compute $\bE^2_{\bk,\lambda}$ and $\bB^2_{\bk,\lambda}$
+  \begin{align*}
+    \bE^2&=4\omega^2|A|^2\sin^2(\omega t-\phi)\sin^2(kz),\\
+    \bB^2&=4k^2|A|^2\cos^2(\omega t-\phi)\cos^2(kz).
+  \end{align*}
+  Putting these two in the volume integral, and recalling that 
+  \begin{align*}
+    \int_0^L\;dz\sin^2(kz)=\int_0^L\;dz\cos^2(kz)=\frac{L}{2},
+  \end{align*}
+  yields
+  \begin{align*}
+    H_\omega&=\int_0^L\;dV\left\{2\varepsilon_0\omega^2|A|^2\sin^2(\omega t-\phi)\sin^2(kz)+2\frac{k^2}{\mu_0}|A|^2\cos^2(\omega t-\phi)\cos^2(kz)\right\}\\
+    &=2\varepsilon_0\omega^2|A|^2\sin^2(\omega t-\phi)S\int_0^L\;dz\sin^2(kz)+2\frac{k^2}{\mu_0}|A|^2\cos^2(\omega t-\phi)S\int_0^L\;dz\cos^2(kz)\\
+    H_\omega&=V\left[\varepsilon_0\omega^2|A|^2\sin^2(\omega t-\phi)+\frac{k^2}{\mu_0}|A|^2\cos^2(\omega t-\phi)\right].
+  \end{align*}
+  Using the fact that $\omega=kc$, $1/\mu_0=\varepsilon_0c^2$, then $k^2/\mu_0=(\omega/c)^2(\varepsilon_0c^2)=\varepsilon_0\omega^2$, which is the same as the E-field factor term.
+  Therefore,
+  \begin{align*}
+    H_\omega=V\varepsilon_0\omega^2|A|[\sin^2(\omega t-\phi)+\cos^2(\omega t-\phi)]=\varepsilon_0V\omega^2|A|^2.
+  \end{align*}
+  \item Equating the last result with $\hbar\omega$ and solving for $A$:
+  \begin{align*}
+    \varepsilon_0V\omega^2|A|^2&=\hbar\omega\\
+    |A|&=\sqrt{\frac{\hbar}{\varepsilon_0 V\omega}}.
+  \end{align*}
+  Its phase, $\phi$, remains unknown, but it acts as a global phase factor so it has no physical meaning. The E- and B-fields are:
+  \begin{align*}
+    \bE(z,t)&=2\sqrt{\frac{\hbar\omega}{\varepsilon_0V}}\hx\sin(\omega t-\phi)\sin(kz),\\
+    \bB(z,t)&=\frac{2}{c}\sqrt{\frac{\hbar\omega}{\varepsilon_0V}}\hy\cos(\omega t-\phi)\cos(kz).
+  \end{align*}
 \end{enumerate}
 %%
 \section*{Exercise 3}
