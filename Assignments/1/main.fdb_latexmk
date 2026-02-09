@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1770173550.40234 "main.aux" "main.bbl" "main" 1770173555.27524 0
+["bibtex main"] 1770173550.40234 "main.aux" "main.bbl" "main" 1770675784.26852 0
   "./refs.bib" 1770157044 211 160453fd3927308c6aeb111605f051c1 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1770173554 265 b543afc5355f45d1bd52f2e20e53fa0f "pdflatex"
+  "main.aux" 1770675783 265 b543afc5355f45d1bd52f2e20e53fa0f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1770173551.36881 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/1/main.tex" "main.pdf" "main" 1770173555.27586 0
+["pdflatex"] 1770675781.56627 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/1/main.tex" "main.pdf" "main" 1770675784.26909 0
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1768864052 123178 2ccd746f0a4ec0e4e75a2c14b6603cde ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1756171257 40136 7003ba06b6cea7a70224e2f1036a7f49 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1728.pk" 1756171264 49100 75decf4a6256d2337b95f774a69046a5 ""
@@ -300,11 +300,11 @@
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/1/main.tex" 1770173545 16280 3c0b40a06a161f2c18fa9d6801acfa18 ""
-  "main.aux" 1770173554 265 b543afc5355f45d1bd52f2e20e53fa0f "pdflatex"
+  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/1/main.tex" 1770675781 16253 b4bf7124f90efe7122871b847002a030 ""
+  "main.aux" 1770675783 265 b543afc5355f45d1bd52f2e20e53fa0f "pdflatex"
   "main.bbl" 1770173551 227 658632eed63ede406fba0f15294b240f "bibtex main"
-  "main.out" 1770173553 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1770173545 16280 3c0b40a06a161f2c18fa9d6801acfa18 ""
+  "main.out" 1770675783 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1770675781 16253 b4bf7124f90efe7122871b847002a030 ""
   "refs.bib" 1770157044 211 160453fd3927308c6aeb111605f051c1 ""
   (generated)
   "main.aux"

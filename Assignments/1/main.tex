@@ -107,8 +107,8 @@ Defining the \emph{ladder operators}
   \begin{array}{l}
     \hx=\dfrac{\sigma}{\sqrt{2}}(\ha^\dagger+\ha)\\
     \hp=\dfrac{i\hbar}{\sigma\sqrt{2}}(\ha^\dagger-\ha)
-  \end{array}
-\end{align*},
+  \end{array},
+\end{align*}
 with $\sigma$ the oscillation length 
 \begin{align*}
   \sigma=\sqrt{\frac{\hbar}{m\omega}},
@@ -131,7 +131,7 @@ If we replace the $\hx,\hp$ in terms of $\ha,\ha^\dagger$ in the Hamiltonian, we
   \hH&=\hbar\omega\left(\hN+\frac{1}{2}\right),
 \end{align*}
 where $\hN=\ha^\dagger\ha$ is the \emph{number operator}. If we know the eigenequation of $\hN$ we automatically know the eigenequation of $\hH$. 
-Assuming the following equation for $\hN$, then:
+Assuming the following eigenequation for $\hN$, then:
 \begin{align*}
   \hN\ket{n}=n\ket{n}\Longrightarrow\hH\ket{n}=\left(n+\frac{1}{2}\right)\ket{n}.
 \end{align*}
@@ -150,7 +150,7 @@ Using these relations, we can test some actions on $\ket{n}$:
   \hN\ha\ket{n}&=([\hN,\ha]+\ha\hN)\ket{n}=(-\ha+\ha\hN)\ket{n}=(\ha n-\ha)\ket{n}=(n-1)\ha\ket{n}.
 \end{align*}
 This imply that $\ha^\dagger\ket{n}$ and $\ha\ket{n}$ are also eigenkets of $\hN$, with eigenvalue increased and decreased by one, respectively.
-With this, we conclude that $n$ must be integer so that $\hN$ and therefore $\hH$ are quantized. A more rigurous proof is given by \cite{cohen1986quantum}.
+With this, we conclude that $n$ must be integer so that $\hN$ and therefore $\hH$ are quantized. A more rigorous proof is given by \cite{cohen1986quantum}.
 
 %%
 \section*{Exercise 2}
@@ -283,9 +283,9 @@ With this, we conclude that $n$ must be integer so that $\hN$ and therefore $\hH
   \end{align*}
   Then,
   \begin{align*}
-    \Delta\hat{X}_1&=\sqrt{\braket{\hat{X}^2_1}-\braket{\hat{X}_1}^2}\\
-    &=\sqrt{\frac{1}{4}\left[(\alpha+\alpha^*)^2+1\right]-\frac{1}{4}(\alpha+\alpha^*)^2}\\
-    \Delta\hat{X}_1&=\frac{1}{2}.
+    \braket{\Delta\hat{X}_1}=\sqrt{\braket{\hat{X}^2_1}-\braket{\hat{X}_1}^2}
+    =\sqrt{\frac{1}{4}\left[(\alpha+\alpha^*)^2+1\right]-\frac{1}{4}(\alpha+\alpha^*)^2}
+    =\frac{1}{2}.
   \end{align*}
   The same procedure is done for the uncertainty of $\hat{X}_2$:
   \begin{align*}
@@ -296,9 +296,8 @@ With this, we conclude that $n$ must be integer so that $\hN$ and therefore $\hH
   \end{align*}
   Then,
   \begin{align*}
-    \Delta\hat{X}_2&=\sqrt{\braket{\hat{X}^2_2}-\braket{\hat{X}_2}^2}\\
-    &=\sqrt{\frac{1}{4}[1-(\alpha-\alpha^*)^2]+\frac{1}{4}(\alpha-\alpha^*)^2}\\
-    \Delta\hat{X}_2&=\frac{1}{2}.
+    \braket{\Delta\hat{X}_2}=\sqrt{\braket{\hat{X}^2_2}-\braket{\hat{X}_2}^2}=\sqrt{\frac{1}{4}[1-(\alpha-\alpha^*)^2]+\frac{1}{4}(\alpha-\alpha^*)^2}
+    =\frac{1}{2}.
   \end{align*}
 \end{enumerate}
 
