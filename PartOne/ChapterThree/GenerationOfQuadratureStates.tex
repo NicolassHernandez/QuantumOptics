@@ -1,0 +1,95 @@
+\section{Generation of squeezed states}
+
+The following is a scheme of a nonlinear medium. Radiation from oscillating dipoles is of different frequency as the input stimulation.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.5\columnwidth]{PartOne/ChapterThree/figures/nonlinearmedium.png}
+    \caption{Nonlinear medium}
+\end{figure}
+Nonlinear polarization induced in a medium by an E-field $\bE$ is:
+\begin{align*}
+    \bP_i=\varepsilon_0\left[\chi^{(1)}_{jk}\bE_k+\varepsilon_0\chi^{(2)}_{jkl}\bE_k\bE_l+\cdots\right].
+\end{align*}
+This polarization is for one dipole, the total would be a sum over all of them.
+Thses quantities are tensor. In particular, we have a linear and second-order polarization terms:
+\begin{align*}
+    \bP_{Lj}&=\text{Linear polarization}=\varepsilon_0\chi_{jk}^{(1)}\bE_k\\
+    \bP_{NLj}&=\text{Second-order polarization}=\varepsilon_0\chi_{jkl}^{(2)}\bE_k\bE_l.
+\end{align*}
+The interaction (dipole-field) energy density associated with the field becomes:
+\begin{align*}
+    U=-\bP\cdot\bE=-\varepsilon_0[\chi^{(1)}_{jk}\bE_k+\chi_{jkl}^{(2)}\bE_j\bE_k]\bE_l=\underbrace{-\varepsilon_0\chi^{(1)}_{jk}\bE_k\bE_l}_{U_L}+
+    \underbrace{-\varepsilon_0\chi^{(2)}_{jkl}\bE_j\bE_k\bE_l}_{U^{(2)}_{NL}\text{ (Squeezed output)}}.
+\end{align*}
+Nonlinear-Hamiltonian is therefore
+\begin{align}
+    H^{(2)}_{NL}=-\int\;dVU^{(2)}_{NL},
+\end{align}
+where the integration region is the medium.
+We will analyze the above Hamoltonian for the specific interaction where we have an incident blue photon spontaneously down-converted to two red photons.
+
+The total E-field is:
+\begin{align*}
+    \hbE_{tot}=\bE_B+\hbE,\quad\begin{array}{l}
+        \bE_B=\text{Classical blue field}\\
+        \hbE=\text{Quantized E-field}
+    \end{array}.
+\end{align*}
+Hamiltonian becomes 
+\begin{align*}
+    \hH_{NL}^{(2)}=-\varepsilon_0\int\;dV\hH^{(2)}_{jkl}(\bE_B+\hbE)_j(\bE_B+\hbE)_k(\bE_B+\hbE)_l
+\end{align*}
+For further simplification let us assume that only $H^{(2)}_{zzz}\neq0=H^{(2)}$:
+\begin{align*}
+    H_{NL}^{(2)}=-3\varepsilon_0\chi^{(2)}\int\;dVE_{Bz}\hbE_z\hbE_z,
+\end{align*}
+where 
+\begin{align*}
+    \bE_{Bz}=\hz[\mathcal{E}_Be^{i(\bk_B\cdot\br-\omega_Bt)}+\mathcal{E}^*_Be^{-i(\bk_B\cdot\br-\omega_Bt)}].
+\end{align*}
+and 
+\begin{align*}
+    \hbE_z=i\sum_{\bk}\hz\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}[\ha_{\bk}e^{i(\bk\cdot\br-\omega t)}+\ha^\dagger_{\bk}e^{-i(\bk\cdot\br-\omega t)}]
+\end{align*}
+Substituting the E-fields in the nonlinear Hamiltonian yields 
+\begin{align*}
+    \hH_{NL}^{(2)}&=-\frac{3}{2V}\varepsilon_0\chi^{(2)}\hbar\int\;dV[\mathcal{E}_Be^{i(\bk_B\cdot\br-\omega_Bt)}+\mathcal{E}^*_Be^{-i(\bk_B\cdot\br-\omega_Bt)}]\\
+    &\sum_{\bk_1}\sqrt{\omega_1}[\ha_{\bk}e^{i(\bk\cdot\br-\omega t)}+\ha^\dagger_{\bk}e^{-i(\bk\cdot\br-\omega t)}]
+    \sum_{\bk_2}\sqrt{\omega_2}[\ha_{\bk}e^{i(\bk\cdot\br-\omega t)}+\ha^\dagger_{\bk}e^{-i(\bk\cdot\br-\omega t)}].
+\end{align*}
+Consider the time-dependent terms:
+\begin{align*}
+    e^{i(\omega_B\pm\omega_1\pm\omega_2)t}\to0
+\end{align*}
+which averages to zero because they are all fast oscilatting. To get a non-zero contribution we choose $\omega_B=\omega_1+\omega_2$.
+
+Similarly, by energy conservation we have 
+\begin{align*}
+    \int\;dVe^{i(\bk_B-\bk_1-\bk_2)\cdot\br}
+\end{align*}
+For this integral to not vanish we must have $\bk_B=\bk_1+\bk_2$ which iplies \bfemph{momentum conservation}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.5\columnwidth]{PartOne/ChapterThree/figures/momentumconservation.png}
+    \caption{Momentum conservation.}
+\end{figure}
+
+This is the \bfemph{spontaneous parametric downconservsion process} (SPDC). 
+
+Thus, keeping only the terms that conserve energy and momentum:
+\begin{align*}
+    \hH_{NL}^{(2)}=-\frac{3}{2}\hbar\chi^{(2)}\sqrt{\omega_1\omega_2}\left[\mathcal{E}_B\ha^\dagger_{\bk_1}\ha^\dagger_{\bk_2}+\mathcal{E}_B^*\ha_{\bk_1}\ha_{\bk_2}\right].
+\end{align*}
+If the two modes are the same:
+\begin{align*}
+    \hH_{NL}^{(2)}=-\frac{1}{2}[\xi^*\ha^2+\xi\ha^{\dagger2}],\quad\xi=3\hbar\chi^{(2)}\omega\mathcal{E}_B.
+\end{align*}
+and 
+\begin{align*}
+    \omega_B=2\omega,\quad\bk_B=2\bk.
+\end{align*}
+The corresponding evolution operator becomes 
+\begin{align*}
+    U(t,0)=e^{-i\hH_{NL}^{(2)}t/\hbar}=e^{\frac{1}{2}[\xi^*\ha^2-\xi^*\ha^{\dagger2}]},\quad\xi=3i\chi^{(2)}\mathcal{E}_B\omega t.
+\end{align*}
+Thus starting with an initial vacuum state in the red modes the system one obtains a squeezed vacuum output.

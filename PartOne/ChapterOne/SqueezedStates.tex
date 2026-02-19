@@ -1,7 +1,7 @@
 \section{Squeezed states}
 Lets define the squeeze operator 
 \begin{align*}
-    \text{Squeezing operator}\qquad\ket{\xi,0}=\hS(\xi)\ket{0},\quad\text{with}\quad\hS(\xi)=e^{\frac{1}{2}(\xi^*\ha^2-\xi\ha^{\dagger2})},\quad\xi\in\mathbb{C}.
+    \text{Squeezing state}\qquad\ket{\xi,0}=\hS(\xi)\ket{0},\quad\text{with}\quad\hS(\xi)=e^{\frac{1}{2}(\xi^*\ha^2-\xi\ha^{\dagger2})},\quad\xi\in\mathbb{C}.
 \end{align*}
 Lets use it to compute the expectation value for the quadrature operators.
 \begin{align*}
@@ -9,17 +9,21 @@ Lets use it to compute the expectation value for the quadrature operators.
 \end{align*}
 We define displaced ladder operators as
 \begin{align*}
-    \text{Squeezing ladder operators}\qquad\tilde{a}=\hS^\dagger(\xi)\ha\hS(\xi),\quad\xi=re^{i\phi}.
+    \tilde{a}=\hS^\dagger(\xi)\ha\hS(\xi),\quad\xi=re^{i\phi}.
 \end{align*}
 Using the BCH formula 
 \begin{align*}
     e^LAe^{-L}=A+[L,A]+\frac{1}{2!}[L,[L,A]]+\cdots
 \end{align*}
 and $A=\ha$ with $L=-\frac{1}{2}(\xi^*\ha^2-\xi\ha^{\dagger2})$ allow us to express the squeezing ladder operator 
-\begin{align*}
-    \tilde{a}&=\hS^\dagger(\xi)\ha\hS(\xi)=\ha\cosh(r)-\ha^\dagger e^{i\phi}\sinh(r)\\
-    \tilde{a}^\dagger&=S(\xi)^\dagger\ha^\dagger\hS(\xi)=\ha^\dagger\cosh(r)-\ha e^{i\phi}\sinh(r).
-\end{align*}
+\begin{align}
+    \text{Squeezing ladder operators}\qquad
+    \highlight{
+    \begin{array}{l}
+        \tilde{a}=\hS^\dagger(\xi)\ha\hS(\xi)=\ha\cosh(r)-\ha^\dagger e^{i\phi}\sinh(r)\\
+        \tilde{a}^\dagger=S(\xi)^\dagger\ha^\dagger\hS(\xi)=\ha^\dagger\cosh(r)-\ha e^{i\phi}\sinh(r).
+    \end{array}}
+\end{align}
 We have used several orders. Its derivative wrt $r$ is:
 \begin{align*}
     \frac{d\ha}{dr}=\ha\sinh(r)-\ha^\dagger e^{i\phi}\cosh(r)=-e^{i\phi}\tilde{a}^\dagger,\quad\frac{d\tilde{a}^\dagger}{dr}=-e^{-i\phi}\tilde{a}.
@@ -28,7 +32,6 @@ Taking another derivative yields:
 \begin{align*}
     \frac{d^2\tilde{a}}{dr^2}=\tilde{a}.
 \end{align*}
-
 Now we can continue the expectation of the quadrature:
 \begin{align*}
     \braket{\hX_1}&=\frac{1}{2}\braket{0|(\hS^\dagger\ha\hS+\hS^\dagger\ha^\dagger\hS)|0}=\frac{1}{2}\braket{0|\left[\tilde{a}+\tilde{a}^\dagger\right]|0}\\
@@ -45,18 +48,20 @@ Similarly we can obtain the respective quantities for $\hX_2$ and the uncertaint
     \braket{\hX_1}=\braket{\hX_2}=0 \Longrightarrow
     \Delta\hX_1=\frac{e^{-r}}{2},\quad\Delta\hX_2=\frac{e^r}{2}.
 \end{align*}
-
-
+%%
 \subsection{Displaced squeezing state}
 Now,
 \begin{align*}
-    \text{Displaced squeezing state}\qquad\ket{\xi,\alpha}=\hD(\alpha)\hS(\xi)\ket{0}.
+    \shortstack{Displaced squeezing state}\qquad\ket{\xi,\alpha}=\hD(\alpha)\hS(\xi)\ket{0}.
 \end{align*}
 Now, the operators are:
-\begin{align*}
-    \tilde{a}&=\hS^\dagger(\xi)\hD^\dagger(\alpha)\ha\hD(\alpha)\hS(\xi)=\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha,\\
-    \tilde{a}^\dagger&=\hS^\dagger(\xi)\hD^\dagger(\alpha)\ha^\dagger\hD(\alpha)\hS(\xi)=\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*.
-\end{align*}
+\begin{align}
+    \shortstack{Displaced squeezing\\operator}\qquad\highlight{
+    \begin{array}{l}
+        \tilde{a}=\hS^\dagger(\xi)\hD^\dagger(\alpha)\ha\hD(\alpha)\hS(\xi)=\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha,\\
+        \tilde{a}^\dagger=\hS^\dagger(\xi)\hD^\dagger(\alpha)\ha^\dagger\hD(\alpha)\hS(\xi)=\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*.
+    \end{array}}
+\end{align}
 The expected number of photons in a displaced squeezed state is:
 \begin{align*}
     \braket{0|\tilde{a}^\dagger\tilde{a}|0}=\braket{0|[\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*][\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha]|0}=\sinh^2|\xi|+|\alpha|^2.
@@ -68,3 +73,29 @@ The expected value in the quadrature value is:
     &=\frac{1}{2}\braket{0|[\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha+\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*]|0}=\re{\alpha}.\\
     \braket{\xi,\alpha|\hX_2|\xi,\alpha}&=\im{\alpha}.
 \end{align*}
+
+On the other hand, the quadrature uncertainties are:
+\begin{align*}
+    \Delta\hX_1^2&=\braket{\xi,\alpha|\hX_1^2|\xi,\alpha}-\braket{\xi,\alpha|\hX_1|\xi,\alpha}^2=\braket{0|\hS^\dagger\hD^\dagger\hX_1\hD\hS\hS^\dagger\hD^\dagger\hX_1\hD\hS|0}-\re{\alpha}^2\\
+    &=\braket{0|\left(\frac{\tilde{a}+\tilde{a}^\dagger}{2}\right)\left(\frac{\tilde{a}+\tilde{a}^\dagger}{2}\right)|0}-\re{\alpha}^2\\
+    &=\frac{1}{4}\braket{0|[\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha+\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*]^2|0}-\re{\alpha}^2\\
+    &=\frac{1}{4}(\cosh^2(r)+\sinh^2(r)-2\cosh(r)\sinh(r)\cos\phi)+\re(\alpha)^2-\re(\alpha)^2\\
+    \Delta\hX_1^2&=\frac{1}{4}[\cosh^2(r)+\sinh^2(r)-2\cosh(r)\sinh(r)\cos(\phi)].\\
+    \Delta\hX_2^2&=\frac{1}{4}[\cosh^2(r)+\sinh^2(r)+2\cosh(r)\sinh(r)\cos(\phi)].
+\end{align*}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{.45\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterOne/figures/displacedsqueezedstate.png}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.45\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterOne/figures/displacedsqueezedstate_b.png}
+        \caption{}
+    \end{subfigure}
+    \caption{}
+\end{figure}

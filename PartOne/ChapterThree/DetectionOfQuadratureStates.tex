@@ -1,0 +1,40 @@
+\section{Detection of quadrature states}
+Modes at the beam splitter output are:
+\begin{align*}
+    \hA_1=\frac{1}{\sqrt{2}}(\ha_1+\ha_2),\quad\hA_2=\frac{1}{\sqrt{2}}(\ha_1-\ha_2).
+\end{align*}
+Detectors $D_1,D_2$ measure the intensity at each output:
+\begin{align*}
+    \braket{\hat{I}_{1,1}}=\braket{\hA^\dagger_{1,2}\hA_{1,2}}.
+\end{align*}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.5\columnwidth]{PartOne/ChapterThree/figures/homodynedetection.png}
+    \caption{Balanced homodyne detection.}
+\end{figure}
+
+In output 1, we have 
+\begin{align*}
+    I_1=\braket{\psi_1\alpha_2|\hA_{1}\hA_1|\alpha_2\Psi_1}&=\braket{\psi_1\alpha_2|\frac{\ha^\dagger_1+\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1+\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
+    \frac{1}{2}\braket{\Psi_1\alpha_2|(\ha^\dagger_1+\alpha^*)(\ha_1+\alpha)|\alpha_2\Psi_1}\\
+    &=\frac{1}{2}\braket{\Psi_1|(\ha^\dagger\ha_1+\ha_1\alpha^*+\ha^\dagger_1\alpha+|\alpha|^2)|\Psi_1}
+\end{align*}
+Lets consider that input 2 contains a strong coherent state field that we refer to as the \emph{local oscillator}. 
+Thus the total state over which the average is being taken is 
+\begin{align}
+    \underbrace{\ket{\Psi_1}}_{\text{Input 1}}\underbrace{\ket{\alpha_2}}_{\text{Coherent state input 2}}.
+\end{align}
+The averaging if about these two states.
+
+We see that the irradiance is just the number operator counting photons at each output.
+For instance,
+\begin{align*}
+    I_1-I_2&=\braket{\Psi_1|\ha_1\alpha_2^*+\ha_1^\dagger\alpha_2|\Psi_1}=\begin{cases}
+        2\alpha_2\braket{\Psi_1|\dfrac{\ha_1+\ha_1^\dagger}{2}|\Psi_1}=2\alpha_2\braket{\Psi_1|\hX_1|\Psi_1},&\alpha_2=\alpha_2^*\\
+        -2i\alpha_2\braket{\Psi_1|\dfrac{\ha_1-\ha_1^\dagger}{2i}|\Psi_1}=-2i\alpha_2\braket{\Psi_1|\hX_2|\Psi_1},&\alpha_2=-\alpha_2^*
+    \end{cases}
+\end{align*}
+In general by changing the phase of input 2 we can measure a general quadrature. Noise in intensity corresponds to noise in specific quadratures.
+If a quadrature measurement has uncertainty $\Delta\hX^2<1/4$.
+
+

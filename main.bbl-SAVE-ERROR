@@ -1,0 +1,238 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{fleisch2008student}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8c8447890a31bf51c420bfefb31d0d07}{%
+           family={Fleisch},
+           familyi={F\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{fullhash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{bibnamehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{authorbibnamehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{authornamehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{authorfullhash}{8c8447890a31bf51c420bfefb31d0d07}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A student's guide to Maxwell's equations}
+      \field{year}{2008}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+    \entry{gbur2011mathematical}{book}{}
+      \name{author}{1}{}{%
+        {{hash=208a3b1c8e40d40385f7360f3c1ba80e}{%
+           family={Gbur},
+           familyi={G\bibinitperiod},
+           given={Gregory\bibnamedelima J},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{fullhash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{bibnamehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{authorbibnamehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{authornamehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{authorfullhash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mathematical methods for optical physics and engineering}
+      \field{year}{2011}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+    \entry{griffiths2023introduction}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to electrodynamics}
+      \field{year}{2023}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+    \entry{zill2020advanced}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ce0689f2d52c5a0939d5509701e4f498}{%
+           family={Zill},
+           familyi={Z\bibinitperiod},
+           given={Dennis\bibnamedelima G},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Jones \& Bartlett Learning}%
+      }
+      \strng{namehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{fullhash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{bibnamehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{authorbibnamehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{authornamehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{authorfullhash}{ce0689f2d52c5a0939d5509701e4f498}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced engineering mathematics}
+      \field{year}{2020}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+  \enddatalist
+\endrefsection
+
+\refsection{1}
+  \datalist[entry]{nty/global//global/global}
+    \entry{fleisch2008student}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8c8447890a31bf51c420bfefb31d0d07}{%
+           family={Fleisch},
+           familyi={F\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{fullhash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{bibnamehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{authorbibnamehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{authornamehash}{8c8447890a31bf51c420bfefb31d0d07}
+      \strng{authorfullhash}{8c8447890a31bf51c420bfefb31d0d07}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A student's guide to Maxwell's equations}
+      \field{year}{2008}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+    \entry{gbur2011mathematical}{book}{}
+      \name{author}{1}{}{%
+        {{hash=208a3b1c8e40d40385f7360f3c1ba80e}{%
+           family={Gbur},
+           familyi={G\bibinitperiod},
+           given={Gregory\bibnamedelima J},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{fullhash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{bibnamehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{authorbibnamehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{authornamehash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \strng{authorfullhash}{208a3b1c8e40d40385f7360f3c1ba80e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mathematical methods for optical physics and engineering}
+      \field{year}{2011}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+    \entry{griffiths2023introduction}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to electrodynamics}
+      \field{year}{2023}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+    \entry{zill2020advanced}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ce0689f2d52c5a0939d5509701e4f498}{%
+           family={Zill},
+           familyi={Z\bibinitperiod},
+           given={Dennis\bibnamedelima G},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Jones \& Bartlett Learning}%
+      }
+      \strng{namehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{fullhash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{bibnamehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{authorbibnamehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{authornamehash}{ce0689f2d52c5a0939d5509701e4f498}
+      \strng{authorfullhash}{ce0689f2d52c5a0939d5509701e4f498}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced engineering mathematics}
+      \field{year}{2020}
+      \true{nocite}
+      \keyw{bib_template}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
