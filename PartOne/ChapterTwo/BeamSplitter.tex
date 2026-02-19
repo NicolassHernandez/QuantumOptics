@@ -1,0 +1,101 @@
+\section{Beam splitter}
+
+Let us consider the action of a beam splitter (BS) on two input modes of same frequency and polarization.
+
+Clasically, the output E-field can be defined in terms of the input E-fields:
+\begin{align*}
+    \begin{bmatrix}
+        E_1'\\E_2
+    \end{bmatrix}=\begin{bmatrix}
+        t'&r\\r'&t
+    \end{bmatrix}\begin{bmatrix}
+        E_1\\E_2
+    \end{bmatrix}.
+\end{align*}
+$\{r,t\}$ and $\{r',t'\}$ are reflection/transmission coefficient associated with the two interfaces of the BS. 
+From energy conservation, we must have 
+\begin{align*}
+    \text{Energy conservation in the BS}\qquad\highlight{|E_1|^2+|E_2|^2=|E_1'|^2+|E_2'|^2}.
+\end{align*}
+If we assume $E_2=0$, then 
+\begin{align}
+    |E_1|^2=|t'E_1|^2+|r'E_1|^2\longrightarrow|r'|^2+|t'|^2=1.\label{eq:E20}
+\end{align} 
+Similarly, setting $E_1=0$ yields 
+\begin{align}
+    |E_2|^2=|rE_2|^2+|tE_2|^2\longrightarrow|r|^2+|t|^2=1.\label{eq:E10}
+\end{align}
+In general,
+\begin{align*}
+    |E_1|^2+|E_2|^2&=|E_1'|^2+|E_2'|^2\\
+    &=(t'E_1+rE_2)(t^{'*}E_1^*+r^*E_2^*)+(r'E_1+tE_2)(r^{'*}E_1^*+t^*E_2^*)\\
+    &=|t'|^2|E_1|^2+|r|^2|E_2|^2+|r'|^2|E_1|^2+|t|^2|E_2|^2+rt^{'*}E_1^*E_2+t'r^*E_1E_2^*+r't^*E_1E_2^*+r^{'*}tE_1^*E_2\\
+    |E_1|^2+|E_2|^2&=|E_1|^2(|r'|^2+|t'|^2)+|E_2|^2(|r|^2+|t|^2)+E_1^*E_2(rt^{'*}+r^{'*}t)+E_1E_2^*(r't^*+r^*t')\\
+    0&=E_1^*E_2(rt^{'*}+r^{'*}t)+c.c.
+\end{align*}
+Thus, 
+\begin{align}
+    rt^{'*}+r^{'*}t=0.\label{eq:E12}
+\end{align}
+For a $50:50$ BS which as $r'=1/\sqrt{2}$, $t'=1/\sqrt{2}$, and $r=1/\sqrt{2}$, \eqref{eq:E20}, \eqref{eq:E10} and \eqref{eq:E12} implies 
+that $t=-1/\sqrt{2}$. Similarly, the quantum description of the BS is 
+\begin{align}
+    \begin{bmatrix}
+        \ha_1'\\\ha_2'
+    \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+        1&1\\1&-1
+    \end{bmatrix}\begin{bmatrix}
+        \ha_1\\\ha_2
+    \end{bmatrix}.
+\end{align}
+Now, the ladder operators are equal to the E-fields. This equation implies that 
+\begin{align*}
+    \ha_1'=\frac{1}{\sqrt{2}}(\ha_1+\ha_2),\quad\text{and}\quad\ha_2'=\frac{1}{\sqrt{2}}(\ha_1-\ha_2).
+\end{align*}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{.45\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterTwo/figures/bs_classical.png}
+        \caption{Classical description}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.45\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterTwo/figures/bs_quantum.png}
+        \caption{Quantum description}
+    \end{subfigure}
+    \caption{Description of a beamsplitter (BS).}
+\end{figure}
+
+
+\begin{example}{Single photon incident in one input}
+    The input is:
+    \begin{align*}
+        \text{Input}=\ket{1}_1\ket{0}_2=(\ha^\dagger_1\ket{0}_1)\ket{0}_2=\ket{1}_1\ket{0}_2.
+    \end{align*}
+    Note that 
+    \begin{align*}
+        \ha_1=\frac{1}{\sqrt{2}}(\ha_1'+\ha_2')\quad\text{and}\quad\ha_1^\dagger=\frac{1}{\sqrt{2}}(\ha_1^{'\dagger}+\ha_2^{'\dagger}).
+    \end{align*}
+    The output is then 
+    \begin{align*}
+        \text{Output}=\frac{1}{\sqrt{2}}(\ha_1^{'\dagger}+\ha_2^{'\dagger})\ket{0}_{1'}\ket{0}_{2'}=\frac{1}{\sqrt{2}}[\ket{1}_{1'}\ket{0}_{2'}+\ket{0}_{1'}\ket{1}_{2'}].
+    \end{align*}
+    Thus, there is a $50:50$ probability of detecting the photon in one of the ouput ports.
+\end{example}
+\begin{example}{Both input with photons}
+    The input is:
+    \begin{align*}
+        \text{Input}=\ket{1}_1\ket{1}_2=\ha_1^\dagger\ket{0}_1\ha_2^\dagger\ket{0}_2.
+    \end{align*}
+    The output is:
+    \begin{align*}
+        \text{Output}&=\frac{1}{2}[\ha_1^{'\dagger}+\ha_2^{'\dagger}][\ha_1^{'\dagger}-\ha_2^{'\dagger}]\ket{0}_{1'}\ket{0}_{2'}\\
+        &=\frac{1}{2}[\ha_1^{'\dagger}\ha_1^{'\dagger}-\ha_2^{'\dagger}\ha_2^{'\dagger}+\cancel{\ha_1^{'\dagger}\ha_2^{'\dagger}}-\cancel{\ha_2^{'\dagger}\ha_1^{'\dagger}}]\ket{0}_{1'}\ket{0}_{2'}\\
+        &=\frac{1}{2}[\sqrt{2}\ket{2}_{1'}\ket{0}_{2'}-\sqrt{2}\ket{0}_{1'}\ket{2}_{2'}]\\
+        \text{Output}&=\frac{1}{\sqrt{2}}[\ket{2}_{1'}\ket{0}_{2'}-\ket{0}_{1'}\ket{2}_{2'}].
+    \end{align*}
+    Thus, when two photons are simultaneously incident on each input, both either go into output 1 or output 2 but never in both a the same time.
+\end{example}

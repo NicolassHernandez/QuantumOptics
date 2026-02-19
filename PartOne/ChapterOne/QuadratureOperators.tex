@@ -1,0 +1,83 @@
+\section{Quadrature operators}
+Recall the E-field operator for a singel mode is:
+\begin{align*}
+    \hbE(\br,t)&=i\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}[\ha e^{i(\bk\cdot\br-\omega t)}-\ha^\dagger e^{-i(\bk\cdot\br-\omega t)}]\\
+    &=i\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}[\ha e^{-i\omega t} e^{i\bk\cdot\br}-\ha^\dagger e^{i\omega t} e^{-i\bk\cdot\br}]\\
+    &=i\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}[\ha(t)e^{i\bk\cdot\br}-\ha^\dagger(t)e^{-i\bk\cdot\br}]\\
+    \hbE(\br,t)&=i\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}[\ha(t)\cos(\bk\cdot\br)+i\ha(t)\sin(\bk\cdot\br)-\ha^\dagger(t)\cos(\bk\cdot\br)+i\ha^\dagger(t)\sin(\bk\cdot\br)].
+\end{align*}
+Lets define the quadrature operators:
+\begin{align}
+    \text{Quadrature operators}\qquad\begin{array}{l}
+        \hX_1=\dfrac{1}{2}(\ha+i\ha^\dagger)\\
+        \hX_2=\dfrac{1}{2i}(\ha-\ha^\dagger)
+    \end{array},
+\end{align}
+where $[\hX_1,\hX_2]=\frac{i}{2}$. In the E-field, if we collect the cosine and sine, we get
+\begin{align*}
+    \hbE(\br,t)=-\sqrt{\frac{2\hbar\omega}{\varepsilon_0V}}\he_{\bk,\lambda}[\hX_1(t)\sin(\bk\cdot\br)+\hX_2(t)\cos(\bk\cdot\br)].
+\end{align*}
+The expectation value of these operators is:
+\begin{align*}
+    &\braket{\alpha|\hX_1(0)|\alpha}=\braket{\alpha|\frac{\ha+\ha^\dagger}{2}|\alpha}=\re{\alpha},\quad
+    \braket{\alpha|\hX_2(0)|\alpha}=\braket{\alpha|\frac{\ha-\ha^\dagger}{2i}|\alpha}=\im{\alpha},\quad\\
+    &\braket{\Delta\hX^2_1}=\braket{\alpha|\frac{1}{4}(\ha+\ha^\dagger)^2|\alpha}-\frac{1}{4}(\alpha+\alpha^*)^2=\frac{1}{4},\quad\braket{\Delta\hX^2_2}=\frac{1}{4}.
+\end{align*}
+That is, there is a minimum uncertainty that a state can possible have in the two quadrature $\hX_1,\hX_2$, such a state os refferred as 
+\emph{minimum uncertainty state}.
+When $\alpha=0$ we have the vaccum state and therefore $\braket{\hX_1(0)}=\braket{\hX_2(0)}=0$, $\braket{\hX_1^2(0)}=\braket{\hX_2^2(0)}=1/4$.
+Coherent states are also refferees to as displaced vaccum states. Specifically,
+\begin{align*}
+    \ket{\alpha}=\hat{D}(\alpha)\ket{0},\quad\hat{D}(\alpha)=e^{\alpha\ha^\dagger-\alpha^*\ha}.
+\end{align*}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{.3\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterOne/figures/displacedvaccum.png}
+        \caption{Displacement of vacuum}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.3\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterOne/figures/coherentstate.png}
+        \caption{Coherent state}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.3\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterOne/figures/evolutioncoherent2.png}
+        \caption{Evolution of coherent state}
+    \end{subfigure}
+\end{figure}
+
+If we include the time dependence:
+\begin{align*}
+    \braket{\alpha|\hX_1(t)|\alpha}&=\frac{\alpha e^{-i\omega t}+\alpha^*e^{i\omega t}}{2}=\re{\alpha e^{-i\omega t}},\quad
+    \braket{\alpha|\hX_2(t)|\alpha}&=\frac{\alpha e^{-i\omega t}-\alpha^*e^{i\omega t}}{2i}=\im{\alpha e^{-i\omega t}}.
+\end{align*}
+The phase space representation of states allows one to acces information aabout the noise/variance associated with any state when a specific 
+E-field quadrature is measured. 
+%
+\subsection{Taking the continuum limit}
+In free space the sum over all $\bk$ becomes an integral:
+\begin{align*}
+    \sum_{\bk}\to N\int\;d^2\bk=N\int_0^\infty\;dkk^2\int_0^\pi\;d\theta\sin\theta\int_0^{2\pi}\;d\phi,
+\end{align*}
+where $N$ is the normalization equal to volume/mode.
+We consider a volume of quantization that is the region in free space where we are quantizing the field $V=L_xL_yL_z$.
+Allowed $\bk$ vectors are $k_x=(2\pi/L_x)m_x$, $k_y=(2\pi/L_y)m_y$ y $k_z=(2\pi/L_z)m_z$, that is, we ensure that the lenths fit an integer number of 
+wavelengths. 
+
+The number of modes in between $\bk$ and $\bk+\Delta\bk$ is:
+\begin{align*}
+    \Delta m_x\Delta m_y\Delta m_z=\frac{L_xL_yL_z}{(2\pi)^2}\Delta\bk_x\Delta\bk_y\Delta\bk_z=\frac{V}{(2\pi)^3}\Delta\bk_x\Delta\bk_y\Delta\bk_z.
+\end{align*}
+Using the above normalization:
+\begin{align*}
+    \sum_{\bk,\lambda}\to\sum_\lambda\int\;dkk^2\int_0^\pi\;d\theta\sin\theta\int_0^{2\pi}\;d\phi\frac{V}{8\pi^2}.
+\end{align*}
+Thus, any continuum limit involves
+\begin{align*}
+    \text{Continuum limit}\qquad\sum_{\bk}\to\frac{V}{8\pi^2}\int\;d^3\bk.
+\end{align*}

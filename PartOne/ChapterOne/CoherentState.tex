@@ -1,0 +1,53 @@
+\section{Coherent states}
+The coherent state is defined as the eigenstate of the annihilator operator:
+\begin{align*}
+    \ha\ket{\alpha}=\alpha\ket{\alpha},\quad\alpha\in\mathbb{C}.
+\end{align*}
+The expected number of photons in the coherent state is:
+\begin{align*}
+    \braket{\alpha|\hn|\alpha}=\braket{\alpha|\ha^\dagger\ha|\alpha}=|\alpha|^2.
+\end{align*}
+\begin{emphasizer}
+    Coherent states are the most classical states of the quantized EM field.
+\end{emphasizer}
+It has the following results:
+\begin{align*}
+    \braket{\alpha|\ha^2|\alpha}=\alpha^2,\quad\braket{\alpha|\ha^{\dagger2}|\alpha}=\alpha^{*2},\quad\braket{\alpha|\ha^\dagger\ha|\alpha}=|\alpha|^2,\quad\braket{\alpha|\ha\ha^\dagger|\alpha}=|\alpha|^2+1.
+\end{align*}
+
+For example, computing the expectation of the E-field \eqref{eq:emfieldquantization} is:
+\begin{align*}
+    \braket{\bE}&=\braket{\alpha|i\sum_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}[\ha_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}
+    -\ha^\dagger_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}]|\alpha}\\
+    &=i\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}[\alpha e^{i(\bk\cdot\br-\omega t)}-\alpha^*e^{-i(\bk\cdot\br-\omega t)}]\\
+    \braket{\bE}&=\bm{\mathcal{E}}e^{i(\bk\cdot\br-\omega t)}+\bm{\mathcal{E}}^*e^{-i(\bk\cdot\br-\omega t)}\longrightarrow\bm{\mathcal{E}}=i\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\alpha\he_{\bk,\lambda}.
+\end{align*}
+The expectation value of the E-field for a coherent state corresponds to a classical E-field.
+
+Let us now consider the uncertainty of the E-field for $\ket{\alpha}$:
+\begin{align*}
+    \braket{\Delta E^2}&=\braket{\bE^2}-\braket{\bE}^2\\
+    &=\braket{\alpha|i\he_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}[\ha e^{i(\bk\cdot\br-\omega t)}
+    -\ha^\dagger e^{-i(\bk\cdot\br-\omega t)}]\cdot i\he_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}[\ha e^{i(\bk\cdot\br-\omega t)}
+    -\ha^\dagger e^{-i(\bk\cdot\br-\omega t)}]|\alpha}-\braket{\bE}^2\\
+    &=-\frac{\hbar\omega}{2\varepsilon_0V}[\alpha^2e^{i2(\bk\cdot\br-\omega t)}+\alpha^{*2}e^{-i2(\bk\cdot\br-\omega t)}-|\alpha|^2-(|\alpha|^2+1)]
+    -\bm{\mathcal{E}}^2e^{i2(\bk\cdot\br-\omega t)}-\bm{\mathcal{E}}^{*2}e^{-i2(\bk\cdot\br-\omega t)}-2|\bm{\mathcal{E}}|^2\\
+    &=\bm{\mathcal{E}}^2e^{i2(\bk\cdot\br-\omega t)}+\bm{\mathcal{E}}^{*2}e^{-i2(\bk\cdot\br-\omega t)}+2|\bm{\mathcal{E}}|^2+\frac{\hbar\omega}{2\varepsilon_0V}
+    -\bm{\mathcal{E}}^2e^{i2(\bk\cdot\br-\omega t)}-\bm{\mathcal{E}}^{*2}e^{-2i(\bk\cdot\br-\omega t)}-2|\bm{\mathcal{E}}|^2\\
+    \braket{\Delta E^2}&=\frac{\hbar\omega}{2\varepsilon_0V}.
+\end{align*}
+This is the uncertainty in E-field limited by quantum noise.
+
+Also, we know that the eigenstates of $\ket{\alpha}$ do not form an orthonormal basis. However, we know that the number state $\ket{n}$ form an orthonormal 
+basis and we can expand the coherent state in terms of the number states, as follows,
+\begin{align*}
+    \ket{\alpha}=e^{-|\alpha|^2/2}\sum_n\frac{\alpha^n}{\sqrt{n!}}\ket{n}.
+\end{align*}
+The probability of finding $n$ photons in a coherent state is:
+\begin{align*}
+    P_n=|\braket{n|\alpha}|^2=\left|\braket{n|e^{-|\alpha|^2/2}\sum_m\frac{\alpha^m}{\sqrt{m!}}|m}\right|^2=\left|e^{-|\alpha|^2/2}\frac{\alpha^n}{\sqrt{n!}}\right|^2=e^{-|\alpha|^2}\frac{|\alpha|^{2n}}{n!}.
+\end{align*}
+Recalling that $\braket{\hn}=|\alpha|^2=\overline{n}$:
+\begin{align*}
+    \text{Probability of finding $n$ photons in a coherent state}\qquad\highlight{P_n=\frac{e^{-\overline{n}}\overline{n}^n}{n!}}.
+\end{align*}
