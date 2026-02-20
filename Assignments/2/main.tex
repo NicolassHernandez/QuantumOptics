@@ -41,6 +41,8 @@
 \newcommand{\hx}{\hat{x}}
 \newcommand{\hX}{\hat{X}}
 \newcommand{\hp}{\hat{p}}
+\newcommand{\hS}{\hat{S}}
+\newcommand{\hD}{\hat{D}}
 \newcommand{\hy}{\hat{y}}
 \newcommand{\hz}{\hat{z}}
 \newcommand{\laplace}[1]{\mathscr{L}\left[#1\right]}
@@ -169,50 +171,108 @@
       \begin{scope}[xshift=5cm]
         \draw[arrow](0,0)--(7,0)node[below]{$t$};
         \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2(t)$};
-        \draw[fill=gray!20,opacity=.5]plot[domain=0:6, smooth, variable=\x]({\x},{2*sin(deg(-\x)+45)+.3})--
-        plot[domain=6:0, smooth, variable=\x] ({\x}, {2*sin(deg(-\x)+45)-.3})--cycle;
-        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(deg(-\x)+45)});
+        \draw[fill=gray!20,opacity=.5]plot[domain=0:6, smooth, variable=\x]({\x},{2*sin(45-deg(\x))+.3})--
+        plot[domain=6:0, smooth, variable=\x] ({\x}, {2*sin(45-deg(\x))-.3})--cycle;
+        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(45-deg(\x))});
       \end{scope}
     \end{tikzpicture}
     \caption{Phase space of the coherent state and time-dependent quadrature operators.}
   \end{figure}
-  \item The process is analogous. We have the following operators:
+  \item The process is analogous. We know that 
   \begin{align*}
-    \tilde{a}(t)=\cosh(r)\ha e^{-i\omega t}-e^{-i\phi}\sinh(r)\ha^\dagger e^{i\omega t}+\alpha,\quad\text{and}\quad\tilde{a}^\dagger(t)=
-    \cosh(r)\ha^\dagger e^{i\omega t}-e^{-i\phi}\sinh(r)\ha e^{-i\omega t}+\alpha^*
+    \tilde{a}&=\hS^\dagger\hD^\dagger\ha\hD\hS=\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha,\quad\text{and}\\
+    \tilde{a}^\dagger&=\hS^\dagger\hD^\dagger\ha^\dagger\hD\hS=\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*.
   \end{align*}
-  In this case, $\phi=0$. The expected value of $\hX_1$ and $\hX_2$ were calculated in the lectures so I list them here with the time inclusion:
+  The expected value of $\hX_1(t)$ is 
   \begin{align*}
-    &\braket{\xi,\alpha|\hX_1|\xi,\alpha}=\re{\alpha e^{-i\omega t}},\quad\braket{\xi,\alpha|\hX_2|\xi,\alpha}=\im{\alpha e^{i\omega t}}.
+    \braket{\hX_1(t)}&=\braket{0|\hS^\dagger\hD^\dagger\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}\hD\hS|0}=\frac{1}{2}\braket{0|\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t}|0}\\
+    &=\frac{1}{2}\bra{0}\left[\cosh(r)\ha e^{-i\omega t}-e^{i\phi}\sinh(r)\ha^\dagger e^{-i\omega t}+\alpha e^{-i\omega t}+\cosh(r)\ha^\dagger e^{i\omega t}
+    -e^{-i\phi}\sinh(r)\ha e^{i\omega t}+\alpha^*e^{i\omega t}\right]\ket{0}\\
+    &=\frac{1}{2}[\alpha e^{-i\omega t}+\alpha^*e^{i\omega t}]\\
+    \braket{\hX_1(t)}&=\re{\alpha e^{-i\omega t}}.
   \end{align*}
-  The expectation of the operators squares is computed now:
+  Similarly,
   \begin{align*}
-    \braket{\xi,\alpha|\hX^2_1(t)|\xi,\alpha}&=\frac{1}{4}\braket{0|S^\dagger D^\dagger(\ha^2e^{-i2\omega t}+2\ha^\dagger\ha+1+\ha^{\dagger2}e^{i2\omega t})DS|0}\\
-    &=\frac{1}{4}\left[\braket{0|S^\dagger D^\dagger\ha^2DS|0}e^{-i2\omega t}+2\braket{0|S^\dagger D^\dagger\ha^\dagger\ha DS|0}+1+\braket{0|S^\dagger D^\dagger\ha^{\dagger2}DS|0}e^{i2\omega t}\right]
+    \braket{\hX_2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}\hD\hS|0}=\frac{1}{2i}\braket{0|\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t}|0}\\
+    &=\frac{1}{2i}\bra{0}\left[\cosh(r)\ha e^{-i\omega t}-e^{i\phi}\sinh(r)\ha^\dagger e^{-i\omega t}+\alpha e^{-i\omega t}-\cosh(r)\ha^\dagger e^{i\omega t}
+    +e^{-i\phi}\sinh(r)\ha e^{i\omega t}-\alpha^*e^{i\omega t}\right]\ket{0}\\
+    &=\frac{1}{2}[\alpha e^{-i\omega t}-\alpha^*e^{i\omega t}]\\
+    \braket{\hX_2(t)}&=\im{\alpha e^{-i\omega t}}.
+  \end{align*}
+  Doing the same for the operators squared:
+  \begin{align*}
+    \braket{\hX_1^2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\left(\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}\right)^2\hD\hS|0}\\
+    &=\frac{1}{4}\braket{0|\hS^\dagger\hD^\dagger\left(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right)\hD\hS\hS^\dagger\hD^\dagger\left(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right)\hD\hS|0}\\
+    &=\frac{1}{4}\braket{0|(\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t})^2|0}\\
+    &=\frac{1}{4}\left[e^{-i2\omega t}\braket{0|\tilde{a}^2|0}+e^{i2\omega t}\braket{0|\tilde{a}^{\dagger2}|0}+\braket{0|\tilde{a}\tilde{a}^\dagger|0}+\braket{0|\tilde{a}^\dagger\tilde{a}|0}\right].
+  \end{align*}
+  We compute each term separately:
+  \begin{align*}
+    \braket{0|\tilde{a}^2|0}=&\braket{0|(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)|0}\\
+    =&\cosh^2(r)\braket{\ha^2}-e^{i\phi}\sinh(r)\cosh(r)\braket{\ha\ha^\dagger}+\alpha\cosh(r)\braket{\ha}-e^{i\phi}\sinh(r)\cosh(r)\braket{\ha^\dagger\ha}\\
+    &+e^{i2\phi}\sinh^2(r)\braket{\ha^{\dagger2}}-\alpha e^{i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha\cosh(r)\braket{\ha}-\alpha e^{i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha^2\\
+    &=\alpha^2-e^{i\phi}\sinh(r)\cosh(r)\\
+    \braket{0|\tilde{a}^2|0}&=\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r).
+  \end{align*}
+  \begin{align*}
+    \braket{0|\tilde{a}^{\dagger2}|0}=&\braket{0|(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)|0}\\
+    =&\cosh^2(r)\braket{\ha^{\dagger2}}-e^{-i\phi}\cosh(r)\sinh(r)\braket{\ha^\dagger\ha}+\alpha^*\cosh(r)\braket{\ha^\dagger}-e^{-i\phi}\sinh(r)\cosh(r)\braket{\ha\ha^\dagger}\\
+    &+e^{-i2\phi}\sinh^2(r)\braket{\ha^2}-\alpha^*e^{-i\phi}\sinh(r)\braket{\ha}+\alpha^*\cosh(r)\braket{\ha^\dagger}-\alpha^*e^{-i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha^{*2}\\
+    =&\alpha^{*2}-e^{-i\phi}\sinh(r)\cosh(r)\\
+    \braket{0|\tilde{a}^{\dagger2}|0}=&\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r).
+  \end{align*}
+  \begin{align*}
+    \braket{0|\tilde{a}\tilde{a}^\dagger|0}=&\braket{0|(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)|0}\\
+    \braket{0|\tilde{a}\tilde{a}^\dagger|0}=&\cosh^2(r)+|\alpha|^2.
+  \end{align*}
+  \begin{align*}
+    \braket{0|\tilde{a}^\dagger\tilde{a}|0}=&\braket{0|(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)|0}\\
+    \braket{0|\tilde{a}^\dagger\tilde{a}|0}=&\sinh^2(r)+|\alpha|^2.
+  \end{align*}
+  Putting all together:
+  \begin{align*}
+    \braket{\hX_1^2(t)}&=\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}+
+    \cosh^2(r)+|\alpha|^2+\sinh^2(r)+|\alpha|^2\right\}\\
+    &=\frac{1}{4}\left[(\alpha e^{-i\omega t}+\alpha^*e^{i\omega t})^2+\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)\right]\\
+    \braket{\hX_1^2(t)}&=[\re{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)].
+  \end{align*}
+  The uncertainty is:
+  \begin{align*}
+    \Delta\hX_1(t)=\sqrt{\braket{\hX_1^2(t)}-\braket{\hX_1(t)}^2}=\frac{1}{2}\sqrt{\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)}.
   \end{align*}
 
-\begin{align*}
-  \hX_1(t)=\frac{1}{2}\left[\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right],\quad\hX_1^2(t)=\frac{1}{4}\left[\ha^2 e^{-i2\omega t}+\ha^{\dagger2}e^{i2\omega t}+2\ha^\dagger\ha+1\right].
-\end{align*}
-The expectation is:
-\begin{align*}
-  \braket{\hX_1(t)}&=\frac{1}{2}\braket{0|S^\dagger D^\dagger\left[\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right]DS|0}=\frac{1}{2}\left[
-    \braket{0|S^\dagger D^\dagger\ha DS|0}e^{-i\omega t}+\braket{0|S^\dagger D^\dagger\ha^\dagger DS|0}e^{i\omega t}\right]\\
-    &=\frac{1}{2}\left[[\cosh(r)\ha-e^{i\phi}\sinh(r)\ha+\alpha]e^{-i\omega t}+[\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*]e^{i\omega t}\right]
-\end{align*}
-\begin{align*}
-  \braket{\hX^2_1(t)}&=\frac{1}{4}\braket{0|S^\dagger D^\dagger[\ha^2 e^{-i2\omega t}+\ha^{\dagger2}e^{i2\omega t}+2\ha^\dagger\ha+1]DS|0}\\
-  &=\frac{1}{4}\left[\braket{0|S^\dagger D^\dagger\ha^2DS|0}e^{-i2\omega t}+\braket{0|S^\dagger D^\dagger\ha^{\dagger 2}DS|0}e^{i2\omega t}+
-  2\braket{0|S^\dagger D^\dagger\ha^\dagger\ha DS|0}+\braket{0|S^\dagger D^\dagger DS|0}\right]\\
-  &=\frac{1}{4}\left[\cosh(r)(\ha+\alpha)^2-e^{i\phi}\sinh(r)(\ha^\dagger+\alpha^*)^2+\alpha\right]
-\end{align*}
+  Similarly,
+  \begin{align*}
+    \braket{\hX_2^2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\left(\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}\right)^2\hD\hS|0}\\
+    &=-\frac{1}{4}\braket{0|\hS^\dagger\hD^\dagger(\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t})\hD\hS\hS^\dagger\hD^\dagger(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t})\hD\hS|0}\\
+    &=-\frac{1}{4}\braket{0|(\tilde{a}e^{-i\omega t}-\tilde{a}^\dagger e^{i\omega t})^2|0}\\
+    &=-\frac{1}{4}[e^{-i2\omega t}\braket{0|\tilde{a}^2|0}+e^{i2\omega t}\braket{0|\tilde{a}^{\dagger2}|0}-\braket{0|\tilde{a}\tilde{a}^\dagger|0}-\braket{0|\tilde{a}^\dagger\tilde{a}|0}].
+  \end{align*}
+  We use the previous results to get
+  \begin{align*}
+    \braket{\hX_2(t)}&=-\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}-
+    \cosh^2(r)-|\alpha|^2-\sinh^2(r)-|\alpha|^2\right\}\\
+    &=-\frac{1}{4}[(\alpha e^{-i\omega t}-\alpha^*e^{i\omega t})^2-\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)]\\
+    \braket{\hX_2(t)}&=[\im{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)].
+  \end{align*}
+  And the uncertainty is:
+  \begin{align*}
+    \Delta\hX_2(t)=\sqrt{\braket{\hX_2^2(t)}-\braket{\hX_2(t)}^2}=\frac{1}{2}\sqrt{\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)}
+  \end{align*}
+  We can verify that $\Delta\hX_1(0)=e^{-r}/2$ and $\Delta\hX_2(0)=e^r/2$ when $\phi=t=0$.
 
+  The phase space representation is shown below.
   \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[scale=.8]
+      \def\r{.7}
+      \def\w{1}
       \draw[arrow](-3,0)--(3,0)node[below]{$\hX_1$};
       \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2$};
-      \draw[fill=gray!20,opacity=.5](45:2)+(0:.3)arc(0:360:.3);
+      \begin{scope}[shift={(45:2)}, rotate=45]
+        \draw[fill=gray!20,opacity=.5] (0,0) ellipse (.5 and .25);
+      \end{scope}
+      %\draw[fill=gray!20,opacity=.5](45:2)+(0:.3)arc(0:360:.3);
       \draw[arrow,very thick,NavyBlue](0,0)+(45:2)node[circ,NavyBlue]{}arc(45:-315:2);
       \draw[dashed](0,{2*sin(45)})node[left,font=\scriptsize]{$\braket{\hX_2}$}--(45:2)--({2*cos(45)},0)node[below,font=\scriptsize]{$\braket{\hX_1}$}(45:2)--++(3.5,0);
       \draw(45:2.5)node[above right,black]{$\ket{\alpha e^{-i\omega t}}$};
@@ -221,9 +281,11 @@ The expectation is:
       \begin{scope}[xshift=5cm]
         \draw[arrow](0,0)--(7,0)node[below]{$t$};
         \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2(t)$};
-        \draw[fill=gray!20,opacity=.5]plot[domain=0:6, smooth, variable=\x]({\x},{2*sin(deg(-\x)+45)+.3})--
-        plot[domain=6:0, smooth, variable=\x] ({\x}, {2*sin(deg(-\x)+45)-.3})--cycle;
-        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(deg(-\x)+45)});
+        \draw[fill=gray!20,opacity=.5]plot[domain=0:6,smooth,variable=\x]({\x},{2*sin(45-deg(\w*\x))+
+        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(45-deg(2*\w*\x)) )) })--
+        plot[domain=6:0, smooth, variable=\x]({\x},{2*sin(45-deg(\w*\x))-
+        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(45-deg(2*\w*\x)) )) })--cycle;
+        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(45-deg(\w*\x))});
       \end{scope}
     \end{tikzpicture}
     \caption{Phase space of the coherent state and time-dependent quadrature operators.}

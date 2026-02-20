@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1771533603.61542 "main.bcf" "main.bbl" "main" 1771538080.16706 0
+["biber main"] 1771533603.61542 "main.bcf" "main.bbl" "main" 1771549174.93967 0
   "PartOne/ChapterOne/bib_.bib" 1768872437 814 ca0c4b5b986e047b1001d6e5f3140200 ""
-  "main.bcf" 1771538079 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
+  "main.bcf" 1771549174 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1771536973.99907 "main.idx" "main.ind" "main" 1771538080.16649 0
-  "main.idx" 1771538078 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1771536973.99907 "main.idx" "main.ind" "main" 1771549174.93921 0
+  "main.idx" 1771549173 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1771538075.81226 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1771538080.16773 0
+["pdflatex"] 1771549170.176 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1771549174.94025 0
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770835094 123178 2ccd746f0a4ec0e4e75a2c14b6603cde ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1742930834 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1756137706 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -664,9 +664,9 @@
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
   "PartOne/ChapterOne/CoherentState.tex" 1771469044 3618 4cdf0ccb9b12fbaac7aeea98c39ff48e ""
   "PartOne/ChapterOne/ElectrodinamicsReview.tex" 1770178759 154 b91da2eff1e5b4627eaea54768fe9ccc ""
-  "PartOne/ChapterOne/QuadratureOperators.tex" 1771475279 4564 71f1c6b276d3df342f6fefff9875f2c5 ""
+  "PartOne/ChapterOne/QuadratureOperators.tex" 1771548732 6464 2b97d4093f9ff042886e8e8a8342d5f9 ""
   "PartOne/ChapterOne/QuantizationOfASingleMode.tex" 1771530853 18060 500469ec20deb2c8ee85b312fa66912c ""
-  "PartOne/ChapterOne/SqueezedStates.tex" 1771530926 5347 045ae757a232b8f64c61f59f0d1d8cf5 ""
+  "PartOne/ChapterOne/SqueezedStates.tex" 1771548729 5353 01fa9f046848c4654eb114732d65ae05 ""
   "PartOne/ChapterOne/bibliography.tex" 1768872437 203 ee8175475dc3287bef0a3bc2f223b1cd ""
   "PartOne/ChapterOne/figures/coherentstate.png" 1771473911 35807 83950cf22ff7c340774a49c9d35000b6 ""
   "PartOne/ChapterOne/figures/displacedsqueezedstate.png" 1771530837 52301 a530f21969e2a169ca1941e0849e039c ""
@@ -674,7 +674,7 @@
   "PartOne/ChapterOne/figures/displacedvaccum.png" 1771473891 32269 392e079187162cdbd9f7c81c29ae9c05 ""
   "PartOne/ChapterOne/figures/evolutioncoherent2.png" 1771473973 135881 cc9355b85ac5be883f4288a9e4184a4b ""
   "PartOne/ChapterOne/main.tex" 1771471687 536 7a5868a7ea587b0a55a224c67ef11867 ""
-  "PartOne/ChapterThree/DetectionOfQuadratureStates.tex" 1771532813 2062 3e44cff588583a05a6a93bd4e9218f85 ""
+  "PartOne/ChapterThree/DetectionOfQuadratureStates.tex" 1771549169 2066 6dcabc2144c9c9cb6d1cb586a8ee3073 ""
   "PartOne/ChapterThree/GenerationOfQuadratureStates.tex" 1771538075 4569 d816ebe035cccfcec88df19f6cc927da ""
   "PartOne/ChapterThree/figures/homodynedetection.png" 1771530791 73463 043d46f46ac7532edcfe2850e1ccf241 ""
   "PartOne/ChapterThree/figures/momentumconservation.png" 1771537412 37377 c6dcacb387ca74364029eca25a2274c9 ""
@@ -685,19 +685,19 @@
   "PartOne/ChapterTwo/figures/bs_quantum.png" 1771470413 44892 21893e8503df290fc5418ecebe04eb43 ""
   "PartOne/ChapterTwo/main.tex" 1771469181 248 de7e6c4199e0925db4ff2bfbb29a4362 ""
   "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" 1771530465 911 c7b8ccf6aa7addbbb8629ca6456801e8 ""
-  "main.aux" 1771538079 6997 02bbb6c2b5b1190bf9d20063f61030bc "pdflatex"
+  "main.aux" 1771549174 7549 be6bb9e5912f38434bb9e0f19ecae2bf "pdflatex"
   "main.bbl" 1771533618 9226 6afc9a62d2d5a4cfda0cae0fcc08661d "biber main"
   "main.ind" 1771536974 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1771538079 939 ead3d8f83e103b601a9839d4d4d4c0cb "pdflatex"
-  "main.lol" 1771538078 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.lot" 1771538079 286 271279e5fe4775817c8b8bd9042586c8 "pdflatex"
-  "main.mtc" 1771538076 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.mtc0" 1771538076 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.out" 1771538079 1847 5c7a5e4d1ac0f2215468ef074b66c7b1 "pdflatex"
-  "main.ptc" 1771538079 2079 fdfd64074751ecf02ba32ba753e58d07 "pdflatex"
-  "main.run.xml" 1771538079 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
+  "main.lof" 1771549174 939 7fba5f68d813022cc9f268ea2346aa91 "pdflatex"
+  "main.lol" 1771549173 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.lot" 1771549174 286 2bcd937c39acfc97ebfa7c383b214c0f "pdflatex"
+  "main.mtc" 1771549171 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.mtc0" 1771549171 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.out" 1771549174 1847 5c7a5e4d1ac0f2215468ef074b66c7b1 "pdflatex"
+  "main.ptc" 1771549174 2189 4cc8169b365ace251c9f9eed0e43345e "pdflatex"
+  "main.run.xml" 1771549174 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
   "main.tex" 1771530465 911 c7b8ccf6aa7addbbb8629ca6456801e8 ""
-  "main.toc" 1771538079 1946 dbc847717e3be303311c0c8e42240df8 "pdflatex"
+  "main.toc" 1771549174 2056 ca9445cd83f02a2a852d1327fd727e91 "pdflatex"
   "struct/Frontpage.tex" 1768872437 694 d9fdb487a8bf032879278c8f1e42e602 ""
   "struct/Preface.tex" 1768872437 119 33a77da7ce89f15d2a52b013e322dbd9 ""
   "struct/circuitikz.tex" 1768872437 3621 e55994767a1aa6f3db9e8adbe25c8836 ""

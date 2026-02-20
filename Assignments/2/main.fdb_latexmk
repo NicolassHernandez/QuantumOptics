@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1771446418.86714 "main.aux" "main.bbl" "main" 1771455282.03037 0
+["bibtex main"] 1771563926.74531 "main.aux" "main.bbl" "main" 1771564857.28254 0
   "./refs.bib" 1770157044 211 160453fd3927308c6aeb111605f051c1 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1771455281 623 1623b5b74dcbd18f12cfbcc3113123f1 "pdflatex"
+  "main.aux" 1771564856 623 b8253033d977ea61bd8dcf4d37793f7b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1771455279.23168 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/2/main.tex" "main.pdf" "main" 1771455282.031 0
+["pdflatex"] 1771564854.37012 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/2/main.tex" "main.pdf" "main" 1771564857.28321 0
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770835094 123178 2ccd746f0a4ec0e4e75a2c14b6603cde ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1756171257 40136 7003ba06b6cea7a70224e2f1036a7f49 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1728.pk" 1756171264 49100 75decf4a6256d2337b95f774a69046a5 ""
@@ -288,11 +288,11 @@
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/2/main.tex" 1771455278 12574 29d03f96597e44c689079c1ef2542f45 ""
-  "main.aux" 1771455281 623 1623b5b74dcbd18f12cfbcc3113123f1 "pdflatex"
-  "main.bbl" 1771446419 227 658632eed63ede406fba0f15294b240f "bibtex main"
-  "main.out" 1771455280 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1771455278 12574 29d03f96597e44c689079c1ef2542f45 ""
+  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/2/main.tex" 1771564853 17018 cd710c9f36b30d340a8d0f9540c206df ""
+  "main.aux" 1771564856 623 b8253033d977ea61bd8dcf4d37793f7b "pdflatex"
+  "main.bbl" 1771563926 227 658632eed63ede406fba0f15294b240f "bibtex main"
+  "main.out" 1771564855 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1771564853 17018 cd710c9f36b30d340a8d0f9540c206df ""
   "refs.bib" 1770157044 211 160453fd3927308c6aeb111605f051c1 ""
   (generated)
   "main.aux"

@@ -8,10 +8,11 @@ Recall the E-field operator for a singel mode is:
 \end{align*}
 Lets define the quadrature operators:
 \begin{align}
-    \text{Quadrature operators}\qquad\begin{array}{l}
-        \hX_1=\dfrac{1}{2}(\ha+i\ha^\dagger)\\
+    \text{Quadrature operators}\qquad\highlight{\begin{array}{l}
+        \hX_1=\dfrac{1}{2}(\ha+\ha^\dagger)\\
         \hX_2=\dfrac{1}{2i}(\ha-\ha^\dagger)
-    \end{array},
+    \end{array}},
+    \label{eq:quadratureoperator_timeindependent}
 \end{align}
 where $[\hX_1,\hX_2]=\frac{i}{2}$. In the E-field, if we collect the cosine and sine, we get
 \begin{align*}
@@ -19,8 +20,8 @@ where $[\hX_1,\hX_2]=\frac{i}{2}$. In the E-field, if we collect the cosine and 
 \end{align*}
 The expectation value of these operators is:
 \begin{align*}
-    &\braket{\alpha|\hX_1(0)|\alpha}=\braket{\alpha|\frac{\ha+\ha^\dagger}{2}|\alpha}=\re{\alpha},\quad
-    \braket{\alpha|\hX_2(0)|\alpha}=\braket{\alpha|\frac{\ha-\ha^\dagger}{2i}|\alpha}=\im{\alpha},\quad\\
+    &\braket{\hX_1}=\braket{\alpha|\hX_1(0)|\alpha}=\braket{\alpha|\frac{\ha+\ha^\dagger}{2}|\alpha}=\re{\alpha},\quad
+    \braket{\hX_2}=\braket{\alpha|\hX_2(0)|\alpha}=\braket{\alpha|\frac{\ha-\ha^\dagger}{2i}|\alpha}=\im{\alpha},\quad\\
     &\braket{\Delta\hX^2_1}=\braket{\alpha|\frac{1}{4}(\ha+\ha^\dagger)^2|\alpha}-\frac{1}{4}(\alpha+\alpha^*)^2=\frac{1}{4},\quad\braket{\Delta\hX^2_2}=\frac{1}{4}.
 \end{align*}
 That is, there is a minimum uncertainty that a state can possible have in the two quadrature $\hX_1,\hX_2$, such a state os refferred as 
@@ -58,6 +59,42 @@ If we include the time dependence:
 \end{align*}
 The phase space representation of states allows one to acces information aabout the noise/variance associated with any state when a specific 
 E-field quadrature is measured. 
+%
+\subsection{Time dependence of quadrature operators}
+Using \eqref{eq:quadratureoperator_timeindependent} and the inclusion of time-dependence yields
+\begin{align}
+    \shortstack{Time-dependent Quadrature\\operators}\qquad\highlight{\begin{array}{l}
+        \hX_1(t)=\dfrac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}\\
+        \hX_2(t)=\dfrac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}
+    \end{array}}.
+    \label{eq:quadratureoperator_timedependent}
+\end{align}
+We can use them to express them in terms of $\hX_1(0)$ and $\hX_2(0)$.
+\begin{align}
+    \ha+\ha^\dagger=2\hX_1(0),\label{eq:hx10}\\
+    \ha-\ha^\dagger=2i\hX_2(0)\label{eq:hx20}.
+\end{align}
+\begin{align*}
+    \eqref{eq:hx10}+\eqref{eq:hx20}:&\quad2\ha=2[\hX_1(0)+i\hX_2(0)]\longrightarrow\ha=\hX_1(0)+i\hX_2(0)\\
+    \eqref{eq:hx10}-\eqref{eq:hx20}:&\quad2\ha^\dagger=2[\hX_1(0)-i\hX_2(0)]\longrightarrow\ha^\dagger=\hX_1(0)-i\hX_2(0)
+\end{align*}
+Using these in the time-evolved quadrature operators:
+\begin{align*}
+\hX_1(t)&=\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}=\frac{[\hX_1(0)+i\hX_2(0)]e^{-i\omega t}+[\hX_1(0)-i\hX_2(0)]e^{i\omega t}}{2}\\
+\hX_1(t)&=\frac{e^{i\omega t}+e^{-i\omega t}}{2}\hX_1(0)+\frac{(e^{i\omega t}-e^{-i\omega t})}{2i}\hX_2(0).
+\end{align*}
+Likewise,
+\begin{align*}
+\hX_2(t)&=\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}=\frac{[\hX_1(0)+i\hX_2(0)]e^{-i\omega t}-[\hX_1(0)-i\hX_2(0)]e^{i\omega t}}{2i}\\
+\hX_2(t)&=-\frac{e^{i\omega t}-e^{-i\omega t}}{2i}\hX_1(0)+i\frac{(e^{i\omega t}+e^{-i\omega t})}{2i}\hX_2(0).
+\end{align*} 
+Then, we have 
+\begin{align}
+    \begin{array}{l}
+        \hX_1(t)=\cos(\omega t)\hX_1(0)+\sin(\omega t)\hX_2(0),\\
+        \hX_2(t)=-\sin(\omega t)\hX_1(0)+\cos(\omega t)\hX_2(0).
+    \end{array}
+\end{align}
 %
 \subsection{Taking the continuum limit}
 In free space the sum over all $\bk$ becomes an integral:
