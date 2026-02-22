@@ -101,3 +101,101 @@ On the other hand, the quadrature uncertainties are:
 \end{figure}
 
 
+\subsection{Displaced squeezed temporal state}
+This is the most general case of the two above.
+
+The expected value of $\hX_1(t)$ is 
+\begin{align*}
+\braket{\hX_1(t)}&=\braket{0|\hS^\dagger\hD^\dagger\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}\hD\hS|0}=\frac{1}{2}\braket{0|\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t}|0}\\
+&=\frac{1}{2}\bra{0}\left[\cosh(r)\ha e^{-i\omega t}-e^{i\phi}\sinh(r)\ha^\dagger e^{-i\omega t}+\alpha e^{-i\omega t}+\cosh(r)\ha^\dagger e^{i\omega t}
+-e^{-i\phi}\sinh(r)\ha e^{i\omega t}+\alpha^*e^{i\omega t}\right]\ket{0}\\
+&=\frac{1}{2}[\alpha e^{-i\omega t}+\alpha^*e^{i\omega t}]\\
+\braket{\hX_1(t)}&=\re{\alpha e^{-i\omega t}}.
+\end{align*}
+Similarly,
+\begin{align*}
+\braket{\hX_2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}\hD\hS|0}=\frac{1}{2i}\braket{0|\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t}|0}\\
+&=\frac{1}{2i}\bra{0}\left[\cosh(r)\ha e^{-i\omega t}-e^{i\phi}\sinh(r)\ha^\dagger e^{-i\omega t}+\alpha e^{-i\omega t}-\cosh(r)\ha^\dagger e^{i\omega t}
++e^{-i\phi}\sinh(r)\ha e^{i\omega t}-\alpha^*e^{i\omega t}\right]\ket{0}\\
+&=\frac{1}{2}[\alpha e^{-i\omega t}-\alpha^*e^{i\omega t}]\\
+\braket{\hX_2(t)}&=\im{\alpha e^{-i\omega t}}.
+\end{align*}
+Doing the same for the operators squared:
+\begin{align*}
+\braket{\hX_1^2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\left(\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}\right)^2\hD\hS|0}\\
+&=\frac{1}{4}\braket{0|\hS^\dagger\hD^\dagger\left(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right)\hD\hS\hS^\dagger\hD^\dagger\left(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right)\hD\hS|0}\\
+&=\frac{1}{4}\braket{0|(\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t})^2|0}\\
+&=\frac{1}{4}\left[e^{-i2\omega t}\braket{0|\tilde{a}^2|0}+e^{i2\omega t}\braket{0|\tilde{a}^{\dagger2}|0}+\braket{0|\tilde{a}\tilde{a}^\dagger|0}+\braket{0|\tilde{a}^\dagger\tilde{a}|0}\right].
+\end{align*}
+We compute each term separately:
+\begin{align*}
+\braket{0|\tilde{a}^2|0}=&\braket{0|(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)|0}\\
+=&\cosh^2(r)\braket{\ha^2}-e^{i\phi}\sinh(r)\cosh(r)\braket{\ha\ha^\dagger}+\alpha\cosh(r)\braket{\ha}-e^{i\phi}\sinh(r)\cosh(r)\braket{\ha^\dagger\ha}\\
+&+e^{i2\phi}\sinh^2(r)\braket{\ha^{\dagger2}}-\alpha e^{i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha\cosh(r)\braket{\ha}-\alpha e^{i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha^2\\
+&=\alpha^2-e^{i\phi}\sinh(r)\cosh(r)\\
+\braket{0|\tilde{a}^2|0}&=\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r).
+\end{align*}
+\begin{align*}
+\braket{0|\tilde{a}^{\dagger2}|0}=&\braket{0|(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)|0}\\
+=&\cosh^2(r)\braket{\ha^{\dagger2}}-e^{-i\phi}\cosh(r)\sinh(r)\braket{\ha^\dagger\ha}+\alpha^*\cosh(r)\braket{\ha^\dagger}-e^{-i\phi}\sinh(r)\cosh(r)\braket{\ha\ha^\dagger}\\
+&+e^{-i2\phi}\sinh^2(r)\braket{\ha^2}-\alpha^*e^{-i\phi}\sinh(r)\braket{\ha}+\alpha^*\cosh(r)\braket{\ha^\dagger}-\alpha^*e^{-i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha^{*2}\\
+=&\alpha^{*2}-e^{-i\phi}\sinh(r)\cosh(r)\\
+\braket{0|\tilde{a}^{\dagger2}|0}=&\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r).
+\end{align*}
+\begin{align*}
+\braket{0|\tilde{a}\tilde{a}^\dagger|0}=&\braket{0|(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)|0}\\
+\braket{0|\tilde{a}\tilde{a}^\dagger|0}=&\cosh^2(r)+|\alpha|^2.
+\end{align*}
+\begin{align*}
+\braket{0|\tilde{a}^\dagger\tilde{a}|0}=&\braket{0|(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)|0}\\
+\braket{0|\tilde{a}^\dagger\tilde{a}|0}=&\sinh^2(r)+|\alpha|^2.
+\end{align*}
+Putting all together:
+\begin{align*}
+\braket{\hX_1^2(t)}&=\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}+
+\cosh^2(r)+|\alpha|^2+\sinh^2(r)+|\alpha|^2\right\}\\
+&=\frac{1}{4}\left[(\alpha e^{-i\omega t}+\alpha^*e^{i\omega t})^2+\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)\right]\\
+\braket{\hX_1^2(t)}&=[\re{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)].
+\end{align*}
+The uncertainty is:
+\begin{align*}
+\Delta\hX_1(t)=\sqrt{\braket{\hX_1^2(t)}-\braket{\hX_1(t)}^2}=\frac{1}{2}\sqrt{\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)}.
+\end{align*}
+
+Similarly,
+\begin{align*}
+\braket{\hX_2^2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\left(\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}\right)^2\hD\hS|0}\\
+&=-\frac{1}{4}\braket{0|\hS^\dagger\hD^\dagger(\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t})\hD\hS\hS^\dagger\hD^\dagger(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t})\hD\hS|0}\\
+&=-\frac{1}{4}\braket{0|(\tilde{a}e^{-i\omega t}-\tilde{a}^\dagger e^{i\omega t})^2|0}\\
+&=-\frac{1}{4}[e^{-i2\omega t}\braket{0|\tilde{a}^2|0}+e^{i2\omega t}\braket{0|\tilde{a}^{\dagger2}|0}-\braket{0|\tilde{a}\tilde{a}^\dagger|0}-\braket{0|\tilde{a}^\dagger\tilde{a}|0}].
+\end{align*}
+We use the previous results to get
+\begin{align*}
+\braket{\hX^2_2(t)}&=-\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}-
+\cosh^2(r)-|\alpha|^2-\sinh^2(r)-|\alpha|^2\right\}\\
+&=-\frac{1}{4}[(\alpha e^{-i\omega t}-\alpha^*e^{i\omega t})^2-\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)]\\
+\braket{\hX_2^2(t)}&=[\im{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)].
+\end{align*}
+And the uncertainty is:
+\begin{align*}
+\Delta\hX_2(t)=\sqrt{\braket{\hX_2^2(t)}-\braket{\hX_2(t)}^2}=\frac{1}{2}\sqrt{\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)}
+\end{align*}
+We can verify that $\Delta\hX_1(0)=e^{-r}/2$ and $\Delta\hX_2(0)=e^r/2$ when $\phi=t=0$. The following table sumarizes the most improtant 
+results for the most general case from which we can get the squeezed or displaced states.
+
+
+
+
+\begin{table}[htbp]
+    \caption{Summary of the displaced squeezed temporal state $\ket{\xi,\alpha}=\hD(\alpha)\hS(\xi)\ket{0}$ with $\xi=r\phase{\phi}$.}
+    \centering
+    \begin{tabular}{l|ll}
+        BCH formula&\multicolumn{2}{l}{$e^LAe^{-L}=A+[L,A]+\frac{1}{2!}[L,[L,A]]+\cdots$}\\
+        Displaced and Squeezed operator&$\hD(\alpha)=e^{\alpha\ha^\dagger-\alpha^*\ha}$&$\hS(\xi)=e^{\frac{1}{2}(\xi^*\ha^2-\xi\ha^{\dagger2})}$\\
+        Quadrature operators&$\hX_1(t)=\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}$&$\hX_2(t)=\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega}}{2i}$\\
+        DS Operator&\multicolumn{2}{l}{$\tilde{a}=\hS^\dagger\hD^\dagger\ha\hD\hS=\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha$}\\
+        Mean value&$\braket{\hX_1(t)}=\re{\alpha e^{-i\omega t}}$&$\braket{\hX_2(t)}=\im{\alpha e^{-i\omega t}}$\\
+        Variance&\multicolumn{2}{l}{$\braket{\hX_1^2(t)}=\braket{\hX_1(t)}^2+\frac{1}{4}[\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)]$}\\
+        &\multicolumn{2}{l}{$\braket{\hX_2^2(t)}=\braket{\hX_2(t)}^2+\frac{1}{4}[\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)]$}
+    \end{tabular}
+\end{table}

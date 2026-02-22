@@ -5,7 +5,7 @@ Let us consider the action of a beam splitter (BS) on two input modes of same fr
 Clasically, the output E-field can be defined in terms of the input E-fields:
 \begin{align*}
     \begin{bmatrix}
-        E_1'\\E_2
+        E_1'\\E'_2
     \end{bmatrix}=\begin{bmatrix}
         t'&r\\r'&t
     \end{bmatrix}\begin{bmatrix}
@@ -48,9 +48,17 @@ that $t=-1/\sqrt{2}$. Similarly, the quantum description of the BS is
         \ha_1\\\ha_2
     \end{bmatrix}.
 \end{align}
-Now, the ladder operators are equal to the E-fields. This equation implies that 
+The ladder operators are equal to the E-fields. In addition, the output modes are written as a linear combination of the input modes:
 \begin{align*}
-    \ha_1'=\frac{1}{\sqrt{2}}(\ha_1+\ha_2),\quad\text{and}\quad\ha_2'=\frac{1}{\sqrt{2}}(\ha_1-\ha_2).
+    \begin{array}{l}
+        \ha_1'=\frac{1}{\sqrt{2}}(\ha_1+\ha_2)\\
+        \ha_2'=\frac{1}{\sqrt{2}}(\ha_1-\ha_2)
+    \end{array}
+    \longrightarrow
+    \begin{array}{l}
+        \ha_1=\frac{1}{\sqrt{2}}(\ha_1'+\ha_2')\\
+        \ha_2=\frac{1}{\sqrt{2}}(\ha_1'-\ha_2')
+    \end{array}
 \end{align*}
 
 \begin{figure}[htbp]
@@ -98,4 +106,82 @@ Now, the ladder operators are equal to the E-fields. This equation implies that
         \text{Output}&=\frac{1}{\sqrt{2}}[\ket{2}_{1'}\ket{0}_{2'}-\ket{0}_{1'}\ket{2}_{2'}].
     \end{align*}
     Thus, when two photons are simultaneously incident on each input, both either go into output 1 or output 2 but never in both a the same time.
+\end{example}
+
+
+
+\begin{example}{Mach-Zehnder}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=.4\columnwidth]{PartOne/ChapterTwo/figures/example_machzenhder.png}
+    \end{figure}
+    \begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+        \item Express the output modes $\{\hb_1,\hb_2\}$ in terms of the input modes $\{\ha_1,\ha_2\}$ assuming the first BS is $50:50$.
+        \item What is the expected number of photons $\braket{\hb_i^\dagger\hb_i}$ in each mode?
+        \item If $\hb_1\to\hb_1e^{i\phi}$, determine the output mode operators are the detector positions $\hc_1=\frac{1}{\sqrt{2}}(\hb_1e^{i\phi}+\hb_2)$ 
+        and $\hb_2=\frac{1}{\sqrt{2}}(\hb_1e^{i\phi}-\hb_2)$ in terms of the input mode operators $\{\ha_1,\ha_2\}$.
+        \item What is the number of photons detected at detector $1$ as a function of $\phi$?
+    \end{enumerate}
+    \subsubsection{Solution}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=(\alph*)]
+  \item For the $50:50$ beamsplitter 1, we have:
+  \begin{align*}
+    \begin{bmatrix}
+      \hb_1\\\hb_2
+    \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+      1&1\\1&-1
+    \end{bmatrix}\begin{bmatrix}
+      \ha_1\\\ha_2
+    \end{bmatrix},\quad\text{with}\quad\begin{bmatrix}
+      \ha_1\\\ha_2
+    \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+      1&1\\1&-1
+    \end{bmatrix}\begin{bmatrix}
+      \hb_1\\\hb_2
+    \end{bmatrix}.
+  \end{align*}
+  \item From the last part, we know that 
+  \begin{align*}
+    \ha_1=\frac{1}{\sqrt{2}}(\hb_1+\hb_2)\xrightarrow{h.c.}\ha_1^\dagger=\frac{1}{\sqrt{2}}(\hb_1^\dagger+\hb_2^\dagger),\quad\text{and}\quad
+    \ha_2=\frac{1}{\sqrt{2}}(\hb_1-\hb_2)\xrightarrow{h.c.}\ha_2^\dagger=\frac{1}{\sqrt{2}}(\hb_1^\dagger-\hb_2^\dagger).
+  \end{align*}
+  The input is then:
+  \begin{align*}
+    \text{Input}=\ket{1}_1\ket{0}_2=\ha^\dagger_1\ket{0}_1\ket{0}_2.
+  \end{align*}
+  Output is:
+  \begin{align*}
+    \text{Output}=\frac{1}{\sqrt{2}}(\hb_1^\dagger+\hb_2^\dagger)\ket{0}_1\ket{0}_2=\frac{1}{\sqrt{2}}[\ket{1}_{1'}\ket{0}_{2'}+\ket{0}_{1'}\ket{1}_{2'}].
+  \end{align*}
+  We expect then to have the same probability of getting one photon at each output. 
+
+  The expected value at output 1 is:
+  \begin{align*}
+    _2\bra{0}_1\bra{1}\hb_1^\dagger\hb_1\ket{1}_1\ket{0}_2&=\frac{1}{2}\braket{0,1|(\ha_1^\dagger+\ha_2^\dagger)(\ha_1+\ha_2)|1,0}\\
+    &=\frac{1}{2}\bra{0,1}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\ket{1,0}\\
+    _2\bra{0}_1\bra{1}\hb_1^\dagger\hb_1\ket{1}_1\ket{0}_2&=\frac{1}{2}.
+  \end{align*}
+  Likewise, the expected value at output 2 is:
+  \begin{align*}
+    _2\bra{0}_1\bra{1}\hb_2^\dagger\hb_2\ket{1}_1\ket{0}_2&=\frac{1}{2}\braket{0,1|(\ha_1^\dagger-\ha_2^\dagger)(\ha_1-\ha_2)|1,0}\\
+    &=\frac{1}{2}\bra{0,1}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\ket{1,0}\\
+    _2\bra{0}_1\bra{1}\hb_2^\dagger\hb_2\ket{1}_1\ket{0}_2&=\frac{1}{2}.    
+  \end{align*}
+  \item We replace the first output as the input of the second output:
+  \begin{align*}
+    \hc_1&=\frac{1}{\sqrt{2}}[\hb_1e^{i\phi}+\hb_2]=\frac{1}{2}\left[(\ha_1+\ha_2)e^{i\phi}+(\ha_1-\ha_2)\right]=\frac{1}{2}[\ha_1(1+e^{i\phi})+\ha_2(e^{i\phi}-1)],\\
+    \hc_2&=\frac{1}{\sqrt{2}}[\hb_1e^{i\phi}-\hb_2]=\frac{1}{2}\left[(\ha_1+\ha_2)e^{i\phi}-(\ha_1-\ha_2)\right]=\frac{1}{2}[\ha_1(e^{i\phi}-1)+\ha_2(1+e^{i\phi})].
+  \end{align*}
+  \item The expected number of photons at detector 1 is:
+  \begin{align*}
+    \braket{0,1|\hc_1^\dagger\hc_1|1,0}&=\frac{1}{4}\left\{[\ha_1^\dagger(1+e^{-i\phi})+\ha_2^\dagger(e^{-i\phi}-1)][\ha_1(1+e^{i\phi})+\ha_2(e^{i\phi}-1)]\right\}\\
+    &=\frac{1}{4}\bra{0,1}\left\{\ha_1^\dagger\ha_1(\cdots)+\ha_1^\dagger\ha_2(\cdots)+\ha_2^\dagger\ha_1(\cdots)+\ha_2^\dagger\ha_2(\cdots)\right\}\ket{1,0}\\
+    &=\frac{1}{4}(1+e^{-i\phi})(1+e^{i\phi})\\
+    \braket{0,1|\hc_1^\dagger\hc_1|1,0}&=\frac{1}{2}[1+\cos\phi]=\cos^2\frac{\phi}{2}.
+  \end{align*}
+  By conservation of energy (or probability), the expected number of photon at detector 2 is:
+  \begin{align*}
+    \braket{0,1|\hc_2^\dagger\hc_2|1,0}&=\sin^2\frac{\phi}{2}.
+  \end{align*}
+\end{enumerate}
 \end{example}

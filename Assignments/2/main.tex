@@ -34,6 +34,8 @@
 \newcommand{\hB}{\hat{B}}
 \newcommand{\hC}{\hat{C}}
 \newcommand{\ha}{\hat{a}}
+\newcommand{\hb}{\hat{b}}
+\newcommand{\hc}{\hat{c}}
 \newcommand{\hn}{\hat{n}}
 \newcommand{\hH}{\hat{H}}
 \newcommand{\hN}{\hat{N}}
@@ -250,10 +252,10 @@
   \end{align*}
   We use the previous results to get
   \begin{align*}
-    \braket{\hX_2(t)}&=-\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}-
+    \braket{\hX_2^2(t)}&=-\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}-
     \cosh^2(r)-|\alpha|^2-\sinh^2(r)-|\alpha|^2\right\}\\
     &=-\frac{1}{4}[(\alpha e^{-i\omega t}-\alpha^*e^{i\omega t})^2-\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)]\\
-    \braket{\hX_2(t)}&=[\im{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)].
+    \braket{\hX_2^2(t)}&=[\im{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)].
   \end{align*}
   And the uncertainty is:
   \begin{align*}
@@ -281,10 +283,10 @@
       \begin{scope}[xshift=5cm]
         \draw[arrow](0,0)--(7,0)node[below]{$t$};
         \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2(t)$};
-        \draw[fill=gray!20,opacity=.5]plot[domain=0:6,smooth,variable=\x]({\x},{2*sin(45-deg(\w*\x))+
-        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(45-deg(2*\w*\x)) )) })--
-        plot[domain=6:0, smooth, variable=\x]({\x},{2*sin(45-deg(\w*\x))-
-        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(45-deg(2*\w*\x)) )) })--cycle;
+        \draw[fill=gray!20,opacity=.5]plot[domain=0:6,smooth,variable=\x]({\x},{2*sin(-deg(\w*\x))+
+        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(-deg(2*\w*\x)) )) })--
+        plot[domain=6:0, smooth, variable=\x]({\x},{2*sin(-deg(\w*\x))-
+        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(-deg(2*\w*\x)) )) })--cycle;
         \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(45-deg(\w*\x))});
       \end{scope}
     \end{tikzpicture}
@@ -292,10 +294,112 @@
   \end{figure}
 \end{enumerate}
 
+%%
+\section*{Exercise 2}
+In general, the photon number for output $i$ is $\hN_i=\hat{b}^\dagger_i\hat{b}_i$.
+For each output we have:
+\begin{align*}
+  \hN_1&=\frac{1}{2}(\ha_1^\dagger+\ha_2^\dagger)(\ha_1+\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2),\\
+  \hN_2&=\frac{1}{2}(\ha_1^\dagger-\ha_2^\dagger)(\ha_1-\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2).
+\end{align*}
+Substraction gives 
+\begin{align*}
+  \hN_1-\hN_2=\frac{1}{2}\left[(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)-(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\right]=\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1.
+\end{align*}
 
-\clearpage
-\nocite{*}
-\bibliographystyle{plain}   % or unsrt, alpha, apalike, etc.
-\bibliography{refs}
+With the phase shift, the input 2 is:
+\begin{align*}
+  \alpha\to\alpha e^{i\phi_\alpha},\quad\text{and}\quad\ha_2\approx\alpha e^{i\phi_\alpha}.
+\end{align*}
+The number photon difference is then:
+\begin{align*}
+  \hN_1-\hN_2=\ha_1^\dagger\alpha e^{i\phi_\alpha}+\ha_1\alpha^*e^{-i\phi_\alpha}.
+\end{align*}
+If $\alpha=|\alpha|$, then 
+\begin{align*}
+  \hN_1-\hN_2=|\alpha|\left(\ha_1^\dagger e^{i\phi_\alpha}+\ha_1e^{-i\phi_\alpha}\right)=2|\alpha|\hX_{\phi_\alpha},\quad\hX_{\phi_\alpha}=\frac{\ha_1^\dagger e^{i\phi_\alpha}+\ha_1e^{-i\phi_\alpha}}{2},
+\end{align*}
+where $\hX_{\phi_\alpha}$ is the quadrature of mode 1 modulated by the phase shift $\phi_\alpha$.
+
+To get the uncertainty $\Delta(\hN_1-\hN_2)$, we compute the expected alue of the difference and the expected value of the difference squared.
+We can use the results from the previoous exercise as the input 1 is a squeezed state of the vacuum.
+\begin{align*}
+  _1\bra{\xi,0}_2\bra{\alpha}(\hN_1-\hN_2)\ket{\alpha}_2\ket{\xi,0}_1&=2|\alpha|\braket{\hX_{\phi_\alpha}}=0,\\
+  _1\bra{\xi,0}_2\bra{\alpha}(\hN_1-\hN_2)^2\ket{\alpha}_2\ket{\xi,0}_1&=4|\alpha|^2\braket{\hX_{\phi_\alpha}^2}=|\alpha|^2[\cosh(2r)-\sinh(2r)\cos(\theta-2\phi_\alpha)],
+\end{align*}
+where $\xi=re^{i\theta}$ is the squeezing factor, and $\phi_\alpha$ the phase shift imposed by the input 2. Uncertainty is therefore:
+\begin{align*}
+  \Delta(\hN_1-\hN_2)=|\alpha|\sqrt{\cosh(2r)-\sinh(2r)\cos(\theta-2\phi_\alpha)}.
+\end{align*}
+
+%%
+\section*{Exercise 3}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=(\alph*)]
+  \item For the $50:50$ beamsplitter 1, we have:
+  \begin{align*}
+    \begin{bmatrix}
+      \hb_1\\\hb_2
+    \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+      1&1\\1&-1
+    \end{bmatrix}\begin{bmatrix}
+      \ha_1\\\ha_2
+    \end{bmatrix},\quad\text{with}\quad\begin{bmatrix}
+      \ha_1\\\ha_2
+    \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+      1&1\\1&-1
+    \end{bmatrix}\begin{bmatrix}
+      \hb_1\\\hb_2
+    \end{bmatrix}.
+  \end{align*}
+  \item From the last part, we know that 
+  \begin{align*}
+    \ha_1=\frac{1}{\sqrt{2}}(\hb_1+\hb_2)\xrightarrow{h.c.}\ha_1^\dagger=\frac{1}{\sqrt{2}}(\hb_1^\dagger+\hb_2^\dagger),\quad\text{and}\quad
+    \ha_2=\frac{1}{\sqrt{2}}(\hb_1-\hb_2)\xrightarrow{h.c.}\ha_2^\dagger=\frac{1}{\sqrt{2}}(\hb_1^\dagger-\hb_2^\dagger).
+  \end{align*}
+  The input is then:
+  \begin{align*}
+    \text{Input}=\ket{1}_1\ket{0}_2=\ha^\dagger_1\ket{0}_1\ket{0}_2.
+  \end{align*}
+  Output is:
+  \begin{align*}
+    \text{Output}=\frac{1}{\sqrt{2}}(\hb_1^\dagger+\hb_2^\dagger)\ket{0}_1\ket{0}_2=\frac{1}{\sqrt{2}}[\ket{1}_{1'}\ket{0}_{2'}+\ket{0}_{1'}\ket{1}_{2'}].
+  \end{align*}
+  We expect then to have the same probability of getting one photon at each output. 
+
+  The expected value at output 1 is:
+  \begin{align*}
+    _2\bra{0}_1\bra{1}\hb_1^\dagger\hb_1\ket{1}_1\ket{0}_2&=\frac{1}{2}\braket{0,1|(\ha_1^\dagger+\ha_2^\dagger)(\ha_1+\ha_2)|1,0}\\
+    &=\frac{1}{2}\bra{0,1}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\ket{1,0}\\
+    _2\bra{0}_1\bra{1}\hb_1^\dagger\hb_1\ket{1}_1\ket{0}_2&=\frac{1}{2}.
+  \end{align*}
+  Likewise, the expected value at output 2 is:
+  \begin{align*}
+    _2\bra{0}_1\bra{1}\hb_2^\dagger\hb_2\ket{1}_1\ket{0}_2&=\frac{1}{2}\braket{0,1|(\ha_1^\dagger-\ha_2^\dagger)(\ha_1-\ha_2)|1,0}\\
+    &=\frac{1}{2}\bra{0,1}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\ket{1,0}\\
+    _2\bra{0}_1\bra{1}\hb_2^\dagger\hb_2\ket{1}_1\ket{0}_2&=\frac{1}{2}.    
+  \end{align*}
+  \item We replace the first output as the input of the second output:
+  \begin{align*}
+    \hc_1&=\frac{1}{\sqrt{2}}[\hb_1e^{i\phi}+\hb_2]=\frac{1}{2}\left[(\ha_1+\ha_2)e^{i\phi}+(\ha_1-\ha_2)\right]=\frac{1}{2}[\ha_1(1+e^{i\phi})+\ha_2(e^{i\phi}-1)],\\
+    \hc_2&=\frac{1}{\sqrt{2}}[\hb_1e^{i\phi}-\hb_2]=\frac{1}{2}\left[(\ha_1+\ha_2)e^{i\phi}-(\ha_1-\ha_2)\right]=\frac{1}{2}[\ha_1(e^{i\phi}-1)+\ha_2(1+e^{i\phi})].
+  \end{align*}
+  \item The expected number of photons at detector 1 is:
+  \begin{align*}
+    \braket{0,1|\hc_1^\dagger\hc_1|1,0}&=\frac{1}{4}\left\{[\ha_1^\dagger(1+e^{-i\phi})+\ha_2^\dagger(e^{-i\phi}-1)][\ha_1(1+e^{i\phi})+\ha_2(e^{i\phi}-1)]\right\}\\
+    &=\frac{1}{4}\bra{0,1}\left\{\ha_1^\dagger\ha_1(\cdots)+\ha_1^\dagger\ha_2(\cdots)+\ha_2^\dagger\ha_1(\cdots)+\ha_2^\dagger\ha_2(\cdots)\right\}\ket{1,0}\\
+    &=\frac{1}{4}(1+e^{-i\phi})(1+e^{i\phi})\\
+    \braket{0,1|\hc_1^\dagger\hc_1|1,0}&=\frac{1}{2}[1+\cos\phi]=\cos^2\frac{\phi}{2}.
+  \end{align*}
+  By conservation of energy (or probability), the expected number of photon at detector 2 is:
+  \begin{align*}
+    \braket{0,1|\hc_2^\dagger\hc_2|1,0}&=\sin^2\frac{\phi}{2}.
+  \end{align*}
+\end{enumerate}
+
+
+%\clearpage
+%\nocite{*}
+%\bibliographystyle{plain}   % or unsrt, alpha, apalike, etc.
+%\bibliography{refs}
 
 \end{document}
