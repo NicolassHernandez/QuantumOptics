@@ -158,7 +158,7 @@
     \Delta\hX_2(t)&=\sqrt{\braket{\hX_2^2(t)}-\braket{\hX_2(t)}^2}=\sqrt{\frac{1}{4}\{1-[2i\im{\alpha e^{-i\omega t}}]^2\}-[\im{\alpha e^{-i\omega t}}]^2 }=\sqrt{\frac{1}{4}}=\frac{1}{2}.
   \end{align*}
 
-  The diagram is shown below.
+  The diagram is shown below. Two distances are shown in red to verify that the uncertainty is maintained.
   \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[scale=.8]
@@ -176,9 +176,11 @@
         \draw[fill=gray!20,opacity=.5]plot[domain=0:6, smooth, variable=\x]({\x},{2*sin(45-deg(\x))+.3})--
         plot[domain=6:0, smooth, variable=\x] ({\x}, {2*sin(45-deg(\x))-.3})--cycle;
         \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(45-deg(\x))});
+        \draw[|-|,very thick,BrickRed](2,{2*sin(45-deg(2))-.3})--(2,{2*sin(45-deg(2))+.3});
+        \draw[|-|,very thick,BrickRed](4,{2*sin(45-deg(4))-.3})--(4,{2*sin(45-deg(4))+.3});
       \end{scope}
     \end{tikzpicture}
-    \caption{Phase space of the coherent state and time-dependent quadrature operators.}
+    \caption{Phase space of a coherent state. Distance in red is shown to verify the uncertainty is maintained.}
   \end{figure}
   \item The process is analogous. We know that 
   \begin{align*}
@@ -263,23 +265,24 @@
   \end{align*}
   We can verify that $\Delta\hX_1(0)=e^{-r}/2$ and $\Delta\hX_2(0)=e^r/2$ when $\phi=t=0$.
 
-  The phase space representation is shown below.
+  The phase space representation is shown below for $t=\phi=0$ and $r=0.6$.
   \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[scale=.8]
-      \def\r{.7}
+      \def\r{.6}
       \def\w{1}
       \draw[arrow](-3,0)--(3,0)node[below]{$\hX_1$};
       \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2$};
-      \begin{scope}[shift={(45:2)}, rotate=45]
-        \draw[fill=gray!20,opacity=.5] (0,0) ellipse (.5 and .25);
+      \begin{scope}[shift={(0:2)}, rotate=0]
+        \draw[fill=gray!20,opacity=.5](0,0)ellipse({exp(-\r)/2} and {exp(\r)/2});
       \end{scope}
-      %\draw[fill=gray!20,opacity=.5](45:2)+(0:.3)arc(0:360:.3);
-      \draw[arrow,very thick,NavyBlue](0,0)+(45:2)node[circ,NavyBlue]{}arc(45:-315:2);
-      \draw[dashed](0,{2*sin(45)})node[left,font=\scriptsize]{$\braket{\hX_2}$}--(45:2)--({2*cos(45)},0)node[below,font=\scriptsize]{$\braket{\hX_1}$}(45:2)--++(3.5,0);
+      \draw[fill=gray!10,dashed,opacity=.5](0,-2)ellipse({exp(\r)/2} and {exp(-\r)/2});
+      \draw[dashed](0,{-2+exp(-\r)/2})--++(7,0)(0,{-2-exp(-\r)/2})--++(7,0);
+      \draw[arrow,very thick,NavyBlue](0,0)+(0:2)node[circ,NavyBlue]{}arc(0:-360:2);
+      \draw[dashed](2,{exp(\r)/2})--++(3,0)(2,{-exp(\r)/2})--++(3,0);
       \draw(45:2.5)node[above right,black]{$\ket{\alpha e^{-i\omega t}}$};
-      \draw[|-|,thick]({2*cos(45)-.3},-.6)--({2*cos(45)+.3},-.6)node[midway,below,font=\scriptsize]{$\Delta\hX_1$};
-      \draw[|-|,thick](-.8,{2*sin(45)-.3})--(-.8,{2*sin(45)+.3})node[midway,left,font=\scriptsize]{$\Delta\hX_2$};
+      \draw[|-|,thick](1.5,{exp(\r)/2})--(1.5,{-exp(\r)/2})node[midway,left,fill=white,font=\scriptsize]{$\Delta\hX_2$};
+      \draw[|-|,thick]({2+-exp(-\r)/2},-1.5)--({2+exp(-\r)/2},-1.5)node[right,font=\scriptsize]{$\Delta\hX_1$};
       \begin{scope}[xshift=5cm]
         \draw[arrow](0,0)--(7,0)node[below]{$t$};
         \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2(t)$};
@@ -287,10 +290,10 @@
         (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(-deg(2*\w*\x)) )) })--
         plot[domain=6:0, smooth, variable=\x]({\x},{2*sin(-deg(\w*\x))-
         (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(-deg(2*\w*\x)) )) })--cycle;
-        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(45-deg(\w*\x))});
+        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(-deg(\w*\x))});
       \end{scope}
     \end{tikzpicture}
-    \caption{Phase space of the coherent state and time-dependent quadrature operators.}
+    \caption{Phase space of the squeezed displaced state for $r=0.6$.}
   \end{figure}
 \end{enumerate}
 
