@@ -1,0 +1,137 @@
+\chapter{Density operator (review from app knight)}
+%
+\section{Density operator}
+\subsection{Definition}
+State vectors $\ket{\psi}$ convey the maximal amount of information about a system allowed by the laws of quantum mechanics.
+
+If $\ket{\psi_1}$ and $\ket{\psi_2}$ are two possible quantum states then so is their coherent superporition
+\begin{align*}
+    \ket{\psi}=c_1\ket{\psi_1}+c_2\ket{\psi_2},\quad|c_1|^2+|c_2|^2=1.
+\end{align*}
+However, there are situations where the state vector is not precisely known.
+It may be possible to write state vectors for the multicomponent system but not for the subsystem of interest.
+
+For instance, a system of two spin-1/2 with eigenstates $\{\ket{\uparrow},\ket{\downarrow}\}$. A possible state of the combined system is 
+\begin{align*}
+    \ket{\psi}=\frac{1}{\sqrt{2}}\left[\ket{\uparrow}_1\ket{\downarrow}_2-\ket{\downarrow}_1\ket{\uparrow}_2\right].
+\end{align*}
+This equation is an entangled state. An entangled state cannot be factored, in any basis, into a product of states of the two subsystems, that is,
+\begin{align*}
+    \text{Entangled state}\qquad\ket{\psi}\neq\ket{\text{spin 1}}\ket{\text{spin 2}}.
+\end{align*}
+Quantum states described by state vectors are said to be \emph{pure states}. States that cannot be described by state vectors are said to be in 
+\emph{mixed states}. Mixed states are described by the density operator 
+\begin{align}
+    \text{Mixed state}\qquad\highlight{\hrho=\sum_ip_i\ket{\psi_i}\bra{\psi_i}},
+    \label{eq:densityoperator_mixed}
+\end{align}
+where the sym is over an ensemble and $p_i$ is the probability of the system being in the ith state of the ensemble $\ket{\psi_i}$.
+The probabilities satisfy the obvious relations 
+\begin{align*}
+    0\leq p_i\leq1,\qquad\sum_ip_i=1,\qquad\sum_ip_i^2\leq1.
+\end{align*}
+For the pure state, all the $p_i$ vanish except the jth with $p_i\delta_{ij}$. Then,
+\begin{align*}
+    \text{Pure state}\qquad\highlight{\hrho=\ket{\psi_j}\bra{\psi_j}}.
+    \label{eq:densityoperator_pure}
+\end{align*}
+The density operator for the pure state $\ket{\psi_j}$ is just the projection onto the state $\ket{\psi_j}$, while the general case 
+\eqref{eq:densityoperator_mixed} is a sum of the projection operators over the ensemble, weighted with the probabilities of each member 
+of the ensemble.
+
+In an orthonormal basis $\{\ket{\varphi_n}\}$, the ith member of the ensemble can be projected as 
+\begin{align*}
+    \ket{\psi_i}=\sum_n\ket{\varphi_n}\braket{\varphi_n|\psi_i}=\sum_nc_n^{(i)}\ket{\varphi_n},\quad c_n^{(i)}=\braket{\varphi_n|\psi_i}.
+\end{align*} 
+The matrix element of $\hrho$ between the $n$ and $n'$ eigenstates is 
+\begin{align*}
+    \braket{\varphi_n|\hrho|\varphi_{n'}}=\sum_i\braket{\varphi_n|\psi_i}p_i\braket{\psi_i|\varphi_{n'}}=\sum_ip_ic_n^{(i)}c_{n'}^{(i)^*}.
+\end{align*}
+The quantities $\braket{\varphi_n|\hrho|\varphi_{n'}}$ form the elements of the density matrix. The trace of this matrix is 
+\begin{align*}
+    \Tr{\hrho}=\sum_n\braket{\varphi_n|\hrho|\varphi_n}=\sum_{i,n}\braket{\varphi_n|\psi_i}p_i\braket{\psi_i|\varphi_n}=\sum_{i,n}p_i\braket{\psi_i|\varphi_n}\braket{\varphi_n|\psi_i}=\sum_ip_i=1.
+\end{align*}
+Since $\hrho$ is Hermitian, the diagonal elements $0\leq\braket{\varphi_n|\hrho|\varphi_n}\leq1$.
+
+Let us now consider the square $\hrho^2=\hrho\cdot\hrho$. For a pure state, we have 
+\begin{align*}
+    \hrho^2=\ket{\psi}\braket{\psi|\psi}\bra{\psi}=\ket{\psi}\bra{\psi}=\hrho\Longrightarrow\Tr{\hrho^2}=\Tr{\hrho}=1.
+\end{align*}
+For a statistical mixture 
+\begin{align*}
+    \hrho^2=\sum_{i,j}p_ip_j\ket{\psi_i}\braket{\psi_i|\psi_j}\bra{\psi_j}.
+\end{align*}
+Its trace is 
+\begin{align*}
+    \Tr{\hrho^2}=\sum_n\braket{\varphi_n|\hrho^2|\varphi_n}=\sum_{n,i,j}p_ip_j\braket{\varphi_n|\psi_i}\braket{\psi_i|\psi_j}\braket{\psi_j|\varphi_n}=\sum_{i,j}p_ip_j
+    |\braket{\psi_i|\psi_j}|^2\leq\left[\sum_ip_i\right]^2-1.
+\end{align*}
+Thus, we have 
+\begin{align}
+    \Tr{\hrho^2}\begin{cases}
+    =1,&\text{pure state}\\
+    <1,&\text{mixed state}
+    \end{cases}.
+\end{align}
+
+The ensemble average (or expectation value for pure state) of some operator $\hO$ is 
+\begin{align}
+    \text{Expectation}\qquad\highlight{\braket{\hO}=\Tr{\hrho\hO}=\begin{cases}
+        \braket{\psi_i|\hO|\psi_i},&\text{pure state}\\
+        \sum_ip_i\braket{\psi_i|\hO|\psi_i},&\text{mixed state}
+    \end{cases}}.
+\end{align}
+Formally we can use the density operator to express the expectation as: 
+\begin{align*}
+    \braket{\hO}=\Tr{\hrho\hO}=\sum_n\braket{\varphi_n|\hrho\hO|\varphi_n}=\sum_{n,i}p_i\braket{\varphi_n|\psi_i}\braket{\psi_i|\hO|\varphi_n}=
+    \sum_{i,n}p_i\braket{\psi_i|\hO|\varphi_n}\braket{\varphi_n|\psi_i}=\sum_ip_i\braket{\psi_i|\hO|\varphi_i}.
+\end{align*}
+
+%
+\subsection{Entangled states}
+Lets consider a two-particle system and that each particle can be in either of two one-particle states $\ket{\psi_1}$ or $\ket{\psi_2}$. Using the notation 
+$\ket{\psi_i^{(j)}}$=particle $j$ in state $i$, we consider a pure two-particle superposition state 
+\begin{align*}
+    \ket{\psi}=C_1\ket{\psi_1^{(1)}}\otimes\ket{\psi_2^{(2)}}+C_2\ket{\psi_2^{(1)}}\otimes\ket{\psi_1^{(2)}}.
+\end{align*}
+This can be extended for multiparticle systems, where we can define the \emph{reduced density operators} for each of the subsystems by tracing the 
+density operator over the states of all the other systems. The reduced density operator for particle 1 is 
+\begin{align*}
+    \hrho^{(1)}=\text{Tr}_2[\hrho]=\braket{\psi_1^{(2)}|\hrho|\psi_1^{(2)}}+\braket{\psi_2^{(2)}|\hrho|\psi_2^{(2)}}=|C_1|^2\ket{\psi_1^{(1)}}\bra{\psi_1^{(1)}}
+    +|C_2|^2\ket{\psi_2^{(1)}}\bra{\psi_2^{(1)}}.
+\end{align*}
+This has the form of a mixed state for particle 1 as long as $C_i\neq0,\;i=1,2$. Simiarly, for particle 2,
+\begin{align*}
+    \hrho^{(2)}=\text{Tr}_1[\hrho]=|C_1|^2\ket{\psi_1^{(2)}}\bra{\psi_1^{(2)}}
+    +|C_2|^2\ket{\psi_2^{(2)}}\bra{\psi_2^{(2)}}.
+\end{align*}
+When one of the particles is considered without regards to the other, it is generally in a mixed state. Thus one may characterized the degree of 
+entanglement according to the degree of purity of either of the subsystems. 
+\begin{itemize}[itemsep=0pt,topsep=0pt,parsep=0pt]
+    \item $\Tr{\hrho^{(2)}}^2=1$, the state $\ket{\psi}$ is not an entangled state.
+    \item $\Tr{\hrho^{(2)}}^2<1$, then $\ket{\psi}$ describes an entanglement between subsystems 1 and 2.
+\end{itemize}
+
+
+
+
+
+%%
+\subsection{Dynamics of the density operator}
+The density operator evolves unitarily according to 
+\begin{align}
+    \text{von Neumann eq 1}\qquad\partial_t\hrho=\frac{i}{\hbar}[\hrho,\hH],\quad\text{con}\quad i\hbar\partial_t\ket{\psi_i}=\hH\ket{\psi_i}.
+\end{align}
+Alternatively, we may write 
+\begin{align*}
+    \text{Heisenberg picture of $\hrho$}\qquad\hrho(t)=\hU(t,0)\hrho(0)\hU^\dagger(t,0),
+\end{align*}
+where the unitary evolution operator $\hU(t,0)$ satisfies the equation 
+\begin{align}
+    \qquad i\hbar\partial_t\hU=\hH\hU.
+\end{align}
+The equation is sometimes written as 
+\begin{align}
+    \text{von Neumann eq 2}\qquad\highlight{i\hbar\partial_t\hrho(t)=[\hH,\hrho(t)]=\mathcal{L}\hrho(t)},
+\end{align}
+where $\mathcal{L}$ is known as the Liouvilian superoperator.

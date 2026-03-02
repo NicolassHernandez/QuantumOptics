@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  22 FEB 2026 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  2 MAR 2026 02:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2382,17 +2382,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [16]
-<PartOne/ChapterOne/figures/displacedvaccum.png, id=222, 225.84375pt x 143.78719pt>
+<PartOne/ChapterOne/figures/displacedvaccum.png, id=238, 225.84375pt x 143.78719pt>
 File: PartOne/ChapterOne/figures/displacedvaccum.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/displacedvaccum.png>
 Package pdftex.def Info: PartOne/ChapterOne/figures/displacedvaccum.png  used on input line 38.
 (pdftex.def)             Requested size: 149.6003pt x 95.25087pt.
-<PartOne/ChapterOne/figures/coherentstate.png, id=224, 245.41687pt x 143.78719pt>
+<PartOne/ChapterOne/figures/coherentstate.png, id=240, 245.41687pt x 143.78719pt>
 File: PartOne/ChapterOne/figures/coherentstate.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/coherentstate.png>
 Package pdftex.def Info: PartOne/ChapterOne/figures/coherentstate.png  used on input line 44.
 (pdftex.def)             Requested size: 149.6003pt x 87.65082pt.
-<PartOne/ChapterOne/figures/evolutioncoherent2.png, id=225, 302.63063pt x 176.15813pt>
+<PartOne/ChapterOne/figures/evolutioncoherent2.png, id=241, 302.63063pt x 176.15813pt>
 File: PartOne/ChapterOne/figures/evolutioncoherent2.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/evolutioncoherent2.png>
 Package pdftex.def Info: PartOne/ChapterOne/figures/evolutioncoherent2.png  used on input line 50.
@@ -2422,12 +2422,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
-<PartOne/ChapterOne/figures/displacedsqueezedstate.png, id=286, 280.04625pt x 103.88812pt>
+<PartOne/ChapterOne/figures/displacedsqueezedstate.png, id=302, 280.04625pt x 103.88812pt>
 File: PartOne/ChapterOne/figures/displacedsqueezedstate.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/displacedsqueezedstate.png>
 Package pdftex.def Info: PartOne/ChapterOne/figures/displacedsqueezedstate.png  used on input line 91.
 (pdftex.def)             Requested size: 224.39664pt x 83.24693pt.
-<PartOne/ChapterOne/figures/displacedsqueezedstate_b.png, id=287, 280.04625pt x 130.98938pt>
+<PartOne/ChapterOne/figures/displacedsqueezedstate_b.png, id=303, 280.04625pt x 130.98938pt>
 File: PartOne/ChapterOne/figures/displacedsqueezedstate_b.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/displacedsqueezedstate_b.png>
 Package pdftex.def Info: PartOne/ChapterOne/figures/displacedsqueezedstate_b.png  used on input line 97.
@@ -2466,7 +2466,7 @@ Overfull \hbox (12.99832pt too wide) detected at line 178
 []
  []
 
-)
+) (PartOne/ChapterOne/ThermalFields.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2474,7 +2474,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22] (PartOne/ChapterOne/bibliography.tex
+[22])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23] (PartOne/ChapterOne/bibliography.tex
 \blx@maxsegment@1=\count592
 \blx@sectionciteorder@1=\count593
 Package biblatex Info: Reference section=1 on input line 3.
@@ -2488,21 +2496,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23]
+[24]
 Chapter 2.
-(main.ptc) [24
+(main.ptc) [25
 
 ] (PartOne/ChapterTwo/BeamSplitter.tex
 Overfull \hbox (4.3308pt too wide) detected at line 35
 []
  []
 
-<PartOne/ChapterTwo/figures/bs_classical.png, id=320, 237.13594pt x 145.29282pt>
+<PartOne/ChapterTwo/figures/bs_classical.png, id=342, 237.13594pt x 145.29282pt>
 File: PartOne/ChapterTwo/figures/bs_classical.png Graphic file (type png)
 <use PartOne/ChapterTwo/figures/bs_classical.png>
 Package pdftex.def Info: PartOne/ChapterTwo/figures/bs_classical.png  used on input line 68.
 (pdftex.def)             Requested size: 224.39664pt x 137.49309pt.
-<PartOne/ChapterTwo/figures/bs_quantum.png, id=321, 170.88844pt x 121.95563pt>
+<PartOne/ChapterTwo/figures/bs_quantum.png, id=343, 170.88844pt x 121.95563pt>
 File: PartOne/ChapterTwo/figures/bs_quantum.png Graphic file (type png)
 <use PartOne/ChapterTwo/figures/bs_quantum.png>
 Package pdftex.def Info: PartOne/ChapterTwo/figures/bs_quantum.png  used on input line 74.
@@ -2514,8 +2522,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25]
-<PartOne/ChapterTwo/figures/example_machzenhder.png, id=334, 228.855pt x 199.49532pt>
+[26]
+<PartOne/ChapterTwo/figures/example_machzenhder.png, id=355, 228.855pt x 199.49532pt>
 File: PartOne/ChapterTwo/figures/example_machzenhder.png Graphic file (type png)
 <use PartOne/ChapterTwo/figures/example_machzenhder.png>
 Package pdftex.def Info: PartOne/ChapterTwo/figures/example_machzenhder.png  used on input line 116.
@@ -2528,7 +2536,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26 <./PartOne/ChapterTwo/figures/bs_classical.png> <./PartOne/ChapterTwo/figures/bs_quantum.png>]
+[27 <./PartOne/ChapterTwo/figures/bs_classical.png> <./PartOne/ChapterTwo/figures/bs_quantum.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2536,7 +2544,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27 <./PartOne/ChapterTwo/figures/example_machzenhder.png>])) (PartOne/ChapterThree/main.tex
+[28 <./PartOne/ChapterTwo/figures/example_machzenhder.png>])) (PartOne/ChapterThree/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2544,21 +2552,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]
+[29]
 Chapter 3.
-(main.ptc) [29
+(main.ptc) [30
 
 ] (PartOne/ChapterThree/DetectionOfQuadratureStates.tex
-<PartOne/ChapterThree/figures/homodynedetection.png, id=369, 262.73157pt x 161.10187pt>
+<PartOne/ChapterThree/figures/homodynedetection.png, id=391, 262.73157pt x 161.10187pt>
 File: PartOne/ChapterThree/figures/homodynedetection.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/homodynedetection.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/homodynedetection.png  used on input line 12.
 (pdftex.def)             Requested size: 249.33128pt x 152.89104pt.
-) (PartOne/ChapterThree/GenerationOfQuadratureStates.tex
-<PartOne/ChapterThree/figures/nonlinearmedium.png, id=370, 214.55156pt x 65.49469pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[31 <./PartOne/ChapterThree/figures/homodynedetection.png>]
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 56.
+ (C:\Users\irisp\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
+File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
+)) (PartOne/ChapterThree/GenerationOfQuadratureStates.tex
+<PartOne/ChapterThree/figures/nonlinearmedium.png, id=400, 214.55156pt x 65.49469pt>
 File: PartOne/ChapterThree/figures/nonlinearmedium.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/nonlinearmedium.png>
-Package pdftex.def Info: PartOne/ChapterThree/figures/nonlinearmedium.png  used on input line 6.
+Package pdftex.def Info: PartOne/ChapterThree/figures/nonlinearmedium.png  used on input line 5.
 (pdftex.def)             Requested size: 249.33128pt x 76.11278pt.
 
 
@@ -2568,7 +2588,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[30 <./PartOne/ChapterThree/figures/homodynedetection.png>]
+[32 <./PartOne/ChapterThree/figures/nonlinearmedium.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2576,11 +2596,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[31 <./PartOne/ChapterThree/figures/nonlinearmedium.png>]
-<PartOne/ChapterThree/figures/momentumconservation.png, id=383, 254.45062pt x 101.62968pt>
+[33]
+<PartOne/ChapterThree/figures/momentumconservation.png, id=411, 254.45062pt x 101.62968pt>
 File: PartOne/ChapterThree/figures/momentumconservation.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/momentumconservation.png>
-Package pdftex.def Info: PartOne/ChapterThree/figures/momentumconservation.png  used on input line 73.
+Package pdftex.def Info: PartOne/ChapterThree/figures/momentumconservation.png  used on input line 102.
 (pdftex.def)             Requested size: 249.33128pt x 99.58864pt.
 ))
 
@@ -2590,7 +2610,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32 <./PartOne/ChapterThree/figures/momentumconservation.png>] [33] (main.ind)
+[34 <./PartOne/ChapterThree/figures/momentumconservation.png>] [35] (Appendix/main.tex (Appendix/DensityOperator.tex
+Appendix A.
+[36
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37])) (main.ind)
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the main.maf file.
@@ -2617,29 +2649,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34] (main.aux)
+[38] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5C7A5E4D1AC0F2215468EF074B66C7B1;1847.
+(rerunfilecheck)             Checksum: E052434653229F6DBED954774F800850;2385.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 88219 strings out of 474486
- 2210719 string characters out of 5743755
- 3437591 words of memory out of 5000000
- 109208 multiletter control sequences out of 15000+600000
- 647432 words of font info for 137 fonts, out of 8000000 for 9000
+ 88304 strings out of 474486
+ 2212368 string characters out of 5743755
+ 3437719 words of memory out of 5000000
+ 109259 multiletter control sequences out of 15000+600000
+ 647749 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,20n,104p,1674b,1875s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on main.pdf (34 pages, 1013548 bytes).
+Output written on main.pdf (38 pages, 1043554 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 592 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1316,6 +1316,9 @@ INPUT .\PartOne\ChapterOne\figures\displacedsqueezedstate_b.png
 INPUT .\PartOne\ChapterOne\figures\displacedsqueezedstate_b.png
 INPUT .\PartOne\ChapterOne\figures\displacedsqueezedstate_b.png
 INPUT .\PartOne\ChapterOne\figures\displacedsqueezedstate_b.png
+INPUT .\PartOne\ChapterOne\ThermalFields.tex
+INPUT .\PartOne\ChapterOne\ThermalFields.tex
+INPUT PartOne\ChapterOne\ThermalFields.tex
 INPUT .\PartOne\ChapterOne\bibliography.tex
 INPUT .\PartOne\ChapterOne\bibliography.tex
 INPUT PartOne\ChapterOne\bibliography.tex
@@ -1382,6 +1385,10 @@ INPUT .\PartOne\ChapterThree\figures\homodynedetection.png
 INPUT .\PartOne\ChapterThree\figures\homodynedetection.png
 INPUT .\PartOne\ChapterThree\figures\homodynedetection.png
 INPUT .\PartOne\ChapterThree\figures\homodynedetection.png
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1bch.fd
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1bch.fd
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1bch.fd
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\tfm\bitstrea\charter\bchr8c.tfm
 INPUT .\PartOne\ChapterThree\GenerationOfQuadratureStates.tex
 INPUT .\PartOne\ChapterThree\GenerationOfQuadratureStates.tex
 INPUT PartOne\ChapterThree\GenerationOfQuadratureStates.tex
@@ -1392,6 +1399,7 @@ INPUT .\PartOne\ChapterThree\figures\nonlinearmedium.png
 INPUT .\PartOne\ChapterThree\figures\nonlinearmedium.png
 INPUT .\PartOne\ChapterThree\figures\nonlinearmedium.png
 INPUT .\PartOne\ChapterThree\figures\nonlinearmedium.png
+INPUT C:\Users\irisp\AppData\Local\Programs\MiKTeX\fonts\vf\bitstrea\charter\bchr8c.vf
 INPUT .\PartOne\ChapterThree\figures\momentumconservation.png
 INPUT .\PartOne\ChapterThree\figures\momentumconservation.png
 INPUT .\PartOne\ChapterThree\figures\momentumconservation.png
@@ -1399,6 +1407,14 @@ INPUT .\PartOne\ChapterThree\figures\momentumconservation.png
 INPUT .\PartOne\ChapterThree\figures\momentumconservation.png
 INPUT .\PartOne\ChapterThree\figures\momentumconservation.png
 INPUT .\PartOne\ChapterThree\figures\momentumconservation.png
+INPUT .\Appendix\main.tex
+INPUT .\Appendix\main.tex
+INPUT .\Appendix\main.tex
+INPUT .\Appendix\main.tex
+INPUT Appendix\main.tex
+INPUT .\Appendix\DensityOperator.tex
+INPUT .\Appendix\DensityOperator.tex
+INPUT Appendix\DensityOperator.tex
 INPUT .\main.ind
 INPUT .\main.ind
 INPUT main.ind
