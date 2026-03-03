@@ -21,13 +21,9 @@ The interaction (dipole-field) energy density associated with the field becomes:
     &=-\varepsilon_0[\chi^{(1)}_{jk}\bE_k+\chi_{jkl}^{(2)}\bE_j\bE_k]\bE_l=\underbrace{-\varepsilon_0\chi^{(1)}_{jk}\bE_k\bE_l}_{U_L}+
     \underbrace{-\varepsilon_0\chi^{(2)}_{jkl}\bE_j\bE_k\bE_l}_{U^{(2)}_{NL}\text{ (Squeezed output)}}.
 \end{align*}
-Nonlinear-Hamiltonian is therefore
-\begin{align}
-    H^{(2)}_{NL}=-\int\;dVU^{(2)}_{NL},
-\end{align}
+
 We will analyze the above nonlinear Hamiltonian for the specific interaction where we have an incident blue photon corresponding 
 spontaneously down-converted to two red photons (nonlinear process).
-
 The total E-field present is:
 \begin{align*}
     \hbE_{tot}=\bE_B+\hbE,\quad\begin{array}{l}
@@ -37,7 +33,7 @@ The total E-field present is:
 \end{align*}
 Hamiltonian becomes 
 \begin{align*}
-    \hH_{NL}^{(2)}=-\varepsilon_0\int\;dV\hH^{(2)}_{jkl}(\bE_B+\hbE)_j(\bE_B+\hbE)_k(\bE_B+\hbE)_l
+    \hH_{NL}^{(2)}=-\int\;dVU^{(2)}_{NL}=-\varepsilon_0\int\;dV\chi^{(2)}_{jkl}(\bE_B+\hbE)_j(\bE_B+\hbE)_k(\bE_B+\hbE)_l
 \end{align*}
 For further simplification let us assume that only $\chi^{(2)}_{zzz}\neq0=\chi^{(2)}$. This is a simplifying assumption, used only for making the calculations 
 easier. We are only studyng the simplest case where squeezed light is generated.
@@ -50,8 +46,7 @@ There will be 4 different kinds of terms resulting from the above combination of
     \item[(2)] $E_{Bz}E_{Bz}\hE_z$ Such a term can be simplified as follows 
     \begin{align*}
         &iE_{Bz}^2\sum_{\bk}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\left[\ha_{\bk,z}e^{i(\bk\cdot\br-\omega t)}-\ha_{kz}^\dagger e^{-i(\bk\cdot\br-\omega t)}\right]\\
-        =&i\left[\mathcal{E}_B^2e^{i2(k_Bz-\omega_Bt)}+\mathcal{E}_B^{*2}e^{-i2(k_Bz-\omega_Bt)}+|\mathcal{E}_B|^2\right]\\
-        =&\sum_{\bk}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\left[\ha_{\bk,z}e^{i(\bk\cdot\br-\omega t)}-\ha_{\bk,z}^\dagger e^{-i(\bk\cdot\br-\omega t)}\right]
+        =&i\left[\mathcal{E}_B^2e^{i2(k_Bz-\omega_Bt)}+\mathcal{E}_B^{*2}e^{-i2(k_Bz-\omega_Bt)}+|\mathcal{E}_B|^2\right]\sum_{\bk}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\left[\ha_{\bk,z}e^{i(\bk\cdot\br-\omega t)}-\ha_{\bk,z}^\dagger e^{-i(\bk\cdot\br-\omega t)}\right].
     \end{align*}
     The above product has time dependent terms of the type $e^{i(2\omega_B\pm\omega)t},\;e^{\pm i\omega t}$. For optical frequencies $\{\omega_B,\omega\}$ both of these 
     terms are fast oscillating and they average to zero over typical timescales of observations $t\sim1\;ns$. 
@@ -59,7 +54,7 @@ There will be 4 different kinds of terms resulting from the above combination of
     \begin{align*}
         \hH_{NL}^{(2)}&=-3\varepsilon_0\chi^{(2)}\int\;dV E_{Bz}\hE_z\hE_z\\
         E_{Bz}&=\mathcal{E}_Be^{i(\bk_B\cdot\br-\omega_Bt)}+\mathcal{E}_B^*e^{-i(\bk_B\cdot\br-\omega_Bt)},\\
-        \hE_z&=i\sum_{\bk}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\left[\ha_{\bk,z}e^{i(\bk\cdot\br-\omega t)}-\ha_{\bk,z}^*e^{-i(\bk\cdot\br-\omega t)}\right]
+        \hE_z&=i\sum_{\bk}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\left[\ha_{\bk,z}e^{i(\bk\cdot\br-\omega t)}-\ha_{\bk,z}^\dagger e^{-i(\bk\cdot\br-\omega t)}\right]
     \end{align*}
     Substituting the E-fields in the nonlinear Hamiltonian:
     \begin{align*}
@@ -72,18 +67,23 @@ There will be 4 different kinds of terms resulting from the above combination of
         e^{i(\omega_B-\omega_1-\omega_2)t},\;e^{i(\omega_B+\omega_1+\omega_2)t},\;e^{i(\omega_B-\omega_1+\omega_2)t},\;e^{i(\omega_B+\omega_1-\omega_2)t}.
     \end{align*}
     These are all fast oscillating terms, which averages to zero. To get a non-zero contribution we choose 
-    \begin{align*}
-        \omega_B=\omega_1+\omega_2\Longrightarrow\text{Energy conservation}.
-    \end{align*}
+    \begin{align}
+        \highlight{\omega_B=\omega_1+\omega_2\Longrightarrow\text{Energy conservation}}.
+    \end{align}
     Similarly,
     \begin{align*}
         \int\;dVe^{i(\bk_B-\bk_1-\bk_2)\cdot\br}.
     \end{align*}
     For this integral to not vanish 
-    \begin{align*}
-        \bk_B=\bk_1+\bk_2\Longrightarrow\text{Momentum conservation}.
-    \end{align*}
-    This is the spontaneous parametric down-conversion SPDC process. 
+    \begin{align}
+        \highlight{\bk_B=\bk_1+\bk_2\Longrightarrow\text{Momentum conservation}}.
+    \end{align}
+    This is the \bfemph{spontaneous parametric down-conversion} SPDC process. 
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=.4\columnwidth]{PartOne/ChapterThree/figures/momentumconservation.png}
+        \caption{Energy and momentum conservation.}
+    \end{figure}
 \end{itemize}
 
 Thus, only keeping the terms that conserve energy and momentum:
@@ -97,14 +97,8 @@ If the two modes are the same:
         \bk_B=2\bk\Longrightarrow\bk=\bk_B/2
     \end{array}.
 \end{align*}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=.5\columnwidth]{PartOne/ChapterThree/figures/momentumconservation.png}
-    \caption{Energy and momentum conservation.}
-\end{figure}
-
 The corresponding evolution operator becomes 
 \begin{align}
-    U(t,0)=e^{-i\hH_{NL}^{(2)}t/\hbar}=e^{\frac{1}{2}[\xi^*\ha^2-\xi^*\ha^{\dagger2}]},\quad\xi=3i\chi^{(2)}\mathcal{E}_B\omega t.
+    U(t,0)=e^{-i\hH_{NL}^{(2)}t/\hbar}=e^{\frac{1}{2}[\xi^*\ha^2-\xi\ha^{\dagger2}]},\quad\xi=3i\chi^{(2)}\mathcal{E}_B\omega t.
 \end{align}
 Thus starting with an initial vacuum state in the red modes the system one obtains a squeezed vacuum output.
