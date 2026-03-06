@@ -46,10 +46,12 @@
 \newcommand{\hS}{\hat{S}}
 \newcommand{\hD}{\hat{D}}
 \newcommand{\hy}{\hat{y}}
+\newcommand{\hrho}{\hat{\rho}}
 \newcommand{\hz}{\hat{z}}
 \newcommand{\laplace}[1]{\mathscr{L}\left[#1\right]}
 \newcommand{\ilaplace}[1]{\mathscr{L}^{-1}\left[#1\right]}
 \newcommand{\fourier}[1]{\mathscr{F}\left[#1\right]}
+\newcommand{\Tr}[1]{\text{Tr}\left[#1\right]}
 \newcommand{\ifourier}[1]{\mathscr{F}^{-1}\left[#1\right]}
 \newcommand{\ket}[1]{\left|#1\right\rangle}
 \newcommand{\bra}[1]{\left\langle#1\right|}
@@ -76,7 +78,7 @@
 \newcommand{\institution}{University of Arizona}
 \newcommand{\autor}{Nicolás Hernández Alegría}
 \newcommand{\course}{OPTI 544 Quantum Optics}
-\newcommand{\assignment}{Assignment 2}
+\newcommand{\assignment}{Assignment 3}
 %
 \title{\textbf{\assignment}\\\course\\{\Large\institution}}
 \author{\autor}
@@ -100,305 +102,48 @@
 %%
 \section*{Exercise 1}
 \begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
-  \item The quadrature operators are:
-  \begin{align*}
-    \hX_1=\frac{\ha+\ha^\dagger}{2},\quad\text{and}\quad\hX_2=\frac{\ha-\ha^\dagger}{2i}.
-  \end{align*}
-  We can use them to express $\ha,\ha^\dagger$ in terms of $\hX_{1,2}$.
-  \begin{align}
-    \ha+\ha^\dagger&=2\hX_1\\
-    \ha-\ha^\dagger&=2i\hX_2.
-  \end{align}
-  Then, 
-  \begin{align*}
-    (1)+(2):&\quad2\ha=2(\hX_1+i\hX_2)\longrightarrow\ha=\hX_1(0)+i\hX_2(0)\\
-    (1)-(2):&\quad2\ha^\dagger=2(\hX_1-i\hX_2)\longrightarrow\ha^\dagger=\hX_1(0)-i\hX_2(0)
-  \end{align*}
-  Using these in the time-evolved quadrature operators:
-  \begin{align*}
-    \hX_1(t)&=\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}=\frac{[\hX_1(0)+i\hX_2(0)]e^{-i\omega t}+[\hX_1(0)-i\hX_2(0)]e^{i\omega t}}{2}\\
-    \hX_1(t)&=\frac{e^{i\omega t}+e^{-i\omega t}}{2}\hX_1(0)+\frac{(e^{i\omega t}-e^{-i\omega t})}{2i}\hX_2(0)=\cos(\omega t)\hX_1(0)+\sin(\omega t)\hX_2(0).
-  \end{align*}
-  Likewise,
-  \begin{align*}
-    \hX_2(t)&=\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}=\frac{[\hX_1(0)+i\hX_2(0)]e^{-i\omega t}-[\hX_1(0)-i\hX_2(0)]e^{i\omega t}}{2i}\\
-    \hX_2(t)&=-\frac{e^{i\omega t}-e^{-i\omega t}}{2i}\hX_1(0)+i\frac{(e^{i\omega t}+e^{-i\omega t})}{2i}\hX_2(0)=-\sin(\omega t)\hX_1(0)+\cos(\omega t)\hX_2(0).
-  \end{align*} 
-  The commutation relation of the time-evolved quadrature operators is
-  \begin{align*}
-    [\hX_1,\hX_2]&=\frac{1}{4i}[\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t},\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}]=\frac{1}{4i}\left\{-[\ha,\ha^\dagger]+[\ha^\dagger,\ha]\right\}=\frac{1}{4i}(-2)=\frac{i}{2}.
-  \end{align*} 
-  \item The expectation value is
-  \begin{align*}
-    \braket{\alpha|\hX_1(t)|\alpha}&=\braket{\alpha|\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}|\alpha}=\frac{1}{2}\left[\braket{\alpha|\ha|\alpha}e^{-i\omega t}+\braket{\alpha|\ha^\dagger|\alpha}e^{i\omega t}\right]=
-    \frac{1}{2}\left[\alpha e^{-i\omega t}+\alpha^*e^{i\omega t}\right]\\
-    &=\frac{1}{2}\left[(\alpha e^{-i\omega t})+(\alpha e^{-i\omega t})^*\right]=\re{\alpha e^{-i\omega t}}.\\
-    \braket{\alpha|\hX_2(t)|\alpha}&=\braket{\alpha|\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}|\alpha}=\frac{1}{2i}\left[\braket{\alpha|\ha|\alpha}e^{-i\omega t}-\braket{\alpha|\ha^\dagger|\alpha}e^{i\omega t}\right]=
-    \frac{1}{2i}\left[\alpha e^{-i\omega t}-\alpha^*e^{i\omega t}\right]\\
-    &=\frac{1}{2i}\left[(\alpha e^{-i\omega t})-(\alpha e^{-i\omega t})^*\right]=\im{\alpha e^{-i\omega t}}.
-  \end{align*}
-  The coherent state $\ket{\alpha e^{-i\omega t}}$ is a complex wave that rotates with a rate given by $\omega$. $\ket{\alpha}$ states the initial position in 
-  the $\hX_1\hX_2$ phase space diagram.
-  \begin{align*}
-    \alpha e^{-i\omega t}=\braket{\hX_1}+i\braket{\hX_2}.
-  \end{align*}
-
-  The uncertainties requires also the expectation value of the operator squared:
-  \begin{align*}
-    \braket{\alpha|\hX^2_1(t)|\alpha}&=\frac{1}{4}\braket{\alpha|(\ha^2e^{-i2\omega t}+\ha\ha^\dagger+\ha^\dagger\ha+\ha^{\dagger2}e^{i2\omega t})|\alpha}=
-    \frac{1}{4}\left[\alpha^2e^{-i2\omega t}+2|\alpha|^2+1+\alpha^{*2}e^{i2\omega t}\right]\\
-    &=\frac{1}{4}\left[(\alpha e^{-i\omega t}+\alpha^*e^{i\omega t})^2+1\right]=\frac{1}{4}\left\{[2\re{\alpha e^{-i\omega t}}]^2+1\right\}.\\
-    \braket{\alpha|\hX^2_2(t)|\alpha}&=-\frac{1}{4}\braket{\alpha|(\ha^2e^{-i2\omega t}-\ha\ha^\dagger-\ha^\dagger\ha+\ha^{\dagger2}e^{i2\omega t})|\alpha}=
-    -\frac{1}{4}\left[\alpha^2e^{-i2\omega t}-2|\alpha|^2-1+\alpha^{*2}e^{i2\omega t}\right]\\
-    &=\frac{1}{4}\left[1-(\alpha e^{-i\omega t}-\alpha^*e^{i\omega t})^2\right]=\frac{1}{4}\left\{1-[2i\im{\alpha e^{-i\omega t}}]^2\right\}.
-  \end{align*}
-  Uncertainty is 
-  \begin{align*}
-    \Delta\hX_1(t)&=\sqrt{\braket{\hX_1^2(t)}-\braket{\hX_1(t)}^2}=\sqrt{\frac{1}{4}\{[2\re{\alpha e^{-i\omega t}}]^2+1\}-[\re{\alpha e^{-i\omega t}}]^2 }=\sqrt{\frac{1}{4}}=\frac{1}{2}.\\
-    \Delta\hX_2(t)&=\sqrt{\braket{\hX_2^2(t)}-\braket{\hX_2(t)}^2}=\sqrt{\frac{1}{4}\{1-[2i\im{\alpha e^{-i\omega t}}]^2\}-[\im{\alpha e^{-i\omega t}}]^2 }=\sqrt{\frac{1}{4}}=\frac{1}{2}.
-  \end{align*}
-
-  The diagram is shown below. Two distances are shown in red to verify that the uncertainty is maintained.
-  \begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}[scale=.8]
-      \draw[arrow](-3,0)--(3,0)node[below]{$\hX_1$};
-      \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2$};
-      \draw[fill=gray!20,opacity=.5](45:2)+(0:.3)arc(0:360:.3);
-      \draw[arrow,very thick,NavyBlue](0,0)+(45:2)node[circ,NavyBlue]{}arc(45:-315:2);
-      \draw[dashed](0,{2*sin(45)})node[left,font=\scriptsize]{$\braket{\hX_2}$}--(45:2)--({2*cos(45)},0)node[below,font=\scriptsize]{$\braket{\hX_1}$}(45:2)--++(3.5,0);
-      \draw(45:2.5)node[above right,black]{$\ket{\alpha e^{-i\omega t}}$};
-      \draw[|-|,thick]({2*cos(45)-.3},-.6)--({2*cos(45)+.3},-.6)node[midway,below,font=\scriptsize]{$\Delta\hX_1$};
-      \draw[|-|,thick](-.8,{2*sin(45)-.3})--(-.8,{2*sin(45)+.3})node[midway,left,font=\scriptsize]{$\Delta\hX_2$};
-      \begin{scope}[xshift=5cm]
-        \draw[arrow](0,0)--(7,0)node[below]{$t$};
-        \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2(t)$};
-        \draw[fill=gray!20,opacity=.5]plot[domain=0:6, smooth, variable=\x]({\x},{2*sin(45-deg(\x))+.3})--
-        plot[domain=6:0, smooth, variable=\x] ({\x}, {2*sin(45-deg(\x))-.3})--cycle;
-        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(45-deg(\x))});
-        \draw[|-|,very thick,BrickRed](2,{2*sin(45-deg(2))-.3})--(2,{2*sin(45-deg(2))+.3});
-        \draw[|-|,very thick,BrickRed](4,{2*sin(45-deg(4))-.3})--(4,{2*sin(45-deg(4))+.3});
-      \end{scope}
-    \end{tikzpicture}
-    \caption{Phase space of a coherent state. Distance in red is shown to verify the uncertainty is maintained.}
-  \end{figure}
-  \item The process is analogous. We know that 
-  \begin{align*}
-    \tilde{a}&=\hS^\dagger\hD^\dagger\ha\hD\hS=\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha,\quad\text{and}\\
-    \tilde{a}^\dagger&=\hS^\dagger\hD^\dagger\ha^\dagger\hD\hS=\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*.
-  \end{align*}
-  The expected value of $\hX_1(t)$ is 
-  \begin{align*}
-    \braket{\hX_1(t)}&=\braket{0|\hS^\dagger\hD^\dagger\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}\hD\hS|0}=\frac{1}{2}\braket{0|\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t}|0}\\
-    &=\frac{1}{2}\bra{0}\left[\cosh(r)\ha e^{-i\omega t}-e^{i\phi}\sinh(r)\ha^\dagger e^{-i\omega t}+\alpha e^{-i\omega t}+\cosh(r)\ha^\dagger e^{i\omega t}
-    -e^{-i\phi}\sinh(r)\ha e^{i\omega t}+\alpha^*e^{i\omega t}\right]\ket{0}\\
-    &=\frac{1}{2}[\alpha e^{-i\omega t}+\alpha^*e^{i\omega t}]\\
-    \braket{\hX_1(t)}&=\re{\alpha e^{-i\omega t}}.
-  \end{align*}
-  Similarly,
-  \begin{align*}
-    \braket{\hX_2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}\hD\hS|0}=\frac{1}{2i}\braket{0|\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t}|0}\\
-    &=\frac{1}{2i}\bra{0}\left[\cosh(r)\ha e^{-i\omega t}-e^{i\phi}\sinh(r)\ha^\dagger e^{-i\omega t}+\alpha e^{-i\omega t}-\cosh(r)\ha^\dagger e^{i\omega t}
-    +e^{-i\phi}\sinh(r)\ha e^{i\omega t}-\alpha^*e^{i\omega t}\right]\ket{0}\\
-    &=\frac{1}{2}[\alpha e^{-i\omega t}-\alpha^*e^{i\omega t}]\\
-    \braket{\hX_2(t)}&=\im{\alpha e^{-i\omega t}}.
-  \end{align*}
-  Doing the same for the operators squared:
-  \begin{align*}
-    \braket{\hX_1^2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\left(\frac{\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}}{2}\right)^2\hD\hS|0}\\
-    &=\frac{1}{4}\braket{0|\hS^\dagger\hD^\dagger\left(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right)\hD\hS\hS^\dagger\hD^\dagger\left(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t}\right)\hD\hS|0}\\
-    &=\frac{1}{4}\braket{0|(\tilde{a}e^{-i\omega t}+\tilde{a}^\dagger e^{i\omega t})^2|0}\\
-    &=\frac{1}{4}\left[e^{-i2\omega t}\braket{0|\tilde{a}^2|0}+e^{i2\omega t}\braket{0|\tilde{a}^{\dagger2}|0}+\braket{0|\tilde{a}\tilde{a}^\dagger|0}+\braket{0|\tilde{a}^\dagger\tilde{a}|0}\right].
-  \end{align*}
-  We compute each term separately:
-  \begin{align*}
-    \braket{0|\tilde{a}^2|0}=&\braket{0|(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)|0}\\
-    =&\cosh^2(r)\braket{\ha^2}-e^{i\phi}\sinh(r)\cosh(r)\braket{\ha\ha^\dagger}+\alpha\cosh(r)\braket{\ha}-e^{i\phi}\sinh(r)\cosh(r)\braket{\ha^\dagger\ha}\\
-    &+e^{i2\phi}\sinh^2(r)\braket{\ha^{\dagger2}}-\alpha e^{i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha\cosh(r)\braket{\ha}-\alpha e^{i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha^2\\
-    &=\alpha^2-e^{i\phi}\sinh(r)\cosh(r)\\
-    \braket{0|\tilde{a}^2|0}&=\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r).
-  \end{align*}
-  \begin{align*}
-    \braket{0|\tilde{a}^{\dagger2}|0}=&\braket{0|(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)|0}\\
-    =&\cosh^2(r)\braket{\ha^{\dagger2}}-e^{-i\phi}\cosh(r)\sinh(r)\braket{\ha^\dagger\ha}+\alpha^*\cosh(r)\braket{\ha^\dagger}-e^{-i\phi}\sinh(r)\cosh(r)\braket{\ha\ha^\dagger}\\
-    &+e^{-i2\phi}\sinh^2(r)\braket{\ha^2}-\alpha^*e^{-i\phi}\sinh(r)\braket{\ha}+\alpha^*\cosh(r)\braket{\ha^\dagger}-\alpha^*e^{-i\phi}\sinh(r)\braket{\ha^\dagger}+\alpha^{*2}\\
-    =&\alpha^{*2}-e^{-i\phi}\sinh(r)\cosh(r)\\
-    \braket{0|\tilde{a}^{\dagger2}|0}=&\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r).
-  \end{align*}
-  \begin{align*}
-    \braket{0|\tilde{a}\tilde{a}^\dagger|0}=&\braket{0|(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)|0}\\
-    \braket{0|\tilde{a}\tilde{a}^\dagger|0}=&\cosh^2(r)+|\alpha|^2.
-  \end{align*}
-  \begin{align*}
-    \braket{0|\tilde{a}^\dagger\tilde{a}|0}=&\braket{0|(\cosh(r)\ha^\dagger-e^{-i\phi}\sinh(r)\ha+\alpha^*)(\cosh(r)\ha-e^{i\phi}\sinh(r)\ha^\dagger+\alpha)|0}\\
-    \braket{0|\tilde{a}^\dagger\tilde{a}|0}=&\sinh^2(r)+|\alpha|^2.
-  \end{align*}
-  Putting all together:
-  \begin{align*}
-    \braket{\hX_1^2(t)}&=\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}+
-    \cosh^2(r)+|\alpha|^2+\sinh^2(r)+|\alpha|^2\right\}\\
-    &=\frac{1}{4}\left[(\alpha e^{-i\omega t}+\alpha^*e^{i\omega t})^2+\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)\right]\\
-    \braket{\hX_1^2(t)}&=[\re{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)].
-  \end{align*}
-  The uncertainty is:
-  \begin{align*}
-    \Delta\hX_1(t)=\sqrt{\braket{\hX_1^2(t)}-\braket{\hX_1(t)}^2}=\frac{1}{2}\sqrt{\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)}.
-  \end{align*}
-
-  Similarly,
-  \begin{align*}
-    \braket{\hX_2^2(t)}&=\braket{0|\hS^\dagger\hD^\dagger\left(\frac{\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t}}{2i}\right)^2\hD\hS|0}\\
-    &=-\frac{1}{4}\braket{0|\hS^\dagger\hD^\dagger(\ha e^{-i\omega t}-\ha^\dagger e^{i\omega t})\hD\hS\hS^\dagger\hD^\dagger(\ha e^{-i\omega t}+\ha^\dagger e^{i\omega t})\hD\hS|0}\\
-    &=-\frac{1}{4}\braket{0|(\tilde{a}e^{-i\omega t}-\tilde{a}^\dagger e^{i\omega t})^2|0}\\
-    &=-\frac{1}{4}[e^{-i2\omega t}\braket{0|\tilde{a}^2|0}+e^{i2\omega t}\braket{0|\tilde{a}^{\dagger2}|0}-\braket{0|\tilde{a}\tilde{a}^\dagger|0}-\braket{0|\tilde{a}^\dagger\tilde{a}|0}].
-  \end{align*}
-  We use the previous results to get
-  \begin{align*}
-    \braket{\hX_2^2(t)}&=-\frac{1}{4}\left\{[\alpha^2-\frac{1}{2}e^{i\phi}\sinh(2r)]e^{-i2\omega t}+[\alpha^{*2}-\frac{1}{2}e^{-i\phi}\sinh(2r)]e^{i2\omega t}-
-    \cosh^2(r)-|\alpha|^2-\sinh^2(r)-|\alpha|^2\right\}\\
-    &=-\frac{1}{4}[(\alpha e^{-i\omega t}-\alpha^*e^{i\omega t})^2-\cosh(2r)-\sinh(2r)\cos(\phi-2\omega t)]\\
-    \braket{\hX_2^2(t)}&=[\im{\alpha e^{-i\omega t}}]^2+\frac{1}{4}[\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)].
-  \end{align*}
-  And the uncertainty is:
-  \begin{align*}
-    \Delta\hX_2(t)=\sqrt{\braket{\hX_2^2(t)}-\braket{\hX_2(t)}^2}=\frac{1}{2}\sqrt{\cosh(2r)+\sinh(2r)\cos(\phi-2\omega t)}
-  \end{align*}
-  We can verify that $\Delta\hX_1(0)=e^{-r}/2$ and $\Delta\hX_2(0)=e^r/2$ when $\phi=t=0$.
-
-  The phase space representation is shown below for $t=\phi=0$ and $r=0.6$.
-  \begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}[scale=.8]
-      \def\r{.6}
-      \def\w{1}
-      \draw[arrow](-3,0)--(3,0)node[below]{$\hX_1$};
-      \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2$};
-      \begin{scope}[shift={(0:2)}, rotate=0]
-        \draw[fill=gray!20,opacity=.5](0,0)ellipse({exp(-\r)/2} and {exp(\r)/2});
-      \end{scope}
-      \draw[fill=gray!10,dashed,opacity=.5](0,-2)ellipse({exp(\r)/2} and {exp(-\r)/2});
-      \draw[dashed](0,{-2+exp(-\r)/2})--++(7,0)(0,{-2-exp(-\r)/2})--++(7,0);
-      \draw[arrow,very thick,NavyBlue](0,0)+(0:2)node[circ,NavyBlue]{}arc(0:-360:2);
-      \draw[dashed](2,{exp(\r)/2})--++(3,0)(2,{-exp(\r)/2})--++(3,0);
-      \draw(45:2.5)node[above right,black]{$\ket{\alpha e^{-i\omega t}}$};
-      \draw[|-|,thick](1.5,{exp(\r)/2})--(1.5,{-exp(\r)/2})node[midway,left,fill=white,font=\scriptsize]{$\Delta\hX_2$};
-      \draw[|-|,thick]({2+-exp(-\r)/2},-1.5)--({2+exp(-\r)/2},-1.5)node[right,font=\scriptsize]{$\Delta\hX_1$};
-      \begin{scope}[xshift=5cm]
-        \draw[arrow](0,0)--(7,0)node[below]{$t$};
-        \draw[arrow](0,-3)--(0,3)node[right]{$\hX_2(t)$};
-        \draw[fill=gray!20,opacity=.5]plot[domain=0:6,smooth,variable=\x]({\x},{2*sin(-deg(\w*\x))+
-        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(-deg(2*\w*\x)) )) })--
-        plot[domain=6:0, smooth, variable=\x]({\x},{2*sin(-deg(\w*\x))-
-        (0.5*sqrt( 0.5*(exp(2*\r)+exp(-2*\r))+0.5*(exp(2*\r)-exp(-2*\r))*cos(-deg(2*\w*\x)) )) })--cycle;
-        \draw[domain=0:6,smooth,variable=\x,NavyBlue,very thick]plot({\x},{2*sin(-deg(\w*\x))});
-      \end{scope}
-    \end{tikzpicture}
-    \caption{Phase space of the squeezed displaced state for $r=0.6$.}
-  \end{figure}
+  \item sfasfasf
+  \item sfasfasf
+  \item asfasf
 \end{enumerate}
-
 %%
 \section*{Exercise 2}
-In general, the photon number for output $i$ is $\hN_i=\hat{b}^\dagger_i\hat{b}_i$.
-For each output we have:
-\begin{align*}
-  \hN_1&=\frac{1}{2}(\ha_1^\dagger+\ha_2^\dagger)(\ha_1+\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2),\\
-  \hN_2&=\frac{1}{2}(\ha_1^\dagger-\ha_2^\dagger)(\ha_1-\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2).
-\end{align*}
-Substraction gives 
-\begin{align*}
-  \hN_1-\hN_2=\frac{1}{2}\left[(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)-(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\right]=\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1.
-\end{align*}
-
-With the phase shift, the input 2 is:
-\begin{align*}
-  \alpha\to\alpha e^{i\phi_\alpha},\quad\text{and}\quad\ha_2\approx\alpha e^{i\phi_\alpha}.
-\end{align*}
-The number photon difference is then:
-\begin{align*}
-  \hN_1-\hN_2=\ha_1^\dagger\alpha e^{i\phi_\alpha}+\ha_1\alpha^*e^{-i\phi_\alpha}.
-\end{align*}
-If $\alpha=|\alpha|$, then 
-\begin{align*}
-  \hN_1-\hN_2=|\alpha|\left(\ha_1^\dagger e^{i\phi_\alpha}+\ha_1e^{-i\phi_\alpha}\right)=2|\alpha|\hX_{\phi_\alpha},\quad\hX_{\phi_\alpha}=\frac{\ha_1^\dagger e^{i\phi_\alpha}+\ha_1e^{-i\phi_\alpha}}{2},
-\end{align*}
-where $\hX_{\phi_\alpha}$ is the quadrature of mode 1 modulated by the phase shift $\phi_\alpha$.
-
-To get the uncertainty $\Delta(\hN_1-\hN_2)$, we compute the expected alue of the difference and the expected value of the difference squared.
-We can use the results from the previoous exercise as the input 1 is a squeezed state of the vacuum.
-\begin{align*}
-  _1\bra{\xi,0}_2\bra{\alpha}(\hN_1-\hN_2)\ket{\alpha}_2\ket{\xi,0}_1&=2|\alpha|\braket{\hX_{\phi_\alpha}}=0,\\
-  _1\bra{\xi,0}_2\bra{\alpha}(\hN_1-\hN_2)^2\ket{\alpha}_2\ket{\xi,0}_1&=4|\alpha|^2\braket{\hX_{\phi_\alpha}^2}=|\alpha|^2[\cosh(2r)-\sinh(2r)\cos(\theta-2\phi_\alpha)],
-\end{align*}
-where $\xi=re^{i\theta}$ is the squeezing factor, and $\phi_\alpha$ the phase shift imposed by the input 2. Uncertainty is therefore:
-\begin{align*}
-  \Delta(\hN_1-\hN_2)=|\alpha|\sqrt{\cosh(2r)-\sinh(2r)\cos(\theta-2\phi_\alpha)}.
-\end{align*}
-
-%%
-\section*{Exercise 3}
-\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=(\alph*)]
-  \item For the $50:50$ beamsplitter 1, we have:
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+  \item First, the eigenequation of the number operator $\hn$ and the definition of the thermal density matrix are:
   \begin{align*}
-    \begin{bmatrix}
-      \hb_1\\\hb_2
-    \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}
-      1&1\\1&-1
-    \end{bmatrix}\begin{bmatrix}
-      \ha_1\\\ha_2
-    \end{bmatrix},\quad\text{with}\quad\begin{bmatrix}
-      \ha_1\\\ha_2
-    \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}
-      1&1\\1&-1
-    \end{bmatrix}\begin{bmatrix}
-      \hb_1\\\hb_2
-    \end{bmatrix}.
+    \hn\ket{n}=n\ket{n},\quad\text{and}\quad\hrho_{th}=\sum_nP_n\ket{n}\bra{n}.
   \end{align*}
-  \item From the last part, we know that 
+  The expectation value of the number of photons is:
   \begin{align*}
-    \ha_1=\frac{1}{\sqrt{2}}(\hb_1+\hb_2)\xrightarrow{h.c.}\ha_1^\dagger=\frac{1}{\sqrt{2}}(\hb_1^\dagger+\hb_2^\dagger),\quad\text{and}\quad
-    \ha_2=\frac{1}{\sqrt{2}}(\hb_1-\hb_2)\xrightarrow{h.c.}\ha_2^\dagger=\frac{1}{\sqrt{2}}(\hb_1^\dagger-\hb_2^\dagger).
+    \braket{\hn}=\Tr{\hn\hrho_{th}}=\sum_n \braket{n|\hn\hrho_{th}|n}=\sum_{n,n'}\braket{n|\hn P_{n'}|n'}\braket{n'|n}=\sum_{n,n'}n'P_{n'}|\braket{n|n'}|^2=\sum_nnP_n.
   \end{align*}
-  The input is then:
+  Now, we put the Boltzman distribution in the last summation:
   \begin{align*}
-    \text{Input}=\ket{1}_1\ket{0}_2=\ha^\dagger_1\ket{0}_1\ket{0}_2.
+    \braket{\hn}=\sum_nn\left[\frac{e^{-(n+1/2)\hbar\omega/(k_BT)}}{\sum_{m=0}^\infty e^{-(m+1/2)\hbar\omega/(k_BT)}}\right]=\sum_nn\frac{e^{-n[\hbar\omega/(k_BT)]}}{\sum_{m=0}^\infty e^{-m[\hbar\omega/(k_BT)]}}=\frac{1}{\sum_{m=0}^\infty e^{-mx}}\sum_nne^{-nx},\;x=\frac{\hbar\omega}{k_BT}.
   \end{align*}
-  Output is:
+  We note that the summation in $n$ can be expressed in terms of a geometric function in the following way
   \begin{align*}
-    \text{Output}=\frac{1}{\sqrt{2}}(\hb_1^\dagger+\hb_2^\dagger)\ket{0}_1\ket{0}_2=\frac{1}{\sqrt{2}}[\ket{1}_{1'}\ket{0}_{2'}+\ket{0}_{1'}\ket{1}_{2'}].
+    \sum_{n=0}^\infty ne^{-nx}=-\frac{d}{dx}\left[\sum_{n=0}^\infty e^{-nx}\right]=-\frac{d}{dx}\left[\frac{1}{1-e^{-x}}\right]=\frac{e^{-x}}{(1-e^{-x})^2}.
   \end{align*}
-  We expect then to have the same probability of getting one photon at each output. 
-
-  The expected value at output 1 is:
+  Then,
   \begin{align*}
-    _2\bra{0}_1\bra{1}\hb_1^\dagger\hb_1\ket{1}_1\ket{0}_2&=\frac{1}{2}\braket{0,1|(\ha_1^\dagger+\ha_2^\dagger)(\ha_1+\ha_2)|1,0}\\
-    &=\frac{1}{2}\bra{0,1}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\ket{1,0}\\
-    _2\bra{0}_1\bra{1}\hb_1^\dagger\hb_1\ket{1}_1\ket{0}_2&=\frac{1}{2}.
+    \braket{\hn}=\frac{1}{\sum_{m=0}^\infty e^{-mx}}\frac{e^{-x}}{(1-e^{-x})^2}=(1-e^{-x})\frac{e^{-x}}{(1-e^{-x})^2}=\frac{e^{-x}}{1-e^{-x}}=\frac{1}{e^{x}-1}=\frac{1}{e^{\frac{\hbar\omega}{k_BT}}-1}.
   \end{align*}
-  Likewise, the expected value at output 2 is:
+  which is the Planck radiation distribution.
+  \item By evaluating the above result, and knowing that 
   \begin{align*}
-    _2\bra{0}_1\bra{1}\hb_2^\dagger\hb_2\ket{1}_1\ket{0}_2&=\frac{1}{2}\braket{0,1|(\ha_1^\dagger-\ha_2^\dagger)(\ha_1-\ha_2)|1,0}\\
-    &=\frac{1}{2}\bra{0,1}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\ket{1,0}\\
-    _2\bra{0}_1\bra{1}\hb_2^\dagger\hb_2\ket{1}_1\ket{0}_2&=\frac{1}{2}.    
+    h\approx6.6261\cdot10^{-34}\;m^2kg/s,\quad\text{and}\quad k_B\approx1.3806\cdot10^{-23}\;m^2kgs^{-2}K^{-1}.
   \end{align*}
-  \item We replace the first output as the input of the second output:
+  The averague number of photon as a function of the absolute temperature is:
   \begin{align*}
-    \hc_1&=\frac{1}{\sqrt{2}}[\hb_1e^{i\phi}+\hb_2]=\frac{1}{2}\left[(\ha_1+\ha_2)e^{i\phi}+(\ha_1-\ha_2)\right]=\frac{1}{2}[\ha_1(1+e^{i\phi})+\ha_2(e^{i\phi}-1)],\\
-    \hc_2&=\frac{1}{\sqrt{2}}[\hb_1e^{i\phi}-\hb_2]=\frac{1}{2}\left[(\ha_1+\ha_2)e^{i\phi}-(\ha_1-\ha_2)\right]=\frac{1}{2}[\ha_1(e^{i\phi}-1)+\ha_2(1+e^{i\phi})].
+    \braket{\hn}(T)=\frac{1}{e^{\dfrac{[6.6261\cdot10^{-34}/(2\pi)][(2\pi)(3\cdot10^8)/(500\cdot10^{-9})]}{(1.3806\cdot10^{-23})K}}-1}=\frac{1}{e^{28797/K}-1}.
   \end{align*}
-  \item The expected number of photons at detector 1 is:
+  At $300K$ and $6000K$ we have 
   \begin{align*}
-    \braket{0,1|\hc_1^\dagger\hc_1|1,0}&=\frac{1}{4}\left\{[\ha_1^\dagger(1+e^{-i\phi})+\ha_2^\dagger(e^{-i\phi}-1)][\ha_1(1+e^{i\phi})+\ha_2(e^{i\phi}-1)]\right\}\\
-    &=\frac{1}{4}\bra{0,1}\left\{\ha_1^\dagger\ha_1(\cdots)+\ha_1^\dagger\ha_2(\cdots)+\ha_2^\dagger\ha_1(\cdots)+\ha_2^\dagger\ha_2(\cdots)\right\}\ket{1,0}\\
-    &=\frac{1}{4}(1+e^{-i\phi})(1+e^{i\phi})\\
-    \braket{0,1|\hc_1^\dagger\hc_1|1,0}&=\frac{1}{2}[1+\cos\phi]=\cos^2\frac{\phi}{2}.
+    \braket{\hn}(300)=\frac{1}{e^{28797/300}-1}=2\cdot10^{-42},\quad\text{and}\quad\braket{\hn}(6000)=\frac{1}{e^{28797/6000}-1}=8.3\cdot10^{-3}.
   \end{align*}
-  By conservation of energy (or probability), the expected number of photon at detector 2 is:
-  \begin{align*}
-    \braket{0,1|\hc_2^\dagger\hc_2|1,0}&=\sin^2\frac{\phi}{2}.
-  \end{align*}
+  The plot of the average number of photons along the temperature is given below.
 \end{enumerate}
-
 
 %\clearpage
 %\nocite{*}
