@@ -13,6 +13,7 @@
 \usepackage{comment}
 \usepackage{caption,subcaption}
 \usepackage{pgfplots}
+\usepackage{dsfont}
 \pgfplotsset{compat=newest} % or a newer version if available
 \usepgfplotslibrary{groupplots}
 \usetikzlibrary{pgfplots.groupplots}
@@ -24,6 +25,7 @@
 \newcommand{\bB}{\bm{B}}
 \newcommand{\bC}{\bm{C}}
 \newcommand{\bE}{\bm{E}}
+\newcommand{\E}{\mathcal{E}}
 \newcommand{\bH}{\bm{H}}
 \newcommand{\bD}{\bm{D}}
 \newcommand{\bO}{\bm{0}}
@@ -33,6 +35,7 @@
 \newcommand{\hA}{\hat{A}}
 \newcommand{\hB}{\hat{B}}
 \newcommand{\hC}{\hat{C}}
+\newcommand{\hU}{\hat{U}}
 \newcommand{\ha}{\hat{a}}
 \newcommand{\hb}{\hat{b}}
 \newcommand{\hc}{\hat{c}}
@@ -40,6 +43,7 @@
 \newcommand{\hH}{\hat{H}}
 \newcommand{\hN}{\hat{N}}
 \newcommand{\hr}{\bm{\hat{r}}}
+\newcommand{\hbE}{\hat{\bm{E}}}
 \newcommand{\hx}{\hat{x}}
 \newcommand{\hX}{\hat{X}}
 \newcommand{\hp}{\hat{p}}
@@ -102,9 +106,80 @@
 %%
 \section*{Exercise 1}
 \begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
-  \item sfasfasf
-  \item sfasfasf
-  \item asfasf
+  \item Assuming a green laser that combine to generate a pair of entangled red and blue photons. The E-field for the green light is:
+  \begin{align*}
+    \textcolor{Green}{\bE_z}&=\hz\left[\E_Ge^{i(kx-\omega_Gt)}+\E_G^*e^{-i(kx-\omega_Gt)}\right],\\
+    \textcolor{BrickRed}{\hbE_z}&=i\sum_{\bk_R}\sqrt{\frac{\hbar\omega_R}{2\varepsilon_0V}}\left[\ha_{\bk_R,z}e^{i(\bk_R\cdot\br-\omega_Rt)}-\ha^\dagger_{\bk_R,z}e^{-i(\bk_R\cdot\br-\omega_R t)}\right],\\
+    \textcolor{Blue}{\hbE_z}&=i\sum_{\bk_B}\sqrt{\frac{\hbar\omega_B}{2\varepsilon_0V}}\left[\ha_{\bk_B,z}e^{i(\bk_B\cdot\br-\omega_Bt)}-\ha^\dagger_{\bk_B,z}e^{-i(\bk_B\cdot\br-\omega_Bt)}\right].
+  \end{align*}
+  Replacing the above definitions yields:
+  {\small
+  \begin{align*}
+    \textcolor{Green}{\bE_z}\textcolor{Green}{\bE_z}\textcolor{BrickRed}{\hbE_z}
+    \textcolor{Blue}{\hbE_z}=&-\frac{\hbar}{2\varepsilon_0V}\hz\cdot\hz\sum_{\bk_B,\bk_R}\sqrt{\omega_R\omega_B}\left[\E_Ge^{-i(\omega_Gt-kx)}+\E_G^*e^{i(\omega_Gt-kx)}\right]\left[\E_Ge^{-i(\omega_Gt-kx)}+\E_G^*e^{i(\omega_Gt-kx)}\right]\\
+    &\left[\ha_{\bk_R,z}e^{i(\bk_R\cdot\br-\omega_Rt)}-\ha^\dagger_{\bk_R,z}e^{-i(\bk_R\cdot\br-\omega_R t)}\right]
+    \left[\ha_{\bk_B,z}e^{i(\bk_B\cdot\br-\omega_Bt)}-\ha^\dagger_{\bk_B,z}e^{-i(\bk_B\cdot\br-\omega_Bt)}\right].
+  \end{align*}}
+  We now look for the exponential terms by distributing the above expression. All the terms 
+  obtained are the followings:
+  \begin{align*}
+    \omega:\;e^{i(\pm 2\omega_G\pm\omega_R\pm\omega_B)t}\quad\land\quad\bk:\;e^{i[\pm2kx+(\pm\bk_R\pm\bk_B)\cdot\br]}.
+  \end{align*}
+  In the above exponentials, the only terms that are slow oscillating are the ones that are nearly zero. Specifically,
+  \begin{align*}
+    \pm2\omega_G\mp(\omega_R+\omega_B)=0&\Longrightarrow\text{Energy conservation}:2\omega_G=\omega_R+\omega_B,\\
+    \pm2kx\mp(\bk_R+\bk_B)&\Longrightarrow\text{Momentum conservation}:2kx=\bk_R+\bk_B.
+  \end{align*}
+  Also, the difference of blue and red is in the optical frequency still, so even when they are substracted the difference is 
+  a fast oscilatting anyway.
+  We have two terms for energy conservation and two terms for momentum conservation.
+  
+  Imposing the energy and momentum conservation yields the following Hamiltonian:
+  \begin{align*}
+    \hH_{NL,1}^{(3)}=\frac{\hbar\sqrt{\omega_R\omega_B}}{2}\chi_{zzzz}^{(3)}\left[\E_G^2\ha^\dagger_{\bk_R,z}\ha^\dagger_{\bk_B,z}+\E_G^{*2}\ha_{\bk_R,z}\ha_{\bk_B,z}\right]. 
+  \end{align*}
+  \item The evolution operator applied to the vaccum state of R and B light $\ket{0}_R\ket{0}_B=\ket{\{0\}}$ is:
+  \begin{align*}
+    \hU(t,0)=e^{-i\hH_{NL,1}^{(3)}t/\hbar}\ket{\{0\}}=e^{-i\left\{\frac{\hbar\sqrt{\omega_R\omega_B}}{2}\chi_{zzzz}^{(3)}\left[\E_G^2\ha^\dagger_{\bk_R,z}\ha^\dagger_{\bk_B,z}+\E_G^{*2}\ha_{\bk_R,z}\ha_{\bk_B,z}\right]\right\}t/\hbar}=\ket{\psi_{out}}
+  \end{align*}
+  Expanding the exponential to the first-order Taylor series yields:
+  \begin{align*}
+    \left\{\mathds{1}-i\frac{\sqrt{\omega_R\omega_B}\chi_{zzzz}^{(3)}}{2}\left[\E_G^2\ha^\dagger_{\bk_R,z}\ha^\dagger_{\bk_B,z}+\E_G^{*2}\ha_{\bk_R,z}\ha_{\bk_B,z}\right]t\right\}\ket{\{0\}}.
+  \end{align*}
+  By defining the squeezing parameter $\xi_z$ as:
+  \begin{align*}
+    \xi_z=-i\frac{\sqrt{\omega_R\omega_B}\chi_{zzzz}^{(3)}}{2}\E_G^2t,
+  \end{align*}
+  we have:
+  \begin{align*}
+    \left[\mathds{1}+\xi_z\ha^\dagger_{\bk_R,z}\ha^\dagger_{\bk_B,z}+\xi^*_z\ha_{\bk_R,z}\ha_{\bk_B,z}\right]\ket{\{0\}}=\ket{\{0\}}+\xi_z\ket{1}_{R_z}\ket{1}_{B_z}.
+  \end{align*}
+  \item The process for the new term is esentially the same, with the change of 
+  the last two indices to y polarization. The Hamiltonian for this term 
+  is: 
+  \begin{align*}
+    \hH^{(3)}_{NL,2}=\frac{\hbar\sqrt{\omega_R\omega_B}}{2}\chi_{zzyy}^{(3)}\left[\E^2_G\ha^\dagger_{\bk_R,y}\ha^\dagger_{\bk_B,y}+\E^{*2}_G\ha_{\bk_R,y}\ha_{\bk_B,y}\right]
+  \end{align*}
+  The total Hamiltonian is the sum of the individual Hamiltonian:
+  \begin{align*}
+    \hH_{NL}^{(3)}&=\hH_{NL,1}^{(3)}+\hH_{NL,2}^{(3)}\\
+    \hH_{NL}^{(3)}&=\frac{\hbar\sqrt{\omega_R\omega_B}}{2}\left[\chi_{zzzz}^{(3)}\E_G^2\ha^\dagger_{\bk_R,z}\ha^\dagger_{\bk_B,z}+\E^{*2}_G\ha_{\bk_R,z}\ha_{\bk_B,z}+
+    \chi_{zzyy}^{(3)}\E_G^2\ha^\dagger_{\bk_R,y}\ha^\dagger_{\bk_B,y}+\E^{*2}_G\ha_{\bk_R,y}\ha_{\bk_B,y}\right].
+  \end{align*}
+  The first-order Taylor expansion of the evolution operator is:
+  \begin{align*}
+    U(t,0)=e^{-i\hN_{NL}^{(3)}t/\hbar}\approx\mathds{1}+\xi_z\ha^\dagger_{\bk_R,z}\ha^\dagger_{\bk_B,z}+\xi^*_z\ha_{\bk_R,z}\ha_{\bk_B,z}+\xi_y\ha^\dagger_{\bk_R,y}\ha^\dagger_{\bk_B,y}+\xi^*_y\ha_{\bk_R,y}\ha_{\bk_B,y},
+  \end{align*}
+  where the squeezing parameters are:
+  \begin{align*}
+    \xi_z=-i\frac{\sqrt{\omega_R\omega_B}\chi_{zzzz}^{(3)}}{2}\E_G^2t,\quad\text{and}\quad\xi_y=-i\frac{\sqrt{\omega_R\omega_B}\chi_{zzyy}^{(3)}}{2}\E_G^2t.
+  \end{align*}
+  Application of the evolution operator in the vaccum state produces:
+  {\small
+  \begin{align*}
+    \left[\mathds{1}+\xi_z\ha^\dagger_{\bk_R,z}\ha^\dagger_{\bk_B,z}+\xi^*_z\ha_{\bk_R,z}\ha_{\bk_B,z}+\xi_y\ha^\dagger_{\bk_R,y}\ha^\dagger_{\bk_B,y}+\xi^*_y\ha_{\bk_R,y}\ha_{\bk_B,y}\right]\ket{\{0\}}=\ket{\{0\}}+\xi_z\ket{1}_{R_z}\ket{1}_{B_z}+\xi_y\ket{1}_{R_y}\ket{1}_{B_y}.
+  \end{align*}}
+  Generating in that way, two polarization entangled photons.
 \end{enumerate}
 %%
 \section*{Exercise 2}

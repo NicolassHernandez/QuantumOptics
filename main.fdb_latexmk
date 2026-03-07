@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1772423409.52166 "main.bcf" "main.bbl" "main" 1772500857.67143 0
+["biber main"] 1772423409.52166 "main.bcf" "main.bbl" "main" 1772815064.99887 0
   "PartOne/ChapterOne/bib_.bib" 1768872437 814 ca0c4b5b986e047b1001d6e5f3140200 ""
-  "main.bcf" 1772500856 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
+  "main.bcf" 1772815064 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1772424088.79388 "main.idx" "main.ind" "main" 1772500857.6707 0
-  "main.idx" 1772500855 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1772814377.1639 "main.idx" "main.ind" "main" 1772815064.99835 0
+  "main.idx" 1772815062 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1772500851.64088 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1772500857.67221 0
+["pdflatex"] 1772815058.33093 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1772815064.99961 0
   "Appendix/DensityOperator.tex" 1772429453 7323 503c3f27b3440dab716d47debfba1f8c ""
   "Appendix/main.tex" 1772423674 36 072edf9da3b799f8415db85aa538e515 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770835094 123178 2ccd746f0a4ec0e4e75a2c14b6603cde ""
@@ -683,7 +683,7 @@
   "PartOne/ChapterOne/figures/evolutioncoherent2.png" 1771473973 135881 cc9355b85ac5be883f4288a9e4184a4b ""
   "PartOne/ChapterOne/main.tex" 1772422934 582 71959d9a2ae6f1e4f9943e3ae0a56d2b ""
   "PartOne/ChapterThree/DetectionOfQuadratureStates.tex" 1772499778 3948 a9a58c9f95b0563d0120a5da9a0d4e70 ""
-  "PartOne/ChapterThree/GenerationOfQuadratureStates.tex" 1772500850 6518 de454d422216121cb614963ba458e9e9 ""
+  "PartOne/ChapterThree/GenerationOfQuadratureStates.tex" 1772815057 6875 f293dc568055d5f68075935329ba35b3 ""
   "PartOne/ChapterThree/figures/homodynedetection.png" 1771530791 73463 043d46f46ac7532edcfe2850e1ccf241 ""
   "PartOne/ChapterThree/figures/momentumconservation.png" 1771537412 37377 c6dcacb387ca74364029eca25a2274c9 ""
   "PartOne/ChapterThree/figures/nonlinearmedium.png" 1771533230 28953 7f9b8ea0f5b3d1751eb7f1e844e1ca59 ""
@@ -694,24 +694,24 @@
   "PartOne/ChapterTwo/figures/example_machzenhder.png" 1771800243 135420 f1384de5a573a94a3f8d35d0fd544fb4 ""
   "PartOne/ChapterTwo/main.tex" 1771469181 248 de7e6c4199e0925db4ff2bfbb29a4362 ""
   "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" 1772423674 910 e2eca7a6b5543ede43cd0578dd099e9d ""
-  "main.aux" 1772500856 9466 73b94cb87635ffb3ab2d4a95225d5f37 "pdflatex"
+  "main.aux" 1772815064 9466 73b94cb87635ffb3ab2d4a95225d5f37 "pdflatex"
   "main.bbl" 1772423412 9226 6afc9a62d2d5a4cfda0cae0fcc08661d "biber main"
-  "main.ind" 1772424089 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1772500856 1056 065d77ddb60c5da8ad00ffd4c4d73397 "pdflatex"
-  "main.lol" 1772500855 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.lot" 1772500856 639 3af4c48d7bea541f26adafebeedd9988 "pdflatex"
-  "main.mtc" 1772500852 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.mtc0" 1772500852 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.out" 1772500856 2385 e052434653229f6dbed954774f800850 "pdflatex"
-  "main.ptc" 1772500856 2953 fba3322a28ca7141e72f05c3eb3d58c7 "pdflatex"
-  "main.run.xml" 1772500856 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
+  "main.ind" 1772814377 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1772815064 1056 065d77ddb60c5da8ad00ffd4c4d73397 "pdflatex"
+  "main.lol" 1772815062 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.lot" 1772815064 639 3af4c48d7bea541f26adafebeedd9988 "pdflatex"
+  "main.mtc" 1772815059 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.mtc0" 1772815059 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.out" 1772815064 2385 e052434653229f6dbed954774f800850 "pdflatex"
+  "main.ptc" 1772815064 2953 fba3322a28ca7141e72f05c3eb3d58c7 "pdflatex"
+  "main.run.xml" 1772815064 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
   "main.tex" 1772423674 910 e2eca7a6b5543ede43cd0578dd099e9d ""
-  "main.toc" 1772500856 2820 40c107f78ce6acdaab8224ab2dd7e05c "pdflatex"
+  "main.toc" 1772815064 2820 40c107f78ce6acdaab8224ab2dd7e05c "pdflatex"
   "struct/Frontpage.tex" 1768872437 694 d9fdb487a8bf032879278c8f1e42e602 ""
   "struct/Preface.tex" 1768872437 119 33a77da7ce89f15d2a52b013e322dbd9 ""
   "struct/circuitikz.tex" 1768872437 3621 e55994767a1aa6f3db9e8adbe25c8836 ""
   "struct/colors.tex" 1768872437 457 2821ec4cb2261c124cc1259b2f46b70e ""
-  "struct/envs.tex" 1772428856 7629 adef0ea2bef26f48aa7f7d4fe7da9edd ""
+  "struct/envs.tex" 1772814308 7659 268d3cee531ecb367a1f4be73e1b7583 ""
   "struct/pckgs.tex" 1768872437 2467 bb0b86a63a76332a351cb13ec8300195 ""
   (generated)
   "main.aux"
