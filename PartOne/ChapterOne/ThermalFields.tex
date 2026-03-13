@@ -16,5 +16,51 @@ We introduce the density operator for the thermal field:
 \end{align*}
 
 
-
+\begin{example}{}
+    Consider the thermal density matrix of a single-mode field 
+    \begin{align*}
+        \rho_{th}=\sum_nP_n\ket{n}\bra{n},\quad\text{with}\quad P_n=\frac{e^{-(n+1/2)\hbar\omega/(k_BT)}}{\sum_{m=0}^\infty e^{-(m+1/2)\hbar\omega/(k_BT)}}.
+    \end{align*}
+    \begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+        \item What is the expectation value of the number of photon in a thermal state?
+        \item What is the average number of photons around visible wavelengths $sim500\;nm$ at room temperature 
+        $\sim300\;K$ and temperature of the sun $\sim6000\;K$?
+    \end{enumerate}
+    \subsubsection{Solution}
+  \begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+  \item First, the eigenequation of the number operator $\hn$ and the definition of the thermal density matrix are:
+  \begin{align*}
+    \hn\ket{n}=n\ket{n},\quad\text{and}\quad\hrho_{th}=\sum_nP_n\ket{n}\bra{n}.
+  \end{align*}
+  The expectation value of the number of photons is:
+  \begin{align*}
+    \braket{\hn}=\Tr{\hn\hrho_{th}}=\sum_n \braket{n|\hn\hrho_{th}|n}=\sum_{n,n'}\braket{n|\hn P_{n'}|n'}\braket{n'|n}=\sum_{n,n'}n'P_{n'}|\braket{n|n'}|^2=\sum_nnP_n.
+  \end{align*}
+  Now, we put the Boltzman distribution in the last summation:
+  \begin{align*}
+    \braket{\hn}=\sum_nn\left[\frac{e^{-(n+1/2)\hbar\omega/(k_BT)}}{\sum_{m=0}^\infty e^{-(m+1/2)\hbar\omega/(k_BT)}}\right]=\sum_nn\frac{e^{-n[\hbar\omega/(k_BT)]}}{\sum_{m=0}^\infty e^{-m[\hbar\omega/(k_BT)]}}=\frac{1}{\sum_{m=0}^\infty e^{-mx}}\sum_nne^{-nx},\;x=\frac{\hbar\omega}{k_BT}.
+  \end{align*}
+  We note that the summation in $n$ can be expressed in terms of a geometric function in the following way
+  \begin{align*}
+    \sum_{n=0}^\infty ne^{-nx}=-\frac{d}{dx}\left[\sum_{n=0}^\infty e^{-nx}\right]=-\frac{d}{dx}\left[\frac{1}{1-e^{-x}}\right]=\frac{e^{-x}}{(1-e^{-x})^2}.
+  \end{align*}
+  Then,
+  \begin{align*}
+    \braket{\hn}=\frac{1}{\sum_{m=0}^\infty e^{-mx}}\frac{e^{-x}}{(1-e^{-x})^2}=(1-e^{-x})\frac{e^{-x}}{(1-e^{-x})^2}=\frac{e^{-x}}{1-e^{-x}}=\frac{1}{e^{x}-1}=\frac{1}{e^{\frac{\hbar\omega}{k_BT}}-1}.
+  \end{align*}
+  which is the Planck radiation distribution.
+  \item By evaluating the above result, and knowing that 
+  \begin{align*}
+    h\approx6.6261\cdot10^{-34}\;m^2kg/s,\quad\text{and}\quad k_B\approx1.3806\cdot10^{-23}\;m^2kgs^{-2}K^{-1}.
+  \end{align*}
+  The average number of photon as a function of the absolute temperature is:
+  \begin{align*}
+    \braket{\hn}(T)=\frac{1}{e^{\dfrac{[6.6261\cdot10^{-34}/(2\pi)][(2\pi)(3\cdot10^8)/(500\cdot10^{-9})]}{(1.3806\cdot10^{-23})K}}-1}=\frac{1}{e^{28797/K}-1}.
+  \end{align*}
+  At $300K$ and $6000K$ we have 
+  \begin{align*}
+    \braket{\hn}(300)=\frac{1}{e^{28797/300}-1}=2.1\cdot10^{-42},\quad\text{and}\quad\braket{\hn}(6000)=\frac{1}{e^{28797/6000}-1}=8.3\cdot10^{-3}.
+  \end{align*}
+\end{enumerate}
+\end{example}
 

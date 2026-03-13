@@ -59,3 +59,54 @@ The term in red can be $\hX_1$ or $\hX_2$ depending on the phase of $\alpha_2$, 
 \end{itemize}
 
 
+\begin{example}{Balanced homodyne deecion of squeezed light}
+    Consider a squeezed vacuum field mode incident on a balanced homodyne detector.
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=.3\columnwidth]{PartOne/ChapterThree/figures/ex_homodynedetection.png}
+    \end{figure}
+    
+    The ouput modes in the detectors are given as 
+    \begin{align*}
+        \hb_1=\frac{1}{\sqrt{2}}(\ha_1+\ha_2),\quad\hb_2=\frac{1}{\sqrt{2}}(\ha_1-\ha_2).
+    \end{align*}
+    What is the difference $\hN_1-\hN_2$, with $\hN_{i}=\hb^\dagger_i\hb_i$, and the variance $\Delta(\hN_1-\hN_2)$ 
+    as a function of $\phi_\alpha$? The phase shifter changes the coherent state input so that $\alpha\to\alpha e^{i\phi_\alpha}$.
+    Assume that $|\alpha|\gg1$ and keep terms to linear order in $|\alpha|$.
+    \subsubsection{Solution}
+    In general, the photon number for output $i$ is $\hN_i=\hat{b}^\dagger_i\hat{b}_i$.
+    For each output we have:
+    \begin{align*}
+    \hN_1&=\frac{1}{2}(\ha_1^\dagger+\ha_2^\dagger)(\ha_1+\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2),\\
+    \hN_2&=\frac{1}{2}(\ha_1^\dagger-\ha_2^\dagger)(\ha_1-\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2).
+    \end{align*}
+    Substraction gives 
+    \begin{align*}
+    \hN_1-\hN_2=\frac{1}{2}\left[(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)-(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)\right]=\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1.
+    \end{align*}
+
+    With the phase shift, the input 2 is:
+    \begin{align*}
+    \alpha\to\alpha e^{i\phi_\alpha},\quad\text{and}\quad\ha_2\approx\alpha e^{i\phi_\alpha}.
+    \end{align*}
+    The number photon difference is then:
+    \begin{align*}
+    \hN_1-\hN_2=\ha_1^\dagger\alpha e^{i\phi_\alpha}+\ha_1\alpha^*e^{-i\phi_\alpha}.
+    \end{align*}
+    If $\alpha=|\alpha|$, then 
+    \begin{align*}
+    \hN_1-\hN_2=|\alpha|\left(\ha_1^\dagger e^{i\phi_\alpha}+\ha_1e^{-i\phi_\alpha}\right)=2|\alpha|\hX_{\phi_\alpha},\quad\hX_{\phi_\alpha}=\frac{\ha_1^\dagger e^{i\phi_\alpha}+\ha_1e^{-i\phi_\alpha}}{2},
+    \end{align*}
+    where $\hX_{\phi_\alpha}$ is the quadrature of mode 1 modulated by the phase shift $\phi_\alpha$.
+
+    To get the uncertainty $\Delta(\hN_1-\hN_2)$, we compute the expected alue of the difference and the expected value of the difference squared.
+    We can use the results from the previoous exercise as the input 1 is a squeezed state of the vacuum.
+    \begin{align*}
+    _1\bra{\xi,0}_2\bra{\alpha}(\hN_1-\hN_2)\ket{\alpha}_2\ket{\xi,0}_1&=2|\alpha|\braket{\hX_{\phi_\alpha}}=0,\\
+    _1\bra{\xi,0}_2\bra{\alpha}(\hN_1-\hN_2)^2\ket{\alpha}_2\ket{\xi,0}_1&=4|\alpha|^2\braket{\hX_{\phi_\alpha}^2}=|\alpha|^2[\cosh(2r)-\sinh(2r)\cos(\theta-2\phi_\alpha)],
+    \end{align*}
+    where $\xi=re^{i\theta}$ is the squeezing factor, and $\phi_\alpha$ the phase shift imposed by the input 2. Uncertainty is therefore:
+    \begin{align*}
+    \Delta(\hN_1-\hN_2)=|\alpha|\sqrt{\cosh(2r)-\sinh(2r)\cos(\theta-2\phi_\alpha)}.
+    \end{align*}
+\end{example}
