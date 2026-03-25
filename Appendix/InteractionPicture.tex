@@ -1,0 +1,119 @@
+\chapter{Shcrodinger and Heisenberg pictures}
+%
+\subsection{Time-dependent reference frames}
+The state of a system can be evaluated in various \bfemph{reference frames} that evolve in time. 
+
+The state $\ket{\psi(t)}$ in one reference frame evolves in time according to the Schrodinger equation
+\begin{align*}
+    i\hbar\partial_t\ket{\psi(t)}=H(t)\ket{\psi(t)}.
+\end{align*}
+A second reference frame that may evolve in time relative to the first one if we assume the existence of a time-dependent unitary operator that operates over 
+the first frame provifing an effective state in the second frame: 
+\begin{align}
+    \text{Effective state of the second frame}\qquad\highlight{\ket{\psi_E(t)}=F(t)\ket{\psi(t)},\quad F(t_0)=\mathds{1}}.
+\end{align}
+The effective state obeys the \bfemph{effective Schrodinger equation} obtained by inserting $\ket{\psi(t)}=F^\dagger(t)\ket{\psi_E(t)}$ in the Schrodinger equation of the first frame:
+\begin{align}
+    \text{Effective Schrodinger equation and Hamiltonian}\qquad\highlight{\begin{array}{l}
+        i\hbar\partial_t\ket{\psi_E(t)}=H_E(t)\ket{\psi_E(t)}\\\\
+        H_E(t)=F(t)H(t)F^\dagger(t)-i\hbar F(t)\left(\partial_tF^\dagger(t)\right)
+    \end{array}}
+\end{align}
+Frame transformations are generally used to simplify calculations and time dependence of the Schrodinger equation.
+%%
+\subsection{Schrodinger, Heisenberg, and interaction pictures}
+They are different frames of reference, and are distinguished by the specfic time-dependent unitary transformations.
+\begin{itemize}[itemsep=0pt,topsep=0pt]
+    \item\textbf{Schrodinger picture} State vectors $\ket{\psi_S(t)}$ evolve in time under the action of the Hamiltonian $\ket{\psi_S(t)}=U(t,t_0)\ket{\psi_S(t)}$. Position and momentum operators have no time dependence.
+    \item\textbf{Heisenberg picture} Defined by the adjoint of the evolution operator of the S picture, so that its application on the Schrodinger-picture state vector $\ket{\psi_H}=U^\dagger(t,t_0)\ket{\psi_S(t)}=\ket{\psi_S(t_0)}$ 
+    vanishes the time dependence. On the other hand, operators that have no time dependence in the S picture may now depend on time.
+    \item\textbf{Interaction picture} Used when the S picture Hamiltonian is time dependent. In this picture, operators and state vectors generally evolve in time.
+\end{itemize}
+%%
+\subsection{Schrodinger picture}
+Position and momentum operators have no explicit tiem dependence in this picture. However, other operators with time dependence may be constructed.
+
+The expectation value of an operator $A_S(t)$ who generally have time dependence that results from both the time dependence of $\ket{\psi_S(t)}$ and from the operator itself:
+\begin{align}
+    \braket{A_S(t)}(t)=\braket{\psi_S(t)|A_S(t)|\psi_S(t)}\longrightarrow\highlight{\frac{d}{dt}\braket{A_S}=\frac{1}{i\hbar}\braket{[A_S,H_S]}+\braket{\frac{\partial A_S}{\partial t}}}.
+\end{align}
+
+Ehrenfest's equations are obtained by replacing $A_S(t)$ with the position and momentum operator $\bm{R}=(X,Y,Z)$ and $\bm{P}=(P_x,P_y,P_z)$, and noting that $\partial_t\bm{R}=\partial_t\bm{P}=0$:
+\begin{align}
+    \text{Ehrenfest's equations }\qquad\highlight{\begin{array}{l}
+        \dfrac{d}{dt}\braket{\bm{R}}=\dfrac{1}{m}\braket{\bm{P}}\\\\
+        \dfrac{d}{dt}\braket{\bm{P}}=-\braket{\nabla V(\bm{R})}
+    \end{array},\quad\braket{V(\bm{R})}=\bigr[\braket{\partial_XV(\bm{R})},\braket{\partial_YV(\bm{R})},\braket{\partial_ZV(\bm{R})}\bigr]}.
+\end{align}
+%%
+\subsection{Heisenberg picture}
+This picture vanishes the time dependence of S picture state vector by applying the adjoint of the time evolution oeprator $U^\dagger(t,t_0)$, which defines a unitary transformation.
+In addition, because expectation values of oeprators must be \textbf{conserved} regardless the interaction used, nn arbitrary operator $A_S(t)$ in the S picture is transformed to the H picture as 
+\begin{align*}
+    \text{Transformed state vector and operator}\qquad\highlight{
+    \begin{array}{l}
+    \ket{\psi_H}=U^\dagger(t,t_0)\ket{\psi_S(t)}=\ket{\psi_S(t_0)}\\
+    A_H(t)=U^\dagger(t,t_0)A_S(t)U(t,t_0)
+    \end{array}}.
+\end{align*}
+As,
+\begin{align*}
+    \braket{A}=\braket{\psi_S(t)|U(t,t_0)|\textcolor{BrickRed}{U^\dagger(t,0)AU(t,0)}U^\dagger(t,0)|\psi_S(t)}.
+\end{align*}
+The evolution of the operator $A_H(t)$ is then given by:
+\begin{align*}
+    \frac{d}{dt}A_H(t)=&-\frac{1}{i\hbar}U^\dagger(t,t_0)H_S(t)A_S(t)U(t,t_0)+U^\dagger(t,t_0)\frac{dA_S(t)}{dt}U(t,t_0)+\frac{1}{i\hbar}U^\dagger(t,t_0)A_S(t)H_S(t)U(t,t_0)\\
+    =&-\frac{1}{i\hbar}U^\dagger(t,t_0)H_S(t)\textcolor{red}{U(t,t_0)U^\dagger(t,t_0)}A_S(t)U(t,t_0)+U^\dagger(t,t_0)\frac{dA_S(t)}{dt}U(t,t_0)\\
+    &+\frac{1}{i\hbar}U^\dagger(t,t_0)A_S(t)\textcolor{red}{U(t,t_0)U^\dagger(t,t_0)}H_S(t)U(t,t_0)\\
+    i\hbar\partial_tA_H(t)&=[A_H(t),H_H(t)]+i\hbar U^\dagger(t,t_0)(\partial_tA_S(t))U(t,t_0).
+\end{align*}
+
+In the table, $H_S$ and $\ket{\psi_S(t)}$ are the S picture Hamiltonian and state vector.
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}{
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{Heisenberg picture quantities and dynamics}\\
+        \hline
+        $\ket{\psi_H}$&$\equiv U^\dagger(t,t_0)\ket{\psi_S(t)}=\ket{\psi_S(t_0)}$\\
+        $A_H(t)$&$\equiv U^\dagger(t,t_0)A_S(t)U(t,t_0)$\\
+        $H_H$&$=H_S,\text{ for time-independent $H_S$}$\\
+        $H_H(t)$&$=H_S(t),\text{ for $[H_S(t),H_S(t')]=0$}$\\
+        $\braket{A_H(t)}(t)$&$=\braket{\psi_H|A_H(t)|\psi_H}$\\
+        &$=\braket{\psi_S(t_0)|U^\dagger(t,t_0)A_S(t)U(t,t_0)|\psi_S(t_0)}$\\
+        &$=\braket{\psi_S|A_S(t)|\psi_S(t)}=\braket{A_S(t)}(t)$\\
+        $i\hbar\partial_tA_H(t)$&$=[A_H(t),H_H(t)]+i\hbar U^\dagger(t,t_0)\left(\partial_tA_S(t)\right)U(t,t_0)$
+    \end{tabular}}
+\end{table}
+\begin{emphasizer}
+    The effective Hamiltonian of the H picture is $H_E=0$. Therefore, the effect Schrodinger equation $i\hbar\partial_t\ket{\psi_H}=0$ is solved by $\ket{\psi_H}=\ket{\psi_S(t_0)}$.
+    In the H picture, only operators evolve in time following the ODE in the last line of the table.
+\end{emphasizer}
+\begin{emphasizer}
+    An advantage of Heisenberg picture is that it leads to equations formally similar to those of classical mechanics.
+\end{emphasizer}
+%%
+\subsection{Interaction picture}
+Obtained with a unitary transformation of state vectors and operators of the S picture.
+This picture removes some of the time dependence of the S picture state vectors, while also altering the time dependence of operators. 
+The interaction picture is typically used with a time-dependent S picture Hamiltonian 
+\begin{align}
+    \text{Time-dependent S picture Hamiltonian}\qquad\highlight{H_S(t)=H_0+W(t)},
+\end{align}
+where the eigenstates of $H_0$ are knwon, and $W(t)$ is a time-dependent \bfemph{perturbation} which induces time-dependent dynamics and \bfemph{transitions}
+between the eigenstates of $H_0$. To transform into the interaction picture, an evolutino operator $U_0(t,t_0)=e^{-iH_0(t-t_0)/\hbar}$ is associated with $H_0$.
+The transformed state vector and arbitrary operator expressed in the interaction picture are 
+\begin{align}
+    \text{Transformed state vector and operator}\qquad\highlight{\begin{array}{l}
+        \ket{\psi_I(t)}=U_0^\dagger(t,t_0)\ket{\psi_S(t)}\\
+        A_I(t)=U^\dagger_0(t,t_0)A_S(t)U_0(t,t_0)
+    \end{array}}
+\end{align}
+The effective Schrodinger equation in the interaction picture is 
+\begin{align}
+    i\hbar\partial_t\ket{\psi_I(t)}=H_E(t)\ket{\psi_I(t)},\quad\text{where}\quad H_E(t)=U^\dagger_0(t,t_0)W(t)U(t,t_0)
+\end{align}
+is the effective Hamiltonian. If $W(t)=0$, then the interaction picture reduces to the H picture: $H_E(t)=0$ and $\ket{\psi_I(t)}=\ket{\psi_S(t_0)}$.
+\begin{emphasizer}[Meaning of the interaction picture]
+    In the I picture (E-picture), we are isolating the evolutino of $H_0$ while only allow evolve $H_1$.
+\end{emphasizer}
