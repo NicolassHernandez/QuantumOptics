@@ -44,15 +44,16 @@
 \contentsline {subsection}{\numberline {4.1.2}Atom-matter interaction}{40}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}The Lorentz atom}{42}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Quantized energy level of atom}{43}{section.4.3}%
-\contentsline {chapter}{\numberline {A}Density operator}{47}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Density operator}{47}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Definition}{47}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Entangled states}{48}{subsection.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Dynamics of the density operator}{49}{subsection.A.1.3}%
-\contentsline {chapter}{\numberline {B}Shcrodinger and Heisenberg pictures}{50}{appendix.B}%
-\contentsline {subsection}{\numberline {B.0.1}Time-dependent reference frames}{50}{subsection.B.0.1}%
-\contentsline {subsection}{\numberline {B.0.2}Schrodinger, Heisenberg, and interaction pictures}{50}{subsection.B.0.2}%
-\contentsline {subsection}{\numberline {B.0.3}Schrodinger picture}{50}{subsection.B.0.3}%
-\contentsline {subsection}{\numberline {B.0.4}Heisenberg picture}{51}{subsection.B.0.4}%
-\contentsline {subsection}{\numberline {B.0.5}Interaction picture}{52}{subsection.B.0.5}%
+\contentsline {section}{\numberline {4.4}Spontaneous emission}{46}{section.4.4}%
+\contentsline {chapter}{\numberline {A}Density operator}{49}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Density operator}{49}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Definition}{49}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Entangled states}{50}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Dynamics of the density operator}{51}{subsection.A.1.3}%
+\contentsline {chapter}{\numberline {B}Shcrodinger and Heisenberg pictures}{52}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Time-dependent reference frames}{52}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Schrodinger, Heisenberg, and interaction pictures}{52}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Schrodinger picture}{52}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Heisenberg picture}{53}{subsection.B.0.4}%
+\contentsline {subsection}{\numberline {B.0.5}Interaction picture}{54}{subsection.B.0.5}%
 \contentsfinish 

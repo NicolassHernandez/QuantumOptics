@@ -93,6 +93,16 @@ Under the RWA, the interaction Hamiltonian becomes:
         \hsigma_+\ha_{\bk,\lambda}e^{i\bk\cdot\br}e^{-i(\omega_{\bk}-\omega_0)t}-\hsigma_-\ha^\dagger_{\bk,\lambda}e^{-i\bk\cdot\br}e^{i(\omega_{\bk}-\omega_0)t}
     \right].
 \end{align*}
+Defining 
+\begin{align*}
+    \hbar g_{\bk,\lambda}=-i\bd\cdot\he_{\bk,\lambda}\sqrt{\frac{\hbar\omega_{\bk}}{2\varepsilon_0V}}e^{i\bk\cdot\br},
+\end{align*}
+we finally have:
+\begin{align}
+    \text{Interaction Hamiltonian}\qquad\highlight{
+    \tilde{H}_{int}\approx\hbar\sum_{\bk,\lambda}g_{\bk,\lambda}\hsigma_+\ha_{\bk,\lambda}e^{-i(\omega_{\bk}-\omega_0)t}+g_{\bk,\lambda}^*\hsigma_-\ha^\dagger_{\bk,\lambda}
+    e^{i(\omega_{\bk}-\omega_0)t}}.
+\end{align}
 There the first term of the type $\hsigma_+\ha_{\bk,\lambda}$ represents the process where $\hsigma_+=\ket{e}\bra{g}$ takes a ground state atom to its 
 excited state and $\ha_{\bk,\lambda}$ annihilatesa photon. Similarly, the second term represents the fundamental process of emission of a single photon 
 from an excited atom. 
