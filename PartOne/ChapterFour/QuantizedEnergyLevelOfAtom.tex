@@ -21,18 +21,18 @@ We would like to express the dipole operator in the energy basis:
 \end{align*}
 Thus, the dipole transition matrix corresponds to the overlap between the electronic wavefunction in two energy levels. Similarly,
 \begin{align*}
-    \braket{e|\hbd|g}*=-e\int d^3r\;\br\psi_g(\br)\psi_e^*(\br)=\bd_{eg}=\bd_{ge}^*,\quad
+    \braket{e|\hbd|g}=-e\int d^3r\;\br\psi_g(\br)\psi_e^*(\br)=\bd_{eg}=\bd_{ge}^*,\quad
     \braket{g|\hbd|g}=\braket{e|\hbd|e}=0
 \end{align*}
 The dipole matrix is symmetric. We can thus express the dipole operator as:
 \begin{align}
     \hbd=\bd_{eg}\ket{e}\bra{g}+\bd_{ge}\ket{g}\bra{e}=\bd\hsigma_++\bd^*\hsigma_-,
 \end{align}
-where $\hsigma$ operators are Pauli matrices and corresponds to atomic raising and lowering atomic operators, respectively.
+where $\hsigma$ operators are Pauli matrices and corresponds to atomic raising and lowering operators, respectively.
 
 The free Hamiltonian of the atom $\hH_0$ can be expressed in terms of its energy eigenstates:
 \begin{align*}
-    \hH_0=\sum-nE_n\ket{n}\bra{n}=E_g\ket{g}\bra{g}+E_e\ket{e}\bra{e}=\hbar\omega_0\ket{e}\bra{e}\quad(E_g=0\land E_e=\hbar\omega_0)=\hbar\omega_0\hsigma_+\hsigma_-
+    \hH_0=\sum_nE_n\ket{n}\bra{n}=E_g\ket{g}\bra{g}+E_e\ket{e}\bra{e}=\hbar\omega_0\ket{e}\bra{e}\quad(E_g=0\land E_e=\hbar\omega_0)=\hbar\omega_0\hsigma_+\hsigma_-.
 \end{align*}
 The total Hamiltonian of an atom interacting with quantized EM-field is:
 \begin{align}
@@ -41,7 +41,7 @@ The total Hamiltonian of an atom interacting with quantized EM-field is:
 where 
 \begin{align}
     \hH_A&=\hbar\omega_0\ket{e}\bra{e}=\hbar\omega_0\hsigma_+\hsigma_0,\\
-    \hH_F&=\sum_{\bk,\lambda}\hbar\omega_{\bk}\left(\ha_{\bk,\lambda}\ha_{\bk,\lambda}+\frac{1}{2}\right),\quad[\ha_{\bk,\lambda},\ha^\dagger_{\bk,\lambda}]=1,\\
+    \hH_F&=\sum_{\bk,\lambda}\hbar\omega_{\bk}\left(\ha^\dagger_{\bk,\lambda}\ha_{\bk,\lambda}+\frac{1}{2}\right),\quad[\ha_{\bk,\lambda},\ha^\dagger_{\bk,\lambda}]=1,\\
     \hH_{int}&=-\hbd\cdot\hbE(\br_A),\quad
     \begin{array}{l}
         \hbd=\bd\ket{e}\bra{g}+\bd^*\ket{g}\bra{e}=\bd\hsigma_++\bd^*\hsigma_-,\\    
@@ -104,7 +104,7 @@ we finally have:
     e^{i(\omega_{\bk}-\omega_0)t}}.
 \end{align}
 There the first term of the type $\hsigma_+\ha_{\bk,\lambda}$ represents the process where $\hsigma_+=\ket{e}\bra{g}$ takes a ground state atom to its 
-excited state and $\ha_{\bk,\lambda}$ annihilatesa photon. Similarly, the second term represents the fundamental process of emission of a single photon 
+excited state and $\ha_{\bk,\lambda}$ annihilates a photon. Similarly, the second term represents the fundamental process of emission of a single photon 
 from an excited atom. 
 \begin{figure}[htbp]
     \centering

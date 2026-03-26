@@ -64,7 +64,7 @@ For a statistical mixture
 Its trace is 
 \begin{align*}
     \Tr{\hrho^2}=\sum_n\braket{\varphi_n|\hrho^2|\varphi_n}=\sum_{n,i,j}p_ip_j\braket{\varphi_n|\psi_i}\braket{\psi_i|\psi_j}\braket{\psi_j|\varphi_n}=\sum_{i,j}p_ip_j
-    |\braket{\psi_i|\psi_j}|^2\leq\left[\sum_ip_i\right]^2-1.
+    |\braket{\psi_i|\psi_j}|^2\leq\left[\sum_ip_i\right]^2=1.
 \end{align*}
 Thus, we have 
 \begin{align}
@@ -86,7 +86,45 @@ Formally we can use the density operator to express the expectation as:
     \braket{\hO}=\Tr{\hrho\hO}=\sum_n\braket{\varphi_n|\hrho\hO|\varphi_n}=\sum_{n,i}p_i\braket{\varphi_n|\psi_i}\braket{\psi_i|\hO|\varphi_n}=
     \sum_{i,n}p_i\braket{\psi_i|\hO|\varphi_n}\braket{\varphi_n|\psi_i}=\sum_ip_i\braket{\psi_i|\hO|\varphi_i}.
 \end{align*}
+%
+\subsection{Two-state system}
+For a two-state system, there always exists a description in terms of the Pauli operators $\hsigma_1,\hsigma_2,\hsigma_3$
+satisfying the commutation relations $[\hsigma_i,\hsigma_j]=2i\varepsilon_{ijk}\hsigma_k$.
 
+In a basis where $\hsigma_3$ and $\hsigma^2=\hsigma_1^2+\hsigma_2^2+\hsigma_3^2$ are diagonal, these operators can be written in matric form:
+\begin{align}
+    \sigma_1=\begin{bmatrix}
+        0&1\\1&0
+    \end{bmatrix},\quad\sigma_2=\begin{bmatrix}
+        0&-i\\i&0
+    \end{bmatrix},\quad\sigma_3=\begin{bmatrix}
+        1&0\\0&-1
+    \end{bmatrix}.
+\end{align}
+Any Hermitian $2\times2$ matrix can be expressed in terms of the Pauli matrices and the identity matriz $\hat{I}_2$, and of course, $\hrho$.
+We can then write:
+\begin{align}
+    \hrho=\begin{bmatrix}
+        \rho_{11}&\rho_{12}\\\rho_{21}&\rho_{22}
+    \end{bmatrix}=\frac{1}{2}\begin{bmatrix}
+        1-s_3&s_1+is_2\\s_1-is_2&1-s_3
+    \end{bmatrix}=\frac{1}{2}(\hat{I}_2+\bs\cdot\sigma),
+\end{align}
+where $\bs=\{s_1,s_2,s_3\}$ is the \emph{Bloch vector}. The associated quantum state can be represented as:
+\begin{align}
+    \highlight{\ket{\psi}=\cos\frac{\theta}{2}e^{-i\phi/2}\ket{\uparrow}+\sin\frac{\theta}{2}e^{i\phi/2}\ket{\downarrow}}.
+\end{align}
+The density operator above has two eigenvalues:
+\begin{align}
+    \highlight{g_{\substack{1\\2}}=\frac{1}{2}\left[1\pm\sqrt{s_1^2+s_2^2+s_3^2}\right]=\frac{1}{2}[1\pm|\bs|]},
+\end{align}
+and its eigenvectors are determined by the two vectors $\pm\bu$ shown in the Bloch sphere. For pure states where $|\bs|=1$, $\pm\bu=\pm\bs$ and $\bs$ lies 
+on the surface of the Bloch sphere. For mixed states where $|\bs|<1$, $\bs$ lies inside the Bloch sphere and $\pm\bu=\pm\frac{\bs}{|\bs|}$.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.3\columnwidth]{Appendix/blochsphere.png}
+    \caption{Representation of the density matrix of a two-state ssystem in terms of the Bloch sphere and Bloch vector.}
+\end{figure}
 %
 \subsection{Entangled states}
 Lets consider a two-particle system and that each particle can be in either of two one-particle states $\ket{\psi_1}$ or $\ket{\psi_2}$. Using the notation 
@@ -95,7 +133,7 @@ $\ket{\psi_i^{(j)}}$=particle $j$ in state $i$, we consider a pure two-particle 
     \ket{\psi}=C_1\ket{\psi_1^{(1)}}\otimes\ket{\psi_2^{(2)}}+C_2\ket{\psi_2^{(1)}}\otimes\ket{\psi_1^{(2)}}.
 \end{align*}
 This can be extended for multiparticle systems, where we can define the \emph{reduced density operators} for each of the subsystems by tracing the 
-density operator over the states of all the other systems. The reduced density operator for particle 1 is 
+density operator over the states of all the other systems. With $\phi=\ket{\psi}\bra{\psi}$, the reduced density operator for particle 1 is 
 \begin{align*}
     \hrho^{(1)}=\text{Tr}_2[\hrho]=\braket{\psi_1^{(2)}|\hrho|\psi_1^{(2)}}+\braket{\psi_2^{(2)}|\hrho|\psi_2^{(2)}}=|C_1|^2\ket{\psi_1^{(1)}}\bra{\psi_1^{(1)}}
     +|C_2|^2\ket{\psi_2^{(1)}}\bra{\psi_2^{(1)}}.
@@ -120,7 +158,7 @@ entanglement according to the degree of purity of either of the subsystems.
 \subsection{Dynamics of the density operator}
 The density operator evolves unitarily according to 
 \begin{align}
-    \text{von Neumann eq 1}\qquad\partial_t\hrho=\frac{i}{\hbar}[\hrho,\hH],\quad\text{con}\quad i\hbar\partial_t\ket{\psi_i}=\hH\ket{\psi_i}.
+    \text{von Neumann eq 1}\qquad\partial_t\hrho=\frac{i}{\hbar}[\hrho,\hH],\quad\text{with}\quad i\hbar\partial_t\ket{\psi_i}=\hH\ket{\psi_i}.
 \end{align}
 Alternatively, we may write 
 \begin{align*}
