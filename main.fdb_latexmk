@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1774486298.49912 "main.bcf" "main.bbl" "main" 1774495903.49439 0
+["biber main"] 1774486298.49912 "main.bcf" "main.bbl" "main" 1774568868.43336 0
   "PartOne/ChapterOne/bib_.bib" 1768872437 814 ca0c4b5b986e047b1001d6e5f3140200 ""
-  "main.bcf" 1774495902 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
+  "main.bcf" 1774568866 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1774488675.6612 "main.idx" "main.ind" "main" 1774495903.49352 0
-  "main.idx" 1774495899 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1774564243.0641 "main.idx" "main.ind" "main" 1774568868.43132 0
+  "main.idx" 1774568860 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1774495893.06263 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1774495903.49513 0
+["pdflatex"] 1774568855.31978 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1774568868.4352 0
   "Appendix/DensityOperator.tex" 1774490164 9362 1012c8205218c66903583fa19a42dce9 ""
   "Appendix/InteractionPicture.tex" 1774409734 7989 9470f2fec0e50b827f45fa0ec3a3043b ""
   "Appendix/blochsphere.png" 1774488704 48442 cf541df6f7a814d45c778aa04e151f49 ""
@@ -705,7 +705,7 @@
   "PartOne/ChapterOne/figures/evolutioncoherent2.png" 1771473973 135881 cc9355b85ac5be883f4288a9e4184a4b ""
   "PartOne/ChapterOne/main.tex" 1772422934 582 71959d9a2ae6f1e4f9943e3ae0a56d2b ""
   "PartOne/ChapterThree/DetectionOfQuadratureStates.tex" 1773361366 7162 058eed357906be2315e400437c031115 ""
-  "PartOne/ChapterThree/DoubleSlitQuantumEraser.tex" 1774492414 4876 aa20fffd6cd299e38f4b2a41317f7207 ""
+  "PartOne/ChapterThree/DoubleSlitQuantumEraser.tex" 1774568842 4916 ddaf82893dde777737ef9482f59b3a7d ""
   "PartOne/ChapterThree/GenerationOfEntangledPhotons.tex" 1773364899 9538 0b0e890ecdfeec5d8c90192c6a4962c3 ""
   "PartOne/ChapterThree/GenerationOfQuadratureStates.tex" 1772815057 6875 f293dc568055d5f68075935329ba35b3 ""
   "PartOne/ChapterThree/figures/doubleslitquantumeraser_case1.png" 1773363721 53060 b20c0ad9d46617ec7d63b6b29cdf5ae3 ""
@@ -723,16 +723,16 @@
   "PartOne/ChapterTwo/figures/example_machzenhder.png" 1771800243 135420 f1384de5a573a94a3f8d35d0fd544fb4 ""
   "PartOne/ChapterTwo/main.tex" 1771469181 248 de7e6c4199e0925db4ff2bfbb29a4362 ""
   "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" 1774409506 1004 e360603782cd2ce07449b7bcbb7d601d ""
-  "main.aux" 1774495902 14727 72208ae2c3b22464a879ad321d20b70a "pdflatex"
+  "main.aux" 1774568866 14866 d48e30670d6633836fe925bc7bd46488 "pdflatex"
   "main.bbl" 1774486310 9226 6afc9a62d2d5a4cfda0cae0fcc08661d "biber main"
-  "main.ind" 1774488676 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.mtc" 1774495894 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.mtc0" 1774495894 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.out" 1774495902 3982 769330e2726b594d9faeb405cb626cb6 "pdflatex"
-  "main.ptc" 1774495902 5263 f8afbf4465e9ac0065f74e847bee173f "pdflatex"
-  "main.run.xml" 1774495902 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
+  "main.ind" 1774564243 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.mtc" 1774568856 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.mtc0" 1774568856 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.out" 1774568866 3982 769330e2726b594d9faeb405cb626cb6 "pdflatex"
+  "main.ptc" 1774568866 5263 f8afbf4465e9ac0065f74e847bee173f "pdflatex"
+  "main.run.xml" 1774568866 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
   "main.tex" 1774409506 1004 e360603782cd2ce07449b7bcbb7d601d ""
-  "main.toc" 1774495902 5077 264747d9b0cdea34229ae4b533f3e40b "pdflatex"
+  "main.toc" 1774568866 5077 264747d9b0cdea34229ae4b533f3e40b "pdflatex"
   "struct/circuitikz.tex" 1768872437 3621 e55994767a1aa6f3db9e8adbe25c8836 ""
   "struct/colors.tex" 1768872437 457 2821ec4cb2261c124cc1259b2f46b70e ""
   "struct/envs.tex" 1774488674 7951 3ac51471ccddbe2d2e8c86d53ee86f22 ""

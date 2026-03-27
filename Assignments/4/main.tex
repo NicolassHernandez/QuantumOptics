@@ -1,0 +1,178 @@
+\documentclass[letterpaper,11pt,twoside]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{listings}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\usepackage{tikz}
+\usepackage[siunitx, RPvoltages]{circuitikz}
+\usetikzlibrary{3d}
+\usepackage{comment}
+\usepackage{caption,subcaption}
+\usepackage{pgfplots}
+\usepackage{dsfont}
+\pgfplotsset{compat=newest} % or a newer version if available
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{pgfplots.groupplots}
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{arrow} = [->,>=stealth,shorten >=2pt]
+\newcommand{\re}[1]{\text{Re}\left(#1\right)}
+\newcommand{\im}[1]{\text{Im}\left(#1\right)}
+\newcommand{\bA}{\bm{A}}
+\newcommand{\bB}{\bm{B}}
+\newcommand{\bC}{\bm{C}}
+\newcommand{\bE}{\bm{E}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\bH}{\bm{H}}
+\newcommand{\bD}{\bm{D}}
+\newcommand{\bO}{\bm{0}}
+\newcommand{\br}{\bm{r}}
+\newcommand{\bk}{\bm{k}}
+\newcommand{\bR}{\bm{R}}
+\newcommand{\hA}{\hat{A}}
+\newcommand{\hB}{\hat{B}}
+\newcommand{\hC}{\hat{C}}
+\newcommand{\hU}{\hat{U}}
+\newcommand{\ha}{\hat{a}}
+\newcommand{\hb}{\hat{b}}
+\newcommand{\hc}{\hat{c}}
+\newcommand{\hn}{\hat{n}}
+\newcommand{\hH}{\hat{H}}
+\newcommand{\hN}{\hat{N}}
+\newcommand{\hr}{\bm{\hat{r}}}
+\newcommand{\hbE}{\hat{\bm{E}}}
+\newcommand{\hx}{\hat{x}}
+\newcommand{\hX}{\hat{X}}
+\newcommand{\hp}{\hat{p}}
+\newcommand{\hP}{\hat{P}}
+\newcommand{\hS}{\hat{S}}
+\newcommand{\hD}{\hat{D}}
+\newcommand{\hy}{\hat{y}}
+\newcommand{\hrho}{\hat{\rho}}
+\newcommand{\hz}{\hat{z}}
+\newcommand{\laplace}[1]{\mathscr{L}\left[#1\right]}
+\newcommand{\ilaplace}[1]{\mathscr{L}^{-1}\left[#1\right]}
+\newcommand{\fourier}[1]{\mathscr{F}\left[#1\right]}
+\newcommand{\Tr}[1]{\text{Tr}\left[#1\right]}
+\newcommand{\ifourier}[1]{\mathscr{F}^{-1}\left[#1\right]}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle#1\right|}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\D}{\mathcal{D}}
+\usepackage{cancel}
+\usepackage{bm}
+\usepackage{fancyhdr}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.8in,top=1in,bottom=1in]{geometry}
+%%%%%
+\begin{filecontents*}{refs.bib}
+@article{cohen1986quantum,
+  title={Quantum mechanics, volume 1},
+  author={Cohen-Tannoudji, Claude and Diu, Bernard and Laloe, Frank},
+  journal={Quantum Mechanics},
+  volume={1},
+  pages={898},
+  year={1986}
+}
+\end{filecontents*}
+%
+\newcommand{\institution}{University of Arizona}
+\newcommand{\autor}{Nicolás Hernández Alegría}
+\newcommand{\course}{OPTI 544 Quantum Optics}
+\newcommand{\assignment}{Assignment 4}
+%
+\title{\textbf{\assignment}\\\course\\{\Large\institution}}
+\author{\autor}
+%\date{\today\\Total time: 12 hours}
+%
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancypagestyle{mainstyle}{
+    \fancyhf{} % Clear all header and footer fields
+    \fancyfoot[C]{\thepage}
+    \fancyhead[LE,RO]{\course} % Section name on odd pages
+    \fancyhead[LO,RE]{\assignment}
+    % Optional: Thin rules
+    \renewcommand{\headrulewidth}{0pt} % Header rule
+    \renewcommand{\footrulewidth}{0pt} % No footer rule
+}
+%
+\begin{document}
+
+\pagestyle{mainstyle}
+\maketitle
+%%
+\section*{Exercise 1}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+  \item State just after the slits, and just after the linear polarizers are:
+  \begin{align*}
+    \ket{\Psi^-}&=\frac{1}{\sqrt{2}}(\ket{A}+\ket{B})\otimes\ket{Y},\\
+    \ket{\Psi^+}&=\frac{1}{\sqrt{2}}(\ket{A}\hP_A+\ket{B}\hP_B)\otimes\ket{Y}=\frac{\sin\theta}{\sqrt{2}}(\ket{A}
+    \ket{\theta_A}-\ket{B}\ket{\theta_B})\longrightarrow\ket{\Psi^{+'}}=\frac{\ket{\Psi^+}}{\sin\theta}.
+  \end{align*}
+  \item At the screen, $\ket{A}$ and $\ket{B}$ should evolve as we seen in the lectures. However, I will leave them as they are and make the projection.
+  \begin{align*}
+    \braket{x_k|\Psi^{+'}}=\frac{1}{\sqrt{2}}(\braket{x_k|A}\ket{\theta_A}-\braket{x_k|B}\ket{\theta_B})=\frac{1}{\sqrt{2}}[\psi_A(x_k)\ket{\theta_A}+
+    \psi_B(x_k)\ket{\theta_B}].
+  \end{align*}
+  Then, the magnitude is:
+  \begin{align*}
+    |\braket{x_k|\Psi^{+'}}|^2&=\frac{1}{2}[\psi_A(x_k)\ket{\theta_A}+
+    \psi_B(x_k)\ket{\theta_B}][\Psi^*_A(x_k)\bra{\theta_A}+
+    \Psi^*_B(x_k)\bra{\theta_B}]\\
+    &=\frac{1}{2}\left[|\psi_A(x_k)|^2+|\psi_B(x_k)|^2-\psi_A(x_k)\psi_B\braket{\theta_B|\theta_A}-\psi_B(x_k)\psi_A^*\braket{\theta_A|\theta_B}\right].
+  \end{align*}
+  We need to find the projection of the polarizers:
+  \begin{align*}
+    \braket{\theta_A|\theta_B}&=[\cos\theta\bra{X}+\sin\theta\bra{Y}][\cos\theta\ket{X}-\sin\theta\ket{Y}]=\cos^2\theta-\sin^2\theta=\cos2\theta,\\
+    \braket{\theta_B|\theta_A}&=[\cos\theta\bra{X}-\sin\theta\bra{Y}][\cos\theta\ket{X}+\sin\theta\ket{Y}]=\cos^2\theta-\sin^2\theta=\cos2\theta.
+  \end{align*}
+  If we assume that 
+  \begin{align*}
+    \psi_A(x_k)=|\psi_A|\angle\theta_A,\quad\text{and}\quad\psi_B(x_k)=|\psi_B|\angle\theta_B,
+  \end{align*}
+  then usinging it with the projection computed we finally have:
+  \begin{align*}
+    P_k=|\braket{x_k|\Psi^{+'}}|^2=\frac{1}{2}\left[|\psi_A|^2+|\psi_B|^2-2\cos2\theta|\psi_A||\psi_B|\cos(\Delta\phi)\right],\quad\Delta\phi=\theta_B-\theta_A.
+  \end{align*}
+  \item For each angle, we have:
+  \begin{align*}
+    \theta=0:&\qquad P_k=\frac{1}{2}\left[|\psi_A|^2+|\psi_B|^2-2|\psi_A||\psi_B|\cos(\Delta\phi)\right]\Longrightarrow\text{Interference term maximized},\\
+    \theta=\pi/4:&\qquad P_k=\frac{1}{2}\left[|\psi_A|^2+|\psi_B|^2\right]\Longrightarrow\text{No interference term}.
+  \end{align*}
+  As we can see, when $\theta=\pi/4$ the interference term vanished and therefore there is no interference.
+  \item The eraser projects onto its basis:
+  \begin{align*}
+    \ket{\Psi^{++}}&=\ket{\theta_E}\bra{\theta_E}\ket{\Psi^{+'}}\\
+    &=\frac{1}{\sqrt{2}}\ket{\theta_E}\bra{\theta_E}(\ket{A}\ket{\theta_A}-\ket{B}\ket{\theta_B})\\
+    &=\frac{1}{\sqrt{2}}\left[(\cos\theta\cos\theta_E+\sin\theta\sin\theta_E)\ket{A}-(\cos\theta\cos\theta_E-\sin\theta\sin\theta_E)\ket{B}\right]\otimes\ket{\theta_E}\\
+    \ket{\Psi^{++}}&=\frac{1}{\sqrt{2}}\left[\cos(\theta-\theta_E)\ket{A}-\cos(\theta+\theta_E)\ket{B}\right]\otimes\ket{\theta_E}.
+  \end{align*}
+  \item For $\theta=\pi/4$ and $\theta_E=\pi/4$ the state vector is:
+  \begin{align*}
+    \ket{\Psi^{++}}=\frac{1}{\sqrt{2}}\ket{A}\otimes\ket{\theta_E}\longrightarrow\ket{\Psi^{++'}}=\ket{A}\otimes\ket{\theta_E}.
+  \end{align*}
+  Because there is not interaction with the slit B, there is no interference pattern detected on the screen.
+  \item For $\theta=\pi/4$ and $\theta_E=0$ we have:
+  \begin{align*}
+    \ket{\Psi^{++}}=\frac{\cos(\pi/4)}{\sqrt{2}}[\ket{A}-\ket{B}]\otimes\ket{X}\longrightarrow\ket{\Psi^{++'}}=\frac{1}{\sqrt{2}}[\ket{A}-\ket{B}]\otimes\ket{X}.
+  \end{align*} 
+  As both slits are present in the state vector, when computed the probability $|\braket{x_j|\Psi^{++'}}$ there will be a cross-term that will implies interfence.
+\end{enumerate}
+
+
+\section*{Exercise 2}
+
+
+\section*{Exercise 3}
+
+
+%\clearpage
+%\nocite{*}
+%\bibliographystyle{plain}   % or unsrt, alpha, apalike, etc.
+%\bibliography{refs}
+
+\end{document}
