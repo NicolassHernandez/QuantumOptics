@@ -95,7 +95,7 @@ We have includnig the subscript $\lambda$ and $\bk$ to consider multiple mode $\
 results in the future.
 Using Faraday's law:
 \begin{align*}
-    \bB_{\bk,\lambda}(z,t)=(\bk\times\be_{\lambda})\frac{1}{kc^2}\sqrt{\frac{2\omega^2}{V\varepsilon_0}}\dot{q}_{\bk,\lambda}(t)\sin(kz).
+    \bB_{\bk,\lambda}(z,t)=(\bk\times\be_{\lambda})\frac{1}{kc^2}\sqrt{\frac{2\omega^2}{V\varepsilon_0}}\dot{q}_{\bk,\lambda}(t)\cos(kz).
 \end{align*}
 The term $\dot{q}(t)$ will play the role of a canonical momentum for a particle of unit mass, $p(t)=\dot{q}(t)$.
 %%
@@ -119,10 +119,10 @@ To begin the quantization, we make $q,p$ operators $\hq,\hp$, which needs to sat
 \end{align}
 The EM fields with the operators are:
 \begin{align}
-    \shortstack{Quantized EM fields}\qquad\begin{array}{l}
+    \shortstack{Quantized single-mode EM fields}\qquad\highlight{\begin{array}{l}
         \bhE_{\bk,\lambda}(z,t)=\be_{\bk,\lambda}\sqrt{\dfrac{2\omega^2}{V\varepsilon_0}}\hq(t)\sin(kz)\\
         \bhB_{\bk,\lambda}(z,t)=(\bk\times\be_{\bk,\lambda})\dfrac{1}{kc^2}\sqrt{\dfrac{2\omega^2}{V\varepsilon_0}}\hp(t)\cos(kz)
-    \end{array}.
+    \end{array}}.
 \end{align}
 The operators $\hq,\hp$ are Hermitian and therefore correspond to obserable quantites. It is convenient to introduce the ladder operators to 
 simplify the expresison:
@@ -153,8 +153,8 @@ The time dependence of the ladder operator in Heisenberg equation is:
 \end{align*}
 For example, we have the following applications:
 \begin{align*}
-    \ha_{\bk,\lambda}\ket{0}=\ket{1}_{\bk,\lambda},\quad\ha_{\bk,\lambda}\ket{n}_{\bk,\lambda}=\sqrt{n}\ket{n-1}_{\bk,\lambda},
-    \quad\ha^\dagger_{\bk,\lambda}\ket{n}_{\bk',\lambda'}=\ket{n}_{\bk,\lambda}\ket{1}_{\bk',\lambda'},\quad\ha_{\bk,\lambda}\ket{n}_{\bk',\lambda'}\ket{0}_{\bk,\omega}=0.
+    \ha^\dagger_{\bk,\lambda}\ket{0}=\ket{1}_{\bk,\lambda},\quad\ha_{\bk,\lambda}\ket{n}_{\bk,\lambda}=\sqrt{n}\ket{n-1}_{\bk,\lambda},
+    \quad\ha^\dagger_{\bk',\lambda'}\ket{n}_{\bk,\lambda}=\ket{n}_{\bk,\lambda}\ket{1}_{\bk',\lambda'},\quad\ha_{\bk,\lambda}\ket{n}_{\bk',\lambda'}\ket{0}_{\bk,\omega}=0.
 \end{align*}
 
 The operator product $\ha^\dagger\ha$ has an important significance and is called the number operator $\hn$, whose eigenequation is 
@@ -174,8 +174,10 @@ The relation between the number state and the raising operator $\ha^\dagger$ is:
 \subsection{Quantizing the multimode field}
 We now consider all the modes in the optical cavity:
 \begin{align}
-    \bE(z,t)&=\sum_{m,\lambda}\he_\lambda\sqrt{\frac{2\omega_m^2}{\varepsilon_0V}}\hq_{m,\lambda}(t)\sin(k_mz)\\
-    \bB(z,t)&=\sum_{m,\lambda}(\hz\times\he_\lambda)\frac{1}{k_mc^2}\sqrt{\frac{2\omega_m^2}{\varepsilon_0V}}\dot{\hq}_{m,\lambda}(t)\cos(k_mz).
+    \text{Quantized multi-mode EM fields}\quad\highlight{\begin{array}{l}
+        \displaystyle\bE(z,t)=\sum_{m,\lambda}\he_\lambda\sqrt{\frac{2\omega_m^2}{\varepsilon_0V}}\hq_{m,\lambda}(t)\sin(k_mz)\\
+        \displaystyle\bB(z,t)=\sum_{m,\lambda}(\hz\times\he_\lambda)\frac{1}{k_mc^2}\sqrt{\frac{2\omega_m^2}{\varepsilon_0V}}\dot{\hq}_{m,\lambda}(t)\cos(k_mz)
+    \end{array}}.
 \end{align}
 where $kL=m\pi$ and $\he_\lambda=\{\hx,\hy\}$. The process is anaglogous; we compute the Hamiltonian:
 \begin{align*}
@@ -206,12 +208,12 @@ With this, the E-field is
 \begin{align*}
     \bE=-\partial_t\bA-\nabla\phi=\bE^\perp+\bE^\parallel,\quad\text{where}\begin{cases}
         \nabla\cdot\bE^\perp=0,&\text{$\bA$ corresponds to radiation (all transverse)}\\
-        \bE''=-\nabla\phi,&\text{$\bA$ corresponds to the field of sources (all longitudinal)}
+        \bE=-\nabla\phi,&\text{$\bA$ corresponds to the field of sources (all longitudinal)}
     \end{cases}.
 \end{align*}
-In Coulomb gauge, in absence of charge $\phi=0$ such that the vector potential-wave equation is 
+In Coulomb gauge, in absence of charge, we have $\phi=0$ such that the vector potential-wave equation is 
 \begin{align*}
-    \nabla^2\bA-\frac{1}{2}\partial_t^2\bA=0.
+    \nabla^2\bA-\frac{1}{c^2}\partial_t^2\bA=0.
 \end{align*}
 It can be solved with the following plane wave 
 \begin{align*}
@@ -224,12 +226,13 @@ The quantization volume we quantize the field is considered to have finite volum
 
 The E- and B-field are then:
 \begin{align*}
-    \bE(\br,t)&=-\partial_t\bA(\br,t)=i\sum_{\bk,\lambda}\he_{\bk,\lambda}\omega\left[A_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}+A^*_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right],\\
-    \bB(\br,t)&=\nabla\times\bA(\br,t)=i\sum_{\bk,\lambda}\he_{\bk,\lambda}\left[A_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}+A^*_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right].
+    \bE(\br,t)&=-\partial_t\bA(\br,t)=i\sum_{\bk,\lambda}\he_{\bk,\lambda}\omega\left[A_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}-A^*_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right],\\
+    \bB(\br,t)&=\nabla\times\bA(\br,t)=i\sum_{\bk,\lambda}(\bk\times\he_{\bk,\lambda})\left[A_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}-A^*_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right].
 \end{align*}
 The energy (Hamiltonian) associated with the fields is:
 \begin{align*}
-    H&=-\int\;dV\left[\frac{1}{2}\varepsilon_0\bE^2(\br,t)+\frac{1}{2\mu_0}\bB(\br,t)\right]\\
+    H&=\int\;dV\left[\frac{1}{2}\varepsilon_0\bE^2(\br,t)+\frac{1}{2\mu_0}\bB(\br,t)\right]\\
+    &=\text{Square becomes a dot product of itself for each field}\\
     &\vdots\\
     H&=2\varepsilon_0V\sum_{\bk,\lambda}\omega^2|A_{\bk,\lambda}|^2.
 \end{align*}
@@ -259,14 +262,14 @@ Thus the fields are:
 \begin{align}
     \begin{array}{l}
     \bA(\br,t)=\sum_{\bk,\lambda}\sqrt{\frac{\hbar}{2\omega\varepsilon_0V}}\he_{\bk,\lambda}\left[\ha_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}+\ha^\dagger_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right],\\
-    \bE(\br,t)=i\sum_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}\left[\ha_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}+\ha^\dagger_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right],\\
-    \bB(\br,t)=\frac{i}{c}\sum_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}(\bk\times\he_{\bk,\lambda})\left[\ha_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}+\ha^\dagger_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right].
+    \bE(\br,t)=i\sum_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\he_{\bk,\lambda}\left[\ha_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}-\ha^\dagger_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right],\\
+    \bB(\br,t)=\frac{i}{c}\sum_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}(\bk\times\he_{\bk,\lambda})\left[\ha_{\bk,\lambda}e^{i(\bk\cdot\br-\omega t)}-\ha^\dagger_{\bk,\lambda}e^{-i(\bk\cdot\br-\omega t)}\right].
     \end{array}\label{eq:emfieldquantization}
 \end{align}
 
 
 \subsection{Electric field expectation and uncertainty}
-Lets conside one mode of the E-field in a number state: $\ket{n}_{\bk,\lambda}$.
+Lets conside one mode of the E-field in a number state: $\ket{n}_{\bk,\lambda}\ket{\{0\}}$.
 Lets add the time dependence to the ladder operators:
 \begin{align*}
     \ha_{\bk,\lambda}e^{-i\omega t}\to\ha_{\bk,\lambda}(t),\quad\ha^\dagger_{\bk,\lambda}e^{i\omega t}\to\ha^\dagger_{\bk,\lambda}(t).
@@ -278,7 +281,7 @@ The E-field is:
 \end{align*}
 Expectation value of the E-field is:
 \begin{align*}
-    _{\bk_0,\lambda_0}\braket{n|\hbE(\br,t)|n}_{\bk_0,\lambda_0}&=i_{\bk,\lambda}\braket{n|\he_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\left[\ha_{\bk,\lambda}(t)e^{i\bk\cdot\br}-\ha^\dagger_{\bk,\lambda}(t)e^{-i\bk\cdot\br}\right]|n}_{\bk_0,\lambda_0}\\
+    _{\bk_0,\lambda_0}\braket{n|\hbE(\br,t)|n}_{\bk_0,\lambda_0}&=i_{\bk_0,\lambda_0}\braket{n|\sum_{\bk,\lambda}\he_{\bk,\lambda}\sqrt{\frac{\hbar\omega}{2\varepsilon_0V}}\left[\ha_{\bk,\lambda}(t)e^{i\bk\cdot\br}-\ha^\dagger_{\bk,\lambda}(t)e^{-i\bk\cdot\br}\right]|n}_{\bk_0,\lambda_0}\\
     &=i_{\bk_0,\lambda_0}\bra{n}\he_{\bk_0,\lambda_0}\sqrt{\frac{\hbar\omega_0}{2\varepsilon_0V}}\left[\sqrt{n}\ket{n-1}_{\bk_0,\lambda_0}e^{i\bk_0\cdot\br}-\sqrt{n+1}\ket{n+1}_{\bk_0,\lambda_0}e^{-i\bk_0\cdot\br}\right]\\
     &=0.
 \end{align*}
@@ -296,4 +299,4 @@ So, the uncertainty is:
 \begin{align*}
     \text{E-field uncertainty}\qquad\highlight{\braket{\Delta E^2}=\underbrace{\sum_{\{\bk,\lambda\}\neq\{\bk_0,\lambda_0\}}\frac{\hbar\omega}{2\varepsilon_0V}}_{\text{All modes in vaccum state}}+\underbrace{\frac{\hbar\omega_0}{2\varepsilon_0V}(2n+1)}_{\text{Mode ($\bk_0,\lambda_0$)}}}.
 \end{align*}
-
+Thus, there is an uncertainty in the E-field due to the \emph{quantum fluctuations}, even in vacuum.

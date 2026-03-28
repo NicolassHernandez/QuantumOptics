@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  26 MAR 2026 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  28 MAR 2026 17:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2289,16 +2289,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7]
-Overfull \hbox (19.46582pt too wide) detected at line 187
+Overfull \hbox (19.46582pt too wide) detected at line 189
 []
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 190.
+Package mdframed Info: mdframed works in twoside mode on input line 192.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 190.
+(mdframed)              on input line 192.
 
-Overfull \hbox (31.21939pt too wide) detected at line 211
+Overfull \hbox (31.21939pt too wide) detected at line 213
 []
  []
 
@@ -2318,7 +2318,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
-Overfull \hbox (139.01994pt too wide) detected at line 294
+Overfull \hbox (139.01994pt too wide) detected at line 297
 []
  []
 
@@ -2358,17 +2358,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <PartOne/ChapterOne/figures/displacedvaccum.png, id=248, 225.84375pt x 143.78719pt>
 File: PartOne/ChapterOne/figures/displacedvaccum.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/displacedvaccum.png>
-Package pdftex.def Info: PartOne/ChapterOne/figures/displacedvaccum.png  used on input line 38.
+Package pdftex.def Info: PartOne/ChapterOne/figures/displacedvaccum.png  used on input line 39.
 (pdftex.def)             Requested size: 149.6003pt x 95.25087pt.
 <PartOne/ChapterOne/figures/coherentstate.png, id=250, 245.41687pt x 143.78719pt>
 File: PartOne/ChapterOne/figures/coherentstate.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/coherentstate.png>
-Package pdftex.def Info: PartOne/ChapterOne/figures/coherentstate.png  used on input line 44.
+Package pdftex.def Info: PartOne/ChapterOne/figures/coherentstate.png  used on input line 45.
 (pdftex.def)             Requested size: 149.6003pt x 87.65082pt.
 <PartOne/ChapterOne/figures/evolutioncoherent2.png, id=251, 302.63063pt x 176.15813pt>
 File: PartOne/ChapterOne/figures/evolutioncoherent2.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/evolutioncoherent2.png>
-Package pdftex.def Info: PartOne/ChapterOne/figures/evolutioncoherent2.png  used on input line 50.
+Package pdftex.def Info: PartOne/ChapterOne/figures/evolutioncoherent2.png  used on input line 51.
 (pdftex.def)             Requested size: 149.6003pt x 87.0816pt.
 
 
@@ -2395,12 +2395,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
-<PartOne/ChapterOne/figures/displacedsqueezedstate.png, id=312, 280.04625pt x 103.88812pt>
+<PartOne/ChapterOne/figures/displacedsqueezedstate.png, id=311, 280.04625pt x 103.88812pt>
 File: PartOne/ChapterOne/figures/displacedsqueezedstate.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/displacedsqueezedstate.png>
 Package pdftex.def Info: PartOne/ChapterOne/figures/displacedsqueezedstate.png  used on input line 91.
 (pdftex.def)             Requested size: 224.39664pt x 83.24693pt.
-<PartOne/ChapterOne/figures/displacedsqueezedstate_b.png, id=313, 280.04625pt x 130.98938pt>
+<PartOne/ChapterOne/figures/displacedsqueezedstate_b.png, id=312, 280.04625pt x 130.98938pt>
 File: PartOne/ChapterOne/figures/displacedsqueezedstate_b.png Graphic file (type png)
 <use PartOne/ChapterOne/figures/displacedsqueezedstate_b.png>
 Package pdftex.def Info: PartOne/ChapterOne/figures/displacedsqueezedstate_b.png  used on input line 97.
@@ -2486,16 +2486,16 @@ Overfull \hbox (4.3308pt too wide) detected at line 35
 []
  []
 
-<PartOne/ChapterTwo/figures/bs_classical.png, id=374, 237.13594pt x 145.29282pt>
+<PartOne/ChapterTwo/figures/bs_classical.png, id=373, 237.13594pt x 145.29282pt>
 File: PartOne/ChapterTwo/figures/bs_classical.png Graphic file (type png)
 <use PartOne/ChapterTwo/figures/bs_classical.png>
 Package pdftex.def Info: PartOne/ChapterTwo/figures/bs_classical.png  used on input line 68.
-(pdftex.def)             Requested size: 224.39664pt x 137.49309pt.
-<PartOne/ChapterTwo/figures/bs_quantum.png, id=375, 170.88844pt x 121.95563pt>
+(pdftex.def)             Requested size: 179.51799pt x 109.99358pt.
+<PartOne/ChapterTwo/figures/bs_quantum.png, id=374, 170.88844pt x 121.95563pt>
 File: PartOne/ChapterTwo/figures/bs_quantum.png Graphic file (type png)
 <use PartOne/ChapterTwo/figures/bs_quantum.png>
 Package pdftex.def Info: PartOne/ChapterTwo/figures/bs_quantum.png  used on input line 74.
-(pdftex.def)             Requested size: 224.39664pt x 160.1538pt.
+(pdftex.def)             Requested size: 179.51799pt x 128.12228pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2504,11 +2504,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [23]
-<PartOne/ChapterTwo/figures/example_machzenhder.png, id=385, 228.855pt x 199.49532pt>
+<PartOne/ChapterTwo/figures/example_machzenhder.png, id=384, 228.855pt x 199.49532pt>
 File: PartOne/ChapterTwo/figures/example_machzenhder.png Graphic file (type png)
 <use PartOne/ChapterTwo/figures/example_machzenhder.png>
 Package pdftex.def Info: PartOne/ChapterTwo/figures/example_machzenhder.png  used on input line 116.
-(pdftex.def)             Requested size: 199.46198pt x 173.87914pt.
+(pdftex.def)             Requested size: 149.6003pt x 130.41315pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2538,7 +2538,7 @@ Chapter 3.
 (main.ptc) [27
 
 ] (PartOne/ChapterThree/DetectionOfQuadratureStates.tex
-<PartOne/ChapterThree/figures/homodynedetection.png, id=422, 262.73157pt x 161.10187pt>
+<PartOne/ChapterThree/figures/homodynedetection.png, id=421, 262.73157pt x 161.10187pt>
 File: PartOne/ChapterThree/figures/homodynedetection.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/homodynedetection.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/homodynedetection.png  used on input line 12.
@@ -2556,7 +2556,7 @@ LaTeX Font Info:    Trying to load font information for TS1+bch on input line 57
  (C:\Users\irisp\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
-<PartOne/ChapterThree/figures/ex_homodynedetection.png, id=431, 188.95593pt x 137.7647pt>
+<PartOne/ChapterThree/figures/ex_homodynedetection.png, id=430, 188.95593pt x 137.7647pt>
 File: PartOne/ChapterThree/figures/ex_homodynedetection.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/ex_homodynedetection.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/ex_homodynedetection.png  used on input line 66.
@@ -2570,7 +2570,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [29 <./PartOne/ChapterThree/figures/ex_homodynedetection.png>]) (PartOne/ChapterThree/GenerationOfQuadratureStates.tex
-<PartOne/ChapterThree/figures/nonlinearmedium.png, id=439, 214.55156pt x 65.49469pt>
+<PartOne/ChapterThree/figures/nonlinearmedium.png, id=438, 214.55156pt x 65.49469pt>
 File: PartOne/ChapterThree/figures/nonlinearmedium.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/nonlinearmedium.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/nonlinearmedium.png  used on input line 5.
@@ -2592,7 +2592,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [31]
-<PartOne/ChapterThree/figures/momentumconservation.png, id=451, 254.45062pt x 101.62968pt>
+<PartOne/ChapterThree/figures/momentumconservation.png, id=450, 254.45062pt x 101.62968pt>
 File: PartOne/ChapterThree/figures/momentumconservation.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/momentumconservation.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/momentumconservation.png  used on input line 90.
@@ -2631,22 +2631,22 @@ Overfull \hbox (15.74042pt too wide) detected at line 144
  []
 
 ) (PartOne/ChapterThree/DoubleSlitQuantumEraser.tex
-<PartOne/ChapterThree/figures/doubleslitquantumeraser_case1.png, id=482, 260.47313pt x 116.68594pt>
+<PartOne/ChapterThree/figures/doubleslitquantumeraser_case1.png, id=481, 260.47313pt x 116.68594pt>
 File: PartOne/ChapterThree/figures/doubleslitquantumeraser_case1.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/doubleslitquantumeraser_case1.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/doubleslitquantumeraser_case1.png  used on input line 8.
 (pdftex.def)             Requested size: 119.68175pt x 53.61385pt.
-<PartOne/ChapterThree/figures/doubleslitquantumeraser_case2.png, id=483, 254.45062pt x 119.69719pt>
+<PartOne/ChapterThree/figures/doubleslitquantumeraser_case2.png, id=482, 254.45062pt x 119.69719pt>
 File: PartOne/ChapterThree/figures/doubleslitquantumeraser_case2.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/doubleslitquantumeraser_case2.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/doubleslitquantumeraser_case2.png  used on input line 14.
 (pdftex.def)             Requested size: 119.68175pt x 56.29968pt.
-<PartOne/ChapterThree/figures/doubleslitquantumeraser_case3.png, id=484, 255.20343pt x 165.61874pt>
+<PartOne/ChapterThree/figures/doubleslitquantumeraser_case3.png, id=483, 255.20343pt x 165.61874pt>
 File: PartOne/ChapterThree/figures/doubleslitquantumeraser_case3.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/doubleslitquantumeraser_case3.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/doubleslitquantumeraser_case3.png  used on input line 20.
 (pdftex.def)             Requested size: 119.68175pt x 77.6715pt.
-<PartOne/ChapterThree/figures/doubleslitquantumeraser_case4.png, id=485, 287.57437pt x 216.05719pt>
+<PartOne/ChapterThree/figures/doubleslitquantumeraser_case4.png, id=484, 287.57437pt x 216.05719pt>
 File: PartOne/ChapterThree/figures/doubleslitquantumeraser_case4.png Graphic file (type png)
 <use PartOne/ChapterThree/figures/doubleslitquantumeraser_case4.png>
 Package pdftex.def Info: PartOne/ChapterThree/figures/doubleslitquantumeraser_case4.png  used on input line 26.
@@ -2667,7 +2667,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[36]))
+[36]
+<PartOne/ChapterThree/figures/quantumerasure_1.png, id=504, 317.68687pt x 191.21437pt>
+File: PartOne/ChapterThree/figures/quantumerasure_1.png Graphic file (type png)
+<use PartOne/ChapterThree/figures/quantumerasure_1.png>
+Package pdftex.def Info: PartOne/ChapterThree/figures/quantumerasure_1.png  used on input line 135.
+(pdftex.def)             Requested size: 179.51799pt x 108.05382pt.
+<PartOne/ChapterThree/figures/quantumerasure_2.png, id=505, 310.15875pt x 191.21437pt>
+File: PartOne/ChapterThree/figures/quantumerasure_2.png Graphic file (type png)
+<use PartOne/ChapterThree/figures/quantumerasure_2.png>
+Package pdftex.def Info: PartOne/ChapterThree/figures/quantumerasure_2.png  used on input line 140.
+(pdftex.def)             Requested size: 179.51799pt x 110.6739pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2675,14 +2686,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[37] [38
+[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[38 <./PartOne/ChapterThree/figures/quantumerasure_1.png> <./PartOne/ChapterThree/figures/quantumerasure_2.png>]))
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39] [40
 
 ] (PartOne/ChapterFour/main.tex
 Chapter 4.
-(main.ptc) [39
+(main.ptc) [41
 
 ] (PartOne/ChapterFour/AtomFieldInteractions.tex
-<PartOne/ChapterFour/figures/atomdistribution.png, id=524, 162.6075pt x 103.88812pt>
+<PartOne/ChapterFour/figures/atomdistribution.png, id=551, 162.6075pt x 103.88812pt>
 File: PartOne/ChapterFour/figures/atomdistribution.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/atomdistribution.png>
 Package pdftex.def Info: PartOne/ChapterFour/figures/atomdistribution.png  used on input line 32.
@@ -2703,7 +2730,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[40 <./PartOne/ChapterFour/figures/atomdistribution.png>]
+[42 <./PartOne/ChapterFour/figures/atomdistribution.png>]
 Package mdframed Info: Not enough space on this page on input line 73.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2716,13 +2743,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[41]) (PartOne/ChapterFour/TheLorentzAtom.tex
-<PartOne/ChapterFour/figures/lorentzatom.png, id=542, 129.48375pt x 41.4047pt>
+[43]) (PartOne/ChapterFour/TheLorentzAtom.tex
+<PartOne/ChapterFour/figures/lorentzatom.png, id=570, 129.48375pt x 41.4047pt>
 File: PartOne/ChapterFour/figures/lorentzatom.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/lorentzatom.png>
 Package pdftex.def Info: PartOne/ChapterFour/figures/lorentzatom.png  used on input line 6.
 (pdftex.def)             Requested size: 199.46198pt x 63.78802pt.
-<PartOne/ChapterFour/figures/lorentzatom_refractiveindex.png, id=543, 316.18124pt x 129.48375pt>
+<PartOne/ChapterFour/figures/lorentzatom_refractiveindex.png, id=571, 316.18124pt x 129.48375pt>
 File: PartOne/ChapterFour/figures/lorentzatom_refractiveindex.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/lorentzatom_refractiveindex.png>
 Package pdftex.def Info: PartOne/ChapterFour/figures/lorentzatom_refractiveindex.png  used on input line 12.
@@ -2735,7 +2762,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[42 <./PartOne/ChapterFour/figures/lorentzatom.png> <./PartOne/ChapterFour/figures/lorentzatom_refractiveindex.png>]
+[44 <./PartOne/ChapterFour/figures/lorentzatom.png> <./PartOne/ChapterFour/figures/lorentzatom_refractiveindex.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
@@ -2748,7 +2775,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[43]
+[45]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2756,13 +2783,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[44]
-<PartOne/ChapterFour/figures/quantizedenergylevelatom_firstterm.png, id=577, 280.79906pt x 100.87688pt>
+[46]
+<PartOne/ChapterFour/figures/quantizedenergylevelatom_firstterm.png, id=604, 280.79906pt x 100.87688pt>
 File: PartOne/ChapterFour/figures/quantizedenergylevelatom_firstterm.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/quantizedenergylevelatom_firstterm.png>
 Package pdftex.def Info: PartOne/ChapterFour/figures/quantizedenergylevelatom_firstterm.png  used on input line 113.
 (pdftex.def)             Requested size: 224.39664pt x 80.61386pt.
-<PartOne/ChapterFour/figures/quantizedenergylevelatom_secondterm.png, id=578, 234.1247pt x 88.83188pt>
+<PartOne/ChapterFour/figures/quantizedenergylevelatom_secondterm.png, id=605, 234.1247pt x 88.83188pt>
 File: PartOne/ChapterFour/figures/quantizedenergylevelatom_secondterm.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/quantizedenergylevelatom_secondterm.png>
 Package pdftex.def Info: PartOne/ChapterFour/figures/quantizedenergylevelatom_secondterm.png  used on input line 119.
@@ -2775,8 +2802,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[45 <./PartOne/ChapterFour/figures/quantizedenergylevelatom_firstterm.png> <./PartOne/ChapterFour/figures/quantizedenergylevelatom_secondterm.png>]
-<PartOne/ChapterFour/figures/spontaneousemission_initialstate.png, id=587, 229.60782pt x 129.48375pt>
+[47 <./PartOne/ChapterFour/figures/quantizedenergylevelatom_firstterm.png> <./PartOne/ChapterFour/figures/quantizedenergylevelatom_secondterm.png>]
+<PartOne/ChapterFour/figures/spontaneousemission_initialstate.png, id=614, 229.60782pt x 129.48375pt>
 File: PartOne/ChapterFour/figures/spontaneousemission_initialstate.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/spontaneousemission_initialstate.png>
 Package pdftex.def Info: PartOne/ChapterFour/figures/spontaneousemission_initialstate.png  used on input line 8.
@@ -2793,7 +2820,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[46 <./PartOne/ChapterFour/figures/spontaneousemission_initialstate.png>]))
+[48 <./PartOne/ChapterFour/figures/spontaneousemission_initialstate.png>]))
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2801,9 +2828,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[47] [48] (Appendix/main.tex (Appendix/DensityOperator.tex
+[49] [50] (Appendix/main.tex (Appendix/DensityOperator.tex
 Appendix A.
-[49
+[51
 
 ]
 
@@ -2813,8 +2840,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[50]
-<Appendix/blochsphere.png, id=621, 105.39375pt x 107.65219pt>
+[52]
+<Appendix/blochsphere.png, id=648, 105.39375pt x 107.65219pt>
 File: Appendix/blochsphere.png Graphic file (type png)
 <use Appendix/blochsphere.png>
 Package pdftex.def Info: Appendix/blochsphere.png  used on input line 125.
@@ -2827,7 +2854,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[51 <./Appendix/blochsphere.png>]) (Appendix/InteractionPicture.tex
+[53 <./Appendix/blochsphere.png>]) (Appendix/InteractionPicture.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2835,14 +2862,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[52]
+[54]
 Appendix B.
 
 Overfull \hbox (1.51062pt too wide) in paragraph at lines 21--24
 \T1/bch/m/n/10.95 Frame trans-for-ma-tions are gen-er-ally used to sim-plify cal-cu-la-tions and time de-pen-dence of the Schrodinger
  []
 
-[53
+[55
 
 ]
 
@@ -2873,7 +2900,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[54]
+[56]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
@@ -2913,7 +2940,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[55] (main.aux)
+[57] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2925,17 +2952,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 88724 strings out of 474486
- 2225634 string characters out of 5743755
- 3438004 words of memory out of 5000000
- 109564 multiletter control sequences out of 15000+600000
+ 88754 strings out of 474486
+ 2226543 string characters out of 5743755
+ 3440002 words of memory out of 5000000
+ 109578 multiletter control sequences out of 15000+600000
  642608 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,21n,104p,1674b,1828s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on main.pdf (55 pages, 1742969 bytes).
+<C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on main.pdf (57 pages, 1876460 bytes).
 PDF statistics:
- 875 PDF objects out of 1000 (max. 8388607)
- 226 named destinations out of 1000 (max. 500000)
- 416 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 909 PDF objects out of 1000 (max. 8388607)
+ 242 named destinations out of 1000 (max. 500000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -37,24 +37,25 @@
 \contentsline {subsection}{\numberline {3.4.4}Case 4: Quantum erasure via an entangled photon}{37}{subsection.3.4.4}%
 \contentsline {subsubsection}{Case 4a}{37}{table.caption.14}%
 \contentsline {subsubsection}{Case 4b}{37}{table.caption.14}%
-\contentsline {part}{II\hspace {1em}Atom-field interaction}{38}{part.2}%
-\contentsline {chapter}{\numberline {4}Atom field interaction}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Atom-field interactions}{40}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Introduction}{40}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Atom-matter interaction}{40}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}The Lorentz atom}{42}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Quantized energy level of atom}{43}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spontaneous emission}{46}{section.4.4}%
-\contentsline {chapter}{\numberline {A}Density operator}{49}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Density operator}{49}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Definition}{49}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Two-state system}{50}{subsection.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Entangled states}{51}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Dynamics of the density operator}{52}{subsection.A.1.4}%
-\contentsline {chapter}{\numberline {B}Shcrodinger and Heisenberg pictures}{53}{appendix.B}%
-\contentsline {subsection}{\numberline {B.0.1}Time-dependent reference frames}{53}{subsection.B.0.1}%
-\contentsline {subsection}{\numberline {B.0.2}Schrodinger, Heisenberg, and interaction pictures}{53}{subsection.B.0.2}%
-\contentsline {subsection}{\numberline {B.0.3}Schrodinger picture}{53}{subsection.B.0.3}%
-\contentsline {subsection}{\numberline {B.0.4}Heisenberg picture}{54}{subsection.B.0.4}%
-\contentsline {subsection}{\numberline {B.0.5}Interaction picture}{55}{subsection.B.0.5}%
+\contentsline {subsubsection}{Solution}{38}{Item.24}%
+\contentsline {part}{II\hspace {1em}Atom-field interaction}{40}{part.2}%
+\contentsline {chapter}{\numberline {4}Atom field interaction}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Atom-field interactions}{42}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Introduction}{42}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Atom-matter interaction}{42}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}The Lorentz atom}{44}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Quantized energy level of atom}{45}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Spontaneous emission}{48}{section.4.4}%
+\contentsline {chapter}{\numberline {A}Density operator}{51}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Density operator}{51}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Definition}{51}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Two-state system}{52}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Entangled states}{53}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Dynamics of the density operator}{54}{subsection.A.1.4}%
+\contentsline {chapter}{\numberline {B}Shcrodinger and Heisenberg pictures}{55}{appendix.B}%
+\contentsline {subsection}{\numberline {B.0.1}Time-dependent reference frames}{55}{subsection.B.0.1}%
+\contentsline {subsection}{\numberline {B.0.2}Schrodinger, Heisenberg, and interaction pictures}{55}{subsection.B.0.2}%
+\contentsline {subsection}{\numberline {B.0.3}Schrodinger picture}{55}{subsection.B.0.3}%
+\contentsline {subsection}{\numberline {B.0.4}Heisenberg picture}{56}{subsection.B.0.4}%
+\contentsline {subsection}{\numberline {B.0.5}Interaction picture}{57}{subsection.B.0.5}%
 \contentsfinish 

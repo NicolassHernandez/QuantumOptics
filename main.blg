@@ -1,0 +1,23 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[149] biber-MSWIN64:340> INFO - === 
+[224] Biber.pm:419> INFO - Reading 'main.bcf'
+[358] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[358] Biber.pm:976> INFO - Using all citekeys in bib section 1
+[358] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[379] Biber.pm:4419> INFO - Processing section 0
+[395] Biber.pm:4610> INFO - Looking for bibtex file 'PartOne/ChapterOne/bib_.bib' for section 0
+[496] bibtex.pm:1713> INFO - LaTeX decoding ...
+[503] bibtex.pm:1519> INFO - Found BibTeX data source 'PartOne/ChapterOne/bib_.bib'
+[595] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[596] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[596] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[596] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[603] Biber.pm:4419> INFO - Processing section 1
+[604] Biber.pm:4610> INFO - Looking for bibtex file 'PartOne/ChapterOne/bib_.bib' for section 1
+[685] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[685] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[685] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[685] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[688] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[693] bbl.pm:763> INFO - Output to main.bbl

@@ -11,10 +11,10 @@ Lets define the quadrature operators:
     \text{Quadrature operators}\qquad\highlight{\begin{array}{l}
         \hX_1=\dfrac{1}{2}(\ha+\ha^\dagger)\\
         \hX_2=\dfrac{1}{2i}(\ha-\ha^\dagger)
-    \end{array}},
+    \end{array},\quad[\hX_1,\hX_2]=\frac{i}{2}},
     \label{eq:quadratureoperator_timeindependent}
 \end{align}
-where $[\hX_1,\hX_2]=\frac{i}{2}$. In the E-field, if we collect the cosine and sine, we get
+In the E-field, if we collect the cosine and sine, we get
 \begin{align*}
     \hbE(\br,t)=-\sqrt{\frac{2\hbar\omega}{\varepsilon_0V}}\he_{\bk,\lambda}[\hX_1(t)\sin(\bk\cdot\br)+\hX_2(t)\cos(\bk\cdot\br)].
 \end{align*}
@@ -24,10 +24,11 @@ The expectation value of these operators is:
     \braket{\hX_2}=\braket{\alpha|\hX_2(0)|\alpha}=\braket{\alpha|\frac{\ha-\ha^\dagger}{2i}|\alpha}=\im{\alpha},\quad\\
     &\braket{\Delta\hX^2_1}=\braket{\alpha|\frac{1}{4}(\ha+\ha^\dagger)^2|\alpha}-\frac{1}{4}(\alpha+\alpha^*)^2=\frac{1}{4},\quad\braket{\Delta\hX^2_2}=\frac{1}{4}.
 \end{align*}
-That is, there is a minimum uncertainty that a state can possible have in the two quadrature $\hX_1,\hX_2$, such a state os refferred as 
+That is, there is a minimum uncertainty that a state can possible have in the two quadrature $\hX_1,\hX_2$, such a state is refferred as 
 \emph{minimum uncertainty state}.
 When $\alpha=0$ we have the vaccum state and therefore $\braket{\hX_1(0)}=\braket{\hX_2(0)}=0$, $\braket{\hX_1^2(0)}=\braket{\hX_2^2(0)}=1/4$.
-Coherent states are also refferees to as displaced vaccum states. Specifically,
+
+Coherent states are also referred to as displaced vaccum states:
 \begin{align*}
     \ket{\alpha}=\hat{D}(\alpha)\ket{0},\quad\hat{D}(\alpha)=e^{\alpha\ha^\dagger-\alpha^*\ha}.
 \end{align*}

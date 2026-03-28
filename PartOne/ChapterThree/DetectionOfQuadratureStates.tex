@@ -26,16 +26,16 @@ which the average is being taken is
 \end{align}
 This produces the following irradiances: 
 \begin{align*}
-    I_1&=\braket{\psi_1\alpha_2|\hA^\dagger_{1}\hA_1|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1+\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1+\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
+    I_1&=\braket{\hN_1}=\braket{\Psi_1\alpha_2|\hA^\dagger_{1}\hA_1|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1+\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1+\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
     \frac{1}{2}\braket{\Psi_1\alpha_2|(\ha^\dagger_1+\alpha_2^*)(\ha_1+\alpha_2)|\alpha_2\Psi_1}\\
     &=\frac{1}{2}\braket{\Psi_1|(\ha^\dagger\ha_1+\ha_1\alpha_2^*+\ha^\dagger_1\alpha_2+|\alpha_2|^2)|\Psi_1},\\
-    I_2&=\braket{\psi_1\alpha_2|\hA^\dagger_2\hA_2|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1-\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1-\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
+    I_2&=\braket{\hN_2}=\braket{\Psi_1\alpha_2|\hA^\dagger_2\hA_2|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1-\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1-\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
     \frac{1}{2}\braket{\Psi_1\alpha_2|(\ha^\dagger_1-\alpha_2^*)(\ha_1-\alpha_2)|\alpha_2\Psi_1}\\
     &=\frac{1}{2}\braket{\Psi_1|(\ha_1^\dagger\ha_1-\ha_1\alpha_2^*-\ha^\dagger_1\alpha_2+|\alpha_2|^2)|\Psi_1}.
 \end{align*}
 By taking the difference $I_1-I_2$, we can change the nature of $\alpha_2$ to have different quadratures:
 \begin{align*}
-    I_1-I_2&\propto\braket{\hN_1-\hN_2}=\braket{\Psi_1|\ha_1\alpha_2^*+\ha_1^\dagger\alpha_2|\Psi_1}=\begin{cases}
+    ?I_1-I_2&\propto\braket{\hN_1-\hN_2}=\braket{\Psi_1|\ha_1\alpha_2^*+\ha_1^\dagger\alpha_2|\Psi_1}=\begin{cases}
         2\alpha_2\braket{\Psi_1|\hX_1|\Psi_1},&\alpha_2=\alpha_2^*,\\
         -2i\alpha_2\braket{\Psi_1|\hX_2|\Psi_1},&\alpha_2=-\alpha_2^*.
     \end{cases}
@@ -45,7 +45,7 @@ In general by changing the phase of input 2 we can measure a general quadrature.
 Say $\alpha_2=|\alpha_2|e^{i\varphi_\alpha}$, then:
 {\small
 \begin{align*}
-    \hN_1-\hN_2=|\alpha_2|(\ha_1e^{-i\varphi_\alpha}+\ha_1^\dagger e^{i\varphi_\alpha})=|\alpha_2|(\ha_1+\ha_1^\dagger)\cos\varphi_\alpha+i|\alpha_2|(\ha_1-\ha_2^\dagger)\sin\varphi_\alpha
+    \hN_1-\hN_2=|\alpha_2|(\ha_1e^{-i\varphi_\alpha}+\ha_1^\dagger e^{i\varphi_\alpha})=|\alpha_2|(\ha_1+\ha_1^\dagger)\cos\varphi_\alpha+i|\alpha_2|(\ha_1-\ha_1^\dagger)\sin\varphi_\alpha
     =2|\alpha_2|(\cos\varphi_\alpha\hX_1-i\sin\varphi_\alpha\hX_2).
 \end{align*}}
 The noise in the difference photocurrent is thus proportional to:

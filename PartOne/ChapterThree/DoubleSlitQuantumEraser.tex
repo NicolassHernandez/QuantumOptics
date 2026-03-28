@@ -86,7 +86,7 @@ After passing through the slits:
         &A&B\\
         \hline
         $\ket{x}_1$&$\ket{+}_1$&$\ket{-}_1$\\
-        $\ket{y}_2$&$\ket{-}_1$&$\ket{+}_1$
+        $\ket{y}_1$&$\ket{-}_1$&$\ket{+}_1$
     \end{tabular}
 \end{table}
 
@@ -113,3 +113,96 @@ Say the polarizer in photon 2's path is oriented along $\ket{+\pi/4}$:
     =&\frac{1}{2}\underbrace{[\ket{A}_1+\ket{B}_1]}_{\text{No which path!}}\ket{x}_1\otimes(\ket{x}_2+\ket{y}_2).
 \end{align*}
 Interference is back. Quantum erasure via an entangled photon!
+\begin{table}[htbp]
+    \centering
+    \caption{Some generalization of the quantum interferometry idea.}
+    \begin{tabular}{l|l|l|l}
+        Initial state&$\ket{\psi^-}=[\cos\theta\ket{X}+\sin\theta e^{i\phi}\ket{Y}]$&Slits&$\ket{\psi^+}=\frac{1}{\sqrt{2}}(\ket{A}+\ket{B})\otimes\ket{\psi^-}$\\
+        Polarizer&$\hP=\ket{p}\bra{p}$&$\ket{\psi^{++}}=\hP\ket{\psi^+}$&$\ket{p}=\text{same form as $\ket{\psi^-}$}$\\
+        Evolution&$\ket{A}\to\sum_iN\exp(ikx_{Ai})\ket{x_i}$&Entangled&$\ket{\psi}_{12}=\frac{1}{\sqrt{2}}(\ket{x}_1\ket{x}_2+\ket{y}_1\ket{y}_2)$
+    \end{tabular}
+\end{table} 
+
+
+\begin{example}{Quantum interferometry}
+    The incoming photon has a polarization given by $\ket{Y}$. There are two LPs in fron of each slit oriented along $\theta_A=-\theta_B=\theta$ such that 
+    their operators are $\hP_A=\ket{\theta_A}\bra{\theta_A}$ and $\hP_B=\ket{\theta_B}\bra{\theta_B}$, with $\ket{\theta_A}=\cos\theta\ket{X}+\sin\theta\ket{Y}$ and 
+    $\ket{\theta_B}=\cos\theta\ket{X}-\sin\theta\ket{Y}$.
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}{.45\columnwidth}
+            \centering
+            \includegraphics[width=.8\columnwidth]{PartOne/ChapterThree/figures/quantumerasure_1.png}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{.45\columnwidth}
+            \centering
+            \includegraphics[width=.8\columnwidth]{PartOne/ChapterThree/figures/quantumerasure_2.png}
+        \end{subfigure}
+    \end{figure}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+    \item What is the state $\ket{\Psi}$ once it passes through the double slit?
+    \item What is the probability $P_k=|\braket{x_k|\Psi}|^2$ of finding the photon at $x_k$ on the screen?
+    \item How does the probability change as function of $\theta$? Consider $\theta=0,\pi/4$. We now place an eraser as shown in the right figure.
+    \item What is the state of the photon once it passes through the eraser?
+    \item Consider $\theta=\pi/4$ and $\theta_E=\pi/4$, is there an interference pattern on the screen?
+    \item For $\theta=\pi/4$ and $\theta_E=0$, is there an interference pattern on the screen?
+\end{enumerate}
+\subsubsection{Solution}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+  \item State just after the slits, and just after the linear polarizers are:
+  \begin{align*}
+    \ket{\Psi^-}&=\frac{1}{\sqrt{2}}(\ket{A}+\ket{B})\otimes\ket{Y},\\
+    \ket{\Psi^+}&=\frac{1}{\sqrt{2}}(\ket{A}\hP_A+\ket{B}\hP_B)\otimes\ket{Y}=\frac{\sin\theta}{\sqrt{2}}(\ket{A}
+    \ket{\theta_A}-\ket{B}\ket{\theta_B})\longrightarrow\ket{\Psi^{+'}}=\frac{\ket{\Psi^+}}{\sin\theta}.
+  \end{align*}
+  \item At the screen, $\ket{A}$ and $\ket{B}$ should evolve as we seen in the lectures. However, I will leave them as they are and make the projection.
+  \begin{align*}
+    \braket{x_k|\Psi^{+'}}=\frac{1}{\sqrt{2}}(\braket{x_k|A}\ket{\theta_A}-\braket{x_k|B}\ket{\theta_B})=\frac{1}{\sqrt{2}}[\psi_A(x_k)\ket{\theta_A}+
+    \psi_B(x_k)\ket{\theta_B}].
+  \end{align*}
+  Then, the magnitude is:
+  \begin{align*}
+    |\braket{x_k|\Psi^{+'}}|^2&=\frac{1}{2}[\psi_A(x_k)\ket{\theta_A}+
+    \psi_B(x_k)\ket{\theta_B}][\Psi^*_A(x_k)\bra{\theta_A}+
+    \Psi^*_B(x_k)\bra{\theta_B}]\\
+    &=\frac{1}{2}\left[|\psi_A(x_k)|^2+|\psi_B(x_k)|^2-\psi_A(x_k)\psi_B\braket{\theta_B|\theta_A}-\psi_B(x_k)\psi_A^*\braket{\theta_A|\theta_B}\right].
+  \end{align*}
+  We need to find the projection of the polarizers:
+  \begin{align*}
+    \braket{\theta_A|\theta_B}&=[\cos\theta\bra{X}+\sin\theta\bra{Y}][\cos\theta\ket{X}-\sin\theta\ket{Y}]=\cos^2\theta-\sin^2\theta=\cos2\theta,\\
+    \braket{\theta_B|\theta_A}&=[\cos\theta\bra{X}-\sin\theta\bra{Y}][\cos\theta\ket{X}+\sin\theta\ket{Y}]=\cos^2\theta-\sin^2\theta=\cos2\theta.
+  \end{align*}
+  If we assume that 
+  \begin{align*}
+    \psi_A(x_k)=|\psi_A|\angle\theta_A,\quad\text{and}\quad\psi_B(x_k)=|\psi_B|\angle\theta_B,
+  \end{align*}
+  then usinging it with the projection computed we finally have:
+  \begin{align*}
+    P_k=|\braket{x_k|\Psi^{+'}}|^2=\frac{1}{2}\left[|\psi_A|^2+|\psi_B|^2-2\cos2\theta|\psi_A||\psi_B|\cos(\Delta\phi)\right],\quad\Delta\phi=\theta_B-\theta_A.
+  \end{align*}
+  \item For each angle, we have:
+  \begin{align*}
+    \theta=0:&\qquad P_k=\frac{1}{2}\left[|\psi_A|^2+|\psi_B|^2-2|\psi_A||\psi_B|\cos(\Delta\phi)\right]\Longrightarrow\text{Interference term maximized},\\
+    \theta=\pi/4:&\qquad P_k=\frac{1}{2}\left[|\psi_A|^2+|\psi_B|^2\right]\Longrightarrow\text{No interference term}.
+  \end{align*}
+  As we can see, when $\theta=\pi/4$ the interference term vanished and therefore there is no interference.
+  \item The eraser projects onto its basis:
+  \begin{align*}
+    \ket{\Psi^{++}}&=\ket{\theta_E}\bra{\theta_E}\ket{\Psi^{+'}}\\
+    &=\frac{1}{\sqrt{2}}\ket{\theta_E}\bra{\theta_E}(\ket{A}\ket{\theta_A}-\ket{B}\ket{\theta_B})\\
+    &=\frac{1}{\sqrt{2}}\left[(\cos\theta\cos\theta_E+\sin\theta\sin\theta_E)\ket{A}-(\cos\theta\cos\theta_E-\sin\theta\sin\theta_E)\ket{B}\right]\otimes\ket{\theta_E}\\
+    \ket{\Psi^{++}}&=\frac{1}{\sqrt{2}}\left[\cos(\theta-\theta_E)\ket{A}-\cos(\theta+\theta_E)\ket{B}\right]\otimes\ket{\theta_E}.
+  \end{align*}
+  \item For $\theta=\pi/4$ and $\theta_E=\pi/4$ the state vector is:
+  \begin{align*}
+    \ket{\Psi^{++}}=\frac{1}{\sqrt{2}}\ket{A}\otimes\ket{\theta_E}\longrightarrow\ket{\Psi^{++'}}=\ket{A}\otimes\ket{\theta_E}.
+  \end{align*}
+  Because there is not interaction with the slit B, there is no interference pattern detected on the screen.
+  \item For $\theta=\pi/4$ and $\theta_E=0$ we have:
+  \begin{align*}
+    \ket{\Psi^{++}}=\frac{\cos(\pi/4)}{\sqrt{2}}[\ket{A}-\ket{B}]\otimes\ket{X}\longrightarrow\ket{\Psi^{++'}}=\frac{1}{\sqrt{2}}[\ket{A}-\ket{B}]\otimes\ket{X}.
+  \end{align*} 
+  As both slits are present in the state vector, when computed the probability $|\braket{x_j|\Psi^{++'}}$ there will be a cross-term that will implies interfence.
+\end{enumerate}
+\end{example}

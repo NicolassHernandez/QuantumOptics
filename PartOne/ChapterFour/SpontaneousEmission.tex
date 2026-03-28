@@ -28,7 +28,7 @@ Let us qrite the dynamics of the quantum state in the interaction picture:
     i\hbar\partial_t\ket{\psi(t)}=&\tilde{H}_{int}\ket{\psi(t)}\\
     i\hbar\partial_t[c_e(t)\ket{\{0\}}+\sum_{\bk,\lambda}c_{g,\bk,\lambda}(t)\ket{g}\ket{1_{\bk,\lambda}}]=&\left[\sum_{\bk,\lambda}g_{\bk,\lambda}\hsigma_+
     \ha_{\bk,\lambda}e^{-i(\omega_{\bk}-\omega_0)t}+g_{\bk,\lambda}^*\hsigma_-\ha^\dagger_{\bk,\lambda}e^{i(\omega_{\bk}-\omega_0)t}\right]\\
-    &\times\left[
+    &\left[
         c_e(t)\ket{e}\ket{\{0\}}+\sum_{\bk',\lambda'}c_{g,\bk',\lambda'}(t)\ket{g}\ket{1_{\bk',\lambda'}}\right]\\
         i\hbar\partial_tc_e\ket{e}\ket{\{0\}}+i\hbar\sum_{\bk,\lambda}\partial_tc_{g,\bk,\lambda}\ket{g}\ket{1_{\bk,\lambda}}&\stackrel{(a)}{=}\hbar\sum_{\bk,\lambda}
         \left(g_{\bk,\lambda}c_{g,\bk,\lambda}e^{-i(\omega_{\bk}-\omega_0)t}\ket{e}\ket{\{0\}}+g^*_{\bk,\lambda}
@@ -50,8 +50,8 @@ atom:
     i\partial_tc_e&=-i\sum_{\bk,\lambda}|g_{\bk,\lambda}|^2\int_0^td\tau\;c_e(\tau)e^{-i(\omega_{\bk}-\omega_0)(t-\tau)}\\
     \partial_tc_e&=-\sum_{\bk,\lambda}|g_{\bk,\lambda}|^2\int_0^td\tau'\;e^{-i(\omega_{\bk}-\omega_0)\tau'}c_e(t-\tau')\quad(\tau'=t-\tau)
 \end{align*}
-At this point we make the \emph{Markov approximation} which means that the system evolution at any time is determine by its present state $c_e(t)$.
-Thus, aproximating $c_e(t-\tau')\to c_e(t)$ in the integral, we obtain:
+At this point we make the \emph{Markov approximation} which means that the system evolution at any time is determined by its present state $c_e(t)$
+(memoryless system). Thus, aproximating $c_e(t-\tau')\to c_e(t)$ in the integral, we obtain:
 \begin{align*}
     \partial_tc_e\approx-c_e(t)\sum_{\bk,\lambda}|g_{\bk,\lambda}|^2\int_0^td\tau\;e^{-i(\omega_{\bk}-\omega_0)(t-\tau)}=-\frac{\gamma_0}{2}c_e(t). 
 \end{align*}
