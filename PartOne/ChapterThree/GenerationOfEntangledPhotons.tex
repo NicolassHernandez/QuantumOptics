@@ -146,3 +146,61 @@ Normalizing the above state, assuming that $\xi_z=\xi_y$ and assuming measuremen
 \end{enumerate}
 \end{example}
 
+\begin{example}{Entangled photons through a BS}
+  Consider the following setup.
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.4\columnwidth]{PartOne/ChapterThree/figures/hongoumandelsetup.png}
+  \end{figure}
+  
+  The state of the two photons exiting the nonlinear crystal is: i) $\ket{1}_1\ket{1}_2$, ii) $\frac{1}{\sqrt{2}}(\ket{1}_1\ket{0}_2+\ket{0}_1\ket{1}_2)$, 
+  and iii) $\frac{1}{\sqrt{2}}(\ket{1}_1\ket{0}_2-\ket{0}_1\ket{1}_2)$. Find $\braket{\hI_k}$ and $\braket{\hI_1-\hI_2}$.
+  \subsubsection{Solution}
+  The intensity operator for each detector and the difference is:
+  \begin{align*}
+    \hI_1&=\hb_1^\dagger\hb_1=\frac{1}{2}(\ha_1^\dagger+\ha^\dagger_2)(\ha_1+\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2),\\
+    \hI_2&=\hb_2^\dagger\hb_2=\frac{1}{2}(\ha_1^\dagger-\ha^\dagger_2)(\ha_1-\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2),\\
+    \hI_1-\hI_2&=\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1.
+  \end{align*}
+  We use these to compute the expected number of photons $\braket{\hI_k}$ at individual detectors and the difference $\braket{\hI_1-\hI_2}$.
+  \begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\roman*)]
+    \item 
+    \begin{align*}
+      \braket{\hI_1}&=\frac{1}{2}\braket{1,1|(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)|1,1}=1,\\
+      \braket{\hI_2}&=\frac{1}{2}\braket{1,1|(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)|1,1}=1,\\
+      \braket{\hI_1-\hI_2}&=0.
+    \end{align*}
+    \item In this case of entangled photons, we follow the definition of the expected value and we use distribution property:
+    {\small
+    \begin{align*}
+      \braket{\hI_1}=\left[\frac{1}{\sqrt{2}}(\bra{0,1}+\bra{1,0})\right]|\hb_1^\dagger\hb_1|\left[\frac{1}{\sqrt{2}}(\ket{1,0}+\ket{0,1})\right]=\frac{1}{4}(\bra{0,1}+\bra{1,0})|(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)|(\ket{1,0}+\ket{0,1}).
+    \end{align*}}
+    I should distribute and solve the 16 terms. However, I can express the input in the following way:
+    \begin{align*}
+      \ket{\psi}=\frac{1}{\sqrt{2}}(\ha_1^\dagger+\ha_2^\dagger)\ket{0,0}=\hb_1^\dagger\ket{0,0}=\ket{1',0'}.
+    \end{align*}
+    which is simpler to use, because:
+    \begin{align*}
+      \braket{\hI_1}=\braket{0',1'|\hb_1^\dagger\hb_1|1',0'}=\braket{0',1'|1',0'}=1.
+    \end{align*}
+    For the detector 2, the expected number of photon is:
+    \begin{align*}
+      \braket{\hI_2}=\braket{0',1'|\hb_2^\dagger\hb_2|1',0'}=0.
+    \end{align*}
+    Therefore,
+    \begin{align*}
+      \braket{\hI_1-\hI_2}=\braket{\hI_1}-\braket{\hI_2}=1.
+    \end{align*}
+    \item Using the form from previous part, the entangled state is:
+    \begin{align*}
+      \ket{\psi}=\frac{1}{\sqrt{2}}(\ket{1,0}-\ket{0,1})=\frac{1}{\sqrt{2}}(\ha_1^\dagger-\ha_2^\dagger)\ket{0,0}=\hb_2^\dagger\ket{0,0}=\ket{0',1'}.
+    \end{align*}
+    Now, 
+    \begin{align*}
+      \braket{\hI_1}&=\braket{0',1'|\hb_1^\dagger\hb_2'|1',0'}=0,\\
+      \braket{\hI_2}&=\braket{0',1'|\hb_2^\dagger\hb_2|0',1'}=1,\\
+      \braket{\hI_1-\hI_2}&=-1.
+    \end{align*}
+  \end{enumerate}
+\end{example}
+
