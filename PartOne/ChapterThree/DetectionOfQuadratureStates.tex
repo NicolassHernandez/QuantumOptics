@@ -3,9 +3,9 @@ Modes at the beam splitter output are:
 \begin{align*}
     \hA_1=\frac{1}{\sqrt{2}}(\ha_1+\ha_2),\quad\hA_2=\frac{1}{\sqrt{2}}(\ha_1-\ha_2).
 \end{align*}
-Detectors $D_1,D_2$ measure the intensity at each output:
+The intensity operator is the number of photons detected at each detector:
 \begin{align}
-    \text{Photocurrent}\qquad\highlight{\hat{I}_{k}\propto\braket{\hN_{k}}=\braket{\hA^\dagger_{k}\hA_{k}}}.
+    \text{Photocurrent}\qquad\highlight{\hI_{k}=\hN_{k}=\hA^\dagger_{k}\hA_{k}}.
 \end{align}
 \begin{figure}[htbp]
     \centering
@@ -15,27 +15,27 @@ Detectors $D_1,D_2$ measure the intensity at each output:
 
 Let us consider the number operator in each output:
 \begin{align*}
-    \hN_1&=\hA_1^\dagger\hA_1=\left(\frac{\ha_1^\dagger+\ha_2^\dagger}{\sqrt{2}}\right)\left(\frac{\ha_1+\ha_2}{\sqrt{2}}\right)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_2^\dagger\ha_2+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1),\\
-    \hN_2&=\hA_2^\dagger\hA_2=\left(\frac{\ha_1^\dagger-\ha_2^\dagger}{\sqrt{2}}\right)\left(\frac{\ha_1-\ha_2}{\sqrt{2}}\right)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_2^\dagger\ha_2-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1),\\
-    \hN_1-\hN_2&=\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1.
+    \hI_1&=\hA_1^\dagger\hA_1=\left(\frac{\ha_1^\dagger+\ha_2^\dagger}{\sqrt{2}}\right)\left(\frac{\ha_1+\ha_2}{\sqrt{2}}\right)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_2^\dagger\ha_2+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1),\\
+    \hI_2&=\hA_2^\dagger\hA_2=\left(\frac{\ha_1^\dagger-\ha_2^\dagger}{\sqrt{2}}\right)\left(\frac{\ha_1-\ha_2}{\sqrt{2}}\right)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_2^\dagger\ha_2-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1),\\
+    \hI_1-\hI_2&=\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1.
 \end{align*}
 Let us consider that the input 2 contains a strong \bfemph{coherent state field} that we refer to as \emph{local oscillator}. Thus the total state over 
 which the average is being taken is 
 \begin{align}
     \underbrace{\ket{\Psi_1}}_{\text{Input 1}}\underbrace{\ket{\alpha_2}}_{\text{Coherent state input 2}}\Longrightarrow \ha_2\ket{\alpha_2}=\alpha_2\ket{\alpha_2}.
 \end{align}
-This produces the following irradiances: 
+This produces the following expected measured intensity (epected number of photons): 
 \begin{align*}
-    I_1&=\braket{\hN_1}=\braket{\Psi_1\alpha_2|\hA^\dagger_{1}\hA_1|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1+\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1+\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
+    \braket{\hI_1}&=\braket{\hN_1}=\braket{\Psi_1\alpha_2|\hA^\dagger_{1}\hA_1|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1+\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1+\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
     \frac{1}{2}\braket{\Psi_1\alpha_2|(\ha^\dagger_1+\alpha_2^*)(\ha_1+\alpha_2)|\alpha_2\Psi_1}\\
     &=\frac{1}{2}\braket{\Psi_1|(\ha^\dagger\ha_1+\ha_1\alpha_2^*+\ha^\dagger_1\alpha_2+|\alpha_2|^2)|\Psi_1},\\
-    I_2&=\braket{\hN_2}=\braket{\Psi_1\alpha_2|\hA^\dagger_2\hA_2|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1-\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1-\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
+    \braket{\hI_2}&=\braket{\hN_2}=\braket{\Psi_1\alpha_2|\hA^\dagger_2\hA_2|\alpha_2\Psi_1}=\braket{\Psi_1\alpha_2|\frac{\ha^\dagger_1-\ha^\dagger_2}{\sqrt{2}}\frac{\ha_1-\ha_2}{\sqrt{2}}|\alpha_2\Psi_1}=
     \frac{1}{2}\braket{\Psi_1\alpha_2|(\ha^\dagger_1-\alpha_2^*)(\ha_1-\alpha_2)|\alpha_2\Psi_1}\\
     &=\frac{1}{2}\braket{\Psi_1|(\ha_1^\dagger\ha_1-\ha_1\alpha_2^*-\ha^\dagger_1\alpha_2+|\alpha_2|^2)|\Psi_1}.
 \end{align*}
-By taking the difference $I_1-I_2$, we can change the nature of $\alpha_2$ to have different quadratures:
+By taking the difference $\hI_1-\hI_2$, we can change the nature of $\alpha_2$ to have different quadratures:
 \begin{align*}
-    ?I_1-I_2&\propto\braket{\hN_1-\hN_2}=\braket{\Psi_1|\ha_1\alpha_2^*+\ha_1^\dagger\alpha_2|\Psi_1}=\begin{cases}
+    \braket{\hI_1-\hI_2}=\braket{\hI_1}-\braket{\hI_2}=\braket{\Psi_1|\ha_1\alpha_2^*+\ha_1^\dagger\alpha_2|\Psi_1}=\begin{cases}
         2\alpha_2\braket{\Psi_1|\hX_1|\Psi_1},&\alpha_2=\alpha_2^*,\\
         -2i\alpha_2\braket{\Psi_1|\hX_2|\Psi_1},&\alpha_2=-\alpha_2^*.
     \end{cases}

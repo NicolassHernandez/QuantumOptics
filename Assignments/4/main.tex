@@ -46,6 +46,7 @@
 \newcommand{\hbE}{\hat{\bm{E}}}
 \newcommand{\hx}{\hat{x}}
 \newcommand{\hX}{\hat{X}}
+\newcommand{\hI}{\hat{I}}
 \newcommand{\hp}{\hat{p}}
 \newcommand{\hP}{\hat{P}}
 \newcommand{\hS}{\hat{S}}
@@ -165,10 +166,97 @@
 
 
 \section*{Exercise 2}
-We need to propagate the states through the BS.
+The intensity operator for each detector and the difference is:
+\begin{align*}
+  \hI_1&=\hb_1^\dagger\hb_1=\frac{1}{2}(\ha_1^\dagger+\ha^\dagger_2)(\ha_1+\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2),\\
+  \hI_2&=\hb_2^\dagger\hb_2=\frac{1}{2}(\ha_1^\dagger-\ha^\dagger_2)(\ha_1-\ha_2)=\frac{1}{2}(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2),\\
+  \hI_1-\hI_2&=\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1.
+\end{align*}
+We use these to compute the expected number of photons $\braket{\hI_k}$ at individual detectors and the difference $\braket{\hI_1-\hI_2}$.
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\roman*)]
+  \item 
+  \begin{align*}
+    \braket{\hI_1}&=\frac{1}{2}\braket{1,1|(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)|1,1}=1,\\
+    \braket{\hI_2}&=\frac{1}{2}\braket{1,1|(\ha_1^\dagger\ha_1-\ha_1^\dagger\ha_2-\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)|1,1}=1,\\
+    \braket{\hI_1-\hI_2}&=0.
+  \end{align*}
+  \item In this case of entangled photons, we follow the definition of the expected value and we use distribution property:
+  {\small
+  \begin{align*}
+    \braket{\hI_1}=\left[\frac{1}{\sqrt{2}}(\bra{0,1}+\bra{1,0})\right]|\hb_1^\dagger\hb_1|\left[\frac{1}{\sqrt{2}}(\ket{1,0}+\ket{0,1})\right]=\frac{1}{4}(\bra{0,1}+\bra{1,0})|(\ha_1^\dagger\ha_1+\ha_1^\dagger\ha_2+\ha_2^\dagger\ha_1+\ha_2^\dagger\ha_2)|(\ket{1,0}+\ket{0,1}).
+  \end{align*}}
+  I should distribute and solve the 16 terms. However, I can express the input in the following way:
+  \begin{align*}
+    \ket{\psi}=\frac{1}{\sqrt{2}}(\ha_1^\dagger+\ha_2^\dagger)\ket{0,0}=\hb_1^\dagger\ket{0,0}=\ket{1',0'}.
+  \end{align*}
+  which is simpler to use, because:
+  \begin{align*}
+    \braket{\hI_1}=\braket{0',1'|\hb_1^\dagger\hb_1|1',0'}=\braket{0',1'|1',0'}=1.
+  \end{align*}
+  For the detector 2, the expected number of photon is:
+  \begin{align*}
+    \braket{\hI_2}=\braket{0',1'|\hb_2^\dagger\hb_2|1',0'}=0.
+  \end{align*}
+  Therefore,
+  \begin{align*}
+    \braket{\hI_1-\hI_2}=\braket{\hI_1}-\braket{\hI_2}=1.
+  \end{align*}
+  \item Using the form from previous part, the entangled state is:
+  \begin{align*}
+    \ket{\psi}=\frac{1}{\sqrt{2}}(\ket{1,0}-\ket{0,1})=\frac{1}{\sqrt{2}}(\ha_1^\dagger-\ha_2^\dagger)\ket{0,0}=\hb_2^\dagger\ket{0,0}=\ket{0',1'}.
+  \end{align*}
+  Now, 
+  \begin{align*}
+    \braket{\hI_1}&=\braket{0',1'|\hb_1^\dagger\hb_2'|1',0'}=0,\\
+    \braket{\hI_2}&=\braket{0',1'|\hb_2^\dagger\hb_2|0',1'}=1,\\
+    \braket{\hI_1-\hI_2}&=-1.
+  \end{align*}
+\end{enumerate}
 
 \section*{Exercise 3}
-
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+  \item We know that the fine-structure constant is:
+  \begin{align*}
+    \alpha=\frac{e^2}{4\pi\varepsilon_0\hbar c}\approx\frac{1}{137}.
+  \end{align*}
+  So we can use it to express the ratio $r_0/\lambda_0$ in terms of $\alpha$.
+  First, centrifugal force of the electron must be equal to the electrostatic force:
+  \begin{align*}
+    \frac{m_ev_n^2}{r_n}=\frac{1}{4\pi\varepsilon_0}\frac{e^2}{r_n^2}\longrightarrow m_ev_n^2r_n=\frac{e^2}{4\pi\varepsilon_0}.
+  \end{align*}
+  For $n=1$, the angular momentum $m_ev_1r_1$ must be quantized by discrete values of $\hbar$, that is,
+  \begin{align*}
+    m_ev_1r_1=1\hbar.
+  \end{align*}
+  Division of the force equation and the angular momentum yields:
+  \begin{align*}
+    v_1=\frac{e^2}{4\pi\varepsilon_0\hbar}
+  \end{align*}
+  If we substitute $v_1$ in the angular momentun equation and solve for $r_1$ we obtain:
+  \begin{align*}
+    r_1=\frac{\hbar}{m_ev_1}=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}.
+  \end{align*}
+  We are given the resonance frequency 
+  \begin{align*}
+    \lambda_0=\frac{2\pi\hbar c}{E_0}=\frac{4\pi\hbar c}{m_ev_1^2},\quad E_0=\frac{1}{2}m_ev_1^2.
+  \end{align*}
+  Making the division $r_0/\lambda_0$, with $r_0=r_1$ in this context, and using $v_1$ yields
+  \begin{align*}
+    \frac{r_0}{\lambda_0}=\frac{\hbar}{m_ev_1}\frac{m_ev_1^2}{4\pi\hbar c}=\frac{v_1}{4\pi c}=\frac{1}{4\pi}\frac{e^2}{4\pi\varepsilon_0\hbar c}=\frac{\alpha}{4\pi}.
+  \end{align*}
+  \item The ratio $v_0/c$, with $v_0=v_1$, is exactly $\alpha$ from the velocity of last part:
+  \begin{align*}
+    \frac{v_0}{c}=\frac{1}{c}\frac{e^2}{4\pi\varepsilon_0\hbar}=\alpha.
+  \end{align*}
+  \item We will use the proportional relations:
+  \begin{align*}
+    \frac{r_0}{\lambda_0}\sim\alpha,\quad\omega_0\sim\frac{c}{\lambda_0}.
+  \end{align*}
+  {\small
+  \begin{align*}
+    \frac{g}{\omega_0}\sim&\frac{er_0}{\hbar\omega_0}\frac{\sqrt{\hbar\omega_0}}{\sqrt{2\varepsilon_0V}}\sim\frac{er_0V^{-1/2}}{\sqrt{\hbar\omega_0\varepsilon_0}}\sim\frac{e}{\sqrt{\varepsilon_0\hbar c}}r_0V^{-1/2}\lambda_0^{1/2}\sim\alpha^{1/2}(\alpha\lambda_0)V^{-1/2}\lambda_0^{1/2}\sim\alpha^{3/2}\lambda_0^{3/2}V^{-1/2}=\frac{\alpha^{3/2}}{(V/\lambda_0^3)^{1/2}}.
+  \end{align*}}
+\end{enumerate}
 
 %\clearpage
 %\nocite{*}
