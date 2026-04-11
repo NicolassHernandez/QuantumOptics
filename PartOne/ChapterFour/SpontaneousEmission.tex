@@ -61,3 +61,104 @@ And finally,
 \end{align}
 which is an exponential decay of an excited atom probability at a rate $\gamma_0$.
 
+
+
+\subsection{Interaction Hamiltonian in the interaction picture}
+We have:
+\begin{align}
+    \tilde{H}_{int}=\sum_{\bk,\lambda}\hbar g_{\bk\lambda}\left[\hsigma_+\ha_{\bk\lambda}e^{-i(\omega-\omega_0)t}+\hsigma_-\ha^\dagger_{\bk\lambda}e^{i(\omega-\omega_0)t}\right].
+\end{align}
+From Schrodinger equation:
+\begin{align*}
+    \frac{d}{dt}\ket{\Psi(t)}=-\frac{i}{\hbar}\tilde{H}_{int}\ket{\Psi(t)}.
+\end{align*}
+The state of the system at any time $t$ is:
+\begin{align*}
+    \ket{\Psi(t)}=c_e(t)\ket{e}\ket{\{0\}}+\sum_{\bk,\lambda}c_{\bk\lambda}(t)\ket{g}\ket{1_{\bk\lambda}}.
+\end{align*}
+There is at most one excitation in the total atom+field system since the Hamiltonian preserves the total number of excitations.
+Substituting $\ket{\Psi(t)}$ in the Schrodinger equation yields 
+\begin{align*}
+    \frac{dc_e}{dt}=-i\sum_{\bk,\lambda}g_{\bk\lambda}c_{\bk\lambda}(t)e^{-i(\omega_{\bk}-\omega_0)t},\quad
+    \frac{dc_{\bk\lambda}}{dt}=-ig^*_{\bk\lambda}(t)c_e(t)e^{i(\omega_k-\omega_0)t}.
+\end{align*}
+From substituting
+\begin{align*}
+    c_{\bk\lambda}(t)=-ig^*_{\bk\lambda}\int_0^t c_e(t)e^{i(\omega_{\bk}-\omega_0)\tau}\;d\tau
+\end{align*}
+in the equation of motion for $c_e$:
+\begin{align*}
+    \frac{dc_e}{dt}=-\int_0^td\tau\;\sum_{\bk,\lambda}|g_{\bk\lambda}|^2c_e(\tau)e^{-i(\omega_{\bk}-\omega_0)(t-\tau)},\quad
+    \frac{dc_e}{dt}=-c_e(t)\sum_{\bk,\lambda}|g_{\bk\lambda}|^2\int_0^\infty d\tau\;e^{-i(\omega_{\bk}-\omega_0)(t-\tau)}.
+\end{align*}
+We now sum over the continuum of modes in free space 
+\begin{align}
+    \sum_{\bk,\lambda}\to\sum_{\lambda}\int d^2k\;\frac{V}{(2\pi)^3}
+\end{align}
+\begin{align*}
+    \frac{\gamma_0}{2}=-\frac{1}{\hbar^2}\sum_{\lambda}\int d^3k\;\frac{V}{(2\pi)^3}|\bd\cdot\he_{\bk\lambda}|^2\frac{\hbar\omega_{\bk}}{2\varepsilon_0V}
+    \left[\pi\delta(\omega-\omega_0)-iP\frac{i}{\omega-\omega_0}\right].
+\end{align*}
+In free space $\omega_{\bk}=kc$. Also, the orientation of the atomic dipole $\bd$ can be chosen arbitrarily. We choose the atomic dipole to be 
+oriented along $\hz$, i.e., $\bd=d\hz$.
+\begin{align*}
+    \frac{\gamma_0}{2}&=-\frac{1}{16\pi^2\hbar\varepsilon_0}\sum_{\lambda}\int_0^\infty dk\;k^2\int_0^\pi d\theta\;\sin\theta \int_0^{2\pi} d\phi\;
+    d^2|\hz\cdot\he_{\bk\lambda}|^2kc\delta(\omega_{\bk}-\omega_0)\\
+    &=-\frac{d^2c}{16\pi^2\hbar\varepsilon_0}\int_0^\infty dk\;k^3\int_0^\pi d\theta\;\sin\theta \int_0^{2\pi}d\phi\left(\sum_{\lambda}|\hz\cdot\he_{\bk\lambda}|^2\right)\delta(\omega_{\bk}-\omega_0).
+\end{align*}
+\begin{definition}[Geometric calculation of $\hz\cdot\he_{\bk\lambda}$]
+    \begin{align*}
+        \bd=d\{0,0,1\},\quad\bk=k\{\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta\},\quad\begin{array}{l}
+            \he_{\bk\lambda_1}=\{\cos\theta\cos\phi,\cos\theta\sin\phi,-\sin\theta\}\\
+            \he_{\bk\lambda_2}=\{-\sin\phi,\cos\phi,0\}
+        \end{array}
+    \end{align*}
+    Therefore, 
+    \begin{align*}
+        \hz\cdot\he_{\bk\lambda}=\begin{cases}
+            \hz\cdot\he_{\bk\lambda_1}=-\sin\theta\\
+            \hz\cdot\he_{\bk\lambda_2}=0
+        \end{cases}.
+    \end{align*}
+\end{definition}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.3\columnwidth]{PartOne/ChapterFour/figures/geometriccalculation.png}
+    \caption{Geometric calculation of $\hz\cdot\he_{\bk\lambda}$.}
+\end{figure}
+
+Then,
+\begin{align*}
+    \frac{\gamma_0}{2}&=-\frac{d^2c}{16\pi^2\hbar\varepsilon_0}\int_0^\infty dk\;k^2\int_0^\pi d\theta\;\sin^3\theta\int_0^{2\pi}d\phi\;\delta(\omega_{\bk}-\omega_0)\\
+    &=-\frac{d^2c}{16\pi^2\hbar\varepsilon_0}2\pi\frac{4}{3}\frac{\omega_0^3}{c^4}=-\frac{d^2k_0^3}{6\pi^2\hbar\varepsilon_0}.
+\end{align*}
+\begin{align*}
+    \frac{dce}{dt}=-\frac{\gamma_0}{2}c_e(t)\longrightarrow c_e(t)=c_e(0)e^{-i\gamma_0t/2}.
+\end{align*}
+%%
+\subsubsection{Spontaneous emitted radiation}
+Substituting in the field coefficient expression:
+\begin{align*}
+    c_{\bk\lambda}(t)&=-i\int_0^td\tau\;g^*_{\bk\lambda}c_e(\tau)e^{i(\omega-\omega_0)\tau}
+    =-i\int_0^td\tau\;g^*_{\bk\lambda}e^{-\gamma\tau/2}e^{i(\omega-\omega_0)\tau}\\
+    &=-ig^*_{\bk\lambda}\frac{e^{[-\gamma/2+i(\omega-\omega_0)]\tau}}{-\gamma/2+i(\omega-\omega_0)}\biggr|_0^t
+    =-ig^*_{\bk\lambda}\frac{e^{[-\gamma/2+i(\omega-\omega_0)]t}-1}{-\gamma/2+i(\omega-\omega_0)}.
+\end{align*}
+The value sqaured is:
+\begin{align*}
+    |c_{\bk\lambda}(t)|^2=|g_{\bk\lambda}|^2\frac{e^{-\gamma t}-2e^{-\gamma t/2}\cos[(\omega-\omega_0)t]+1}{(\gamma/2)^2+(\omega-\omega_0)^2}.
+\end{align*}
+Then,
+\begin{align*}
+    t=0:&\qquad |c_{\bk\lambda}(0)|^2=0\\
+    t\to\infty:&\qquad|c_{\bk\lambda}|^2\to\frac{|g_{\bk\lambda}|^2}{(\gamma/2)^2+(\omega-\omega_0)^2}=\text{Lorentzian with width $\gamma/2$}
+\end{align*}
+Finally, the emitted E-field is:
+\begin{align*}
+    \hE(\br,t)&=i\sum_{\bk,\lambda}\E_0\left[\ha_{\bk\lambda}e^{-i(\bk\cdot\br-\omega t)}-\ha^\dagger_{\bk\lambda}e^{i(\bk\cdot\br-\omega t)}\right].
+\end{align*}
+The average value of the E-field over the $\Psi(t)$ is:
+\begin{align*}
+    \braket{\Psi(t)|\hE(\br,t)|\Psi(t)}\sum\braket{e,0_{\bk\lambda}|\ha_{\bk\lambda}|g,1_{\bk\lambda}}=0.
+\end{align*}
