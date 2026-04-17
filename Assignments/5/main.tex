@@ -236,9 +236,9 @@
   The detuning $\Delta_L$ modulate the amplitude of the state $\ket{g}$. In particular, 
   \begin{align*}
     \ket{\pm}=\begin{cases}
-      \ket{\substack{e\\g}},&\Delta_L\ll-|\Omega|\\
+      \ket{\substack{g\\e}},&\Delta_L\ll-|\Omega|\\
       \frac{1}{\sqrt{2}}[\ket{e}\pm\ket{g}],&\Delta_L=0\\
-      \ket{\substack{g\\e}},&\Delta_L\gg|\Omega|
+      \ket{\substack{e\\g}},&\Delta_L\gg|\Omega|
     \end{cases}.
   \end{align*}
   \item For $\Delta_L=0$, the dressed states take the form:
@@ -298,7 +298,84 @@
   \begin{align*}
     \bh=\frac{\hbar\re{\Omega}}{2}\bm{x}-\frac{\hbar\im{\Omega}}{2}\bm{y}-\frac{\hbar\Delta_L}{2}\bm{z}.
   \end{align*}
+  \item Assuming $\Omega$ real, the effective Hamiltonian is:
+  \begin{align*}
+    \tilde{H}_{\mathrm{eff}}=\frac{\hbar}{2}\bm{\Omega}_{\mathrm{eff}}\cdot\bm{\sigma}+\mathds{I}=\frac{\hbar}{2}\left[\Omega\hsigma_x-\Delta_L\hsigma_z\right],\quad\bm{\Omega}_{\mathrm{eff}}=(\Omega,0,-\Delta_L).
+  \end{align*}
+  The rotation in the Bloch sphere is governed by the following expression:
+  \begin{align*}
+    \br(t)=\br(0)\cos(\Omega_{\mathrm{eff}}t)+(\hat{\Omega}_{\mathrm{eff}}\times\br(0))\sin(\Omega_{\mathrm{eff}}t)+\hat{\Omega}_{\mathrm{eff}}
+    (\hat{\Omega}_{\mathrm{eff}}\cdot\br(0))[1-\cos(\Omega_{\mathrm{eff}}t)].
+  \end{align*}
+  For each case, with the initial atom in the ground state $\br(0)=(0,0,-1)$, we have 
+  \begin{align*}
+    \Delta_L=0:&\qquad\bm{\Omega}_{\mathrm{eff}}=(\Omega,0,0),\quad\hat{\Omega}_{\mathrm{eff}}=(1,0,0),\quad\Omega_{\mathrm{eff}}=\Omega,\\
+    \Delta_L=\Omega:&\qquad\bm{\Omega}_{\mathrm{eff}}=(\Omega,0,-\Omega),\quad\hat{\Omega}_{\mathrm{eff}}=\frac{1}{\sqrt{2}}(1,0,-1),\quad\Omega_{\mathrm{eff}}=\sqrt{2}\Omega.
+  \end{align*}
+  The rotation vector for the first case is:
+  \begin{align*}
+    \br(t)&=(0,0,-1)\cos(\Omega t)+[(1,0,0)\times(0,0,-1)]\sin(\Omega t)+(1,0,0)[(1,0,0)\cdot(0,0,-1)][1-\cos(\Omega t)]\\
+    &=(0,0,-1)\cos(\Omega t)+(0,1,0)\sin(\Omega t)\\
+    \br(t)&=[0,\sin(\Omega t),-\cos(\Omega t)].
+  \end{align*}
+  For the second is:
+  \begin{align*}
+    \br(t)=&(0,0,-1)\cos(\sqrt{2}\Omega t)+\frac{1}{\sqrt{2}}[(1,0,-1)\times(0,0,-1)]\sin(\sqrt{2}\Omega t)\\
+    &+\frac{1}{2}(1,0,-1)[(1,0,-1)\cdot(0,0,-1)][1-\cos(\sqrt{2}\Omega t)]\\
+    =&(0,0,-1)\cos(\sqrt{2}\Omega t)+\frac{1}{\sqrt{2}}(0,1,0)\sin(\sqrt{2}\Omega t)+\frac{1}{2}(1,0,-1)[1-\cos(\sqrt{2}t)]\\
+    \br(t)=&\left(\frac{1-\cos(\sqrt{2}\Omega t)}{2},\frac{\sin(\sqrt{2}\Omega t)}{\sqrt{2}},-\frac{1+\cos(\sqrt{2}\Omega t)}{2}\right).
+  \end{align*}
 \end{enumerate}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}{.45\columnwidth}
+    \centering
+    \begin{tikzpicture}[scale=1]
+    \def\R{2.0}
+    \coordinate (O) at (0,0);
+    %\shade[ball color=gray!10, opacity=0.25] (O) circle (\R);
+    \draw[thick](O)circle(\R);
+    \draw[dashed] (-\R,0) arc[start angle=180,end angle=360,x radius=\R,y radius=0.55];
+    \draw[thick]  (\R,0) arc[start angle=0,end angle=180,x radius=\R,y radius=0.55];
+    %(y,z,x)
+    \draw[arrow,thick] (0,0,0) -- (0,1.5*\R,0) node[above] {$z$};
+    \draw[arrow,thick] (0,0,0) -- (1.5*\R,0,0) node[right] {$y$};
+    \draw[arrow,thick] (0,0,0) -- (0,0,1.5*\R) node[below left] {$x$};
+    \fill (0,\R) circle (0.04) node[above right] {$\ket{e}$};
+    \fill (0,-\R) circle (0.04) node[below right] {$\ket{g}$};
+    % effective axis for case 2
+    \draw[red,arrow,very thick](0,0)--(0,0,1)node[below right] {$\vec\Omega_{\rm eff}$};
+    \draw[domain=0:{1.9*pi},smooth,variable=\x,NavyBlue,very thick,arrow]
+    plot({\R*sin(deg(\x))},{-\R*cos(deg(\x))},{0});
+    \end{tikzpicture}
+    \caption{$\Delta_L=0$}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{.45\columnwidth}
+    \centering
+    \begin{tikzpicture}[scale=1]
+    \def\R{2.0}
+    \coordinate (O) at (0,0);
+    %\shade[ball color=gray!10, opacity=0.25] (O) circle (\R);
+    \draw[thick](O)circle(\R);
+    \draw[dashed] (-\R,0) arc[start angle=180,end angle=360,x radius=\R,y radius=0.55];
+    \draw[thick]  (\R,0) arc[start angle=0,end angle=180,x radius=\R,y radius=0.55];
+    %(y,z,x)
+    \draw[arrow,thick] (0,0,0) -- (0,1.5*\R,0) node[above] {$z$};
+    \draw[arrow,thick] (0,0,0) -- (1.5*\R,0,0) node[right] {$y$};
+    \draw[arrow,thick] (0,0,0) -- (0,0,1.5*\R) node[below left] {$x$};
+    \fill (0,\R) circle (0.04) node[above right] {$\ket{e}$};
+    \fill (0,-\R) circle (0.04) node[below right] {$\ket{g}$};
+    % effective axis for case 2
+    \draw[red,arrow,very thick](0,0)--(0,{-1/sqrt(2)},{1/sqrt(2)})node[below right] {$\vec\Omega_{\rm eff}$};
+    \draw[domain=0:{1.2*pi},smooth,variable=\x,NavyBlue,very thick,arrow]
+    plot({sin(deg(sqrt(2)*\x))/sqrt(2)},{-(1+cos(deg(sqrt(2)*\x)))/2},{(1-cos(deg(sqrt(2)*\x)))/2});
+    \end{tikzpicture}
+    \caption{$\Delta_L=\Omega$}
+  \end{subfigure}
+\end{figure}
+
 
 %\clearpage
 %\nocite{*}
