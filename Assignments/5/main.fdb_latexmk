@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1776402809.93239 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" "main.pdf" "main" 1776402811.83012 0
+["pdflatex"] 1776404886.15623 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" "main.pdf" "main" 1776404888.34397 0
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770835094 123178 2ccd746f0a4ec0e4e75a2c14b6603cde ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1756171257 40136 7003ba06b6cea7a70224e2f1036a7f49 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1728.pk" 1756171264 49100 75decf4a6256d2337b95f774a69046a5 ""
+  "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0600.pk" 1761089572 14880 665175e039eadec1f652619b072c6f64 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0800.pk" 1756605945 19080 e2c7a8905135e62656c355e04813d4e7 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1095.pk" 1756171256 26228 944af790e0b2f4b0f85a204fcfe40f1b ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk" 1756171259 28440 6d53ed4e1bb1487e05155ae470a71190 ""
@@ -57,6 +58,7 @@
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
+  "C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1247596673 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -279,10 +281,10 @@
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" 1776402809 10155 98d8c4a0456e8c31fba6fab33de33e1c ""
-  "main.aux" 1776402811 337 9a06e54f1d3f8559dadc3cd91a920d6d "pdflatex"
-  "main.out" 1776402811 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1776402809 10155 98d8c4a0456e8c31fba6fab33de33e1c ""
+  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" 1776404885 11945 5bb2afa66fa45d02f7f3774cb1fd71d1 ""
+  "main.aux" 1776404887 337 9a06e54f1d3f8559dadc3cd91a920d6d "pdflatex"
+  "main.out" 1776404887 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1776404885 11945 5bb2afa66fa45d02f7f3774cb1fd71d1 ""
   "refs.bib" 1774565308 212 064c78a4d76d4b4e5ce4451ade8ba557 ""
   (generated)
   "main.aux"

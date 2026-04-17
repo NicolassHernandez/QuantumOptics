@@ -31,6 +31,7 @@
 \newcommand{\bO}{\bm{0}}
 \newcommand{\br}{\bm{r}}
 \newcommand{\bk}{\bm{k}}
+\newcommand{\bh}{\bm{h}}
 \newcommand{\bR}{\bm{R}}
 \newcommand{\hA}{\hat{A}}
 \newcommand{\hB}{\hat{B}}
@@ -45,6 +46,7 @@
 \newcommand{\hr}{\bm{\hat{r}}}
 \newcommand{\hbE}{\hat{\bm{E}}}
 \newcommand{\hx}{\hat{x}}
+\newcommand{\hsigma}{\hat{\sigma}}
 \newcommand{\hX}{\hat{X}}
 \newcommand{\hI}{\hat{I}}
 \newcommand{\hp}{\hat{p}}
@@ -254,6 +256,47 @@
   At $t=\pi/\Omega$, we have:
   \begin{align*}
     \ket{\Psi(\pi/\Omega)}=e^{-i\pi/2}\ket{+}=-i\ket{+}=\frac{-i}{\sqrt{2}}[\ket{e}+\ket{g}].
+  \end{align*}
+\end{enumerate}
+
+
+\section*{Exercise 2}
+\begin{enumerate}[itemsep=0pt,topsep=0pt,parsep=0pt,label=\alph*)]
+  \item The effective Hamiltonian can be expressed in terms of the Pauli matrices:
+  \begin{align*}
+    \tilde{H}_{\mathrm{eff}}=\hbar\begin{bmatrix}
+      -\Delta_L/2&\Omega/2\\\Omega^*/2&\Delta_L/2
+    \end{bmatrix}=h_x\begin{bmatrix}
+      0&1\\1&0
+    \end{bmatrix}+h_y\begin{bmatrix}
+      0&-i\\i&0
+    \end{bmatrix}+h_z\begin{bmatrix}
+      1&0\\0&-1
+    \end{bmatrix}+h_1\begin{bmatrix}
+      1&0\\0&1
+    \end{bmatrix}
+  \end{align*}
+  By equating each element of the matrix we have four equations:
+  \begin{align*}
+    \left.\begin{array}{rl}
+      (1):&h_z+h_1=\frac{-\hbar\Delta_L}{2}\\
+      (2):&h_x-ih_y=\frac{\hbar\Omega}{2}\\
+      (3):&h_x+ih_y=\frac{\hbar\Omega^*}{2}\\
+      (4):&h_1-h_z=\frac{\hbar\Delta_L}{2}
+    \end{array}\right\rfloor
+  \end{align*}
+  By playing with those, we have the following results:
+  \begin{align*}
+    &(1)+(4)\Longrightarrow h_1=0,\quad (2)+(3)\Longrightarrow h_x=\frac{\hbar\re{\Omega}}{2},\\
+    &\quad (1)-(4)\Longrightarrow h_z=-\frac{\hbar\Delta_L}{2},\quad(2)-(3)\Longrightarrow h_y=-\frac{\hbar\im{\Omega}}{2}.
+  \end{align*}
+  Pauli matrices commute each other, so the evolution operator can be written as a separate exponential:
+  \begin{align*}
+    e^{-\frac{i\tilde{H}_{\mathrm{eff}}t}{\hbar}}=e^{-\frac{i[h_x\hsigma_x+h_y\hsigma_y+h_z\hsigma_z]t}{\hbar}}=e^{-\frac{i\re{\Omega}t}{2}}e^{\frac{i\Delta_Lt}{2}}e^{\frac{i\im{\Omega}t}{2}}.
+  \end{align*}
+  The vector precession is:
+  \begin{align*}
+    \bh=\frac{\hbar\re{\Omega}}{2}\bm{x}-\frac{\hbar\im{\Omega}}{2}\bm{y}-\frac{\hbar\Delta_L}{2}\bm{z}.
   \end{align*}
 \end{enumerate}
 
