@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1775931188.47407 "main.bcf" "main.bbl" "main" 1775932184.8045 0
+["biber main"] 1775931188.47407 "main.bcf" "main.bbl" "main" 1776395747.2655 0
   "PartOne/ChapterOne/bib_.bib" 1768872437 814 ca0c4b5b986e047b1001d6e5f3140200 ""
-  "main.bcf" 1775932184 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
+  "main.bcf" 1776395746 108139 eeab2fac862e356875dc41b2bb6442d1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1775931179.82203 "main.idx" "main.ind" "main" 1775932184.80369 0
-  "main.idx" 1775932180 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1775931179.82203 "main.idx" "main.ind" "main" 1776395747.26511 0
+  "main.idx" 1776395742 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1775932176.92216 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1775932184.80528 0
+["pdflatex"] 1776395736.34805 "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" "main.pdf" "main" 1776395747.26604 0
   "Appendix/DensityOperator.tex" 1774490164 9362 1012c8205218c66903583fa19a42dce9 ""
   "Appendix/InteractionPicture.tex" 1774409734 7989 9470f2fec0e50b827f45fa0ec3a3043b ""
   "Appendix/blochsphere.png" 1774488704 48442 cf541df6f7a814d45c778aa04e151f49 ""
@@ -690,11 +690,13 @@
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1750428951 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1750428951 20785 198a9cb2e04238d92c320d0d9edbd76a ""
   "PartOne/ChapterFour/AtomFieldInteractions.tex" 1774827792 4677 72ae668464c14b649686b5410087b415 ""
-  "PartOne/ChapterFour/DrivingTheAtomWithALaser.tex" 1775932176 9696 c3618dc0efcdc2c0d5fbc4a8bfc032c6 ""
+  "PartOne/ChapterFour/DrivingTheAtomWithALaser.tex" 1776395732 10497 b91f893cfe9186ce522861b33cb33498 ""
   "PartOne/ChapterFour/QuantizedEnergyLevelOfAtom.tex" 1774495695 7132 219aba3df4dd0761a037f67426f13a3e ""
   "PartOne/ChapterFour/SpontaneousEmission.tex" 1775926719 9228 e7d8730bf293b08b20955f052b1f477a ""
   "PartOne/ChapterFour/TheLorentzAtom.tex" 1774729138 3214 21cc26cfae4471b4219b0c8a3ad39c1f ""
   "PartOne/ChapterFour/figures/atomdistribution.png" 1774399916 31098 ef0370eb8dc30cf1280fa0a3fe43f9fc ""
+  "PartOne/ChapterFour/figures/blochsphere_effhamiltonian_1.png" 1776380479 55581 9610095f8e248727deb499079055b2fc ""
+  "PartOne/ChapterFour/figures/blochsphere_effhamiltonian_2.png" 1776380499 88570 7715d8df7c02d12a10a9911668a26f2e ""
   "PartOne/ChapterFour/figures/dressedstates_variation.png" 1775931981 160824 61c76fa8f79b08dbdb17479dacd375ef ""
   "PartOne/ChapterFour/figures/drivingtheatom.png" 1775927115 26303 ae0cb8576dfc3cdb3f448efa70149a7d ""
   "PartOne/ChapterFour/figures/evolution_dressedstates.png" 1775931790 71286 f6cef42f0d6b09cb39af814138ec3af5 ""
@@ -742,16 +744,16 @@
   "PartOne/ChapterTwo/figures/example_machzenhder.png" 1771800243 135420 f1384de5a573a94a3f8d35d0fd544fb4 ""
   "PartOne/ChapterTwo/main.tex" 1771469181 248 de7e6c4199e0925db4ff2bfbb29a4362 ""
   "c:/Users/irisp/Documents/python/QuantumOptics/main.tex" 1774409506 1004 e360603782cd2ce07449b7bcbb7d601d ""
-  "main.aux" 1775932183 17006 c1a1f168a9003ceebe0e63c014c297b4 "pdflatex"
+  "main.aux" 1776395746 17006 312840a9acf4f748eeaf3fe5720c5558 "pdflatex"
   "main.bbl" 1775931191 9226 6afc9a62d2d5a4cfda0cae0fcc08661d "biber main"
   "main.ind" 1775931180 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.mtc" 1775932177 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.mtc0" 1775932177 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.out" 1775932184 4197 1fa06a7bdd42925c53077dd31f509a47 "pdflatex"
-  "main.ptc" 1775932184 5888 28c33eaed562babac37d1aa8c80fc161 "pdflatex"
-  "main.run.xml" 1775932184 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
+  "main.mtc" 1776395737 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.mtc0" 1776395737 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.out" 1776395746 4197 1fa06a7bdd42925c53077dd31f509a47 "pdflatex"
+  "main.ptc" 1776395746 5888 8dae9d044eaecb5d582da59f954ecbd2 "pdflatex"
+  "main.run.xml" 1776395746 2318 471f701eca3e29696c4e2ff7a8ae79b2 "pdflatex"
   "main.tex" 1774409506 1004 e360603782cd2ce07449b7bcbb7d601d ""
-  "main.toc" 1775932184 5702 3d373b08054ec9e75279210045b37691 "pdflatex"
+  "main.toc" 1776395746 5702 b5601e886c95e5300c7dc513f14bf2d1 "pdflatex"
   "struct/circuitikz.tex" 1768872437 3621 e55994767a1aa6f3db9e8adbe25c8836 ""
   "struct/colors.tex" 1768872437 457 2821ec4cb2261c124cc1259b2f46b70e ""
   "struct/envs.tex" 1774819083 7978 785aa8cd7a398d23d8890225a0a063a0 ""

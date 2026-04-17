@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  11 APR 2026 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  16 APR 2026 23:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2922,7 +2922,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <PartOne/ChapterFour/figures/evolution_dressedstates.png, id=691, 248.42813pt x 131.74219pt>
 File: PartOne/ChapterFour/figures/evolution_dressedstates.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/evolution_dressedstates.png>
-Package pdftex.def Info: PartOne/ChapterFour/figures/evolution_dressedstates.png  used on input line 174.
+Package pdftex.def Info: PartOne/ChapterFour/figures/evolution_dressedstates.png  used on input line 171.
 (pdftex.def)             Requested size: 199.46198pt x 105.77582pt.
 
 
@@ -2933,12 +2933,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [56 <./PartOne/ChapterFour/figures/evolution_dressedstates.png>]
-<PartOne/ChapterFour/figures/dressedstates_variation.png, id=702, 306.39468pt x 237.13594pt>
+<PartOne/ChapterFour/figures/blochsphere_effhamiltonian_1.png, id=701, 217.5628pt x 164.86594pt>
+File: PartOne/ChapterFour/figures/blochsphere_effhamiltonian_1.png Graphic file (type png)
+<use PartOne/ChapterFour/figures/blochsphere_effhamiltonian_1.png>
+Package pdftex.def Info: PartOne/ChapterFour/figures/blochsphere_effhamiltonian_1.png  used on input line 187.
+(pdftex.def)             Requested size: 179.51799pt x 136.04372pt.
+<PartOne/ChapterFour/figures/blochsphere_effhamiltonian_2.png, id=702, 302.63063pt x 162.6075pt>
+File: PartOne/ChapterFour/figures/blochsphere_effhamiltonian_2.png Graphic file (type png)
+<use PartOne/ChapterFour/figures/blochsphere_effhamiltonian_2.png>
+Package pdftex.def Info: PartOne/ChapterFour/figures/blochsphere_effhamiltonian_2.png  used on input line 192.
+(pdftex.def)             Requested size: 224.39664pt x 120.57082pt.
+<PartOne/ChapterFour/figures/dressedstates_variation.png, id=703, 306.39468pt x 237.13594pt>
 File: PartOne/ChapterFour/figures/dressedstates_variation.png Graphic file (type png)
 <use PartOne/ChapterFour/figures/dressedstates_variation.png>
-Package pdftex.def Info: PartOne/ChapterFour/figures/dressedstates_variation.png  used on input line 186.
+Package pdftex.def Info: PartOne/ChapterFour/figures/dressedstates_variation.png  used on input line 205.
 (pdftex.def)             Requested size: 299.20059pt x 231.5811pt.
-))
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2946,9 +2956,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[57 <./PartOne/ChapterFour/figures/dressedstates_variation.png>] [58] (Appendix/main.tex (Appendix/DensityOperator.tex
+[57 <./PartOne/ChapterFour/figures/blochsphere_effhamiltonian_1.png> <./PartOne/ChapterFour/figures/blochsphere_effhamiltonian_2.png> <./PartOne/ChapterFour/figures/dressedstates_variation.png>]))
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[58] [59] (Appendix/main.tex (Appendix/DensityOperator.tex
 Appendix A.
-[59
+[60
 
 ]
 
@@ -2958,8 +2976,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[60]
-<Appendix/blochsphere.png, id=729, 105.39375pt x 107.65219pt>
+[61]
+<Appendix/blochsphere.png, id=740, 105.39375pt x 107.65219pt>
 File: Appendix/blochsphere.png Graphic file (type png)
 <use Appendix/blochsphere.png>
 Package pdftex.def Info: Appendix/blochsphere.png  used on input line 125.
@@ -2972,7 +2990,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[61 <./Appendix/blochsphere.png>]) (Appendix/InteractionPicture.tex
+[62 <./Appendix/blochsphere.png>]) (Appendix/InteractionPicture.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2980,14 +2998,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[62]
+[63]
 Appendix B.
 
 Overfull \hbox (1.51062pt too wide) in paragraph at lines 21--24
 \T1/bch/m/n/10.95 Frame trans-for-ma-tions are gen-er-ally used to sim-plify cal-cu-la-tions and time de-pen-dence of the Schrodinger
  []
 
-[63
+[64
 
 ]
 
@@ -3018,7 +3036,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[64]
+[65]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
@@ -3058,7 +3076,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[65] (main.aux)
+[66] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -3070,17 +3088,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 88866 strings out of 474486
- 2230376 string characters out of 5743755
+ 88883 strings out of 474486
+ 2231351 string characters out of 5743755
  3440033 words of memory out of 5000000
- 109646 multiletter control sequences out of 15000+600000
+ 109660 multiletter control sequences out of 15000+600000
  648229 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,21n,104p,1674b,2814s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/irisp/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on main.pdf (65 pages, 2290213 bytes).
+Output written on main.pdf (66 pages, 2398605 bytes).
 PDF statistics:
- 1005 PDF objects out of 1200 (max. 8388607)
- 277 named destinations out of 1000 (max. 500000)
- 469 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1015 PDF objects out of 1200 (max. 8388607)
+ 280 named destinations out of 1000 (max. 500000)
+ 479 words of extra memory for PDF output out of 10000 (max. 10000000)
 

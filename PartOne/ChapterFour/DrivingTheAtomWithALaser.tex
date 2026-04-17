@@ -145,14 +145,14 @@ Then,
 \end{align}
 One can diagonalize the above Hamiltonian such that 
 \begin{align*}
-    V\frac{d\bm{C}}{dt}&=-\frac{i}{\hbar}\underbrace{VH_{eff}V^{-1}}_{H_{eff,D}}\underbrace{V\bm{C}}_{\text{New eigenstates}}\\
+    V\frac{d\bm{c}}{dt}&=-\frac{i}{\hbar}\underbrace{VH_{eff}V^{-1}}_{H_{eff,D}}\underbrace{V\bm{c}}_{\text{New eigenstates}}\\
     \frac{d}{dt}\underbrace{\begin{bmatrix}
         C_+\\C_-
-    \end{bmatrix}}_{V\bm{C}}&=-\frac{i}{\hbar}\begin{bmatrix}
+    \end{bmatrix}}_{V\bm{c}}&=-\frac{i}{\hbar}\begin{bmatrix}
         E_+&0\\0&E_-
     \end{bmatrix}\underbrace{\begin{bmatrix}
         C_+\\C_-
-    \end{bmatrix}}_{V\bm{C}}.
+    \end{bmatrix}}_{V\bm{c}}.
 \end{align*}
 Then, the dressed eigenstates are:
 \begin{align}
@@ -163,10 +163,7 @@ Then, the dressed eigenstates are:
 \end{align}
 The atomic state expressed in dresses basis:
 \begin{align*}
-    \ket{\Psi(t)}=c_+\ket{+}+c_-\ket{-},\quad\begin{array}{l}
-        c_+(t)=c_+(0)e^{-iE_+t/\hbar}\\
-        c_-(t)=c_-(0)e^{-iE_-t/\hbar}
-    \end{array},\quad E_\pm=\pm\frac{\hbar}{2}\sqrt{\Delta_L^2+\Omega^2}.
+    \ket{\Psi(t)}=c_+\ket{+}+c_-\ket{-},\quad c_\pm(t)=c_\pm(0)e^{-iE_\pm t/\hbar},\quad E_\pm=\pm\frac{\hbar}{2}\sqrt{\Delta_L^2+\Omega^2}.
 \end{align*}
 A qualitative evolution is given in the following figure.
 \begin{figure}[H]
@@ -174,6 +171,28 @@ A qualitative evolution is given in the following figure.
     \includegraphics[width=.4\columnwidth]{PartOne/ChapterFour/figures/evolution_dressedstates.png}
     \caption{Evolution of $c_g$ and $c_e$ for different detuning values $\Delta_L$.}
 \end{figure}
+%%
+
+For a detuned laser the atom does not get fully excited. To see this qualitative dynamics we look at the effective Hamiltonian:
+\begin{align}
+    H_{eff}=\begin{bmatrix}
+        -\Delta_L/2&\Omega/2\\\Omega^*/2&\Delta_L/2
+    \end{bmatrix}=-\frac{\Delta_L}{2}\hsigma_z+\frac{\re{\Omega}}{2}\hsigma_x-\frac{\im{\Omega}}{2}\hsigma_y.
+\end{align}
+Let us depict this Hamiltonian and the initial state on the Bloch sphere.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{.45\columnwidth}
+        \centering
+        \includegraphics[width=.8\columnwidth]{PartOne/ChapterFour/figures/blochsphere_effhamiltonian_1.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.45\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{PartOne/ChapterFour/figures/blochsphere_effhamiltonian_2.png}
+    \end{subfigure}
+\end{figure}
+
 %%
 \subsection{Dressed states and energies variation with $\Delta_L$}
 The angle $\theta$ is:
