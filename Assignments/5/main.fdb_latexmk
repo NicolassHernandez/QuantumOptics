@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1776446901.0241 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" "main.pdf" "main" 1776446903.26798 0
+["pdflatex"] 1776478022.38251 "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" "main.pdf" "main" 1776478025.56814 0
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770835094 123178 2ccd746f0a4ec0e4e75a2c14b6603cde ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1756171257 40136 7003ba06b6cea7a70224e2f1036a7f49 ""
   "C:/Users/irisp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1728.pk" 1756171264 49100 75decf4a6256d2337b95f774a69046a5 ""
@@ -297,10 +297,10 @@
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/irisp/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" 1776446900 16138 8bf849e14253c19819e970b3b493bd5e ""
-  "main.aux" 1776446902 337 1aa7f44dd69586da0e95d58de05ad378 "pdflatex"
-  "main.out" 1776446902 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1776446900 16138 8bf849e14253c19819e970b3b493bd5e ""
+  "c:/Users/irisp/Documents/python/QuantumOptics/Assignments/5/main.tex" 1776478021 17477 dcce154c8e097c8cfafaca411abbe146 ""
+  "main.aux" 1776478025 337 050154b27a7b7baeee4b18ee7c0d8c67 "pdflatex"
+  "main.out" 1776478024 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1776478021 17477 dcce154c8e097c8cfafaca411abbe146 ""
   "refs.bib" 1774565308 212 064c78a4d76d4b4e5ce4451ade8ba557 ""
   (generated)
   "main.aux"

@@ -233,12 +233,37 @@
   \begin{align*}
     [\ket{+}\;\ket{-}]=[\ket{e}\;\ket{g}]V^{-1}\longrightarrow\ket{\pm}=\frac{1}{N_\pm}[\Omega\ket{e}+(\Delta_L\pm\Omega_R)\ket{g}],\quad N_\pm=\sqrt{2\Omega_R(\Omega_R\pm\Delta_L)}.
   \end{align*}
-  The detuning $\Delta_L$ modulate the amplitude of the state $\ket{g}$. In particular, 
+  We can get a standard form of the dressed states starting from the coefficient $c_e$ and $c_g$:
+  \begin{align*}
+    c^2_e&=\frac{\Omega^2}{2\Omega_R(\Omega_R+\Delta_L)}=\frac{(\Omega_R+\Delta_L)(\Omega_R-\Delta_L)}{2\Omega_R(\Omega_R+\Delta_L)}=\frac{\Omega_R-\Delta_L}{2\Omega_R}=\frac{1-\Delta_L/\Omega_R}{2},\\
+    c^2_g&=\frac{(\Omega_R+\Delta_L)^2}{2\Omega_R(\Omega_R+\Delta_L)}=\frac{\Omega_R+\Delta_L}{2\Omega_R}=\frac{1+\Delta_L/\Omega_R}{2}.
+  \end{align*}
+  If we equate the last result of $c_e^2$ to $\cos^2(\theta)$, we get:
+  \begin{align*}
+    \cos^2\theta=\frac{1+\cos2\theta}{2}=\frac{1-\Delta_L/\Omega_R}{2}\Longrightarrow\cos2\theta=-\frac{\Delta_L}{\Omega_R}.
+  \end{align*}
+  Then,
+  \begin{align*}
+    \cos^22\theta+\sin^22\theta=1\longrightarrow\sin2\theta=\sqrt{1-\Delta_L^2/\Omega_R^2}=\sqrt{\frac{\Omega_R^2-\Delta_L^2}{\Omega_R^2}}=+\frac{\Omega}{\Omega_R}.
+  \end{align*}
+  Using both result we get
+  \begin{align*}
+    \tan2\theta=\frac{\sin2\theta}{\cos2\theta}=\frac{\Omega/\Omega_R}{-\Delta_L/\Omega_R}=-\frac{\Omega}{\Delta_L}.
+  \end{align*}
+  Therefore,
+  \begin{align*}
+    \ket{\pm}=\cos\theta\ket{e}+\sin\theta\ket{g},\quad\tan2\theta=-\frac{\Omega}{\Delta_L},
+  \end{align*}
+  and doing the same process we get:
+  \begin{align*}
+    \ket{-}=-\sin\theta\ket{e}+\cos\theta\ket{g}.
+  \end{align*}
+  The detuning $\Delta_L$ change the amplitude of the bare states. In particular, 
   \begin{align*}
     \ket{\pm}=\begin{cases}
-      \ket{\substack{g\\e}},&\Delta_L\ll-|\Omega|\\
+      \ket{\substack{g\\e}},&\Delta_L\ll0\\
       \frac{1}{\sqrt{2}}[\ket{e}\pm\ket{g}],&\Delta_L=0\\
-      \ket{\substack{e\\g}},&\Delta_L\gg|\Omega|
+      \ket{\substack{e\\g}},&\Delta_L\gg0
     \end{cases}.
   \end{align*}
   \item For $\Delta_L=0$, the dressed states take the form:
